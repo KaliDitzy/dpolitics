@@ -1,0 +1,552 @@
+﻿@colead = 0.001
+@comajor = 0.005
+@cominor = 0.001 # wtf are these?
+
+###########################
+# Election Events
+###########################
+
+add_namespace = election
+
+# Elections Stalled
+country_event = {
+	id = election.1
+	title = election.1.t
+	desc = election.1.d
+	picture = GFX_report_event_election_vote
+	
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = {
+			OR = {
+				fascism_plurality = yes
+				traditionalism_plurality = yes
+				conservatism_plurality = yes
+				liberalism_plurality = yes
+				radicalism_plurality = yes
+				social_democracy_plurality = yes
+				democratic_socialism_plurality = yes
+				bolshevism_plurality = yes
+				anarchism_plurality = yes
+			}
+		}
+	}
+	
+	option = {
+		name = election.1.a
+		add_stability = -0.1
+	}
+}
+# Fascist Victory
+country_event = {
+	id = election.2
+	title = election.2.t
+	desc = {
+		text = election.2.d.2
+		trigger = {
+			fascism > 0.5
+		}
+	}
+	desc = {
+		text = election.2.d.1
+		trigger = {
+			NOT = { fascism > 0.5 }
+		}
+	}
+	picture = GFX_report_event_election_vote
+	
+	is_triggered_only = yes
+
+	trigger = {
+		fascism_plurality = yes
+	}
+	
+	option = {
+		trigger = {
+			NOT = { fascism > 0.5 }
+		}
+		name = election.2.a
+		set_politics = {
+			ruling_party = fascism
+			elections_allowed = yes
+		}
+		set_temp_variable = { popularity_hit = party_popularity@fascism }
+		multiply_temp_variable = { popularity_hit = -0.1 }
+		add_popularity = {
+			ideology = fascism
+			popularity = var:popularity_hit
+		}
+	}
+	option = {
+		trigger = {
+			NOT = { fascism > 0.5 }
+		}
+		name = election.2.b
+		add_stability = -0.05
+		set_politics = {
+			ruling_party = fascism
+			elections_allowed = yes
+		}
+	}
+	
+	option = {
+		trigger = {
+			fascism > 0.5
+		}
+		name = election.2.c
+		add_stability = -0.025
+		set_politics = {
+			ruling_party = fascism
+			elections_allowed = yes
+		}
+	}
+}
+# Traditionalist Victory
+country_event = {
+	id = election.3
+	title = election.3.t
+	desc = {
+		text = election.3.d.2
+		trigger = {
+			traditionalism > 0.5
+		}
+	}
+	desc = {
+		text = election.3.d.1
+		trigger = {
+			NOT = { traditionalism > 0.5 }
+		}
+	}
+	picture = GFX_report_event_election_vote
+	
+	is_triggered_only = yes
+
+	trigger = {
+		traditionalism_plurality = yes
+	}
+	
+	option = {
+		trigger = {
+			NOT = { traditionalism > 0.5 }
+		}
+		name = election.3.a
+		set_politics = {
+			ruling_party = traditionalism
+			elections_allowed = yes
+		}
+		set_temp_variable = { popularity_hit = party_popularity@traditionalism }
+		multiply_temp_variable = { popularity_hit = -0.1 }
+		add_popularity = {
+			ideology = traditionalism
+			popularity = var:popularity_hit
+		}
+	}
+	option = {
+		trigger = {
+			NOT = { traditionalism > 0.5 }
+		}
+		name = election.3.b
+		add_stability = -0.05
+		set_politics = {
+			ruling_party = traditionalism
+			elections_allowed = yes
+		}
+	}
+	
+	option = {
+		trigger = {
+			traditionalism > 0.5
+		}
+		name = election.3.c
+		add_stability = -0.025
+		set_politics = {
+			ruling_party = traditionalism
+			elections_allowed = yes
+		}
+	}
+}
+# Conservative Victory
+country_event = {
+	id = election.4
+	title = election.4.t
+	desc = {
+		text = election.4.d.2
+		trigger = {
+			conservatism > 0.5
+		}
+	}
+	desc = {
+		text = election.4.d.1
+		trigger = {
+			NOT = { conservatism > 0.5 }
+		}
+	}
+	picture = GFX_report_event_election_vote
+	
+	is_triggered_only = yes
+
+	trigger = {
+		conservatism_plurality = yes
+	}
+	
+	option = {
+		trigger = {
+			NOT = { conservatism > 0.5 }
+		}
+		name = election.4.a
+		set_politics = {
+			ruling_party = conservatism
+			elections_allowed = yes
+		}
+		set_temp_variable = { popularity_hit = party_popularity@conservatism }
+		multiply_temp_variable = { popularity_hit = -0.1 }
+		add_popularity = {
+			ideology = conservatism
+			popularity = var:popularity_hit
+		}
+	}
+	option = {
+		trigger = {
+			NOT = { conservatism > 0.5 }
+		}
+		name = election.4.b
+		add_stability = -0.05
+		set_politics = {
+			ruling_party = conservatism
+			elections_allowed = yes
+		}
+	}
+	
+	option = {
+		trigger = {
+			conservatism > 0.5
+		}
+		name = election.4.c
+		add_stability = -0.025
+		set_politics = {
+			ruling_party = conservatism
+			elections_allowed = yes
+		}
+	}
+}
+# Liberal Victory
+country_event = {
+	id = election.5
+	title = election.5.t
+	desc = {
+		text = election.5.d.2
+		trigger = {
+			liberalism > 0.5
+		}
+	}
+	desc = {
+		text = election.5.d.1
+		trigger = {
+			NOT = { liberalism > 0.5 }
+		}
+	}
+	picture = GFX_report_event_election_vote
+	
+	is_triggered_only = yes
+
+	trigger = {
+		liberalism_plurality = yes
+	}
+	
+	option = {
+		trigger = {
+			NOT = { liberalism > 0.5 }
+		}
+		name = election.5.a
+		set_politics = {
+			ruling_party = liberalism
+			elections_allowed = yes
+		}
+		set_temp_variable = { popularity_hit = party_popularity@liberalism }
+		multiply_temp_variable = { popularity_hit = -0.1 }
+		add_popularity = {
+			ideology = liberalism
+			popularity = var:popularity_hit
+		}
+	}
+	option = {
+		trigger = {
+			NOT = { liberalism > 0.5 }
+		}
+		name = election.5.b
+		add_stability = -0.05
+		set_politics = {
+			ruling_party = liberalism
+			elections_allowed = yes
+		}
+	}
+	
+	option = {
+		trigger = {
+			liberalism > 0.5
+		}
+		name = election.5.c
+		add_stability = -0.025
+		set_politics = {
+			ruling_party = liberalism
+			elections_allowed = yes
+		}
+	}
+}
+# Radical Victory
+country_event = {
+	id = election.6
+	title = election.6.t
+	desc = {
+		text = election.6.d.2
+		trigger = {
+			radicalism > 0.5
+		}
+	}
+	desc = {
+		text = election.6.d.1
+		trigger = {
+			NOT = { radicalism > 0.5 }
+		}
+	}
+	picture = GFX_report_event_election_vote
+	
+	is_triggered_only = yes
+
+	trigger = {
+		radicalism_plurality = yes
+	}
+	
+	option = {
+		trigger = {
+			NOT = { radicalism > 0.5 }
+		}
+		name = election.6.a
+		set_politics = {
+			ruling_party = radicalism
+			elections_allowed = yes
+		}
+		set_temp_variable = { popularity_hit = party_popularity@radicalism }
+		multiply_temp_variable = { popularity_hit = -0.1 }
+		add_popularity = {
+			ideology = radicalism
+			popularity = var:popularity_hit
+		}
+	}
+	option = {
+		trigger = {
+			NOT = { radicalism > 0.5 }
+		}
+		name = election.6.b
+		add_stability = -0.05
+		set_politics = {
+			ruling_party = radicalism
+			elections_allowed = yes
+		}
+	}
+	
+	option = {
+		trigger = {
+			radicalism > 0.5
+		}
+		name = election.6.c
+		add_stability = -0.025
+		set_politics = {
+			ruling_party = radicalism
+			elections_allowed = yes
+		}
+	}
+}
+# Social Democratic Victory
+country_event = {
+	id = election.7
+	title = election.7.t
+	desc = {
+		text = election.7.d.2
+		trigger = {
+			social_democracy > 0.5
+		}
+	}
+	desc = {
+		text = election.7.d.1
+		trigger = {
+			NOT = { social_democracy > 0.5 }
+		}
+	}
+	picture = GFX_report_event_election_vote
+	
+	is_triggered_only = yes
+
+	trigger = {
+		social_democracy_plurality = yes
+	}
+	
+	option = {
+		trigger = {
+			NOT = { social_democracy > 0.5 }
+		}
+		name = election.7.a
+		set_politics = {
+			ruling_party = social_democracy
+			elections_allowed = yes
+		}
+		set_temp_variable = { popularity_hit = party_popularity@social_democracy }
+		multiply_temp_variable = { popularity_hit = -0.1 }
+		add_popularity = {
+			ideology = social_democracy
+			popularity = var:popularity_hit
+		}
+	}
+	option = {
+		trigger = {
+			NOT = { social_democracy > 0.5 }
+		}
+		name = election.7.b
+		add_stability = -0.05
+		set_politics = {
+			ruling_party = social_democracy
+			elections_allowed = yes
+		}
+	}
+	
+	option = {
+		trigger = {
+			social_democracy > 0.5
+		}
+		name = election.7.c
+		add_stability = -0.025
+		set_politics = {
+			ruling_party = social_democracy
+			elections_allowed = yes
+		}
+	}
+}
+# Democratic Socialist Victory
+country_event = {
+	id = election.8
+	title = election.8.t
+	desc = {
+		text = election.8.d.2
+		trigger = {
+			democratic_socialism > 0.5
+		}
+	}
+	desc = {
+		text = election.8.d.1
+		trigger = {
+			NOT = { democratic_socialism > 0.5 }
+		}
+	}
+	picture = GFX_report_event_election_vote
+	
+	is_triggered_only = yes
+
+	trigger = {
+		democratic_socialism_plurality = yes
+	}
+	
+	option = {
+		trigger = {
+			NOT = { democratic_socialism > 0.5 }
+		}
+		name = election.8.a
+		set_politics = {
+			ruling_party = democratic_socialism
+			elections_allowed = yes
+		}
+		set_temp_variable = { popularity_hit = party_popularity@democratic_socialism }
+		multiply_temp_variable = { popularity_hit = -0.1 }
+		add_popularity = {
+			ideology = democratic_socialism
+			popularity = var:popularity_hit
+		}
+	}
+	option = {
+		trigger = {
+			NOT = { democratic_socialism > 0.5 }
+		}
+		name = election.8.b
+		add_stability = -0.05
+		set_politics = {
+			ruling_party = democratic_socialism
+			elections_allowed = yes
+		}
+	}
+	
+	option = {
+		trigger = {
+			democratic_socialism > 0.5
+		}
+		name = election.8.c
+		add_stability = -0.025
+		set_politics = {
+			ruling_party = democratic_socialism
+			elections_allowed = yes
+		}
+	}
+}
+# Bolshevik Victory
+country_event = {
+	id = election.9
+	title = election.9.t
+	desc = {
+		text = election.9.d.2
+		trigger = {
+			bolshevism > 0.5
+		}
+	}
+	desc = {
+		text = election.9.d.1
+		trigger = {
+			NOT = { bolshevism > 0.5 }
+		}
+	}
+	picture = GFX_report_event_election_vote
+	
+	is_triggered_only = yes
+
+	trigger = {
+		bolshevism_plurality = yes
+	}
+	
+	option = {
+		trigger = {
+			NOT = { bolshevism > 0.5 }
+		}
+		name = election.9.a
+		set_politics = {
+			ruling_party = bolshevism
+			elections_allowed = yes
+		}
+		set_temp_variable = { popularity_hit = party_popularity@bolshevism }
+		multiply_temp_variable = { popularity_hit = -0.1 }
+		add_popularity = {
+			ideology = bolshevism
+			popularity = var:popularity_hit
+		}
+	}
+	option = {
+		trigger = {
+			NOT = { bolshevism > 0.5 }
+		}
+		name = election.9.b
+		add_stability = -0.05
+		set_politics = {
+			ruling_party = bolshevism
+			elections_allowed = yes
+		}
+	}
+	
+	option = {
+		trigger = {
+			bolshevism > 0.5
+		}
+		name = election.9.c
+		add_stability = -0.025
+		set_politics = {
+			ruling_party = bolshevism
+			elections_allowed = yes
+		}
+	}
+}

@@ -1,0 +1,836 @@
+﻿search_filter_prios = {
+	FOCUS_FILTER_POLITICAL = 1010
+	
+	FOCUS_FILTER_RESEARCH = 522
+	
+	FOCUS_FILTER_INDUSTRY = 509
+
+	FOCUS_FILTER_BALANCE_OF_POWER = 200
+	FOCUS_FILTER_SOV_POLITICAL_PARANOIA = 111
+	FOCUS_FILTER_PROPAGANDA = 110
+	FOCUS_FILTER_MISSIOLINI = 110
+	FOCUS_FILTER_ARMY_XP = 103
+	FOCUS_FILTER_NAVY_XP = 102
+	FOCUS_FILTER_AIR_XP = 101
+
+}
+
+focus_tree = {
+	id = generic_focus
+	
+	country = {
+		factor = 500
+	}
+	
+	default = yes
+	reset_on_civilwar = yes
+
+	initial_show_position = {
+		focus = political_effort
+	}
+
+	focus = {
+		id = political_effort
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 0
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_political_power = 120
+			set_temp_variable = { tmp = 5 } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes
+		}
+	}
+	focus = {
+		id = moderate_focus
+		icon = GFX_goal_generic_demand_territory
+		relative_position_id = political_effort
+		x = -6
+		y = 1
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	
+		available_if_capitulated = yes
+
+		offset = {
+			x = 6
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = moderate_focus
+			}
+		}
+
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { has_completed_focus = radical_focus }
+			}
+		}
+
+		prerequisite = { focus = political_effort }
+		mutually_exclusive = { focus = radical_focus }
+		
+		completion_reward = {
+			set_temp_variable = { tmp = 5 } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes
+
+			hidden_effect = {
+				IF = {
+					limit = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+					}
+					mark_focus_tree_layout_dirty = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = moderate_left_wing_focus
+		icon = GFX_goal_generic_demand_territory
+		relative_position_id = moderate_focus
+		x = -3
+		y = 1
+		cost = 5
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	
+		available_if_capitulated = yes
+
+		offset = {
+			x = 3
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = moderate_left_wing_focus
+			}
+		}
+
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { has_completed_focus = liberalism_focus }
+				NOT = { has_completed_focus = moderate_right_wing_focus }
+			}
+		}
+
+		prerequisite = { focus = moderate_focus }
+		mutually_exclusive = { focus = liberalism_focus focus = moderate_right_wing_focus }
+		
+		completion_reward = {
+			set_temp_variable = { tmp = 5 } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes
+
+			hidden_effect = {
+				IF = {
+					limit = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+					}
+					mark_focus_tree_layout_dirty = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = democratic_socialism_focus
+		icon = GFX_goal_generic_demand_territory
+		relative_position_id = moderate_left_wing_focus
+		x = -1
+		y = 1
+		cost = 5
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	
+		available_if_capitulated = yes
+
+		offset = {
+			x = 1
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = democratic_socialism_focus
+			}
+		}
+
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { has_completed_focus = social_democracy_focus }
+			}
+		}
+
+		prerequisite = { focus = moderate_left_wing_focus }
+		mutually_exclusive = { focus = social_democracy_focus }
+		
+		completion_reward = {
+			add_popularity = {
+				ideology = democratic_socialism
+				popularity = 0.05
+			}
+			set_temp_variable = { tmp = 5 } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes
+
+			hidden_effect = {
+				IF = {
+					limit = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+					}
+					mark_focus_tree_layout_dirty = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = social_democracy_focus
+		icon = GFX_goal_generic_demand_territory
+		relative_position_id = moderate_left_wing_focus
+		x = 1
+		y = 1
+		cost = 5
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	
+		available_if_capitulated = yes
+
+		offset = {
+			x = -1
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = social_democracy_focus
+			}
+		}
+
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { has_completed_focus = democratic_socialism_focus }
+			}
+		}
+
+		prerequisite = { focus = moderate_left_wing_focus }
+		mutually_exclusive = { focus = democratic_socialism_focus }
+		
+		completion_reward = {
+			add_popularity = {
+				ideology = social_democracy
+				popularity = 0.05
+			}
+			set_temp_variable = { tmp = 5 } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes
+
+			hidden_effect = {
+				IF = {
+					limit = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+					}
+					mark_focus_tree_layout_dirty = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = liberalism_focus
+		icon = GFX_goal_generic_demand_territory
+		relative_position_id = moderate_focus
+		x = 0
+		y = 1
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	
+		available_if_capitulated = yes
+
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { has_completed_focus = moderate_left_wing_focus }
+				NOT = { has_completed_focus = moderate_right_wing_focus }
+			}
+		}
+
+		prerequisite = { focus = moderate_focus }
+		mutually_exclusive = { focus = moderate_left_wing_focus focus = moderate_right_wing_focus }
+		
+		completion_reward = {
+			add_popularity = {
+				ideology = liberalism
+				popularity = 0.05
+			}
+			set_temp_variable = { tmp = 10 } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes
+
+			hidden_effect = {
+				IF = {
+					limit = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+					}
+					mark_focus_tree_layout_dirty = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = moderate_right_wing_focus
+		icon = GFX_goal_generic_demand_territory
+		relative_position_id = moderate_focus
+		x = 3
+		y = 1
+		cost = 5
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	
+		available_if_capitulated = yes
+
+		offset = {
+			x = -3
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = moderate_right_wing_focus
+			}
+		}
+
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { has_completed_focus = moderate_left_wing_focus }
+				NOT = { has_completed_focus = liberalism_focus }
+			}
+		}
+
+		prerequisite = { focus = moderate_focus }
+		mutually_exclusive = { focus = moderate_left_wing_focus focus = liberalism_focus }
+		
+		completion_reward = {
+			set_temp_variable = { tmp = 5 } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes
+
+			hidden_effect = {
+				IF = {
+					limit = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+					}
+					mark_focus_tree_layout_dirty = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = conservatism_focus
+		icon = GFX_goal_generic_demand_territory
+		relative_position_id = moderate_right_wing_focus
+		x = -1
+		y = 1
+		cost = 5
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	
+		available_if_capitulated = yes
+
+		offset = {
+			x = 1
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = conservatism_focus
+			}
+		}
+
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { has_completed_focus = traditionalism_focus }
+			}
+		}
+
+		prerequisite = { focus = moderate_right_wing_focus }
+		mutually_exclusive = { focus = traditionalism_focus }
+		
+		completion_reward = {
+			add_popularity = {
+				ideology = conservatism
+				popularity = 0.05
+			}
+			set_temp_variable = { tmp = 5 } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes
+
+			hidden_effect = {
+				IF = {
+					limit = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+					}
+					mark_focus_tree_layout_dirty = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = traditionalism_focus
+		icon = GFX_goal_generic_demand_territory
+		relative_position_id = moderate_right_wing_focus
+		x = 1
+		y = 1
+		cost = 5
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	
+		available_if_capitulated = yes
+
+		offset = {
+			x = -1
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = traditionalism_focus
+			}
+		}
+
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { has_completed_focus = conservatism_focus }
+			}
+		}
+
+		prerequisite = { focus = moderate_right_wing_focus }
+		mutually_exclusive = { focus = conservatism_focus }
+		
+		completion_reward = {
+			add_popularity = {
+				ideology = traditionalism
+				popularity = 0.05
+			}
+			set_temp_variable = { tmp = 5 } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes
+
+			hidden_effect = {
+				IF = {
+					limit = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+					}
+					mark_focus_tree_layout_dirty = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = radical_focus
+		icon = GFX_goal_generic_demand_territory
+		relative_position_id = political_effort
+		x = 6
+		y = 1
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	
+		available_if_capitulated = yes
+
+		offset = {
+			x = -6
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = radical_focus
+			}
+		}
+
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { has_completed_focus = moderate_focus }
+			}
+		}
+
+		prerequisite = { focus = political_effort }
+		mutually_exclusive = { focus = moderate_focus }
+		
+		completion_reward = {
+			set_temp_variable = { tmp = 5 } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes
+
+			hidden_effect = {
+				IF = {
+					limit = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+					}
+					mark_focus_tree_layout_dirty = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = radical_left_wing_focus
+		icon = GFX_goal_generic_demand_territory
+		relative_position_id = radical_focus
+		x = -3
+		y = 1
+		cost = 5
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	
+		available_if_capitulated = yes
+
+		offset = {
+			x = 3
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = radical_left_wing_focus
+			}
+		}
+
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { has_completed_focus = radicalism_focus }
+				NOT = { has_completed_focus = fascism_focus }
+			}
+		}
+
+		prerequisite = { focus = radical_focus }
+		mutually_exclusive = { focus = radicalism_focus focus = fascism_focus }
+		
+		completion_reward = {
+			set_temp_variable = { tmp = 5 } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes
+
+			hidden_effect = {
+				IF = {
+					limit = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+					}
+					mark_focus_tree_layout_dirty = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = bolshevism_focus
+		icon = GFX_goal_generic_demand_territory
+		relative_position_id = radical_left_wing_focus
+		x = -1
+		y = 1
+		cost = 5
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	
+		available_if_capitulated = yes
+
+		offset = {
+			x = 1
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = bolshevism_focus
+			}
+		}
+
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { has_completed_focus = anarchism_focus }
+			}
+		}
+
+		prerequisite = { focus = radical_left_wing_focus }
+		mutually_exclusive = { focus = anarchism_focus }
+		
+		completion_reward = {
+			add_popularity = {
+				ideology = bolshevism
+				popularity = 0.05
+			}
+			set_temp_variable = { tmp = 5 } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes
+
+			hidden_effect = {
+				IF = {
+					limit = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+					}
+					mark_focus_tree_layout_dirty = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = anarchism_focus
+		icon = GFX_goal_generic_demand_territory
+		relative_position_id = radical_left_wing_focus
+		x = 1
+		y = 1
+		cost = 5
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	
+		available_if_capitulated = yes
+
+		offset = {
+			x = -1
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = anarchism_focus
+			}
+		}
+
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { has_completed_focus = bolshevism_focus }
+			}
+		}
+
+		prerequisite = { focus = radical_left_wing_focus }
+		mutually_exclusive = { focus = bolshevism_focus }
+		
+		completion_reward = {
+			add_popularity = {
+				ideology = anarchism
+				popularity = 0.05
+			}
+			set_temp_variable = { tmp = 5 } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes
+
+			hidden_effect = {
+				IF = {
+					limit = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+					}
+					mark_focus_tree_layout_dirty = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = radicalism_focus
+		icon = GFX_goal_generic_demand_territory
+		relative_position_id = radical_focus
+		x = 0
+		y = 1
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	
+		available_if_capitulated = yes
+
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { has_completed_focus = radical_left_wing_focus }
+				NOT = { has_completed_focus = fascism_focus }
+			}
+		}
+
+		prerequisite = { focus = radical_focus }
+		mutually_exclusive = { focus = radical_left_wing_focus focus = fascism_focus }
+		
+		completion_reward = {
+			add_popularity = {
+				ideology = radicalism
+				popularity = 0.05
+			}
+			set_temp_variable = { tmp = 10 } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes
+
+			hidden_effect = {
+				IF = {
+					limit = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+					}
+					mark_focus_tree_layout_dirty = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = fascism_focus
+		icon = GFX_goal_generic_demand_territory
+		relative_position_id = radical_focus
+		x = 3
+		y = 1
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	
+		available_if_capitulated = yes
+
+		offset = {
+			x = -3
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = fascism_focus
+			}
+		}
+
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { has_completed_focus = radical_left_wing_focus }
+				NOT = { has_completed_focus = radicalism_focus }
+			}
+		}
+
+		prerequisite = { focus = radical_focus }
+		mutually_exclusive = { focus = radical_left_wing_focus focus = radicalism_focus }
+		
+		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+			set_temp_variable = { tmp = 10 } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes
+
+			hidden_effect = {
+				IF = {
+					limit = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+					}
+					mark_focus_tree_layout_dirty = yes
+				}
+			}
+		}
+	}
+}

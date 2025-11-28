@@ -1,0 +1,11 @@
+﻿l_english:
+  MAPMODE_GOVERNMENT: "§YRegime§! map mode"
+  MAPMODE_GOVERNMENT_NAME: "Regime"
+  MAPMODE_GOVERNMENT_DESCRIPTION: "Shows the countries by their current regimes."
+  government_tooltip: "[FROM.Owner.current_regime_title]"
+  government_tooltip_delayed: ""
+  MAPMODE_DOMINANT_IDEOLOGY: "§YDominant Ideology§! map mode"
+  MAPMODE_DOMINANT_IDEOLOGY_NAME: "Dominant Ideology"
+  MAPMODE_DOMINANT_IDEOLOGY_DESCRIPTION: "Shows the countries by their dominant ideology."
+  dominant_ideology_tooltip: "[FROM.Owner.dominant_ideology_title]"
+  dominant_ideology_tooltip_delayed: ""

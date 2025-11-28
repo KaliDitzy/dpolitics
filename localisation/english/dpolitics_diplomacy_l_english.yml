@@ -1,0 +1,12 @@
+﻿l_english:
+  DECLARE_INDEPENDENCE_TITLE: "Declare Independence"
+  DECLARE_INDEPENDENCE_ACTION_DESC: "Declare independence."
+  declare_independence_send_desc: "Declare independence."
+  declare_independence_accept: "Government Conformed"
+  declare_independence_accept_desc: "[ROOT.GetNameDefCap] has forced us to conform to their governing principles."
+
+  CONFORM_GOVERNMENT_TITLE: "Conform Government"
+  CONFORM_GOVERNMENT_ACTION_DESC: "Conform their government to our principles."
+  conform_government_send_desc: "Conform their government to our principles."
+  conform_government_accept: "Government Conformed"
+  conform_government_accept_desc: "[ROOT.GetNameDefCap] has forced us to conform to their governing principles."

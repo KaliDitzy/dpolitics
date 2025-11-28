@@ -1,0 +1,62 @@
+on_actions = {
+    on_startup = {
+        effect = {
+            every_possible_country = {
+                recalculate_dissent = yes
+                randomize_ideology_targets = yes
+                recalculate_gui = yes
+                recalculate_cosmetic_tag = yes
+
+                d_spawn_army = yes
+            }
+        }
+    }
+    on_daily = {
+        effect = {
+            recalculate_cooldowns = yes
+            recalculate_dissent = yes
+            recalculate_gui = yes
+            recalculate_cosmetic_tag = yes
+
+            set_variable = { global.day_1_over = 1 }
+        }
+    }
+    on_weekly = {
+        effect = {
+            add_to_variable = { dissent_base = dissent_change }
+            recalculate_dissent = yes
+            
+            update_ideology_targets = yes
+        }
+        random_events = {
+            100 = politics.border_influence.1
+            100 = politics.border_influence.2
+            100 = politics.border_influence.3
+            100 = politics.border_influence.4
+            100 = politics.border_influence.5
+            100 = politics.border_influence.6
+            100 = politics.border_influence.7
+            100 = politics.border_influence.8
+            100 = politics.border_influence.9
+        }
+    }
+    on_monthly = {
+        effect = {
+            add_to_variable = {
+                current_month = 1
+            }
+            if = {
+                limit = {
+                    check_variable = { current_month > 11 }
+                }
+                set_variable = { current_month = 0 }
+            }
+            if = {
+                limit = {
+                    check_variable = { current_month = 0 }
+                }
+                randomize_ideology_targets = yes
+            }
+        }
+    }
+}

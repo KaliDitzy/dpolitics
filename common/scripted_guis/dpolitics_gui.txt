@@ -1,0 +1,1625 @@
+scripted_gui = {
+    dpolitics_politics = {
+        window_name = dpolitics_politics_gui
+        context_type = player_context
+
+        effects = {
+            open_dpolitics_click = {
+                if = {
+                    limit = {
+                        has_country_flag = dpolitics_visible
+                    }
+                    clr_country_flag = dpolitics_visible
+                    clr_country_flag = dpolitics_choose_visible
+                }
+                else = {
+                    set_country_flag = dpolitics_visible
+                }
+            }
+        }
+    }
+    dpolitics_base = {
+        window_name = dpolitics_base_gui
+        context_type = player_context
+
+        visible = {
+            OR = {
+                has_country_flag = dpolitics_visible
+                is_ai = yes
+            }
+        }
+
+        triggers = {
+            fash_support_button_click_enabled = { set_temp_variable = { tmp = 5 } custom_trigger_tooltip = { tooltip = dissent_at_least NOT = { check_variable = { dissent < tmp } } } }
+            trad_support_button_click_enabled = { set_temp_variable = { tmp = 5 } custom_trigger_tooltip = { tooltip = dissent_at_least NOT = { check_variable = { dissent < tmp } } } }
+            cons_support_button_click_enabled = { set_temp_variable = { tmp = 5 } custom_trigger_tooltip = { tooltip = dissent_at_least NOT = { check_variable = { dissent < tmp } } } }
+            lib_support_button_click_enabled = { set_temp_variable = { tmp = 5 } custom_trigger_tooltip = { tooltip = dissent_at_least NOT = { check_variable = { dissent < tmp } } } }
+            rad_support_button_click_enabled = { set_temp_variable = { tmp = 5 } custom_trigger_tooltip = { tooltip = dissent_at_least NOT = { check_variable = { dissent < tmp } } } }
+            socd_support_button_click_enabled = { set_temp_variable = { tmp = 5 } custom_trigger_tooltip = { tooltip = dissent_at_least NOT = { check_variable = { dissent < tmp } } } }
+            dsoc_support_button_click_enabled = { set_temp_variable = { tmp = 5 } custom_trigger_tooltip = { tooltip = dissent_at_least NOT = { check_variable = { dissent < tmp } } } }
+            bols_support_button_click_enabled = { set_temp_variable = { tmp = 5 } custom_trigger_tooltip = { tooltip = dissent_at_least NOT = { check_variable = { dissent < tmp } } } }
+            anar_support_button_click_enabled = { set_temp_variable = { tmp = 5 } custom_trigger_tooltip = { tooltip = dissent_at_least NOT = { check_variable = { dissent < tmp } } } }
+
+            fash_ban_button_click_enabled = {
+                if = { limit = { check_variable = { fash_ban_cooldown > 0 } } custom_trigger_tooltip = { tooltip = fash_cooldown NOT = { check_variable = { fash_ban_cooldown > 0 } } } }
+                NOT = { has_government = fascism has_country_flag = fash_banned }
+            }
+            trad_ban_button_click_enabled = {
+                if = { limit = { check_variable = { trad_ban_cooldown > 0 } } custom_trigger_tooltip = { tooltip = trad_cooldown NOT = { check_variable = { trad_ban_cooldown > 0 } } } }
+                NOT = { has_government = traditionalism has_country_flag = trad_banned }
+            }
+            cons_ban_button_click_enabled = {
+                if = { limit = { check_variable = { cons_ban_cooldown > 0 } } custom_trigger_tooltip = { tooltip = cons_cooldown NOT = { check_variable = { cons_ban_cooldown > 0 } } } }
+                NOT = { has_government = conservatism has_country_flag = cons_banned }
+            }
+            lib_ban_button_click_enabled = {
+                if = { limit = { check_variable = { lib_ban_cooldown > 0 } } custom_trigger_tooltip = { tooltip = lib_cooldown NOT = { check_variable = { lib_ban_cooldown > 0 } } } }
+                NOT = { has_government = liberalism has_country_flag = lib_banned }
+            }
+            rad_ban_button_click_enabled = {
+                if = { limit = { check_variable = { rad_ban_cooldown > 0 } } custom_trigger_tooltip = { tooltip = rad_cooldown NOT = { check_variable = { rad_ban_cooldown > 0 } } } }
+                NOT = { has_government = radicalism has_country_flag = rad_banned }
+            }
+            socd_ban_button_click_enabled = {
+                if = { limit = { check_variable = { socd_ban_cooldown > 0 } } custom_trigger_tooltip = { tooltip = socd_cooldown NOT = { check_variable = { socd_ban_cooldown > 0 } } } }
+                NOT = { has_government = social_democracy has_country_flag = socd_banned }
+            }
+            dsoc_ban_button_click_enabled = {
+                if = { limit = { check_variable = { dsoc_ban_cooldown > 0 } } custom_trigger_tooltip = { tooltip = dsoc_cooldown NOT = { check_variable = { dsoc_ban_cooldown > 0 } } } }
+                NOT = { has_government = democratic_socialism has_country_flag = dsoc_banned }
+            }
+            bols_ban_button_click_enabled = {
+                if = { limit = { check_variable = { bols_ban_cooldown > 0 } } custom_trigger_tooltip = { tooltip = bols_cooldown NOT = { check_variable = { bols_ban_cooldown > 0 } } } }
+                NOT = { has_government = bolshevism has_country_flag = bols_banned }
+            }
+            anar_ban_button_click_enabled = {
+                if = { limit = { check_variable = { anar_ban_cooldown > 0 } } custom_trigger_tooltip = { tooltip = anar_cooldown NOT = { check_variable = { anar_ban_cooldown > 0 } } } }
+                NOT = { has_government = anarchism has_country_flag = anar_banned }
+            }
+            
+            fash_unban_button_click_enabled = { has_country_flag = fash_banned set_temp_variable = { tmp = 10 } custom_trigger_tooltip = { tooltip = dissent_at_least NOT = { check_variable = { dissent < tmp } } } }
+            trad_unban_button_click_enabled = { has_country_flag = trad_banned set_temp_variable = { tmp = 10 } custom_trigger_tooltip = { tooltip = dissent_at_least NOT = { check_variable = { dissent < tmp } } } }
+            cons_unban_button_click_enabled = { has_country_flag = cons_banned set_temp_variable = { tmp = 10 } custom_trigger_tooltip = { tooltip = dissent_at_least NOT = { check_variable = { dissent < tmp } } } }
+            lib_unban_button_click_enabled = { has_country_flag = lib_banned set_temp_variable = { tmp = 10 } custom_trigger_tooltip = { tooltip = dissent_at_least NOT = { check_variable = { dissent < tmp } } } }
+            rad_unban_button_click_enabled = { has_country_flag = rad_banned set_temp_variable = { tmp = 10 } custom_trigger_tooltip = { tooltip = dissent_at_least NOT = { check_variable = { dissent < tmp } } } }
+            socd_unban_button_click_enabled = { has_country_flag = socd_banned set_temp_variable = { tmp = 10 } custom_trigger_tooltip = { tooltip = dissent_at_least NOT = { check_variable = { dissent < tmp } } } }
+            dsoc_unban_button_click_enabled = { has_country_flag = dsoc_banned set_temp_variable = { tmp = 10 } custom_trigger_tooltip = { tooltip = dissent_at_least NOT = { check_variable = { dissent < tmp } } } }
+            bols_unban_button_click_enabled = { has_country_flag = bols_banned set_temp_variable = { tmp = 10 } custom_trigger_tooltip = { tooltip = dissent_at_least NOT = { check_variable = { dissent < tmp } } } }
+            anar_unban_button_click_enabled = { has_country_flag = anar_banned set_temp_variable = { tmp = 10 } custom_trigger_tooltip = { tooltip = dissent_at_least NOT = { check_variable = { dissent < tmp } } } }
+        }
+
+        effects = {
+            close_button_click = {
+                clr_country_flag = dpolitics_visible
+                clr_country_flag = dpolitics_choose_visible
+            }
+
+            fash_ban_button_click = {
+                custom_effect_tooltip = {
+                    localization_key = will_ban_ideology
+                    IDEOLOGY = fascism_noun
+                }
+                set_temp_variable = { stability_impact = party_popularity@fascism } multiply_temp_variable = { stability_impact = -1 } add_stability = stability_impact
+                set_political_party = { ideology = fascism popularity = 0 } set_temp_variable = { tmp = 10 } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes
+                set_variable = { fash_ban_cooldown = 1440 }
+                set_country_flag = fash_banned
+            }
+            trad_ban_button_click = {
+                custom_effect_tooltip = {
+                    localization_key = will_ban_ideology
+                    IDEOLOGY = traditionalism_noun
+                }
+                set_temp_variable = { stability_impact = party_popularity@traditionalism } multiply_temp_variable = { stability_impact = -1 } add_stability = stability_impact
+                set_political_party = { ideology = traditionalism popularity = 0 } set_temp_variable = { tmp = 10 } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes
+                set_variable = { trad_ban_cooldown = 1440 }
+                set_country_flag = trad_banned
+            }
+            cons_ban_button_click = {
+                custom_effect_tooltip = {
+                    localization_key = will_ban_ideology
+                    IDEOLOGY = conservatism_noun
+                }
+                set_temp_variable = { stability_impact = party_popularity@conservatism } multiply_temp_variable = { stability_impact = -1 } add_stability = stability_impact
+                set_political_party = { ideology = conservatism popularity = 0 } set_temp_variable = { tmp = 10 } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes
+                set_variable = { cons_ban_cooldown = 1440 }
+                set_country_flag = cons_banned
+            }
+            lib_ban_button_click = {
+                custom_effect_tooltip = {
+                    localization_key = will_ban_ideology
+                    IDEOLOGY = liberalism_noun
+                }
+                set_temp_variable = { stability_impact = party_popularity@liberalism } multiply_temp_variable = { stability_impact = -1 } add_stability = stability_impact
+                set_political_party = { ideology = liberalism popularity = 0 } set_temp_variable = { tmp = 10 } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes
+                set_variable = { lib_ban_cooldown = 1440 }
+                set_country_flag = lib_banned
+            }
+            rad_ban_button_click = {
+                custom_effect_tooltip = {
+                    localization_key = will_ban_ideology
+                    IDEOLOGY = radicalism_noun
+                }
+                set_temp_variable = { stability_impact = party_popularity@radicalism } multiply_temp_variable = { stability_impact = -1 } add_stability = stability_impact
+                set_political_party = { ideology = radicalism popularity = 0 } set_temp_variable = { tmp = 10 } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes
+                set_variable = { rad_ban_cooldown = 1440 }
+                set_country_flag = rad_banned
+            }
+            socd_ban_button_click = {
+                custom_effect_tooltip = {
+                    localization_key = will_ban_ideology
+                    IDEOLOGY = social_democracy_noun
+                }
+                set_temp_variable = { stability_impact = party_popularity@social_democracy } multiply_temp_variable = { stability_impact = -1 } add_stability = stability_impact
+                set_political_party = { ideology = social_democracy popularity = 0 } set_temp_variable = { tmp = 10 } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes
+                set_variable = { socd_ban_cooldown = 1440 }
+                set_country_flag = socd_banned
+            }
+            dsoc_ban_button_click = {
+                custom_effect_tooltip = {
+                    localization_key = will_ban_ideology
+                    IDEOLOGY = democratic_socialism_noun
+                }
+                set_temp_variable = { stability_impact = party_popularity@democratic_socialism } multiply_temp_variable = { stability_impact = -1 } add_stability = stability_impact
+                set_political_party = { ideology = democratic_socialism popularity = 0 } set_temp_variable = { tmp = 10 } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes
+                set_variable = { dsoc_ban_cooldown = 1440 }
+                set_country_flag = dsoc_banned
+            }
+            bols_ban_button_click = {
+                custom_effect_tooltip = {
+                    localization_key = will_ban_ideology
+                    IDEOLOGY = bolshevism_noun
+                }
+                set_temp_variable = { stability_impact = party_popularity@bolshevism } multiply_temp_variable = { stability_impact = -1 } add_stability = stability_impact
+                set_political_party = { ideology = bolshevism popularity = 0 } set_temp_variable = { tmp = 10 } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes
+                set_variable = { bols_ban_cooldown = 1440 }
+                set_country_flag = bols_banned
+            }
+            anar_ban_button_click = {
+                custom_effect_tooltip = {
+                    localization_key = will_ban_ideology
+                    IDEOLOGY = anarchism_noun
+                }
+                set_temp_variable = { stability_impact = party_popularity@anarchism } multiply_temp_variable = { stability_impact = -1 } add_stability = stability_impact
+                set_political_party = { ideology = anarchism popularity = 0 } set_temp_variable = { tmp = 10 } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes
+                set_variable = { anar_ban_cooldown = 1440 }
+                set_country_flag = anar_banned
+            }
+
+            fash_unban_button_click = {
+                custom_effect_tooltip = {
+                    localization_key = will_unban_ideology
+                    IDEOLOGY = fascism_noun
+                }
+                add_stability = 0.05
+                set_temp_variable = { tmp = -10 } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes
+                add_popularity = { ideology = fascism popularity = 0.05 } 
+                clr_country_flag = fash_banned
+            }
+            trad_unban_button_click = {
+                custom_effect_tooltip = {
+                    localization_key = will_unban_ideology
+                    IDEOLOGY = traditionalism_noun
+                }
+                add_stability = 0.05
+                set_temp_variable = { tmp = -10 } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes
+                add_popularity = { ideology = traditionalism popularity = 0.05 } 
+                clr_country_flag = trad_banned
+            }
+            cons_unban_button_click = {
+                custom_effect_tooltip = {
+                    localization_key = will_unban_ideology
+                    IDEOLOGY = conservatism_noun
+                }
+                add_stability = 0.05
+                set_temp_variable = { tmp = -10 } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes
+                add_popularity = { ideology = conservatism popularity = 0.05 } 
+                clr_country_flag = cons_banned
+            }
+            lib_unban_button_click = {
+                custom_effect_tooltip = {
+                    localization_key = will_unban_ideology
+                    IDEOLOGY = liberalism_noun
+                }
+                add_stability = 0.05
+                set_temp_variable = { tmp = -10 } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes
+                add_popularity = { ideology = liberalism popularity = 0.05 } 
+                clr_country_flag = lib_banned
+            }
+            rad_unban_button_click = {
+                custom_effect_tooltip = {
+                    localization_key = will_unban_ideology
+                    IDEOLOGY = radicalism_noun
+                }
+                add_stability = 0.05
+                set_temp_variable = { tmp = -10 } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes
+                add_popularity = { ideology = radicalism popularity = 0.05 } 
+                clr_country_flag = rad_banned
+            }
+            socd_unban_button_click = {
+                custom_effect_tooltip = {
+                    localization_key = will_unban_ideology
+                    IDEOLOGY = social_democracy_noun
+                }
+                add_stability = 0.05
+                set_temp_variable = { tmp = -10 } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes
+                add_popularity = { ideology = social_democracy popularity = 0.05 } 
+                clr_country_flag = socd_banned
+            }
+            dsoc_unban_button_click = {
+                add_stability = 0.05
+                set_temp_variable = { tmp = -10 } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes
+                add_popularity = { ideology = democratic_socialism popularity = 0.05 } 
+                clr_country_flag = dsoc_banned
+            }
+            bols_unban_button_click = {
+                custom_effect_tooltip = {
+                    localization_key = will_unban_ideology
+                    IDEOLOGY = bolshevism_noun
+                }
+                add_stability = 0.05
+                set_temp_variable = { tmp = -10 } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes
+                add_popularity = { ideology = bolshevism popularity = 0.05 } 
+                clr_country_flag = bols_banned
+            }
+            anar_unban_button_click = {
+                custom_effect_tooltip = {
+                    localization_key = will_unban_ideology
+                    IDEOLOGY = anarchism_noun
+                }
+                add_stability = 0.05
+                set_temp_variable = { tmp = -10 } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes
+                add_popularity = { ideology = anarchism popularity = 0.05 } 
+                clr_country_flag = anar_banned
+            }
+            
+            fash_support_button_click = { add_popularity = { ideology = fascism popularity = 0.015 } set_temp_variable = { tmp = -5 } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes add_stability = 0.005 }
+            trad_support_button_click = { add_popularity = { ideology = traditionalism popularity = 0.015 } set_temp_variable = { tmp = -5 } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes add_stability = 0.005 }
+            cons_support_button_click = { add_popularity = { ideology = conservatism popularity = 0.015 } set_temp_variable = { tmp = -5 } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes add_stability = 0.005 }
+            lib_support_button_click = { add_popularity = { ideology = liberalism popularity = 0.015 } set_temp_variable = { tmp = -5 } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes add_stability = 0.005 }
+            rad_support_button_click = { add_popularity = { ideology = radicalism popularity = 0.015 } set_temp_variable = { tmp = -5 } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes add_stability = 0.005 }
+            socd_support_button_click = { add_popularity = { ideology = social_democracy popularity = 0.015 } set_temp_variable = { tmp = -5 } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes add_stability = 0.005 }
+            dsoc_support_button_click = { add_popularity = { ideology = democratic_socialism popularity = 0.015 } set_temp_variable = { tmp = -5 } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes add_stability = 0.005 }
+            bols_support_button_click = { add_popularity = { ideology = bolshevism popularity = 0.015 } set_temp_variable = { tmp = -5 } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes add_stability = 0.005 }
+            anar_support_button_click = { add_popularity = { ideology = anarchism popularity = 0.015 } set_temp_variable = { tmp = -5 } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes add_stability = 0.005 }
+        
+            # REFORMS
+
+            reform_0_button_click = {
+                if = {
+                    limit = {
+                        check_variable = { current_selected_reform = 0 }
+                        has_country_flag = dpolitics_choose_visible
+                    }
+                    clr_country_flag = dpolitics_choose_visible
+                }
+                else = {
+                    set_variable = { current_selected_reform = 0 }
+                    set_country_flag = dpolitics_choose_visible
+                }
+            }
+            reform_1_button_click = {
+                if = {
+                    limit = {
+                        check_variable = { current_selected_reform = 1 }
+                        has_country_flag = dpolitics_choose_visible
+                    }
+                    clr_country_flag = dpolitics_choose_visible
+                }
+                else = {
+                    set_variable = { current_selected_reform = 1 }
+                    set_country_flag = dpolitics_choose_visible
+                }
+            }
+            reform_2_button_click = {
+                if = {
+                    limit = {
+                        check_variable = { current_selected_reform = 2 }
+                        has_country_flag = dpolitics_choose_visible
+                    }
+                    clr_country_flag = dpolitics_choose_visible
+                }
+                else = {
+                    set_variable = { current_selected_reform = 2 }
+                    set_country_flag = dpolitics_choose_visible
+                }
+            }
+            reform_3_button_click = {
+                if = {
+                    limit = {
+                        check_variable = { current_selected_reform = 3 }
+                        has_country_flag = dpolitics_choose_visible
+                    }
+                    clr_country_flag = dpolitics_choose_visible
+                }
+                else = {
+                    set_variable = { current_selected_reform = 3 }
+                    set_country_flag = dpolitics_choose_visible
+                }
+            }
+        }
+
+        properties = {
+            ruling_party_highlight = {
+                y = var:ruling_party_highlight_y
+            }
+        }
+
+        ai_enabled = { always = yes }
+
+        ai_weights = {
+            fash_support_button_click = {
+                ai_will_do = {
+                    base = 0
+
+                    modifier = {
+                        add = -100
+                        check_variable = { ai_seeking_reform > 0 }
+                    }
+
+                    modifier = {
+                        add = 2
+                        has_government = democratic_socialism
+                    }
+                    modifier = {
+                        add = var:fash_random_target
+                    }
+                    modifier = {
+                        add = 20
+                        NOT = { check_variable = { dissent < 5 } }
+                    }
+                    modifier = {
+                        add = 30
+                        NOT = { check_variable = { dissent < 15 } }
+                    }
+                }
+                ignore_lower_weights = {
+                    factor = 50
+                }
+            }
+            trad_support_button_click = {
+                ai_will_do = {
+                    base = 5
+
+                    modifier = {
+                        add = -100
+                        check_variable = { ai_seeking_reform > 0 }
+                    }
+
+                    modifier = {
+                        add = 2
+                        has_government = democratic_socialism
+                    }
+                    modifier = {
+                        add = var:trad_random_target
+                    }
+                    modifier = {
+                        add = 20
+                        NOT = { check_variable = { dissent < 5 } }
+                    }
+                    modifier = {
+                        add = 30
+                        NOT = { check_variable = { dissent < 15 } }
+                    }
+                }
+                ignore_lower_weights = {
+                    factor = 50
+                }
+            }
+            cons_support_button_click = {
+                ai_will_do = {
+                    base = 10
+
+                    modifier = {
+                        add = -100
+                        check_variable = { ai_seeking_reform > 0 }
+                    }
+
+                    modifier = {
+                        add = 2
+                        has_government = democratic_socialism
+                    }
+                    modifier = {
+                        add = var:cons_random_target
+                    }
+                    modifier = {
+                        add = 20
+                        NOT = { check_variable = { dissent < 5 } }
+                    }
+                    modifier = {
+                        add = 30
+                        NOT = { check_variable = { dissent < 15 } }
+                    }
+                }
+                ignore_lower_weights = {
+                    factor = 50
+                }
+            }
+            lib_support_button_click = {
+                ai_will_do = {
+                    base = 10
+
+                    modifier = {
+                        add = -100
+                        check_variable = { ai_seeking_reform > 0 }
+                    }
+
+                    modifier = {
+                        add = 2
+                        has_government = democratic_socialism
+                    }
+                    modifier = {
+                        add = var:lib_random_target
+                    }
+                    modifier = {
+                        add = 20
+                        NOT = { check_variable = { dissent < 5 } }
+                    }
+                    modifier = {
+                        add = 30
+                        NOT = { check_variable = { dissent < 15 } }
+                    }
+                }
+                ignore_lower_weights = {
+                    factor = 50
+                }
+            }
+            rad_support_button_click = {
+                ai_will_do = {
+                    base = 0
+
+                    modifier = {
+                        add = -100
+                        check_variable = { ai_seeking_reform > 0 }
+                    }
+
+                    modifier = {
+                        add = 2
+                        has_government = democratic_socialism
+                    }
+                    modifier = {
+                        add = var:rad_random_target
+                    }
+                    modifier = {
+                        add = 20
+                        NOT = { check_variable = { dissent < 5 } }
+                    }
+                    modifier = {
+                        add = 30
+                        NOT = { check_variable = { dissent < 15 } }
+                    }
+                }
+                ignore_lower_weights = {
+                    factor = 50
+                }
+            }
+            socd_support_button_click = {
+                ai_will_do = {
+                    base = 10
+
+                    modifier = {
+                        add = -100
+                        check_variable = { ai_seeking_reform > 0 }
+                    }
+
+                    modifier = {
+                        add = 2
+                        has_government = democratic_socialism
+                    }
+                    modifier = {
+                        add = var:socd_random_target
+                    }
+                    modifier = {
+                        add = 20
+                        NOT = { check_variable = { dissent < 5 } }
+                    }
+                    modifier = {
+                        add = 30
+                        NOT = { check_variable = { dissent < 15 } }
+                    }
+                }
+                ignore_lower_weights = {
+                    factor = 50
+                }
+            }
+            dsoc_support_button_click = {
+                ai_will_do = {
+                    base = 5
+
+                    modifier = {
+                        add = -100
+                        check_variable = { ai_seeking_reform > 0 }
+                    }
+
+                    modifier = {
+                        add = 2
+                        has_government = democratic_socialism
+                    }
+                    modifier = {
+                        add = var:dsoc_random_target
+                    }
+                    modifier = {
+                        add = 20
+                        NOT = { check_variable = { dissent < 5 } }
+                    }
+                    modifier = {
+                        add = 30
+                        NOT = { check_variable = { dissent < 15 } }
+                    }
+                }
+                ignore_lower_weights = {
+                    factor = 50
+                }
+            }
+            bols_support_button_click = {
+                ai_will_do = {
+                    base = 0
+
+                    modifier = {
+                        add = -100
+                        check_variable = { ai_seeking_reform > 0 }
+                    }
+
+                    modifier = {
+                        add = 2
+                        has_government = democratic_socialism
+                    }
+                    modifier = {
+                        add = var:bols_random_target
+                    }
+                    modifier = {
+                        add = 20
+                        NOT = { check_variable = { dissent < 5 } }
+                    }
+                    modifier = {
+                        add = 30
+                        NOT = { check_variable = { dissent < 15 } }
+                    }
+                }
+                ignore_lower_weights = {
+                    factor = 50
+                }
+            }
+            anar_support_button_click = {
+                ai_will_do = {
+                    base = 0
+
+                    modifier = {
+                        add = -100
+                        check_variable = { ai_seeking_reform > 0 }
+                    }
+
+                    modifier = {
+                        add = 2
+                        has_government = democratic_socialism
+                    }
+                    modifier = {
+                        add = var:anar_random_target
+                    }
+                    modifier = {
+                        add = 20
+                        NOT = { check_variable = { dissent < 5 } }
+                    }
+                    modifier = {
+                        add = 30
+                        NOT = { check_variable = { dissent < 15 } }
+                    }
+                }
+                ignore_lower_weights = {
+                    factor = 50
+                }
+            }
+
+            reform_0_button_click = {
+                ai_will_do = {
+                    base = 0
+
+                    modifier = {
+                        add = 1
+                        check_variable = { current_selected_reform = 3 }
+                    }
+                }
+            }
+            reform_1_button_click = {
+                ai_will_do = {
+                    base = 0
+
+                    modifier = {
+                        add = 1
+                        check_variable = { current_selected_reform = 0 }
+                    }
+                }
+            }
+            reform_2_button_click = {
+                ai_will_do = {
+                    base = 0
+
+                    modifier = {
+                        add = 1
+                        check_variable = { current_selected_reform = 1 }
+                    }
+                }
+            }
+            reform_3_button_click = {
+                ai_will_do = {
+                    base = 0
+
+                    modifier = {
+                        add = 1
+                        check_variable = { current_selected_reform = 2 }
+                    }
+                }
+            }
+        }
+    }
+    dpolitics_choose = {
+        window_name = dpolitics_choose_gui
+        context_type = player_context
+
+        visible = {
+            OR = {
+                AND = {
+                    has_country_flag = dpolitics_visible
+                    has_country_flag = dpolitics_choose_visible
+                }
+                is_ai = yes
+            }
+        }
+
+        triggers = {
+            option_3_bg_visible = {
+                OR = {
+                    check_variable = { current_selected_reform = 0 }
+                    check_variable = { current_selected_reform = 1 }
+                    check_variable = { current_selected_reform = 2 }
+                    check_variable = { current_selected_reform = 3 }
+                }
+            }
+            option_3_title_visible = {
+                OR = {
+                    check_variable = { current_selected_reform = 0 }
+                    check_variable = { current_selected_reform = 1 }
+                    check_variable = { current_selected_reform = 2 }
+                    check_variable = { current_selected_reform = 3 }
+                }
+            }
+            option_3_button_visible = {
+                OR = {
+                    check_variable = { current_selected_reform = 0 }
+                    check_variable = { current_selected_reform = 1 }
+                    check_variable = { current_selected_reform = 2 }
+                    check_variable = { current_selected_reform = 3 }
+                }
+            }
+
+            option_4_bg_visible = {
+                OR = {
+                    check_variable = { current_selected_reform = 0 }
+                    check_variable = { current_selected_reform = 1 }
+                    check_variable = { current_selected_reform = 2 }
+                }
+            }
+            option_4_title_visible = {
+                OR = {
+                    check_variable = { current_selected_reform = 0 }
+                    check_variable = { current_selected_reform = 1 }
+                    check_variable = { current_selected_reform = 2 }
+                }
+            }
+            option_4_button_visible = {
+                OR = {
+                    check_variable = { current_selected_reform = 0 }
+                    check_variable = { current_selected_reform = 1 }
+                    check_variable = { current_selected_reform = 2 }
+                }
+            }
+
+            option_5_bg_visible = {
+                OR = {
+                    check_variable = { current_selected_reform = 1 }
+                    check_variable = { current_selected_reform = 2 }
+                }
+            }
+            option_5_title_visible = {
+                OR = {
+                    check_variable = { current_selected_reform = 1 }
+                    check_variable = { current_selected_reform = 2 }
+                }
+            }
+            option_5_button_visible = {
+                OR = {
+                    check_variable = { current_selected_reform = 1 }
+                    check_variable = { current_selected_reform = 2 }
+                }
+            }
+
+            option_6_bg_visible = {
+                OR = {
+                    check_variable = { current_selected_reform = 1 }
+                }
+            }
+            option_6_title_visible = {
+                OR = {
+                    check_variable = { current_selected_reform = 1 }
+                }
+            }
+            option_6_button_visible = {
+                OR = {
+                    check_variable = { current_selected_reform = 1 }
+                }
+            }
+
+            option_1_button_click_enabled = {
+                if = {
+                    limit = {
+                        check_variable = { current_selected_reform = 0 }
+                    }
+                    NOT = { has_idea = reform_dop_monarchy }
+                    reform_dop_minimum_requirements = yes
+                    OR = {
+                        has_idea = reform_dm_autocracy
+                        has_idea = reform_dm_technocracy
+                        has_idea = reform_dm_corporatism
+                        has_idea = reform_dm_representative_democracy
+                    }
+                    OR = {
+                        has_idea = reform_cl_indefinitely_suspended
+                        has_idea = reform_cl_martial_law
+                        has_idea = reform_cl_curtailed
+                        has_idea = reform_cl_guaranteed
+                    }
+                    OR = {
+                        traditionalism_plurality = yes
+                        conservatism_plurality = yes
+                    }
+                }
+                else_if = {
+                    limit = {
+                        check_variable = { current_selected_reform = 1 }
+                    }
+                    NOT = { has_idea = reform_dm_autocracy }
+                    reform_dm_minimum_requirements = yes
+                    OR = {
+                        has_idea = reform_dop_monarchy
+                        has_idea = reform_dop_oligarchy
+                    }
+                    OR = {
+                        has_idea = reform_cl_indefinitely_suspended
+                        has_idea = reform_cl_martial_law
+                        has_idea = reform_cl_curtailed
+                    }
+                    OR = {
+                        fascism_plurality = yes
+                        traditionalism_plurality = yes
+                        bolshevism_plurality = yes
+                    }
+                }
+                else_if = {
+                    limit = {
+                        check_variable = { current_selected_reform = 2 }
+                    }
+                    NOT = { has_idea = reform_cl_indefinitely_suspended }
+                    reform_cl_minimum_requirements = yes
+                    OR = {
+                        has_idea = reform_dop_monarchy
+                        has_idea = reform_dop_oligarchy
+                    }
+                    OR = {
+                        has_idea = reform_dm_autocracy
+                        has_idea = reform_dm_technocracy
+                        has_idea = reform_dm_corporatism
+                    }
+                    OR = {
+                        fascism_plurality = yes
+                        traditionalism_plurality = yes
+                        conservatism_plurality = yes
+                        bolshevism_plurality = yes
+                    }
+                }
+                else_if = {
+                    limit = {
+                        check_variable = { current_selected_reform = 3 }
+                    }
+                    NOT = { has_idea = reform_pao_feudal_structure }
+                    reform_pao_minimum_requirements = yes
+                    has_idea = reform_dop_monarchy
+                    has_idea = reform_dm_autocracy
+                    OR = {
+                        traditionalism_plurality = yes
+                    }
+                }
+            }
+            option_2_button_click_enabled = {
+                if = {
+                    limit = {
+                        check_variable = { current_selected_reform = 0 }
+                    }
+                    NOT = { has_idea = reform_dop_oligarchy }
+                    reform_dop_minimum_requirements = yes
+                    OR = {
+                        has_idea = reform_dm_autocracy
+                        has_idea = reform_dm_technocracy
+                        has_idea = reform_dm_corporatism
+                        has_idea = reform_dm_representative_democracy
+                    }
+                    OR = {
+                        has_idea = reform_cl_indefinitely_suspended
+                        has_idea = reform_cl_martial_law
+                        has_idea = reform_cl_curtailed
+                        has_idea = reform_cl_guaranteed
+                    }
+                    OR = {
+                        fascism_plurality = yes
+                        traditionalism_plurality = yes
+                        conservatism_plurality = yes
+                        liberalism_plurality = yes
+                        social_democracy_plurality = yes
+                        democratic_socialism_plurality = yes
+                        bolshevism_plurality = yes
+                    }
+                }
+                else_if = {
+                    limit = {
+                        check_variable = { current_selected_reform = 1 }
+                    }
+                    NOT = { has_idea = reform_dm_technocracy }
+                    reform_dm_minimum_requirements = yes
+                    OR = {
+                        has_idea = reform_dop_monarchy
+                        has_idea = reform_dop_oligarchy
+                    }
+                    OR = {
+                        has_idea = reform_cl_indefinitely_suspended
+                        has_idea = reform_cl_martial_law
+                        has_idea = reform_cl_curtailed
+                        has_idea = reform_cl_guaranteed
+                    }
+                    OR = {
+                        liberalism_plurality = yes
+                        social_democracy_plurality = yes
+                    }
+                }
+                else_if = {
+                    limit = {
+                        check_variable = { current_selected_reform = 2 }
+                    }
+                    NOT = { has_idea = reform_cl_martial_law }
+                    reform_cl_minimum_requirements = yes
+                    OR = {
+                        has_idea = reform_dop_monarchy
+                        has_idea = reform_dop_oligarchy
+                    }
+                    OR = {
+                        has_idea = reform_dm_autocracy
+                        has_idea = reform_dm_technocracy
+                        has_idea = reform_dm_corporatism
+                        has_idea = reform_dm_representative_democracy
+                    }
+                    OR = {
+                        fascism_plurality = yes
+                        traditionalism_plurality = yes
+                        conservatism_plurality = yes
+                        liberalism_plurality = yes
+                        radicalism_plurality = yes
+                        social_democracy_plurality = yes
+                        democratic_socialism_plurality = yes
+                        bolshevism_plurality = yes
+                    }
+                }
+                else_if = {
+                    limit = {
+                        check_variable = { current_selected_reform = 3 }
+                    }
+                    NOT = { has_idea = reform_pao_private_ownership }
+                    reform_pao_minimum_requirements = yes
+                    OR = {
+                        has_idea = reform_dop_monarchy
+                        has_idea = reform_dop_oligarchy
+                        has_idea = reform_dop_minarchy
+                    }
+                    OR = {
+                        has_idea = reform_dm_autocracy
+                        has_idea = reform_dm_technocracy
+                        has_idea = reform_dm_corporatism
+                        has_idea = reform_dm_representative_democracy
+                        has_idea = reform_dm_direct_democracy
+                    }
+                    OR = {
+                        fascism_plurality = yes
+                        traditionalism_plurality = yes
+                        conservatism_plurality = yes
+                        liberalism_plurality = yes
+                        radicalism_plurality = yes
+                        social_democracy_plurality = yes
+                        democratic_socialism_plurality = yes
+                    }
+                }
+            }
+            option_3_button_click_enabled = {
+                if = {
+                    limit = {
+                        check_variable = { current_selected_reform = 0 }
+                    }
+                    NOT = { has_idea = reform_dop_minarchy }
+                    reform_dop_minimum_requirements = yes
+                    OR = {
+                        has_idea = reform_dm_representative_democracy
+                        has_idea = reform_dm_direct_democracy
+                    }
+                    has_idea = reform_cl_guaranteed
+                    OR = {
+                        liberalism_plurality = yes
+                        radicalism_plurality = yes
+                        anarchism_plurality = yes
+                    }
+                }
+                else_if = {
+                    limit = {
+                        check_variable = { current_selected_reform = 1 }
+                    }
+                    NOT = { has_idea = reform_dm_corporatism }
+                    reform_dm_minimum_requirements = yes
+                    OR = {
+                        has_idea = reform_dop_monarchy
+                        has_idea = reform_dop_oligarchy
+                    }
+                    OR = {
+                        has_idea = reform_cl_indefinitely_suspended
+                        has_idea = reform_cl_martial_law
+                        has_idea = reform_cl_curtailed
+                    }
+                    OR = {
+                        fascism_plurality = yes
+                    }
+                }
+                else_if = {
+                    limit = {
+                        check_variable = { current_selected_reform = 2 }
+                    }
+                    NOT = { has_idea = reform_cl_curtailed }
+                    reform_cl_minimum_requirements = yes
+                    OR = {
+                        has_idea = reform_dop_monarchy
+                        has_idea = reform_dop_oligarchy
+                        has_idea = reform_dop_minarchy
+                    }
+                    OR = {
+                        has_idea = reform_dm_autocracy
+                        has_idea = reform_dm_technocracy
+                        has_idea = reform_dm_corporatism
+                        has_idea = reform_dm_representative_democracy
+                    }
+                    OR = {
+                        fascism_plurality = yes
+                        traditionalism_plurality = yes
+                        conservatism_plurality = yes
+                        liberalism_plurality = yes
+                        radicalism_plurality = yes
+                        social_democracy_plurality = yes
+                        democratic_socialism_plurality = yes
+                        bolshevism_plurality = yes
+                    }
+                }
+                else_if = {
+                    limit = {
+                        check_variable = { current_selected_reform = 3 }
+                    }
+                    NOT = { has_idea = reform_pao_private_property_abolished }
+                    reform_pao_minimum_requirements = yes
+                    OR = {
+                        democratic_socialism_plurality = yes
+                        bolshevism_plurality = yes
+                        anarchism_plurality = yes
+                    }
+                }
+            }
+            option_4_button_click_enabled = {
+                if = {
+                    limit = {
+                        check_variable = { current_selected_reform = 0 }
+                    }
+                    NOT = { has_idea = reform_dop_anarchy }
+                    reform_dop_minimum_requirements = yes
+                    OR = {
+                        has_idea = reform_dm_direct_democracy
+                        has_idea = reform_dm_free_association
+                    }
+                    OR = {
+                        has_idea = reform_cl_guaranteed
+                        has_idea = reform_cl_total_individual_freedom
+                    }
+                    has_idea = reform_pao_private_property_abolished
+                    anarchism_plurality = yes
+                }
+                else_if = {
+                    limit = {
+                        check_variable = { current_selected_reform = 1 }
+                    }
+                    NOT = { has_idea = reform_dm_representative_democracy }
+                    reform_dm_minimum_requirements = yes
+                    OR = {
+                        has_idea = reform_dop_monarchy
+                        has_idea = reform_dop_oligarchy
+                        has_idea = reform_dop_minarchy
+                    }
+                    OR = {
+                        has_idea = reform_cl_martial_law
+                        has_idea = reform_cl_curtailed
+                        has_idea = reform_cl_guaranteed
+                        has_idea = reform_cl_total_individual_freedom
+                    }
+                    OR = {
+                        conservatism_plurality = yes
+                        liberalism_plurality = yes
+                        radicalism_plurality = yes
+                        social_democracy_plurality = yes
+                        democratic_socialism_plurality = yes
+                    }
+                }
+                else_if = {
+                    limit = {
+                        check_variable = { current_selected_reform = 2 }
+                    }
+                    NOT = { has_idea = reform_cl_guaranteed }
+                    reform_cl_minimum_requirements = yes
+                    OR = {
+                        has_idea = reform_dm_autocracy
+                        has_idea = reform_dm_technocracy
+                        has_idea = reform_dm_corporatism
+                        has_idea = reform_dm_representative_democracy
+                        has_idea = reform_dm_direct_democracy
+                    }
+                    OR = {
+                        conservatism_plurality = yes
+                        liberalism_plurality = yes
+                        radicalism_plurality = yes
+                        social_democracy_plurality = yes
+                        democratic_socialism_plurality = yes
+                        bolshevism_plurality = yes
+                        anarchism_plurality = yes
+                    }
+                }
+            }
+            option_5_button_click_enabled = {
+                if = {
+                    limit = {
+                        check_variable = { current_selected_reform = 1 }
+                    }
+                    NOT = { has_idea = reform_dm_direct_democracy }
+                    reform_dm_minimum_requirements = yes
+                    OR = {
+                        has_idea = reform_dop_minarchy
+                        has_idea = reform_dop_anarchy
+                    }
+                    OR = {
+                        has_idea = reform_cl_guaranteed
+                        has_idea = reform_cl_total_individual_freedom
+                    }
+                    OR = {
+                        liberalism_plurality = yes
+                        radicalism_plurality = yes
+                        social_democracy_plurality = yes
+                        democratic_socialism_plurality = yes
+                        anarchism_plurality = yes
+                    }
+                }
+                else_if = {
+                    limit = {
+                        check_variable = { current_selected_reform = 2 }
+                    }
+                    NOT = { has_idea = reform_cl_total_individual_freedom }
+                    reform_cl_minimum_requirements = yes
+                    OR = {
+                        has_idea = reform_dm_direct_democracy
+                        has_idea = reform_dm_free_association
+                    }
+                    OR = {
+                        radicalism_plurality = yes
+                        anarchism_plurality = yes
+                    }
+                }
+            }
+            option_6_button_click_enabled = {
+                if = {
+                    limit = {
+                        check_variable = { current_selected_reform = 1 }
+                    }
+                    NOT = { has_idea = reform_dm_free_association }
+                    reform_dm_minimum_requirements = yes
+                    has_idea = reform_dop_anarchy
+                    has_idea = reform_cl_total_individual_freedom
+                    has_idea = reform_pao_private_property_abolished
+                    anarchism_plurality = yes
+                }
+            }
+        }
+
+        effects = {
+            close_button_click = {
+                clr_country_flag = dpolitics_choose_visible
+            }
+
+            option_1_button_click = {
+                if = {
+                    limit = {
+                        check_variable = { current_selected_reform = 0 }
+                    }
+                    add_ideas = reform_dop_monarchy
+                    hidden_effect = {
+                        remove_ideas = {
+                            reform_dop_oligarchy
+                            reform_dop_minarchy
+                            reform_dop_anarchy
+                        }
+                    }
+                    reform_dop_minimum_effects = yes
+                }
+                else_if = {
+                    limit = {
+                        check_variable = { current_selected_reform = 1 }
+                    }
+                    add_ideas = reform_dm_autocracy
+                    hidden_effect = {
+                        remove_ideas = {
+                            reform_dm_technocracy
+                            reform_dm_corporatism
+                            reform_dm_representative_democracy
+                            reform_dm_direct_democracy
+                            reform_dm_free_association
+                        }
+                    }
+                    reform_dm_minimum_effects = yes
+                }
+                else_if = {
+                    limit = {
+                        check_variable = { current_selected_reform = 2 }
+                    }
+                    add_ideas = reform_cl_indefinitely_suspended
+                    hidden_effect = {
+                        remove_ideas = {
+                            reform_cl_martial_law
+                            reform_cl_curtailed
+                            reform_cl_guaranteed
+                            reform_cl_total_individual_freedom
+                        }
+                    }
+                    reform_cl_minimum_effects = yes
+                }
+                else_if = {
+                    limit = {
+                        check_variable = { current_selected_reform = 3 }
+                    }
+                    add_ideas = reform_pao_feudal_structure
+                    hidden_effect = {
+                        remove_ideas = {
+                            reform_pao_private_ownership
+                            reform_pao_private_property_abolished
+                        }
+                    }
+                    reform_pao_minimum_effects = yes
+                }
+            }
+            option_2_button_click = {
+                if = {
+                    limit = {
+                        check_variable = { current_selected_reform = 0 }
+                    }
+                    add_ideas = reform_dop_oligarchy
+                    hidden_effect = {
+                        remove_ideas = {
+                            reform_dop_monarchy
+                            reform_dop_minarchy
+                            reform_dop_anarchy
+                        }
+                    }
+                    reform_dop_minimum_effects = yes
+                }
+                else_if = {
+                    limit = {
+                        check_variable = { current_selected_reform = 1 }
+                    }
+                    add_ideas = reform_dm_technocracy
+                    hidden_effect = {
+                        remove_ideas = {
+                            reform_dm_autocracy
+                            reform_dm_corporatism
+                            reform_dm_representative_democracy
+                            reform_dm_direct_democracy
+                            reform_dm_free_association
+                        }
+                    }
+                    reform_dm_minimum_effects = yes
+                }
+                else_if = {
+                    limit = {
+                        check_variable = { current_selected_reform = 2 }
+                    }
+                    add_ideas = reform_cl_martial_law
+                    hidden_effect = {
+                        remove_ideas = {
+                            reform_cl_indefinitely_suspended
+                            reform_cl_curtailed
+                            reform_cl_guaranteed
+                            reform_cl_total_individual_freedom
+                        }
+                    }
+                    reform_cl_minimum_effects = yes
+                }
+                else_if = {
+                    limit = {
+                        check_variable = { current_selected_reform = 3 }
+                    }
+                    add_ideas = reform_pao_private_ownership
+                    hidden_effect = {
+                        remove_ideas = {
+                            reform_pao_feudal_structure
+                            reform_pao_private_property_abolished
+                        }
+                    }
+                    reform_pao_minimum_effects = yes
+                }
+            }
+            option_3_button_click = {
+                if = {
+                    limit = {
+                        check_variable = { current_selected_reform = 0 }
+                    }
+                    add_ideas = reform_dop_minarchy
+                    hidden_effect = {
+                        remove_ideas = {
+                            reform_dop_monarchy
+                            reform_dop_oligarchy
+                            reform_dop_anarchy
+                        }
+                    }
+                    reform_dop_minimum_effects = yes
+                }
+                else_if = {
+                    limit = {
+                        check_variable = { current_selected_reform = 1 }
+                    }
+                    add_ideas = reform_dm_corporatism
+                    hidden_effect = {
+                        remove_ideas = {
+                            reform_dm_autocracy
+                            reform_dm_technocracy
+                            reform_dm_representative_democracy
+                            reform_dm_direct_democracy
+                            reform_dm_free_association
+                        }
+                    }
+                    reform_dm_minimum_effects = yes
+                }
+                else_if = {
+                    limit = {
+                        check_variable = { current_selected_reform = 2 }
+                    }
+                    add_ideas = reform_cl_curtailed
+                    hidden_effect = {
+                        remove_ideas = {
+                            reform_cl_indefinitely_suspended
+                            reform_cl_martial_law
+                            reform_cl_guaranteed
+                            reform_cl_total_individual_freedom
+                        }
+                    }
+                    reform_cl_minimum_effects = yes
+                }
+                else_if = {
+                    limit = {
+                        check_variable = { current_selected_reform = 3 }
+                    }
+                    add_ideas = reform_pao_private_property_abolished
+                    hidden_effect = {
+                        remove_ideas = {
+                            reform_pao_feudal_structure
+                            reform_pao_private_ownership
+                        }
+                    }
+                    reform_pao_minimum_effects = yes
+                }
+            }
+            option_4_button_click = {
+                if = {
+                    limit = {
+                        check_variable = { current_selected_reform = 0 }
+                    }
+                    add_ideas = reform_dop_anarchy
+                    hidden_effect = {
+                        remove_ideas = {
+                            reform_dop_monarchy
+                            reform_dop_oligarchy
+                            reform_dop_minarchy
+                        }
+                    }
+                    reform_dop_minimum_effects = yes
+                }
+                else_if = {
+                    limit = {
+                        check_variable = { current_selected_reform = 1 }
+                    }
+                    add_ideas = reform_dm_representative_democracy
+                    hidden_effect = {
+                        remove_ideas = {
+                            reform_dm_autocracy
+                            reform_dm_technocracy
+                            reform_dm_corporatism
+                            reform_dm_direct_democracy
+                            reform_dm_free_association
+                        }
+                    }
+                    reform_dm_minimum_effects = yes
+                }
+                else_if = {
+                    limit = {
+                        check_variable = { current_selected_reform = 2 }
+                    }
+                    add_ideas = reform_cl_guaranteed
+                    hidden_effect = {
+                        remove_ideas = {
+                            reform_cl_indefinitely_suspended
+                            reform_cl_martial_law
+                            reform_cl_curtailed
+                            reform_cl_total_individual_freedom
+                        }
+                    }
+                    reform_cl_minimum_effects = yes
+                }
+            }
+            option_5_button_click = {
+                if = {
+                    limit = {
+                        check_variable = { current_selected_reform = 1 }
+                    }
+                    add_ideas = reform_dm_direct_democracy
+                    hidden_effect = {
+                        remove_ideas = {
+                            reform_dm_autocracy
+                            reform_dm_technocracy
+                            reform_dm_corporatism
+                            reform_dm_representative_democracy
+                            reform_dm_free_association
+                        }
+                    }
+                    reform_dm_minimum_effects = yes
+                }
+                else_if = {
+                    limit = {
+                        check_variable = { current_selected_reform = 2 }
+                    }
+                    add_ideas = reform_cl_total_individual_freedom
+                    hidden_effect = {
+                        remove_ideas = {
+                            reform_cl_indefinitely_suspended
+                            reform_cl_martial_law
+                            reform_cl_curtailed
+                            reform_cl_guaranteed
+                        }
+                    }
+                    reform_cl_minimum_effects = yes
+                }
+            }
+            option_6_button_click = {
+                if = {
+                    limit = {
+                        check_variable = { current_selected_reform = 1 }
+                    }
+                    add_ideas = reform_dm_free_association
+                    hidden_effect = {
+                        remove_ideas = {
+                            reform_dm_autocracy
+                            reform_dm_technocracy
+                            reform_dm_corporatism
+                            reform_dm_representative_democracy
+                            reform_dm_direct_democracy
+                        }
+                    }
+                    reform_dm_minimum_effects = yes
+                }
+            }
+        }
+
+        ai_enabled = { always = yes }
+
+        ai_weights = {
+            option_1_button_click = {
+                ai_will_do = {
+                    base = 5
+
+                    # Distribution of Power
+                    modifier = {
+                        add = -100
+                        check_variable = { current_selected_reform = 0 }
+                        check_variable = { reform_dop_cooldown > 0 }
+                    }
+
+                    # Decision-Making
+                    modifier = {
+                        add = -100
+                        check_variable = { current_selected_reform = 1 }
+                        check_variable = { reform_dm_cooldown > 0 }
+                    }
+
+                    # Civil Liberties / Indefinitely Suspended
+                    modifier = {
+                        add = -100
+                        check_variable = { current_selected_reform = 2 }
+                        check_variable = { reform_cl_cooldown > 0 }
+                    }
+                    modifier = {
+                        add = 10
+                        check_variable = { current_selected_reform = 2 }
+                        is_moderate = no
+                        is_right = yes
+                    }
+                }
+            }
+            option_2_button_click = {
+                ai_will_do = {
+                    base = 5
+
+                    # Distribution of Power
+                    modifier = {
+                        add = -100
+                        check_variable = { current_selected_reform = 0 }
+                        check_variable = { reform_dop_cooldown > 0 }
+                    }
+
+                    # Decision-Making
+                    modifier = {
+                        add = -100
+                        check_variable = { current_selected_reform = 1 }
+                        check_variable = { reform_dm_cooldown > 0 }
+                    }
+
+                    # Civil Liberties / Martial Law
+                    modifier = {
+                        add = -100
+                        check_variable = { current_selected_reform = 2 }
+                        check_variable = { reform_cl_cooldown > 0 }
+                    }
+                    modifier = {
+                        add = 10
+                        check_variable = { current_selected_reform = 2 }
+                        has_war = yes
+                    }
+                    modifier = {
+                        add = 5
+                        check_variable = { current_selected_reform = 2 }
+                        is_moderate = no
+                        NOT = { has_idea = reform_cl_indefinitely_suspended }
+                    }
+                }
+            }
+            option_3_button_click = {
+                ai_will_do = {
+                    base = 5
+
+                    # Distribution of Power
+                    modifier = {
+                        add = -100
+                        check_variable = { current_selected_reform = 0 }
+                        check_variable = { reform_dop_cooldown > 0 }
+                    }
+
+                    # Decision-Making
+                    modifier = {
+                        add = -100
+                        check_variable = { current_selected_reform = 1 }
+                        check_variable = { reform_dm_cooldown > 0 }
+                    }
+
+                    # Civil Liberties / Curtailed
+                    modifier = {
+                        add = -100
+                        check_variable = { current_selected_reform = 2 }
+                        check_variable = { reform_cl_cooldown > 0 }
+                    }
+                    modifier = {
+                        add = 10
+                        check_variable = { current_selected_reform = 2 }
+                        is_right = yes
+                    }
+                    modifier = {
+                        add = 5
+                        check_variable = { current_selected_reform = 2 }
+                        is_moderate = no
+                    }
+                }
+            }
+            option_4_button_click = {
+                ai_will_do = {
+                    base = 5
+
+                    # Distribution of Power
+                    modifier = {
+                        add = -100
+                        check_variable = { current_selected_reform = 0 }
+                        check_variable = { reform_dop_cooldown > 0 }
+                    }
+
+                    # Decision-Making
+                    modifier = {
+                        add = -100
+                        check_variable = { current_selected_reform = 1 }
+                        check_variable = { reform_dm_cooldown > 0 }
+                    }
+
+                    # Civil Liberties / Guaranteed
+                    modifier = {
+                        add = -100
+                        check_variable = { current_selected_reform = 2 }
+                        check_variable = { reform_cl_cooldown > 0 }
+                    }
+                    modifier = {
+                        add = 5
+                        check_variable = { current_selected_reform = 2 }
+                        has_war = no
+                    }
+                    modifier = {
+                        add = 5
+                        check_variable = { current_selected_reform = 2 }
+                        is_moderate = yes
+                        OR = {
+                            has_idea = reform_cl_curtailed
+                            has_idea = reform_cl_martial_law
+                            has_idea = reform_cl_indefinitely_suspended
+                        }
+                    }
+                    modifier = {
+                        add = 5
+                        check_variable = { current_selected_reform = 2 }
+                        is_left = yes
+                    }
+                }
+            }
+            option_5_button_click = {
+                ai_will_do = {
+                    base = 5
+
+                    # Distribution of Power
+                    modifier = {
+                        add = -100
+                        check_variable = { current_selected_reform = 0 }
+                        check_variable = { reform_dop_cooldown > 0 }
+                    }
+
+                    # Decision-Making
+                    modifier = {
+                        add = -100
+                        check_variable = { current_selected_reform = 1 }
+                        check_variable = { reform_dm_cooldown > 0 }
+                    }
+
+                    # Civil Liberties / Total Freedom
+                    modifier = {
+                        add = -100
+                        check_variable = { current_selected_reform = 2 }
+                        check_variable = { reform_cl_cooldown > 0 }
+                    }
+                    modifier = {
+                        add = 5
+                        check_variable = { current_selected_reform = 2 }
+                        is_moderate = no
+                    }
+                    modifier = {
+                        add = 10
+                        check_variable = { current_selected_reform = 2 }
+                        is_right = no
+                    }
+                }
+            }
+            option_6_button_click = {
+                ai_will_do = {
+                    base = 5
+
+                    # Decision-Making
+                    modifier = {
+                        add = -100
+                        check_variable = { current_selected_reform = 1 }
+                        check_variable = { reform_dm_cooldown > 0 }
+                    }
+                }
+            }
+        }
+    }
+}

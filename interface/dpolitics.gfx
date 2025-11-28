@@ -1,0 +1,58 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_dissent_icon"
+		texturefile = "gfx/interface/dissent_icon.dds"
+	}
+
+	spriteType = {
+		name = "GFX_dpolitics_main_bg"
+		texturefile = "gfx/interface/politics/politics_main_background.dds"
+	}
+
+    spriteType = {
+		name = "GFX_dpolitics_button"
+		texturefile = "gfx/interface/politics/topbar_politics.dds"
+	}
+    spriteType = {
+		name = "GFX_support_party"
+		texturefile = "gfx/interface/politics/placeholder_support_party.dds"
+	}
+    spriteType = {
+		name = "GFX_ban_party"
+		texturefile = "gfx/interface/politics/placeholder_ban_party.dds"
+	}
+    spriteType = {
+		name = "GFX_unban_party"
+		texturefile = "gfx/interface/politics/placeholder_unban_party.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ruling_party_highlight"
+		texturefile = "gfx/interface/politics/placeholder_ruling_party_highlight.dds"
+	}
+
+	# reforms
+	spriteType = {
+		name = "GFX_reform_entry_bg"
+		texturefile = "gfx/interface/reform_entry_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_reform_entry_bg_2"
+		texturefile = "gfx/interface/reform_entry_bg_2.dds"
+	}
+	spriteType = {
+		name = "GFX_reform_entry_bg_3"
+		texturefile = "gfx/interface/reform_entry_bg_3.dds"
+	}
+
+	# faction icons
+	spriteType = {
+		name = "GFX_faction_icon_deitsche_vabund"
+		texturefile = "gfx/interface/factions/faction_logos/faction_icon_deitsche_vabund.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_faction_icon_deitsche_vabund_miniature"
+		texturefile = "gfx/interface/factions/faction_logos/faction_icon_deitsche_vabund_miniature.dds"
+	}
+}

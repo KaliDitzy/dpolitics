@@ -1,0 +1,5 @@
+opinion_modifiers = {
+    german_confederation_brothers = {
+        value = 15
+    }
+}

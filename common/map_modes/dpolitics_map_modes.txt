@@ -1,0 +1,329 @@
+scripted_map_modes = {
+	government = {
+	# the game will use name of the map mode for some strings:
+	# MAPMODE_TEST_MAP_MODE MAPMODE_TEST_MAP_MODE_NAME MAPMODE_TEST_MAP_MODE_DESCRIPTION as name & desc
+	# test_map_mode_tooltip & test_map_mode_tooltip_delayed for tooltips
+	# GFX_mapmode_buttons_deselected_small_test_map_mode GFX_mapmode_buttons_selected_small_test_map_mode for the icons
+
+	# there are two layers for a map mode. bottom & top
+	# both are same except during rendering they will be rendered in that order
+	# for each layer the game will figure out what borders to render and will ask script to pick a color for those
+	top = {
+
+		# type represents which borders will be used for rendering for this layer
+		# or it can represent one of the hard coded map mode layers
+		# must be one of following:
+		#   none #will render nothing for this layer
+		#   country #will render using country provinces
+		#   state #will render using state provinces
+		#   state_controller #will render using state provinces & controllers. if a state is shared between countries it will be called for each country
+
+		#   game_map_mode_country (these are hard coded map mode layers. if these are used all other layer entries are ignored)
+		#   game_map_mode_states
+		#   game_map_mode_diplomacy
+		#   game_map_mode_players
+		#   game_map_mode_factions
+		#   game_map_mode_ideology
+		type = country
+
+		# this trigger will be used for setting the color of a specific border
+		# if trigger returns true then it will render that border
+		# scope depends on type of the layer
+		# scope is player
+		# from scope depends on type
+		#   country: current country that will be rendered
+		#   state: current state that will be rendered
+		#   state_controller: current state that will be rendered and from from scope will be the controller of current portion of the state
+		# if return value is true the game expects you to set some temp variables which will be used as border color etc
+
+		color = {
+			set_temp_variable = { red = 0.0 }
+			set_temp_variable = { blue = 0.0 }
+			set_temp_variable = { green = 0.0 }
+			set_temp_variable = { alpha = 1.0 }
+
+			if = {
+				limit = {
+					check_variable = { FROM.regime_id = 1 }
+					FROM = { has_idea = reform_pao_feudal_structure }
+				}
+				# 46, 57, 87
+				set_temp_variable = { red = 46 } divide_temp_variable = { red = 255 }
+				set_temp_variable = { green = 57 } divide_temp_variable = { green = 255 }
+				set_temp_variable = { blue = 87 } divide_temp_variable = { blue = 255 }
+			}
+			if = {
+				limit = {
+					check_variable = { FROM.regime_id = 1 }
+					FROM = { has_idea = reform_dm_autocracy }
+				}
+				# 122, 121, 143
+				set_temp_variable = { red = 121 } divide_temp_variable = { red = 255 }
+				set_temp_variable = { green = 121 } divide_temp_variable = { green = 255 }
+				set_temp_variable = { blue = 143 } divide_temp_variable = { blue = 255 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { FROM.regime_id = 1 }
+				}
+				# 71,117,181
+				set_temp_variable = { red = 71 } divide_temp_variable = { red = 255 }
+				set_temp_variable = { green = 117 } divide_temp_variable = { green = 255 }
+				set_temp_variable = { blue = 181 } divide_temp_variable = { blue = 255 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { FROM.regime_id = 2 }
+					FROM = { has_idea = reform_pao_private_property_abolished }
+				}
+				# 222, 20, 134
+				set_temp_variable = { red = 222 } divide_temp_variable = { red = 255 }
+				set_temp_variable = { green = 20 } divide_temp_variable = { green = 255 }
+				set_temp_variable = { blue = 134 } divide_temp_variable = { blue = 255 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { FROM.regime_id = 2 }
+				}
+				# 20, 113, 219
+				set_temp_variable = { red = 20 } divide_temp_variable = { red = 255 }
+				set_temp_variable = { green = 113 } divide_temp_variable = { green = 255 }
+				set_temp_variable = { blue = 219 } divide_temp_variable = { blue = 255 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { FROM.regime_id = 3 }
+				}
+				# 44, 42, 97
+				set_temp_variable = { red = 44 } divide_temp_variable = { red = 255 }
+				set_temp_variable = { green = 42 } divide_temp_variable = { green = 255 }
+				set_temp_variable = { blue = 97 } divide_temp_variable = { blue = 255 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { FROM.regime_id = 4 }
+				}
+				# 128, 0, 0
+				set_temp_variable = { red = 128 } divide_temp_variable = { red = 255 }
+				set_temp_variable = { green = 0 } divide_temp_variable = { green = 255 }
+				set_temp_variable = { blue = 0 } divide_temp_variable = { blue = 255 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { FROM.regime_id = 5 }
+				}
+				# 255, 0, 0
+				set_temp_variable = { red = 255 } divide_temp_variable = { red = 255 }
+				set_temp_variable = { green = 0 } divide_temp_variable = { green = 255 }
+				set_temp_variable = { blue = 0 } divide_temp_variable = { blue = 255 }
+			}
+
+			#always = yes
+		}
+
+
+		# a target list that can be used to limit which scopes will be rendered on map
+		# similar to targeted decisions
+		# highly recommended for perfomance, otherwise it will try to render for every scope
+		targets = {
+			#target_array = robot_map_icon_array
+			#targets
+			#target_trigger
+			#... everything targeted decisions support
+		}
+
+		# if the border has thickness then set
+		thickness = yes
+	}
+
+	bottom = {
+		# same structure as top
+
+		type = none
+	}
+
+
+	# if we want to show texts on map this you can set far_text & near_text
+	# must be one of the:
+	#  none
+	#  country
+	#  state
+	#  faction
+	#  player
+
+	far_text = country
+	near_text = state
+
+	# if yes, the game will update the map mode daily_update
+	# otherwise force_update_map_mode effect can be used
+	update_daily = yes
+
+	}
+
+	dominant_ideology = {
+	# the game will use name of the map mode for some strings:
+	# MAPMODE_TEST_MAP_MODE MAPMODE_TEST_MAP_MODE_NAME MAPMODE_TEST_MAP_MODE_DESCRIPTION as name & desc
+	# test_map_mode_tooltip & test_map_mode_tooltip_delayed for tooltips
+	# GFX_mapmode_buttons_deselected_small_test_map_mode GFX_mapmode_buttons_selected_small_test_map_mode for the icons
+
+	# there are two layers for a map mode. bottom & top
+	# both are same except during rendering they will be rendered in that order
+	# for each layer the game will figure out what borders to render and will ask script to pick a color for those
+	top = {
+
+		# type represents which borders will be used for rendering for this layer
+		# or it can represent one of the hard coded map mode layers
+		# must be one of following:
+		#   none #will render nothing for this layer
+		#   country #will render using country provinces
+		#   state #will render using state provinces
+		#   state_controller #will render using state provinces & controllers. if a state is shared between countries it will be called for each country
+
+		#   game_map_mode_country (these are hard coded map mode layers. if these are used all other layer entries are ignored)
+		#   game_map_mode_states
+		#   game_map_mode_diplomacy
+		#   game_map_mode_players
+		#   game_map_mode_factions
+		#   game_map_mode_ideology
+		type = country
+
+		# this trigger will be used for setting the color of a specific border
+		# if trigger returns true then it will render that border
+		# scope depends on type of the layer
+		# scope is player
+		# from scope depends on type
+		#   country: current country that will be rendered
+		#   state: current state that will be rendered
+		#   state_controller: current state that will be rendered and from from scope will be the controller of current portion of the state
+		# if return value is true the game expects you to set some temp variables which will be used as border color etc
+
+		color = {
+			set_temp_variable = { red = 0.0 }
+			set_temp_variable = { blue = 0.0 }
+			set_temp_variable = { green = 0.0 }
+			set_temp_variable = { alpha = 1.0 }
+
+			if = {
+				limit = {
+					FROM = { fascism_plurality = yes }
+				}
+				# 115 60 4
+				set_temp_variable = { red = 115 } divide_temp_variable = { red = 255 }
+				set_temp_variable = { green = 60 } divide_temp_variable = { green = 255 }
+				set_temp_variable = { blue = 4 } divide_temp_variable = { blue = 255 }
+			}
+			else_if = {
+				limit = {
+					FROM = { traditionalism_plurality = yes }
+				}
+				# 28 55 175
+				set_temp_variable = { red = 28 } divide_temp_variable = { red = 255 }
+				set_temp_variable = { green = 55 } divide_temp_variable = { green = 255 }
+				set_temp_variable = { blue = 175 } divide_temp_variable = { blue = 255 }
+			}
+			else_if = {
+				limit = {
+					FROM = { conservatism_plurality = yes }
+				}
+				# 56 110 248
+				set_temp_variable = { red = 56 } divide_temp_variable = { red = 255 }
+				set_temp_variable = { green = 110 } divide_temp_variable = { green = 255 }
+				set_temp_variable = { blue = 248 } divide_temp_variable = { blue = 255 }
+			}
+			else_if = {
+				limit = {
+					FROM = { liberalism_plurality = yes }
+				}
+				# 229 180 19
+				set_temp_variable = { red = 229 } divide_temp_variable = { red = 255 }
+				set_temp_variable = { green = 180 } divide_temp_variable = { green = 255 }
+				set_temp_variable = { blue = 19 } divide_temp_variable = { blue = 255 }
+			}
+			else_if = {
+				limit = {
+					FROM = { radicalism_plurality = yes }
+				}
+				# 147 99 9
+				set_temp_variable = { red = 147 } divide_temp_variable = { red = 255 }
+				set_temp_variable = { green = 99 } divide_temp_variable = { green = 255 }
+				set_temp_variable = { blue = 9 } divide_temp_variable = { blue = 255 }
+			}
+			else_if = {
+				limit = {
+					FROM = { social_democracy_plurality = yes }
+				}
+				# 239 75 75
+				set_temp_variable = { red = 239 } divide_temp_variable = { red = 255 }
+				set_temp_variable = { green = 75 } divide_temp_variable = { green = 255 }
+				set_temp_variable = { blue = 75 } divide_temp_variable = { blue = 255 }
+			}
+			else_if = {
+				limit = {
+					FROM = { democratic_socialism_plurality = yes }
+				}
+				# 247 38 38
+				set_temp_variable = { red = 247 } divide_temp_variable = { red = 255 }
+				set_temp_variable = { green = 38 } divide_temp_variable = { green = 255 }
+				set_temp_variable = { blue = 38 } divide_temp_variable = { blue = 255 }
+			}
+			else_if = {
+				limit = {
+					FROM = { bolshevism_plurality = yes }
+				}
+				# 255 0 0
+				set_temp_variable = { red = 255 } divide_temp_variable = { red = 255 }
+				set_temp_variable = { green = 0 } divide_temp_variable = { green = 255 }
+				set_temp_variable = { blue = 0 } divide_temp_variable = { blue = 255 }
+			}
+			else_if = {
+				limit = {
+					FROM = { anarchism_plurality = yes }
+				}
+				# 168 5 5
+				set_temp_variable = { red = 168 } divide_temp_variable = { red = 255 }
+				set_temp_variable = { green = 5 } divide_temp_variable = { green = 255 }
+				set_temp_variable = { blue = 5 } divide_temp_variable = { blue = 255 }
+			}
+
+			#always = yes
+		}
+
+
+		# a target list that can be used to limit which scopes will be rendered on map
+		# similar to targeted decisions
+		# highly recommended for perfomance, otherwise it will try to render for every scope
+		targets = {
+			#target_array = robot_map_icon_array
+			#targets
+			#target_trigger
+			#... everything targeted decisions support
+		}
+
+		# if the border has thickness then set
+		thickness = yes
+	}
+
+	bottom = {
+		# same structure as top
+
+		type = none
+	}
+
+
+	# if we want to show texts on map this you can set far_text & near_text
+	# must be one of the:
+	#  none
+	#  country
+	#  state
+	#  faction
+	#  player
+
+	far_text = country
+	near_text = state
+
+	# if yes, the game will update the map mode daily_update
+	# otherwise force_update_map_mode effect can be used
+	update_daily = yes
+
+	}
+}

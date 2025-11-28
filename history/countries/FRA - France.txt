@@ -1,0 +1,109 @@
+capital = 16
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_recon = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_mountaineers = 1
+	tech_trucks = 1
+	motorised_infantry = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	mobile_warfare = 1
+	trade_interdiction = 1
+	formation_flying = 1
+	fuel_silos = 1
+	synth_oil_experiments = 1
+	oil_processing = 1
+	fuel_refining = 1
+}
+if = {
+	limit = {
+		NOT = { has_dlc = "By Blood Alone" }
+	}
+	set_technology = {
+		early_fighter = 1
+		fighter1 = 1
+		early_bomber = 1
+		tactical_bomber1 = 1
+		strategic_bomber1 = 1
+		CAS1 = 1
+		naval_bomber1 = 1
+	}
+}
+if = {
+	limit = {
+		NOT = {
+			has_dlc = "No Step Back"
+		}
+	}
+	set_technology = {
+		gwtank = 1
+		basic_light_tank = 1
+		improved_light_tank = 1
+		basic_heavy_tank = 1
+	}
+}
+if = {
+	limit = {
+		
+		has_dlc = "No Step Back"
+		
+	}
+	set_technology = {
+		gwtank_chassis = 1
+		basic_light_tank_chassis = 1
+		improved_light_tank_chassis = 1
+		basic_heavy_tank_chassis = 1
+	}
+}
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		transport = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		mtg_transport = 1
+	}
+}
+
+set_research_slots = 3
+set_convoys = 50
+set_stability = 0.75
+set_variable = { dissent_base = 2.5 }
+add_ideas = {
+	reform_dop_oligarchy
+	reform_dm_representative_democracy
+	reform_cl_guaranteed
+	reform_pao_private_ownership
+}
+set_cosmetic_tag = FRA_republic
+set_variable = { regime_id = 2 }
+
+set_politics = {
+	ruling_party = liberalism
+	last_election = "1933.11.1"
+	election_frequency = 48
+	elections_allowed = yes
+}
+set_popularities = {
+    fascism = 5
+    traditionalism = 7
+    conservatism = 19
+    liberalism = 40
+    radicalism = 9
+    social_democracy = 13
+    democratic_socialism = 5
+    bolshevism = 2
+    anarchism = 0
+}

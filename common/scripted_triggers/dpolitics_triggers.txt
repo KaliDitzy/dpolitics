@@ -1,0 +1,261 @@
+has_ideological_advisor = {
+    OR = {
+        has_allowed_idea_with_traits = { idea = fascist_demagogue characters = yes }
+        has_allowed_idea_with_traits = { idea = traditionalist_preacher characters = yes }
+        has_allowed_idea_with_traits = { idea = conservative_politician characters = yes }
+        has_allowed_idea_with_traits = { idea = liberal_politician characters = yes }
+        has_allowed_idea_with_traits = { idea = radical_agitator characters = yes }
+        has_allowed_idea_with_traits = { idea = social_democratic_politician characters = yes }
+        has_allowed_idea_with_traits = { idea = democratic_socialist_politician characters = yes }
+        has_allowed_idea_with_traits = { idea = bolshevik_revolutionary characters = yes }
+        has_allowed_idea_with_traits = { idea = anarchist_agitator characters = yes }
+    }
+}
+
+fascism_plurality = {
+    custom_trigger_tooltip = {
+        tooltip = fash_plurality
+        OR = { fascism > party_popularity@traditionalism has_country_flag = trad_banned }
+        OR = { fascism > party_popularity@conservatism has_country_flag = cons_banned }
+        OR = { fascism > party_popularity@liberalism has_country_flag = lib_banned }
+        OR = { fascism > party_popularity@radicalism has_country_flag = rad_banned }
+        OR = { fascism > party_popularity@social_democracy has_country_flag = socd_banned }
+        OR = { fascism > party_popularity@democratic_socialism has_country_flag = dsoc_banned }
+        OR = { fascism > party_popularity@bolshevism has_country_flag = bols_banned }
+        NOT = { has_country_flag = fash_banned }
+    }
+}
+traditionalism_plurality = {
+    custom_trigger_tooltip = {
+        tooltip = trad_plurality
+        OR = { traditionalism > party_popularity@fascism has_country_flag = fash_banned }
+        OR = { traditionalism > party_popularity@conservatism has_country_flag = cons_banned }
+        OR = { traditionalism > party_popularity@liberalism has_country_flag = lib_banned }
+        OR = { traditionalism > party_popularity@radicalism has_country_flag = rad_banned }
+        OR = { traditionalism > party_popularity@social_democracy has_country_flag = socd_banned }
+        OR = { traditionalism > party_popularity@democratic_socialism has_country_flag = dsoc_banned }
+        OR = { traditionalism > party_popularity@bolshevism has_country_flag = bols_banned }
+        NOT = { has_country_flag = trad_banned }
+    }
+}
+conservatism_plurality = {
+    custom_trigger_tooltip = {
+        tooltip = cons_plurality
+        OR = { conservatism > party_popularity@fascism has_country_flag = fash_banned }
+        OR = { conservatism > party_popularity@traditionalism has_country_flag = trad_banned }
+        OR = { conservatism > party_popularity@liberalism has_country_flag = lib_banned }
+        OR = { conservatism > party_popularity@radicalism has_country_flag = rad_banned }
+        OR = { conservatism > party_popularity@social_democracy has_country_flag = socd_banned }
+        OR = { conservatism > party_popularity@democratic_socialism has_country_flag = dsoc_banned }
+        OR = { conservatism > party_popularity@bolshevism has_country_flag = bols_banned }
+        NOT = { has_country_flag = cons_banned }
+    }
+}
+liberalism_plurality = {
+    custom_trigger_tooltip = {
+        tooltip = lib_plurality
+        OR = { liberalism > party_popularity@fascism has_country_flag = fash_banned }
+        OR = { liberalism > party_popularity@traditionalism has_country_flag = trad_banned }
+        OR = { liberalism > party_popularity@conservatism has_country_flag = cons_banned }
+        OR = { liberalism > party_popularity@radicalism has_country_flag = rad_banned }
+        OR = { liberalism > party_popularity@social_democracy has_country_flag = socd_banned }
+        OR = { liberalism > party_popularity@democratic_socialism has_country_flag = dsoc_banned }
+        OR = { liberalism > party_popularity@bolshevism has_country_flag = bols_banned }
+        NOT = { has_country_flag = lib_banned }
+    }
+}
+radicalism_plurality = {
+    custom_trigger_tooltip = {
+        tooltip = rad_plurality
+        OR = { radicalism > party_popularity@fascism has_country_flag = fash_banned }
+        OR = { radicalism > party_popularity@traditionalism has_country_flag = trad_banned }
+        OR = { radicalism > party_popularity@conservatism has_country_flag = cons_banned }
+        OR = { radicalism > party_popularity@liberalism has_country_flag = lib_banned }
+        OR = { radicalism > party_popularity@social_democracy has_country_flag = socd_banned }
+        OR = { radicalism > party_popularity@democratic_socialism has_country_flag = dsoc_banned }
+        OR = { radicalism > party_popularity@bolshevism has_country_flag = bols_banned }
+        NOT = { has_country_flag = rad_banned }
+    }
+}
+social_democracy_plurality = {
+    custom_trigger_tooltip = {
+        tooltip = socd_plurality
+        OR = { social_democracy > party_popularity@fascism has_country_flag = fash_banned }
+        OR = { social_democracy > party_popularity@traditionalism has_country_flag = trad_banned }
+        OR = { social_democracy > party_popularity@conservatism has_country_flag = cons_banned }
+        OR = { social_democracy > party_popularity@liberalism has_country_flag = lib_banned }
+        OR = { social_democracy > party_popularity@radicalism has_country_flag = rad_banned }
+        OR = { social_democracy > party_popularity@democratic_socialism has_country_flag = dsoc_banned }
+        OR = { social_democracy > party_popularity@bolshevism has_country_flag = bols_banned }
+        NOT = { has_country_flag = socd_banned }
+    }
+}
+democratic_socialism_plurality = {
+    custom_trigger_tooltip = {
+        tooltip = dsoc_plurality
+        OR = { democratic_socialism > party_popularity@fascism has_country_flag = fash_banned }
+        OR = { democratic_socialism > party_popularity@traditionalism has_country_flag = trad_banned }
+        OR = { democratic_socialism > party_popularity@conservatism has_country_flag = cons_banned }
+        OR = { democratic_socialism > party_popularity@liberalism has_country_flag = lib_banned }
+        OR = { democratic_socialism > party_popularity@radicalism has_country_flag = rad_banned }
+        OR = { democratic_socialism > party_popularity@social_democracy has_country_flag = socd_banned }
+        OR = { democratic_socialism > party_popularity@bolshevism has_country_flag = bols_banned }
+        NOT = { has_country_flag = dsoc_banned }
+    }
+}
+bolshevism_plurality = {
+    custom_trigger_tooltip = {
+        tooltip = bols_plurality
+        OR = { bolshevism > party_popularity@fascism has_country_flag = fash_banned }
+        OR = { bolshevism > party_popularity@traditionalism has_country_flag = trad_banned }
+        OR = { bolshevism > party_popularity@conservatism has_country_flag = cons_banned }
+        OR = { bolshevism > party_popularity@liberalism has_country_flag = lib_banned }
+        OR = { bolshevism > party_popularity@radicalism has_country_flag = rad_banned }
+        OR = { bolshevism > party_popularity@social_democracy has_country_flag = socd_banned }
+        OR = { bolshevism > party_popularity@democratic_socialism has_country_flag = dsoc_banned }
+        NOT = { has_country_flag = bols_banned }
+    }
+}
+anarchism_plurality = {
+    custom_trigger_tooltip = {
+        tooltip = anar_plurality
+        OR = { anarchism > party_popularity@fascism has_country_flag = fash_banned }
+        OR = { anarchism > party_popularity@traditionalism has_country_flag = trad_banned }
+        OR = { anarchism > party_popularity@conservatism has_country_flag = cons_banned }
+        OR = { anarchism > party_popularity@liberalism has_country_flag = lib_banned }
+        OR = { anarchism > party_popularity@radicalism has_country_flag = rad_banned }
+        OR = { anarchism > party_popularity@social_democracy has_country_flag = socd_banned }
+        OR = { anarchism > party_popularity@democratic_socialism has_country_flag = dsoc_banned }
+        OR = { anarchism > party_popularity@bolshevism has_country_flag = bols_banned }
+    }
+}
+
+is_right = {
+    OR = {
+        has_government = fascism
+        has_government = traditionalism
+        has_government = conservatism
+    }
+}
+
+is_center = {
+    OR = {
+        has_government = liberalism
+        has_government = radicalism
+        has_government = social_democracy
+    }
+}
+
+is_left = {
+    OR = {
+        has_government = democratic_socialism
+        has_government = bolshevism
+        has_government = anarchism
+    }
+}
+
+is_moderate = {
+    OR = {
+        has_government = conservatism
+        has_government = liberalism
+        has_government = social_democracy
+    }
+}
+
+german_capital_state = {
+    custom_trigger_tooltip = {
+        tooltip = has_german_capital_state_tt
+        capital_scope = {
+            OR = {
+                state = 8
+                state = 42
+                state = 51
+                state = 57
+                state = 56
+                state = 55
+                state = 978
+                state = 50
+                state = 59
+                state = 60
+                state = 54
+                state = 52
+                state = 848
+                state = 3
+                state = 8
+                state = 151
+                state = 847
+                state = 153
+                state = 39
+                state = 976
+                state = 975
+                state = 4
+                state = 152
+                state = 53
+                state = 972
+                state = 69
+                state = 74
+                state = 65
+                state = 64
+                state = 61
+                state = 62
+                state = 68
+                state = 66
+                state = 67
+                state = 153
+                state = 63
+                state = 85
+                state = 763
+                state = 5
+                state = 188 
+            }
+        }
+    }
+}
+
+reform_dop_minimum_requirements = {
+    set_temp_variable = { tmp = 40 } custom_trigger_tooltip = { tooltip = dissent_at_least NOT = { check_variable = { dissent < tmp } } }
+}
+reform_dm_minimum_requirements = {
+    set_temp_variable = { tmp = 25 } custom_trigger_tooltip = { tooltip = dissent_at_least NOT = { check_variable = { dissent < tmp } } }
+}
+reform_cl_minimum_requirements = {
+    set_temp_variable = { tmp = 15 } custom_trigger_tooltip = { tooltip = dissent_at_least NOT = { check_variable = { dissent < tmp } } }
+}
+reform_pao_minimum_requirements = {
+    set_temp_variable = { tmp = 25 } custom_trigger_tooltip = { tooltip = dissent_at_least NOT = { check_variable = { dissent < tmp } } }
+}
+
+cosmetic_monarchy = {
+    has_idea = reform_dop_monarchy
+
+    OR = {
+        has_idea = reform_dm_autocracy
+        has_idea = reform_dm_representative_democracy
+    }
+    NOT = { has_idea = reform_pao_private_property_abolished }
+}
+cosmetic_republic = {
+    OR = {
+        has_idea = reform_dop_oligarchy
+        has_idea = reform_dop_minarchy
+    }
+    OR = {
+        has_idea = reform_dm_representative_democracy
+        has_idea = reform_dm_direct_democracy
+        has_idea = reform_dm_free_association
+    }
+}
+cosmetic_junta = {
+    has_idea = reform_dop_oligarchy
+    OR = {
+        has_idea = reform_dm_corporatism
+        has_idea = reform_dm_autocracy
+    }
+    NOT = { has_idea = reform_pao_private_property_abolished }
+}
+cosmetic_anarchist = {
+    has_idea = reform_dop_anarchy
+}
+cosmetic_bolshevik = {
+    has_idea = reform_pao_private_property_abolished
+}

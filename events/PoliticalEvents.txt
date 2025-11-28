@@ -1,0 +1,805 @@
+﻿add_namespace = politics
+
+# OPPOSITION EVENTS
+
+add_namespace = politics.opposition
+
+@opposition_days = 96
+@opposition_dissent = 1
+# Opposition Against Fascism
+country_event = {
+	id = politics.opposition.1
+	title = politics.opposition.1.t
+	desc = politics.opposition.1.d
+	picture = GFX_report_event_election_vote
+
+	trigger = {
+		has_government = fascism
+	}
+
+	mean_time_to_happen = {
+		days = @opposition_days
+		modifier = {
+			factor = stability
+		}
+	}
+	
+	option = { #
+		name = politics.opposition.1.a
+
+		add_political_power = 25
+		add_stability = -0.05
+		set_temp_variable = { tmp = @opposition_dissent } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes
+	}
+
+	option = {
+		name = politics.opposition.1.b
+
+		random_list = {
+			100 = { add_popularity = { ideology = fascism popularity = -0.04 } }
+			100 = { add_popularity = { ideology = traditionalism popularity = 0.02 } }
+			50 = { add_popularity = { ideology = conservatism popularity = 0.02 } }
+		}
+		add_stability = 0.05
+	}
+}
+# Opposition Against Traditionalism
+country_event = {
+	id = politics.opposition.2
+	title = politics.opposition.2.t
+	desc = politics.opposition.2.d
+	picture = GFX_report_event_election_vote
+
+	trigger = {
+		has_government = traditionalism
+	}
+
+	mean_time_to_happen = {
+		days = @opposition_days
+		modifier = {
+			factor = stability
+		}
+	}
+	
+	option = { #
+		name = politics.opposition.2.a
+
+		add_political_power = 25
+		add_stability = -0.05
+		set_temp_variable = { tmp = @opposition_dissent } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes
+	}
+
+	option = {
+		name = politics.opposition.2.b
+
+		random_list = {
+			100 = { add_popularity = { ideology = fascism popularity = 0.02 } }
+			100 = { add_popularity = { ideology = traditionalism popularity = -0.04 } }
+			100 = { add_popularity = { ideology = conservatism popularity = 0.02 } }
+			50 = { add_popularity = { ideology = liberalism popularity = 0.02 } }
+		}
+		add_stability = 0.05
+	}
+}
+# Opposition Against Conservatism
+country_event = {
+	id = politics.opposition.3
+	title = politics.opposition.3.t
+	desc = politics.opposition.3.d
+	picture = GFX_report_event_election_vote
+
+	trigger = {
+		has_government = conservatism
+	}
+
+	mean_time_to_happen = {
+		days = @opposition_days
+		modifier = {
+			factor = stability
+		}
+	}
+	
+	option = { #
+		name = politics.opposition.3.a
+
+		add_political_power = 25
+		add_stability = -0.05
+		set_temp_variable = { tmp = @opposition_dissent } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes
+	}
+
+	option = {
+		name = politics.opposition.3.b
+
+		random_list = {
+			50 = { add_popularity = { ideology = fascism popularity = 0.02 } }
+			100 = { add_popularity = { ideology = traditionalism popularity = 0.02 } }
+			100 = { add_popularity = { ideology = conservatism popularity = -0.04 } }
+			100 = { add_popularity = { ideology = liberalism popularity = 0.02 } }
+			50 = { add_popularity = { ideology = radicalism popularity = 0.02 } }
+		}
+		add_stability = 0.05
+	}
+}
+# Opposition Against Liberalism
+country_event = {
+	id = politics.opposition.4
+	title = politics.opposition.4.t
+	desc = politics.opposition.4.d
+	picture = GFX_report_event_election_vote
+
+	trigger = {
+		has_government = liberalism
+	}
+
+	mean_time_to_happen = {
+		days = @opposition_days
+		modifier = {
+			factor = stability
+		}
+	}
+	
+	option = { #
+		name = politics.opposition.4.a
+
+		add_political_power = 25
+		add_stability = -0.05
+		set_temp_variable = { tmp = @opposition_dissent } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes
+	}
+
+	option = {
+		name = politics.opposition.4.b
+
+		random_list = {
+			50 = { add_popularity = { ideology = traditionalism popularity = 0.02 } }
+			100 = { add_popularity = { ideology = conservatism popularity = 0.02 } }
+			100 = { add_popularity = { ideology = liberalism popularity = -0.04 } }
+			100 = { add_popularity = { ideology = radicalism popularity = 0.02 } }
+			50 = { add_popularity = { ideology = social_democracy popularity = 0.02 } }
+		}
+		add_stability = 0.05
+	}
+}
+# Opposition Against Radicalism
+country_event = {
+	id = politics.opposition.5
+	title = politics.opposition.5.t
+	desc = politics.opposition.5.d
+	picture = GFX_report_event_election_vote
+
+	trigger = {
+		has_government = radicalism
+	}
+
+	mean_time_to_happen = {
+		days = @opposition_days
+		modifier = {
+			factor = stability
+		}
+	}
+	
+	option = { #
+		name = politics.opposition.5.a
+
+		add_political_power = 25
+		add_stability = -0.05
+		set_temp_variable = { tmp = @opposition_dissent } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes
+	}
+
+	option = {
+		name = politics.opposition.5.b
+
+		random_list = {
+			50 = { add_popularity = { ideology = conservatism popularity = 0.02 } }
+			100 = { add_popularity = { ideology = liberalism popularity = 0.02 } }
+			100 = { add_popularity = { ideology = radicalism popularity = -0.04 } }
+			100 = { add_popularity = { ideology = social_democracy popularity = 0.02 } }
+			50 = { add_popularity = { ideology = democratic_socialism popularity = 0.02 } }
+		}
+		add_stability = 0.05
+	}
+}
+# Opposition Against Social Democracy
+country_event = {
+	id = politics.opposition.6
+	title = politics.opposition.6.t
+	desc = politics.opposition.6.d
+	picture = GFX_report_event_election_vote
+
+	trigger = {
+		has_government = social_democracy
+	}
+
+	mean_time_to_happen = {
+		days = @opposition_days
+		modifier = {
+			factor = stability
+		}
+	}
+	
+	option = { #
+		name = politics.opposition.6.a
+
+		add_political_power = 25
+		add_stability = -0.05
+		set_temp_variable = { tmp = @opposition_dissent } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes
+	}
+
+	option = {
+		name = politics.opposition.6.a
+
+		random_list = {
+			50 = { add_popularity = { ideology = liberalism popularity = 0.02 } }
+			100 = { add_popularity = { ideology = radicalism popularity = 0.02 } }
+			100 = { add_popularity = { ideology = social_democracy popularity = -0.04 } }
+			100 = { add_popularity = { ideology = democratic_socialism popularity = 0.02 } }
+			50 = { add_popularity = { ideology = bolshevism popularity = 0.02 } }
+		}
+		add_stability = 0.05
+	}
+}
+# Opposition Against Democratic Socialism
+country_event = {
+	id = politics.opposition.7
+	title = politics.opposition.7.t
+	desc = politics.opposition.7.d
+	picture = GFX_report_event_election_vote
+
+	trigger = {
+		has_government = democratic_socialism
+	}
+
+	mean_time_to_happen = {
+		days = @opposition_days
+		modifier = {
+			factor = stability
+		}
+	}
+	
+	option = { #
+		name = politics.opposition.7.a
+
+		add_political_power = 25
+		add_stability = -0.05
+		set_temp_variable = { tmp = @opposition_dissent } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes
+	}
+
+	option = {
+		name = politics.opposition.7.a
+
+		random_list = {
+			50 = { add_popularity = { ideology = liberalism popularity = 0.02 } }
+			100 = { add_popularity = { ideology = social_democracy popularity = 0.02 } }
+			100 = { add_popularity = { ideology = democratic_socialism popularity = -0.04 } }
+			100 = { add_popularity = { ideology = bolshevism popularity = 0.02 } }
+			50 = { add_popularity = { ideology = anarchism popularity = 0.02 } }
+		}
+		add_stability = 0.05
+	}
+}
+# Opposition Against Bolshevism
+country_event = {
+	id = politics.opposition.8
+	title = politics.opposition.8.t
+	desc = politics.opposition.8.d
+	picture = GFX_report_event_election_vote
+
+	trigger = {
+		has_government = bolshevism
+	}
+
+	mean_time_to_happen = {
+		days = @opposition_days
+		modifier = {
+			factor = stability
+		}
+	}
+	
+	option = { #
+		name = politics.opposition.8.a
+
+		add_political_power = 5
+		add_stability = -0.05
+		set_temp_variable = { tmp = @opposition_dissent } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes
+	}
+
+	option = {
+		name = politics.opposition.8.a
+
+		random_list = {
+			50 = { add_popularity = { ideology = social_democracy popularity = 0.02 } }
+			100 = { add_popularity = { ideology = democratic_socialism popularity = 0.02 } }
+			100 = { add_popularity = { ideology = bolshevism popularity = -0.04 } }
+			100 = { add_popularity = { ideology = anarchism popularity = 0.02 } }
+		}
+		add_stability = 0.05
+	}
+}
+# Opposition Against Anarchism
+country_event = {
+	id = politics.opposition.9
+	title = politics.opposition.9.t
+	desc = politics.opposition.9.d
+	picture = GFX_report_event_election_vote
+
+	trigger = {
+		has_government = anarchism
+	}
+
+	mean_time_to_happen = {
+		days = @opposition_days
+		modifier = {
+			factor = stability
+		}
+	}
+	
+	option = { #
+		name = politics.opposition.9.a
+
+		add_political_power = 25
+		add_stability = -0.05
+		set_temp_variable = { tmp = @opposition_dissent } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes
+	}
+
+	option = {
+		name = politics.opposition.9.a
+
+		random_list = {
+			50 = { add_popularity = { ideology = democratic_socialism popularity = 0.02 } }
+			100 = { add_popularity = { ideology = bolshevism popularity = 0.02 } }
+			100 = { add_popularity = { ideology = anarchism popularity = -0.04 } }
+		}
+		add_stability = 0.05
+	}
+}
+
+# BORDER INFLUENCE EVENTS
+
+add_namespace = politics.border_influence
+
+@border_influence_chance = 41
+@border_influence_dissent = 5
+# Fascist Country Spillover
+country_event = {
+	id = politics.border_influence.1
+	title = politics.border_influence.1.t
+	desc = politics.border_influence.1.d
+	picture = GFX_report_event_election_vote
+
+	trigger = {
+		NOT = {
+			has_government = fascism
+		}
+		any_neighbor_country = {
+			has_government = fascism
+		}
+
+		set_temp_variable_to_random = rnd
+		set_temp_variable = { chance = 1 }
+		divide_temp_variable = { chance = @border_influence_chance }
+		check_variable = { rnd < chance }
+	}
+
+	is_triggered_only = yes
+	
+	option = { #
+		name = politics.border_influence.1.a
+
+		add_political_power = 10
+		add_stability = -0.05
+		set_temp_variable = { tmp = @border_influence_dissent } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes
+	}
+
+	option = {
+		name = politics.border_influence.1.b
+
+		random_list = {
+			100 = { add_popularity = { ideology = ROOT popularity = -0.05 } }
+			100 = { add_popularity = { ideology = fascism popularity = 0.03 } }
+		}
+	}
+}
+# Traditionalist Country Spillover
+country_event = {
+	id = politics.border_influence.2
+	title = politics.border_influence.2.t
+	desc = politics.border_influence.2.d
+	picture = GFX_report_event_election_vote
+
+	trigger = {
+		NOT = {
+			has_government = traditionalism
+		}
+		any_neighbor_country = {
+			has_government = traditionalism
+		}
+
+		set_temp_variable_to_random = rnd
+		set_temp_variable = { chance = 1 }
+		divide_temp_variable = { chance = @border_influence_chance }
+		check_variable = { rnd < chance }
+	}
+
+	is_triggered_only = yes
+	
+	option = { #
+		name = politics.border_influence.2.a
+
+		add_political_power = 10
+		add_stability = -0.05
+		set_temp_variable = { tmp = @border_influence_dissent } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes
+	}
+
+	option = {
+		name = politics.border_influence.2.b
+
+		random_list = {
+			100 = { add_popularity = { ideology = ROOT popularity = -0.05 } }
+			100 = { add_popularity = { ideology = traditionalism popularity = 0.03 } }
+		}
+	}
+}
+# Conservative Country Spillover
+country_event = {
+	id = politics.border_influence.3
+	title = politics.border_influence.3.t
+	desc = politics.border_influence.3.d
+	picture = GFX_report_event_election_vote
+
+	trigger = {
+		NOT = {
+			has_government = conservatism
+		}
+		any_neighbor_country = {
+			has_government = conservatism
+		}
+
+		set_temp_variable_to_random = rnd
+		set_temp_variable = { chance = 1 }
+		divide_temp_variable = { chance = @border_influence_chance }
+		check_variable = { rnd < chance }
+	}
+
+	is_triggered_only = yes
+	
+	option = { #
+		name = politics.border_influence.3.a
+
+		add_political_power = 10
+		add_stability = -0.05
+		set_temp_variable = { tmp = @border_influence_dissent } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes
+	}
+
+	option = {
+		name = politics.border_influence.3.b
+
+		random_list = {
+			100 = { add_popularity = { ideology = ROOT popularity = -0.05 } }
+			100 = { add_popularity = { ideology = conservatism popularity = 0.03 } }
+		}
+	}
+}
+# Liberal Country Spillover
+country_event = {
+	id = politics.border_influence.4
+	title = politics.border_influence.4.t
+	desc = politics.border_influence.4.d
+	picture = GFX_report_event_election_vote
+
+	trigger = {
+		NOT = {
+			has_government = liberalism
+		}
+		any_neighbor_country = {
+			has_government = liberalism
+		}
+
+		set_temp_variable_to_random = rnd
+		set_temp_variable = { chance = 1 }
+		divide_temp_variable = { chance = @border_influence_chance }
+		check_variable = { rnd < chance }
+	}
+
+	is_triggered_only = yes
+	
+	option = { #
+		name = politics.border_influence.4.a
+
+		add_political_power = 10
+		add_stability = -0.05
+		set_temp_variable = { tmp = @border_influence_dissent } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes
+	}
+
+	option = {
+		name = politics.border_influence.4.b
+
+		random_list = {
+			100 = { add_popularity = { ideology = ROOT popularity = -0.05 } }
+			100 = { add_popularity = { ideology = liberalism popularity = 0.03 } }
+		}
+	}
+}
+# Radical Country Spillover
+country_event = {
+	id = politics.border_influence.5
+	title = politics.border_influence.5.t
+	desc = politics.border_influence.5.d
+	picture = GFX_report_event_election_vote
+
+	trigger = {
+		NOT = {
+			has_government = radicalism
+		}
+		any_neighbor_country = {
+			has_government = radicalism
+		}
+
+		set_temp_variable_to_random = rnd
+		set_temp_variable = { chance = 1 }
+		divide_temp_variable = { chance = @border_influence_chance }
+		check_variable = { rnd < chance }
+	}
+
+	is_triggered_only = yes
+	
+	option = { #
+		name = politics.border_influence.5.a
+
+		add_political_power = 10
+		add_stability = -0.05
+		set_temp_variable = { tmp = @border_influence_dissent } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes
+	}
+
+	option = {
+		name = politics.border_influence.5.b
+
+		random_list = {
+			100 = { add_popularity = { ideology = ROOT popularity = -0.05 } }
+			100 = { add_popularity = { ideology = radicalism popularity = 0.03 } }
+		}
+	}
+}
+# Social Democratic Country Spillover
+country_event = {
+	id = politics.border_influence.6
+	title = politics.border_influence.6.t
+	desc = politics.border_influence.6.d
+	picture = GFX_report_event_election_vote
+
+	trigger = {
+		NOT = {
+			has_government = social_democracy
+		}
+		any_neighbor_country = {
+			has_government = social_democracy
+		}
+
+		set_temp_variable_to_random = rnd
+		set_temp_variable = { chance = 1 }
+		divide_temp_variable = { chance = @border_influence_chance }
+		check_variable = { rnd < chance }
+	}
+
+	is_triggered_only = yes
+	
+	option = { #
+		name = politics.border_influence.6.a
+
+		add_political_power = 10
+		add_stability = -0.05
+		set_temp_variable = { tmp = @border_influence_dissent } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes
+	}
+
+	option = {
+		name = politics.border_influence.6.b
+
+		random_list = {
+			100 = { add_popularity = { ideology = ROOT popularity = -0.05 } }
+			100 = { add_popularity = { ideology = social_democracy popularity = 0.03 } }
+		}
+	}
+}
+# Democratic Socialist Country Spillover
+country_event = {
+	id = politics.border_influence.7
+	title = politics.border_influence.7.t
+	desc = politics.border_influence.7.d
+	picture = GFX_report_event_election_vote
+
+	trigger = {
+		NOT = {
+			has_government = democratic_socialism
+		}
+		any_neighbor_country = {
+			has_government = democratic_socialism
+		}
+
+		set_temp_variable_to_random = rnd
+		set_temp_variable = { chance = 1 }
+		divide_temp_variable = { chance = @border_influence_chance }
+		check_variable = { rnd < chance }
+	}
+
+	is_triggered_only = yes
+	
+	option = { #
+		name = politics.border_influence.7.a
+
+		add_political_power = 10
+		add_stability = -0.05
+		set_temp_variable = { tmp = @border_influence_dissent } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes
+	}
+
+	option = {
+		name = politics.border_influence.7.b
+
+		random_list = {
+			100 = { add_popularity = { ideology = ROOT popularity = -0.05 } }
+			100 = { add_popularity = { ideology = democratic_socialism popularity = 0.03 } }
+		}
+	}
+}
+# Bolshevik Country Spillover
+country_event = {
+	id = politics.border_influence.8
+	title = politics.border_influence.8.t
+	desc = politics.border_influence.8.d
+	picture = GFX_report_event_election_vote
+
+	trigger = {
+		NOT = {
+			has_government = bolshevism
+		}
+		any_neighbor_country = {
+			has_government = bolshevism
+		}
+
+		set_temp_variable_to_random = rnd
+		set_temp_variable = { chance = 1 }
+		divide_temp_variable = { chance = @border_influence_chance }
+		check_variable = { rnd < chance }
+	}
+
+	is_triggered_only = yes
+	
+	option = { #
+		name = politics.border_influence.8.a
+
+		add_political_power = 10
+		add_stability = -0.05
+		set_temp_variable = { tmp = @border_influence_dissent } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes
+	}
+
+	option = {
+		name = politics.border_influence.8.b
+
+		random_list = {
+			100 = { add_popularity = { ideology = ROOT popularity = -0.05 } }
+			100 = { add_popularity = { ideology = bolshevism popularity = 0.03 } }
+		}
+	}
+}
+# Anarchist Country Spillover
+country_event = {
+	id = politics.border_influence.9
+	title = politics.border_influence.9.t
+	desc = politics.border_influence.9.d
+	picture = GFX_report_event_election_vote
+
+	trigger = {
+		NOT = {
+			has_government = anarchism
+		}
+		any_neighbor_country = {
+			has_government = anarchism
+		}
+
+		set_temp_variable_to_random = rnd
+		set_temp_variable = { chance = 1 }
+		divide_temp_variable = { chance = @border_influence_chance }
+		check_variable = { rnd < chance }
+	}
+
+	is_triggered_only = yes
+	
+	option = { #
+		name = politics.border_influence.9.a
+
+		add_political_power = 10
+		add_stability = -0.05
+		set_temp_variable = { tmp = @border_influence_dissent } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes
+	}
+
+	option = {
+		name = politics.border_influence.9.b
+
+		random_list = {
+			100 = { add_popularity = { ideology = ROOT popularity = -0.05 } }
+			100 = { add_popularity = { ideology = anarchism popularity = 0.03 } }
+		}
+	}
+}
+
+# REGIME CHANGE EVENTS
+
+add_namespace = politics.regime_change
+
+# Monarchist Regime Comes Into Power
+news_event = {
+	id = politics.regime_change.1
+	title = politics.regime_change.1.t
+	desc = politics.regime_change.1.d
+	picture = GFX_report_event_election_vote
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = politics.regime_change.1.a
+		set_temp_variable = { tmp = @border_influence_dissent } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes
+	}
+}
+# Republican Regime Comes Into Power
+news_event = {
+	id = politics.regime_change.2
+	title = politics.regime_change.2.t
+	desc = politics.regime_change.2.d
+	picture = GFX_report_event_election_vote
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = politics.regime_change.2.a
+		set_temp_variable = { tmp = @border_influence_dissent } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes
+	}
+}
+# Military Regime Comes Into Power
+news_event = {
+	id = politics.regime_change.3
+	title = politics.regime_change.3.t
+	desc = politics.regime_change.3.d
+	picture = GFX_report_event_election_vote
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = politics.regime_change.3.a
+		set_temp_variable = { tmp = @border_influence_dissent } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes
+	}
+}
+# Anarchist Regime Comes Into Power
+news_event = {
+	id = politics.regime_change.4
+	title = politics.regime_change.4.t
+	desc = politics.regime_change.4.d
+	picture = GFX_report_event_election_vote
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = politics.regime_change.4.a
+		set_temp_variable = { tmp = @border_influence_dissent } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes
+	}
+}
+# Bolshevik Regime Comes Into Power
+news_event = {
+	id = politics.regime_change.5
+	title = politics.regime_change.5.t
+	desc = politics.regime_change.5.d
+	picture = GFX_report_event_election_vote
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = politics.regime_change.5.a
+		set_temp_variable = { tmp = @border_influence_dissent } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes
+	}
+}

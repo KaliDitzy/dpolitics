@@ -1,0 +1,520 @@
+defined_text = {
+    name = current_reform_title
+    text = {
+        trigger = {
+            check_variable = { current_selected_reform = 0 }
+        }
+        localization_key = "Distribution of Power"
+    }
+    text = {
+        trigger = {
+            check_variable = { current_selected_reform = 1 }
+        }
+        localization_key = "Decision-Making"
+    }
+    text = {
+        trigger = {
+            check_variable = { current_selected_reform = 2 }
+        }
+        localization_key = "Civil Liberties"
+    }
+    text = {
+        trigger = {
+            check_variable = { current_selected_reform = 3 }
+        }
+        localization_key = "Property and Ownership"
+    }
+}
+
+defined_text = {
+    name = option_1_title
+    text = {
+        trigger = {
+            check_variable = { current_selected_reform = 0 }
+        }
+        localization_key = reform_dop_monarchy
+    }
+    text = {
+        trigger = {
+            check_variable = { current_selected_reform = 1 }
+        }
+        localization_key = reform_dm_autocracy
+    }
+    text = {
+        trigger = {
+            check_variable = { current_selected_reform = 2 }
+        }
+        localization_key = reform_cl_indefinitely_suspended
+    }
+    text = {
+        trigger = {
+            check_variable = { current_selected_reform = 3 }
+        }
+        localization_key = reform_pao_feudal_structure
+    }
+}
+defined_text = {
+    name = option_2_title
+    text = {
+        trigger = {
+            check_variable = { current_selected_reform = 0 }
+        }
+        localization_key = reform_dop_oligarchy
+    }
+    text = {
+        trigger = {
+            check_variable = { current_selected_reform = 1 }
+        }
+        localization_key = reform_dm_technocracy
+    }
+    text = {
+        trigger = {
+            check_variable = { current_selected_reform = 2 }
+        }
+        localization_key = reform_cl_martial_law
+    }
+    text = {
+        trigger = {
+            check_variable = { current_selected_reform = 3 }
+        }
+        localization_key = reform_pao_private_ownership
+    }
+}
+defined_text = {
+    name = option_3_title
+    text = {
+        trigger = {
+            check_variable = { current_selected_reform = 0 }
+        }
+        localization_key = reform_dop_minarchy
+    }
+    text = {
+        trigger = {
+            check_variable = { current_selected_reform = 1 }
+        }
+        localization_key = reform_dm_corporatism
+    }
+    text = {
+        trigger = {
+            check_variable = { current_selected_reform = 2 }
+        }
+        localization_key = reform_cl_curtailed
+    }
+    text = {
+        trigger = {
+            check_variable = { current_selected_reform = 3 }
+        }
+        localization_key = reform_pao_private_property_abolished
+    }
+}
+defined_text = {
+    name = option_4_title
+    text = {
+        trigger = {
+            check_variable = { current_selected_reform = 0 }
+        }
+        localization_key = reform_dop_anarchy
+    }
+    text = {
+        trigger = {
+            check_variable = { current_selected_reform = 1 }
+        }
+        localization_key = reform_dm_representative_democracy
+    }
+    text = {
+        trigger = {
+            check_variable = { current_selected_reform = 2 }
+        }
+        localization_key = reform_cl_guaranteed
+    }
+}
+defined_text = {
+    name = option_5_title
+    text = {
+        trigger = {
+            check_variable = { current_selected_reform = 1 }
+        }
+        localization_key = reform_dm_direct_democracy
+    }
+    text = {
+        trigger = {
+            check_variable = { current_selected_reform = 2 }
+        }
+        localization_key = reform_cl_total_individual_freedom
+    }
+}
+defined_text = {
+    name = option_6_title
+    text = {
+        trigger = {
+            check_variable = { current_selected_reform = 1 }
+        }
+        localization_key = reform_dm_free_association
+    }
+}
+
+defined_text = {
+    name = option_1_desc
+    text = {
+        trigger = {
+            check_variable = { current_selected_reform = 0 }
+        }
+        localization_key = reform_dop_monarchy_desc
+    }
+    text = {
+        trigger = {
+            check_variable = { current_selected_reform = 1 }
+        }
+        localization_key = reform_dm_autocracy_desc
+    }
+    text = {
+        trigger = {
+            check_variable = { current_selected_reform = 2 }
+        }
+        localization_key = reform_cl_indefinitely_suspended_desc
+    }
+    text = {
+        trigger = {
+            check_variable = { current_selected_reform = 3 }
+        }
+        localization_key = reform_pao_feudal_structure_desc
+    }
+}
+defined_text = {
+    name = option_2_desc
+    text = {
+        trigger = {
+            check_variable = { current_selected_reform = 0 }
+        }
+        localization_key = reform_dop_oligarchy_desc
+    }
+    text = {
+        trigger = {
+            check_variable = { current_selected_reform = 1 }
+        }
+        localization_key = reform_dm_technocracy_desc
+    }
+    text = {
+        trigger = {
+            check_variable = { current_selected_reform = 2 }
+        }
+        localization_key = reform_cl_martial_law_desc
+    }
+    text = {
+        trigger = {
+            check_variable = { current_selected_reform = 3 }
+        }
+        localization_key = reform_pao_private_ownership_desc
+    }
+}
+defined_text = {
+    name = option_3_desc
+    text = {
+        trigger = {
+            check_variable = { current_selected_reform = 0 }
+        }
+        localization_key = reform_dop_minarchy_desc
+    }
+    text = {
+        trigger = {
+            check_variable = { current_selected_reform = 1 }
+        }
+        localization_key = reform_dm_corporatism_desc
+    }
+    text = {
+        trigger = {
+            check_variable = { current_selected_reform = 2 }
+        }
+        localization_key = reform_cl_curtailed_desc
+    }
+    text = {
+        trigger = {
+            check_variable = { current_selected_reform = 3 }
+        }
+        localization_key = reform_pao_private_property_abolished_desc
+    }
+}
+defined_text = {
+    name = option_4_desc
+    text = {
+        trigger = {
+            check_variable = { current_selected_reform = 0 }
+        }
+        localization_key = reform_dop_anarchy_desc
+    }
+    text = {
+        trigger = {
+            check_variable = { current_selected_reform = 1 }
+        }
+        localization_key = reform_dm_representative_democracy_desc
+    }
+    text = {
+        trigger = {
+            check_variable = { current_selected_reform = 2 }
+        }
+        localization_key = reform_cl_guaranteed_desc
+    }
+}
+defined_text = {
+    name = option_5_desc
+    text = {
+        trigger = {
+            check_variable = { current_selected_reform = 1 }
+        }
+        localization_key = reform_dm_direct_democracy_desc
+    }
+    text = {
+        trigger = {
+            check_variable = { current_selected_reform = 2 }
+        }
+        localization_key = reform_cl_total_individual_freedom_desc
+    }
+}
+defined_text = {
+    name = option_6_desc
+    text = {
+        trigger = {
+            check_variable = { current_selected_reform = 1 }
+        }
+        localization_key = reform_dm_free_association_desc
+    }
+}
+
+defined_text = {
+    name = current_reform_dop
+    text = {
+        trigger = {
+            has_idea = reform_dop_monarchy
+        }
+        localization_key = reform_dop_monarchy
+    }
+    text = {
+        trigger = {
+            has_idea = reform_dop_oligarchy
+        }
+        localization_key = reform_dop_oligarchy
+    }
+    text = {
+        trigger = {
+            has_idea = reform_dop_minarchy
+        }
+        localization_key = reform_dop_minarchy
+    }
+    text = {
+        trigger = {
+            has_idea = reform_dop_anarchy
+        }
+        localization_key = reform_dop_anarchy
+    }
+}
+defined_text = {
+    name = current_reform_dm
+    text = {
+        trigger = {
+            has_idea = reform_dm_autocracy
+        }
+        localization_key = reform_dm_autocracy
+    }
+    text = {
+        trigger = {
+            has_idea = reform_dm_technocracy
+        }
+        localization_key = reform_dm_technocracy
+    }
+    text = {
+        trigger = {
+            has_idea = reform_dm_corporatism
+        }
+        localization_key = reform_dm_corporatism
+    }
+    text = {
+        trigger = {
+            has_idea = reform_dm_representative_democracy
+        }
+        localization_key = reform_dm_representative_democracy
+    }
+    text = {
+        trigger = {
+            has_idea = reform_dm_direct_democracy
+        }
+        localization_key = reform_dm_direct_democracy
+    }
+    text = {
+        trigger = {
+            has_idea = reform_dm_free_association
+        }
+        localization_key = reform_dm_free_association
+    }
+}
+defined_text = {
+    name = current_reform_cl
+    text = {
+        trigger = {
+            has_idea = reform_cl_indefinitely_suspended
+        }
+        localization_key = reform_cl_indefinitely_suspended
+    }
+    text = {
+        trigger = {
+            has_idea = reform_cl_martial_law
+        }
+        localization_key = reform_cl_martial_law
+    }
+    text = {
+        trigger = {
+            has_idea = reform_cl_curtailed
+        }
+        localization_key = reform_cl_curtailed
+    }
+    text = {
+        trigger = {
+            has_idea = reform_cl_guaranteed
+        }
+        localization_key = reform_cl_guaranteed
+    }
+    text = {
+        trigger = {
+            has_idea = reform_cl_total_individual_freedom
+        }
+        localization_key = reform_cl_total_individual_freedom
+    }
+}
+defined_text = {
+    name = current_reform_pao
+    text = {
+        trigger = {
+            has_idea = reform_pao_feudal_structure
+        }
+        localization_key = reform_pao_feudal_structure
+    }
+    text = {
+        trigger = {
+            has_idea = reform_pao_private_ownership
+        }
+        localization_key = reform_pao_private_ownership
+    }
+    text = {
+        trigger = {
+            has_idea = reform_pao_private_property_abolished
+        }
+        localization_key = reform_pao_private_property_abolished
+    }
+}
+
+defined_text = {
+    name = current_regime_title
+    text = {
+        trigger = {
+            check_variable = { regime_id = 0 }
+        }
+        localization_key = "Unique"
+    }
+    text = {
+        trigger = {
+            check_variable = { regime_id = 1 }
+            has_idea = reform_pao_feudal_structure
+        }
+        localization_key = "Feudal Monarchy"
+    }
+    text = {
+        trigger = {
+            check_variable = { regime_id = 1 }
+            has_idea = reform_dm_autocracy
+        }
+        localization_key = "Absolute Monarchy"
+    }
+    text = {
+        trigger = {
+            check_variable = { regime_id = 1 }
+        }
+        localization_key = "Constitutional Monarchy"
+    }
+    text = {
+        trigger = {
+            check_variable = { regime_id = 2 }
+            has_idea = reform_pao_private_property_abolished
+        }
+        localization_key = "Communist Republic"
+    }
+    text = {
+        trigger = {
+            check_variable = { regime_id = 2 }
+        }
+        localization_key = "Republic"
+    }
+    text = {
+        trigger = {
+            check_variable = { regime_id = 3 }
+        }
+        localization_key = "Military Junta"
+    }
+    text = {
+        trigger = {
+            check_variable = { regime_id = 4 }
+        }
+        localization_key = "Anarchist Commune"
+    }
+    text = {
+        trigger = {
+            check_variable = { regime_id = 5 }
+        }
+        localization_key = "Communist Dictatorship"
+    }
+}
+defined_text = {
+    name = dominant_ideology_title
+    text = {
+        trigger = {
+            fascism_plurality = yes
+        }
+        localization_key = fascism
+    }
+    text = {
+        trigger = {
+            traditionalism_plurality = yes
+        }
+        localization_key = traditionalism
+    }
+    text = {
+        trigger = {
+            conservatism_plurality = yes
+        }
+        localization_key = conservatism
+    }
+    text = {
+        trigger = {
+            liberalism_plurality = yes
+        }
+        localization_key = liberalism
+    }
+    text = {
+        trigger = {
+            radicalism_plurality = yes
+        }
+        localization_key = radicalism
+    }
+    text = {
+        trigger = {
+            social_democracy_plurality = yes
+        }
+        localization_key = social_democracy
+    }
+    text = {
+        trigger = {
+            democratic_socialism_plurality = yes
+        }
+        localization_key = democratic_socialism
+    }
+    text = {
+        trigger = {
+            bolshevism_plurality = yes
+        }
+        localization_key = bolshevism
+    }
+    text = {
+        trigger = {
+            anarchism_plurality = yes
+        }
+        localization_key = anarchism
+    }
+}

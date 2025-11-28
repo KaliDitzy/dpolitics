@@ -1,0 +1,130 @@
+ideas = {
+	hidden_ideas = {
+		reform_dop_monarchy = {
+			name = reform_dop_monarchy
+		}
+		reform_dop_oligarchy = {
+			name = reform_dop_oligarchy
+		}
+		reform_dop_minarchy = {
+			name = reform_dop_minarchy
+		}
+		reform_dop_anarchy = {
+			name = reform_dop_anarchy
+		}
+		
+		reform_dm_autocracy = {
+			name = reform_dm_autocracy
+			on_add = {
+				set_politics = {
+					ruling_party = ROOT
+					elections_allowed = no
+				}
+			}
+			on_remove = {
+				retire_leader = yes
+			}
+		}
+		reform_dm_technocracy = {
+			name = reform_dm_technocracy
+			on_add = {
+				set_politics = {
+					ruling_party = ROOT
+					elections_allowed = no
+				}
+			}
+			on_remove = {
+				retire_leader = yes
+			}
+		}
+		reform_dm_corporatism = {
+			name = reform_dm_corporatism
+			on_add = {
+				set_politics = {
+					ruling_party = ROOT
+					elections_allowed = no
+				}
+			}
+			modifier = {
+				dissent_gain = 0.5
+			}
+			on_remove = {
+				retire_leader = yes
+			}
+		}
+		reform_dm_representative_democracy = {
+			name = reform_dm_representative_democracy
+			on_add = {
+				set_politics = {
+					ruling_party = ROOT
+					elections_allowed = yes
+				}
+			}
+			on_remove = {
+				retire_leader = yes
+			}
+		}
+		reform_dm_direct_democracy = {
+			name = reform_dm_direct_democracy
+			on_add = {
+				set_politics = {
+					ruling_party = ROOT
+					elections_allowed = yes
+				}
+			}
+			on_remove = {
+				retire_leader = yes
+			}
+		}
+		reform_dm_free_association = {
+			name = reform_dm_free_association
+			on_add = {
+				set_politics = {
+					ruling_party = ROOT
+					elections_allowed = no
+				}
+			}
+			on_remove = {
+				retire_leader = yes
+			}
+		}
+		
+		reform_cl_indefinitely_suspended = {
+			name = reform_cl_indefinitely_suspended
+			modifier = {
+				custom_modifier_tooltip = weekly_dissent_minus_4_tt
+			}
+		}
+		reform_cl_martial_law = {
+			name = reform_cl_martial_law
+			modifier = {
+				custom_modifier_tooltip = weekly_dissent_minus_2_tt
+			}
+		}
+		reform_cl_curtailed = {
+			name = reform_cl_curtailed
+			modifier = {
+				custom_modifier_tooltip = weekly_dissent_minus_1_tt
+			}
+		}
+		reform_cl_guaranteed = {
+			name = reform_cl_guaranteed
+		}
+		reform_cl_total_individual_freedom = {
+			name = reform_cl_total_individual_freedom
+			modifier = {
+				custom_modifier_tooltip = weekly_dissent_plus_1_tt
+			}
+		}
+
+		reform_pao_feudal_structure = {
+			name = reform_pao_feudal_structure
+		}
+		reform_pao_private_ownership = {
+			name = reform_pao_private_ownership
+		}
+		reform_pao_private_property_abolished = {
+			name = reform_pao_private_property_abolished
+		}
+	}
+}

@@ -1,0 +1,762 @@
+recalculate_dissent = {
+	set_variable = { dissent_change_base = 0.5 }
+
+	# MECHANICAL
+	set_temp_variable = { inv_stability = 0.5 }
+	subtract_from_temp_variable = { inv_stability = stability }
+	add_to_variable = { dissent_change_base = inv_stability }
+
+	# IDEOLOGY
+	if = {
+		limit = {
+			OR = {
+				has_government = fascism
+				has_government = bolshevism
+			}
+		}
+		subtract_from_variable = { dissent_change_base = 1 }
+	}
+	if = {
+		limit = {
+			has_government = traditionalism
+		}
+		subtract_from_variable = { dissent_change_base = 0.75 }
+	}
+	if = {
+		limit = {
+			OR = {
+				has_government = conservatism
+				has_government = democratic_socialism
+			}
+		}
+		subtract_from_variable = { dissent_change_base = 0.25 }
+	}
+	if = {
+		limit = {
+			has_government = liberalism
+			has_government = social_democracy
+		}
+		subtract_from_variable = { dissent_change_base = -0.25 }
+	}
+	if = {
+		limit = {
+			OR = {
+				has_government = radicalism
+				has_government = anarchism
+			}
+		}
+		subtract_from_variable = { dissent_change_base = -0.5 }
+	}
+	
+	### IDEAS
+	# Traits
+	if = {
+		limit = {
+			has_idea_with_trait = political_dissenter
+		}
+		subtract_from_variable = { dissent_change_base = -0.5 }
+	}
+	if = {
+		limit = {
+			has_idea_with_trait = iron_fist
+		}
+		subtract_from_variable = { dissent_change_base = 0.5 }
+	}
+
+	## Reforms
+	# Civil Liberties
+	if = {
+		limit = {
+			has_idea = reform_cl_indefinitely_suspended
+		}
+		subtract_from_variable = { dissent_change_base = 0.4 }
+	}
+	if = {
+		limit = {
+			has_idea = reform_cl_martial_law
+		}
+		subtract_from_variable = { dissent_change_base = 0.2 }
+	}
+	if = {
+		limit = {
+			has_idea = reform_cl_curtailed
+		}
+		subtract_from_variable = { dissent_change_base = 0.1 }
+	}
+	if = {
+		limit = {
+			has_idea = reform_cl_total_individual_freedom
+		}
+		add_to_variable = { dissent_change_base = 0.1 }
+	}
+
+	clamp_variable = {
+		var = dissent_base
+		min = 0
+		max = 100
+	}
+	set_variable = { dissent = dissent_base }
+	set_variable = { dissent_change = dissent_change_base }
+	clamp_variable = {
+		var = dissent
+		min = 0
+		max = 100
+	}
+	
+	hidden_effect = { add_dynamic_modifier = { modifier = dissent_modifier } }
+	set_variable = { dissent_stability_impact = -15 }
+	add_to_variable = { dissent_stability_impact = dissent }
+	multiply_variable = { dissent_stability_impact = -0.01 }
+	divide_variable = { dissent_stability_impact = 400 }
+	set_variable = { dissent_drift_defence_impact = dissent }
+	multiply_variable = { dissent_drift_defence_impact = -0.01 }
+	force_update_dynamic_modifier = yes
+}
+recalculate_cooldowns = {
+	subtract_from_variable = { fash_ban_cooldown = 1 } clamp_variable = { var = fash_ban_cooldown min = 0 }
+	subtract_from_variable = { trad_ban_cooldown = 1 } clamp_variable = { var = trad_ban_cooldown min = 0 }
+	subtract_from_variable = { cons_ban_cooldown = 1 } clamp_variable = { var = cons_ban_cooldown min = 0 }
+	subtract_from_variable = { lib_ban_cooldown = 1 } clamp_variable = { var = lib_ban_cooldown min = 0 }
+	subtract_from_variable = { rad_ban_cooldown = 1 } clamp_variable = { var = rad_ban_cooldown min = 0 }
+	subtract_from_variable = { socd_ban_cooldown = 1 } clamp_variable = { var = socd_ban_cooldown min = 0 }
+	subtract_from_variable = { dsoc_ban_cooldown = 1 } clamp_variable = { var = dsoc_ban_cooldown min = 0 }
+	subtract_from_variable = { bols_ban_cooldown = 1 } clamp_variable = { var = bols_ban_cooldown min = 0 }
+	subtract_from_variable = { anar_ban_cooldown = 1 } clamp_variable = { var = anar_ban_cooldown min = 0 }
+	
+	subtract_from_variable = { reform_dop_cooldown = 1 } clamp_variable = { var = reform_dop_cooldown min = 0 }
+	subtract_from_variable = { reform_dm_cooldown = 1 } clamp_variable = { var = reform_dm_cooldown min = 0 }
+	subtract_from_variable = { reform_cl_cooldown = 1 } clamp_variable = { var = reform_cl_cooldown min = 0 }
+	subtract_from_variable = { reform_pao_cooldown = 1 } clamp_variable = { var = reform_pao_cooldown min = 0 }
+}
+recalculate_gui = {
+	if = { limit = { has_government = fascism } set_variable = { ruling_party_highlight_y = 64 } }
+	else_if = { limit = { has_government = traditionalism } set_variable = { ruling_party_highlight_y = 90 } }
+	else_if = { limit = { has_government = conservatism } set_variable = { ruling_party_highlight_y = 116 } }
+	else_if = { limit = { has_government = liberalism } set_variable = { ruling_party_highlight_y = 142 } }
+	else_if = { limit = { has_government = radicalism } set_variable = { ruling_party_highlight_y = 168 } }
+	else_if = { limit = { has_government = social_democracy } set_variable = { ruling_party_highlight_y = 194 } }
+	else_if = { limit = { has_government = democratic_socialism } set_variable = { ruling_party_highlight_y = 220 } }
+	else_if = { limit = { has_government = bolshevism } set_variable = { ruling_party_highlight_y = 246 } }
+	else_if = { limit = { has_government = anarchism } set_variable = { ruling_party_highlight_y = 272 } }
+}
+recalculate_cosmetic_tag = {
+	if = {
+		limit = {
+			cosmetic_monarchy = yes
+		}
+		if = {
+			limit = {
+				NOT = { check_variable = { regime_id = 1 } }
+				is_subject = no
+			}
+			news_event = {
+				id = politics.regime_change.1
+				days = 3
+			}
+		}
+		set_variable = { regime_id = 1 }
+	}
+	else_if = {
+		limit = {
+			cosmetic_republic = yes
+		}
+		if = {
+			limit = {
+				NOT = { check_variable = { regime_id = 2 } }
+				is_subject = no
+			}
+			news_event = {
+				id = politics.regime_change.2
+				days = 3
+			}
+		}
+		set_variable = { regime_id = 2 }
+	}
+	else_if = {
+		limit = {
+			cosmetic_junta = yes
+		}
+		if = {
+			limit = {
+				NOT = { check_variable = { regime_id = 3 } }
+				is_subject = no
+			}
+			news_event = {
+				id = politics.regime_change.3
+				days = 3
+			}
+		}
+		set_variable = { regime_id = 3 }
+	}
+	else_if = {
+		limit = {
+			cosmetic_anarchist = yes
+		}
+		if = {
+			limit = {
+				NOT = { check_variable = { regime_id = 4 } }
+				is_subject = no
+			}
+			news_event = {
+				id = politics.regime_change.4
+				days = 3
+			}
+		}
+		set_variable = { regime_id = 4 }
+	}
+	else_if = {
+		limit = {
+			cosmetic_bolshevik = yes
+		}
+		if = {
+			limit = {
+				NOT = { check_variable = { regime_id = 5 } }
+				is_subject = no
+			}
+			news_event = {
+				id = politics.regime_change.5
+				days = 3
+			}
+		}
+		set_variable = { regime_id = 5 }
+	}
+	else = {
+		set_variable = { regime_id = 0 }
+	}
+
+	# ORIGINAL COUNTRIES
+	if = {
+		limit = {
+			original_tag = AUS
+		}
+		if = {
+			limit = {
+				cosmetic_monarchy = yes
+			}
+			set_cosmetic_tag = AUS_monarchy
+		}
+		else_if = {
+			limit = {
+				cosmetic_republic = yes
+			}
+			set_cosmetic_tag = AUS_republic
+		}
+		else_if = {
+			limit = {
+				cosmetic_junta = yes
+			}
+			set_cosmetic_tag = AUS_junta
+		}
+		else_if = {
+			limit = {
+				cosmetic_anarchist = yes
+			}
+			set_cosmetic_tag = AUS_anarchist
+		}
+		else_if = {
+			limit = {
+				cosmetic_bolshevik = yes
+			}
+			set_cosmetic_tag = AUS_bolshevik
+		}
+		else = {
+			drop_cosmetic_tag = yes
+		}
+	}
+	if = {
+		limit = {
+			original_tag = PRE
+		}
+		if = {
+			limit = {
+				cosmetic_monarchy = yes
+			}
+			set_cosmetic_tag = PRE_monarchy
+		}
+		else_if = {
+			limit = {
+				cosmetic_republic = yes
+			}
+			set_cosmetic_tag = PRE_republic
+		}
+		else_if = {
+			limit = {
+				cosmetic_junta = yes
+			}
+			set_cosmetic_tag = PRE_junta
+		}
+		else_if = {
+			limit = {
+				cosmetic_anarchist = yes
+			}
+			set_cosmetic_tag = PRE_anarchist
+		}
+		else_if = {
+			limit = {
+				cosmetic_bolshevik = yes
+			}
+			set_cosmetic_tag = PRE_bolshevik
+		}
+		else = {
+			drop_cosmetic_tag = yes
+		}
+	}
+	if = {
+		limit = {
+			original_tag = HOL
+		}
+		if = {
+			limit = {
+				cosmetic_monarchy = yes
+			}
+			set_cosmetic_tag = HOL_monarchy
+		}
+		else_if = {
+			limit = {
+				cosmetic_republic = yes
+			}
+			set_cosmetic_tag = HOL_republic
+		}
+		else_if = {
+			limit = {
+				cosmetic_junta = yes
+			}
+			set_cosmetic_tag = HOL_junta
+		}
+		else_if = {
+			limit = {
+				cosmetic_anarchist = yes
+			}
+			set_cosmetic_tag = HOL_anarchist
+		}
+		else_if = {
+			limit = {
+				cosmetic_bolshevik = yes
+			}
+			set_cosmetic_tag = HOL_bolshevik
+		}
+		else = {
+			drop_cosmetic_tag = yes
+		}
+	}
+	if = {
+		limit = {
+			original_tag = RHI
+		}
+		if = {
+			limit = {
+				cosmetic_monarchy = yes
+			}
+			set_cosmetic_tag = RHI_monarchy
+		}
+		else_if = {
+			limit = {
+				cosmetic_republic = yes
+			}
+			set_cosmetic_tag = RHI_republic
+		}
+		else_if = {
+			limit = {
+				cosmetic_junta = yes
+			}
+			set_cosmetic_tag = RHI_junta
+		}
+		else_if = {
+			limit = {
+				cosmetic_anarchist = yes
+			}
+			set_cosmetic_tag = RHI_anarchist
+		}
+		else_if = {
+			limit = {
+				cosmetic_bolshevik = yes
+			}
+			set_cosmetic_tag = RHI_bolshevik
+		}
+		else = {
+			drop_cosmetic_tag = yes
+		}
+	}
+	if = {
+		limit = {
+			original_tag = FRA
+		}
+		if = {
+			limit = {
+				cosmetic_monarchy = yes
+			}
+			set_cosmetic_tag = FRA_monarchy
+		}
+		else_if = {
+			limit = {
+				cosmetic_republic = yes
+			}
+			set_cosmetic_tag = FRA_republic
+		}
+		else_if = {
+			limit = {
+				cosmetic_junta = yes
+			}
+			set_cosmetic_tag = FRA_junta
+		}
+		else_if = {
+			limit = {
+				cosmetic_anarchist = yes
+			}
+			set_cosmetic_tag = FRA_anarchist
+		}
+		else_if = {
+			limit = {
+				cosmetic_bolshevik = yes
+			}
+			set_cosmetic_tag = FRA_bolshevik
+		}
+		else = {
+			drop_cosmetic_tag = yes
+		}
+	}
+	if = {
+		limit = {
+			original_tag = OCC
+		}
+		if = {
+			limit = {
+				cosmetic_monarchy = yes
+			}
+			set_cosmetic_tag = OCC_monarchy
+		}
+		else_if = {
+			limit = {
+				cosmetic_republic = yes
+			}
+			set_cosmetic_tag = OCC_republic
+		}
+		else_if = {
+			limit = {
+				cosmetic_junta = yes
+			}
+			set_cosmetic_tag = OCC_junta
+		}
+		else_if = {
+			limit = {
+				cosmetic_anarchist = yes
+			}
+			set_cosmetic_tag = OCC_anarchist
+		}
+		else_if = {
+			limit = {
+				cosmetic_bolshevik = yes
+			}
+			set_cosmetic_tag = OCC_bolshevik
+		}
+		else = {
+			drop_cosmetic_tag = yes
+		}
+	}
+	if = {
+		limit = {
+			original_tag = ITA
+		}
+		if = {
+			limit = {
+				cosmetic_monarchy = yes
+			}
+			set_cosmetic_tag = ITA_monarchy
+		}
+		else_if = {
+			limit = {
+				cosmetic_republic = yes
+			}
+			set_cosmetic_tag = ITA_republic
+		}
+		else_if = {
+			limit = {
+				cosmetic_junta = yes
+			}
+			set_cosmetic_tag = ITA_junta
+		}
+		else_if = {
+			limit = {
+				cosmetic_anarchist = yes
+			}
+			set_cosmetic_tag = ITA_anarchist
+		}
+		else_if = {
+			limit = {
+				cosmetic_bolshevik = yes
+			}
+			set_cosmetic_tag = ITA_bolshevik
+		}
+		else = {
+			drop_cosmetic_tag = yes
+		}
+	}
+	if = {
+		limit = {
+			original_tag = HUN
+		}
+		if = {
+			limit = {
+				cosmetic_monarchy = yes
+			}
+			set_cosmetic_tag = HUN_monarchy
+		}
+		else_if = {
+			limit = {
+				cosmetic_republic = yes
+			}
+			set_cosmetic_tag = HUN_republic
+		}
+		else_if = {
+			limit = {
+				cosmetic_junta = yes
+			}
+			set_cosmetic_tag = HUN_junta
+		}
+		else_if = {
+			limit = {
+				cosmetic_anarchist = yes
+			}
+			set_cosmetic_tag = HUN_anarchist
+		}
+		else_if = {
+			limit = {
+				cosmetic_bolshevik = yes
+			}
+			set_cosmetic_tag = HUN_bolshevik
+		}
+		else = {
+			drop_cosmetic_tag = yes
+		}
+	}
+
+	# formables
+	if = {
+		limit = {
+			has_country_flag = GER_formed
+		}
+		if = {
+			limit = {
+				cosmetic_monarchy = yes
+			}
+			set_cosmetic_tag = GER_monarchy
+		}
+		else_if = {
+			limit = {
+				cosmetic_republic = yes
+			}
+			set_cosmetic_tag = GER_republic
+		}
+		else_if = {
+			limit = {
+				cosmetic_junta = yes
+			}
+			set_cosmetic_tag = GER_junta
+		}
+		else_if = {
+			limit = {
+				cosmetic_anarchist = yes
+			}
+			set_cosmetic_tag = GER_anarchist
+		}
+		else_if = {
+			limit = {
+				cosmetic_bolshevik = yes
+			}
+			set_cosmetic_tag = GER_bolshevik
+		}
+		else = {
+			set_cosmetic_tag = GER
+		}
+	}
+}
+
+randomize_ideology_targets = { # Randomizes an AI country's motivation to support a certain ideology.
+	set_variable_to_random = {
+		var = fash_random_target
+		min = 0
+		max = 15
+	}
+	set_variable_to_random = {
+		var = trad_random_target
+		min = 0
+		max = 15
+	}
+	set_variable_to_random = {
+		var = cons_random_target
+		min = 0
+		max = 15
+	}
+	set_variable_to_random = {
+		var = lib_random_target
+		min = 0
+		max = 15
+	}
+	set_variable_to_random = {
+		var = rad_random_target
+		min = 0
+		max = 15
+	}
+	set_variable_to_random = {
+		var = socd_random_target
+		min = 0
+		max = 15
+	}
+	set_variable_to_random = {
+		var = dsoc_random_target
+		min = 0
+		max = 15
+	}
+	set_variable_to_random = {
+		var = bols_random_target
+		min = 0
+		max = 15
+	}
+	set_variable_to_random = {
+		var = anar_random_target
+		min = 0
+		max = 15
+	}
+}
+update_ideology_targets = { # Slightly shifts an AI country's motivation to support a certain ideology.
+	set_variable_to_random = { var = ded_rnd min = 0 max = 1 }
+	if = {
+		limit = {
+			check_variable = { ded_rnd > 0.916 }
+		}
+		set_variable_to_random = { var = ded_rnd min = -3 max = 3 }
+		set_variable = { ai_seeking_reform = ded_rnd }
+	}
+
+	set_variable_to_random = { var = ded_rnd min = -0.5 max = 0.5 }
+	add_to_variable = { fash_random_target = ded_rnd }
+	clamp_variable = { var = fash_random_target min = 0 max = 15 }
+
+	set_variable_to_random = { var = ded_rnd min = -0.5 max = 0.5 }
+	add_to_variable = { trad_random_target = ded_rnd }
+	clamp_variable = { var = trad_random_target min = 0 max = 15 }
+
+	set_variable_to_random = { var = ded_rnd min = -0.5 max = 0.5 }
+	add_to_variable = { cons_random_target = ded_rnd }
+	clamp_variable = { var = cons_random_target min = 0 max = 15 }
+
+	set_variable_to_random = { var = ded_rnd min = -0.5 max = 0.5 }
+	add_to_variable = { lib_random_target = ded_rnd }
+	clamp_variable = { var = lib_random_target min = 0 max = 15 }
+	set_variable_to_random = { var = ded_rnd min = -0.5 max = 0.5 }
+	add_to_variable = { rad_random_target = ded_rnd }
+	clamp_variable = { var = rad_random_target min = 0 max = 15 }
+
+	set_variable_to_random = { var = ded_rnd min = -0.5 max = 0.5 }
+	add_to_variable = { socd_random_target = ded_rnd }
+	clamp_variable = { var = socd_random_target min = 0 max = 15 }
+
+	set_variable_to_random = { var = ded_rnd min = -0.5 max = 0.5 }
+	add_to_variable = { dsoc_random_target = ded_rnd }
+	clamp_variable = { var = dsoc_random_target min = 0 max = 15 }
+	
+	set_variable_to_random = { var = ded_rnd min = -0.5 max = 0.5 }
+	add_to_variable = { bols_random_target = ded_rnd }
+	clamp_variable = { var = bols_random_target min = 0 max = 15 }
+
+	set_variable_to_random = { var = ded_rnd min = -0.5 max = 0.5 }
+	add_to_variable = { anar_random_target = ded_rnd }
+	clamp_variable = { var = anar_random_target min = 0 max = 15 }
+}
+
+reform_dop_minimum_effects = {
+	add_stability = 0.2
+	set_temp_variable = { tmp = -40 } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes
+    recalculate_cosmetic_tag = yes
+	set_variable = { reform_dop_cooldown = 28 }
+	subtract_from_variable = { ai_seeking_reform = 1 }
+}
+reform_dm_minimum_effects = {
+	add_stability = 0.125
+	set_temp_variable = { tmp = -25 } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes
+    recalculate_cosmetic_tag = yes
+	set_variable = { reform_dm_cooldown = 28 }
+	subtract_from_variable = { ai_seeking_reform = 1 }
+}
+reform_cl_minimum_effects = {
+	add_stability = 0.075
+	set_temp_variable = { tmp = -15 } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes
+    recalculate_cosmetic_tag = yes
+	set_variable = { reform_cl_cooldown = 28 }
+	subtract_from_variable = { ai_seeking_reform = 1 }
+}
+reform_pao_minimum_effects = {
+	add_stability = 0.125
+	set_temp_variable = { tmp = -25 } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes
+    recalculate_cosmetic_tag = yes
+	set_variable = { reform_pao_cooldown = 28 }
+	subtract_from_variable = { ai_seeking_reform = 1 }
+}
+
+d_dissent = {
+	FROM = {
+		add_to_variable = {
+			var = dissent_base
+			value = args^0?10
+		}
+		
+		log = "Added [?args^0?10|H%%] dissent for [FROM.GetName]"
+	}
+	recalculate_dissent = yes
+}
+
+d_spawn_army = {
+	if = {
+		limit = {
+			num_divisions < 1
+		}
+		load_oob = generic
+
+		if = {
+			limit = {
+				is_major = yes
+			}
+			capital_scope = {
+				for_loop_effect = {
+					end = PREV.num_of_civilian_factories
+					value = temp
+					
+					create_unit = {
+						division = "name = \"Infantry Division\" division_template = \"Large Infantry Division\" start_experience_factor = 0.5"
+						owner = PREV
+					}
+				}
+			}
+		}
+		else = {
+			capital_scope = {
+				for_loop_effect = {
+					end = PREV.num_of_civilian_factories
+					value = temp
+					
+					create_unit = {
+						division = "name = \"Infantry Division\" division_template = \"Small Infantry Division\" start_experience_factor = 0.5"
+						owner = PREV
+					}
+				}
+			}
+		}
+	}
+}
+
+d_force_ai_reform = {
+	set_variable_to_random = { var = ded_rnd min = 0 max = 1 }
+	if = {
+		limit = {
+			check_variable = { ded_rnd > 0.916 }
+		}
+		set_variable_to_random = { var = ded_rnd min = -3 max = 3 }
+		set_variable = { ai_seeking_reform = ded_rnd }
+	}
+}
+
+d_force_recalculate_cosmetic_tags = {
+	every_possible_country = {
+		recalculate_cosmetic_tag = yes
+	}
+}

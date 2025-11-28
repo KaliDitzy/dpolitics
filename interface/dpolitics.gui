@@ -1,0 +1,865 @@
+@BOXY = 13
+@ICONY = 11
+@TEXTY = 16
+
+@TEXTX = 174
+@SUPPORTX = 434
+@BANX = 460
+@UNBANX = 486
+
+@REFORMX0 = 22
+@REFORMX1 = 190
+@REFORMX2 = 358
+guiTypes = {
+    containerWindowType = {
+        name = "dpolitics_politics_gui" # Can be used in the window_name of scripted GUI
+        position = { x = 0 y = 0 }
+        size = { width = 100%% height= 100%% }
+
+        buttonType = {
+            name = "open_dpolitics"
+            position = { x = 98 y = 34 }
+            quadTextureSprite = "GFX_dpolitics_button"
+        }
+
+        instantTextBoxType = {
+            name ="dissent"
+            position = { x = 98 y = 58 }
+            font = "hoi_16mbs"
+            text = "DISSENT"
+            format = center
+            maxWidth = 30
+            maxHeight = 24
+            fixedsize = yes
+            pdx_tooltip = DISSENT_INFO
+            pdx_tooltip_delayed = DISSENT_INFO_DELAYED
+        }
+    }
+    containerWindowType = {
+        name = "dpolitics_base_gui" # Can be used in the window_name of scripted GUI
+        position = { x = -553 y = 78 }
+        show_position = { x = -3 y = 78 }
+        show_animation_type = decelerated
+        hide_animation_type = accelerated
+        animation_time = 300
+        size = { width = 550 height= 100%% }
+
+        background = {
+            name = "Background"
+            spriteType = "GFX_tiled_bg"
+        }
+        
+        iconType = {
+            position = { x = 13 y=46 }
+            name = "Background2"
+            spriteType ="GFX_dpolitics_main_bg"
+        }
+
+        iconType ={
+			name ="production_header_bg"
+			spriteType = "GFX_header_bg"
+			position = { x= 5 y = 07 }
+			Orientation = "UPPER_LEFT"
+		}
+
+        instantTextboxType = {
+            name = "dpolitics_base_title"
+            position = { x = 45 y = 8 }
+            textureFile = ""
+            font = "hoi_36header"
+            borderSize = {x = 0 y = 0}
+            text = "Government"
+            maxWidth = 500
+            maxHeight = 20
+            format = left
+        }
+
+        iconType ={
+            name ="dissent_value_bg"
+            spriteType = "GFX_generic_box_smallest"
+            position = { x = 420 y = @BOXY }
+            Orientation = "UPPER_LEFT"
+            pdx_tooltip = DISSENT_INFO
+            pdx_tooltip_delayed = DISSENT_INFO_DELAYED
+        }
+
+        iconType ={
+            name ="dissent_icon"
+            spriteType = "GFX_dissent_icon"
+            position = { x = 423 y = @ICONY }
+            Orientation = "UPPER_LEFT"
+            pdx_tooltip = DISSENT_INFO
+            pdx_tooltip_delayed = DISSENT_INFO_DELAYED
+        }
+
+        instantTextBoxType = {
+            name ="dissent"
+            position = { x = 440 y = @TEXTY }
+            font = "hoi_18mbs"
+            text = "DISSENT"
+            format = center
+            maxWidth = 50
+            maxHeight = 24
+            fixedsize = yes
+            pdx_tooltip = DISSENT_INFO
+            pdx_tooltip_delayed = DISSENT_INFO_DELAYED
+        }
+
+        buttonType = {
+            name = "close_button"
+            position = { x = -43 y = 9 }
+            quadTextureSprite ="GFX_closebutton"
+            buttonFont = "Main_14_black"
+            shortcut = "ESCAPE"
+            Orientation = "UPPER_RIGHT"
+            clicksound = click_close
+            pdx_tooltip = "CLOSE"
+        }
+
+        #
+
+        iconType ={
+            name ="ruling_party_highlight"
+            spriteType = "GFX_ruling_party_highlight"
+            position = { x = @TEXTX y = 64 }
+            Orientation = "UPPER_LEFT"
+        }
+
+        instantTextboxType = {
+            name = "fash_party_text"
+            position = { x = @TEXTX y = 66 }
+            font = "hoi_26mbs"
+            borderSize = {x = 0 y = 0}
+            text = "Fascists"
+            maxWidth = 256
+            maxHeight = 26
+            format = right
+        }
+        buttonType = {
+            name = "fash_support_button"
+            position = { x = @SUPPORTX y = 64 }
+            quadTextureSprite ="GFX_support_party"
+            Orientation = "UPPER_LEFT"
+            clicksound = click_close
+            pdx_tooltip = FASH_SUPPORT_BUTTON_TT
+            pdx_tooltip_delayed = SUPPORT_DELAYED_TT
+        }
+        buttonType = {
+            name = "fash_ban_button"
+            position = { x = @BANX y = 64 }
+            quadTextureSprite ="GFX_ban_party"
+            Orientation = "UPPER_LEFT"
+            clicksound = click_close
+            pdx_tooltip = FASH_BAN_BUTTON_TT
+            pdx_tooltip_delayed = BAN_DELAYED_TT
+        }
+        buttonType = {
+            name = "fash_unban_button"
+            position = { x = @UNBANX y = 64 }
+            quadTextureSprite ="GFX_unban_party"
+            Orientation = "UPPER_LEFT"
+            clicksound = click_close
+            pdx_tooltip = FASH_UNBAN_BUTTON_TT
+            pdx_tooltip_delayed = UNBAN_DELAYED_TT
+        }
+
+        instantTextboxType = {
+            name = "trad_party_text"
+            position = { x = @TEXTX y = 92 }
+            font = "hoi_26mbs"
+            borderSize = {x = 0 y = 0}
+            text = "Traditionalists"
+            maxWidth = 256
+            maxHeight = 26
+            format = right
+        }
+        buttonType = {
+            name = "trad_support_button"
+            position = { x = @SUPPORTX y = 90 }
+            quadTextureSprite ="GFX_support_party"
+            Orientation = "UPPER_LEFT"
+            clicksound = click_close
+            pdx_tooltip = TRAD_SUPPORT_BUTTON_TT
+            pdx_tooltip_delayed = SUPPORT_DELAYED_TT
+        }
+        buttonType = {
+            name = "trad_ban_button"
+            position = { x = @BANX y = 90 }
+            quadTextureSprite ="GFX_ban_party"
+            Orientation = "UPPER_LEFT"
+            clicksound = click_close
+            pdx_tooltip = TRAD_BAN_BUTTON_TT
+            pdx_tooltip_delayed = BAN_DELAYED_TT
+        }
+        buttonType = {
+            name = "trad_unban_button"
+            position = { x = @UNBANX y = 90 }
+            quadTextureSprite ="GFX_unban_party"
+            Orientation = "UPPER_LEFT"
+            clicksound = click_close
+            pdx_tooltip = TRAD_UNBAN_BUTTON_TT
+            pdx_tooltip_delayed = UNBAN_DELAYED_TT
+        }
+
+        instantTextboxType = {
+            name = "cons_party_text"
+            position = { x = @TEXTX y = 118 }
+            font = "hoi_26mbs"
+            borderSize = {x = 0 y = 0}
+            text = "Conservatives"
+            maxWidth = 256
+            maxHeight = 26
+            format = right
+        }
+        buttonType = {
+            name = "cons_support_button"
+            position = { x = @SUPPORTX y = 116 }
+            quadTextureSprite ="GFX_support_party"
+            Orientation = "UPPER_LEFT"
+            clicksound = click_close
+            pdx_tooltip = CONS_SUPPORT_BUTTON_TT
+            pdx_tooltip_delayed = SUPPORT_DELAYED_TT
+        }
+        buttonType = {
+            name = "cons_ban_button"
+            position = { x = @BANX y = 116 }
+            quadTextureSprite ="GFX_ban_party"
+            Orientation = "UPPER_LEFT"
+            clicksound = click_close
+            pdx_tooltip = CONS_BAN_BUTTON_TT
+            pdx_tooltip_delayed = BAN_DELAYED_TT
+        }
+        buttonType = {
+            name = "cons_unban_button"
+            position = { x = @UNBANX y = 116 }
+            quadTextureSprite ="GFX_unban_party"
+            Orientation = "UPPER_LEFT"
+            clicksound = click_close
+            pdx_tooltip = CONS_UNBAN_BUTTON_TT
+            pdx_tooltip_delayed = UNBAN_DELAYED_TT
+        }
+
+        instantTextboxType = {
+            name = "lib_party_text"
+            position = { x = @TEXTX y = 144 }
+            font = "hoi_26mbs"
+            borderSize = {x = 0 y = 0}
+            text = "Liberals"
+            maxWidth = 256
+            maxHeight = 26
+            format = right
+        }
+        buttonType = {
+            name = "lib_support_button"
+            position = { x = @SUPPORTX y = 142 }
+            quadTextureSprite ="GFX_support_party"
+            Orientation = "UPPER_LEFT"
+            clicksound = click_close
+            pdx_tooltip = LIB_SUPPORT_BUTTON_TT
+            pdx_tooltip_delayed = SUPPORT_DELAYED_TT
+        }
+        buttonType = {
+            name = "lib_ban_button"
+            position = { x = @BANX y = 142 }
+            quadTextureSprite ="GFX_ban_party"
+            Orientation = "UPPER_LEFT"
+            clicksound = click_close
+            pdx_tooltip = LIB_BAN_BUTTON_TT
+            pdx_tooltip_delayed = BAN_DELAYED_TT
+        }
+        buttonType = {
+            name = "lib_unban_button"
+            position = { x = @UNBANX y = 142 }
+            quadTextureSprite ="GFX_unban_party"
+            Orientation = "UPPER_LEFT"
+            clicksound = click_close
+            pdx_tooltip = LIB_UNBAN_BUTTON_TT
+            pdx_tooltip_delayed = UNBAN_DELAYED_TT
+        }
+
+        instantTextboxType = {
+            name = "rad_party_text"
+            position = { x = @TEXTX y = 170 }
+            font = "hoi_26mbs"
+            borderSize = {x = 0 y = 0}
+            text = "Radicalists"
+            maxWidth = 256
+            maxHeight = 26
+            format = right
+        }
+        buttonType = {
+            name = "rad_support_button"
+            position = { x = @SUPPORTX y = 168 }
+            quadTextureSprite ="GFX_support_party"
+            Orientation = "UPPER_LEFT"
+            clicksound = click_close
+            pdx_tooltip = RAD_SUPPORT_BUTTON_TT
+            pdx_tooltip_delayed = SUPPORT_DELAYED_TT
+        }
+        buttonType = {
+            name = "rad_ban_button"
+            position = { x = @BANX y = 168 }
+            quadTextureSprite ="GFX_ban_party"
+            Orientation = "UPPER_LEFT"
+            clicksound = click_close
+            pdx_tooltip = RAD_BAN_BUTTON_TT
+            pdx_tooltip_delayed = BAN_DELAYED_TT
+        }
+        buttonType = {
+            name = "rad_unban_button"
+            position = { x = @UNBANX y = 168 }
+            quadTextureSprite ="GFX_unban_party"
+            Orientation = "UPPER_LEFT"
+            clicksound = click_close
+            pdx_tooltip = RAD_UNBAN_BUTTON_TT
+            pdx_tooltip_delayed = UNBAN_DELAYED_TT
+        }
+
+        instantTextboxType = {
+            name = "socd_party_text"
+            position = { x = @TEXTX y = 198 }
+            font = "hoi_26mbs"
+            borderSize = {x = 0 y = 0}
+            text = "Social Democrats"
+            maxWidth = 256
+            maxHeight = 26
+            format = right
+        }
+        buttonType = {
+            name = "socd_support_button"
+            position = { x = @SUPPORTX y = 194 }
+            quadTextureSprite ="GFX_support_party"
+            Orientation = "UPPER_LEFT"
+            clicksound = click_close
+            pdx_tooltip = SOCD_SUPPORT_BUTTON_TT
+            pdx_tooltip_delayed = SUPPORT_DELAYED_TT
+        }
+        buttonType = {
+            name = "socd_ban_button"
+            position = { x = @BANX y = 194 }
+            quadTextureSprite ="GFX_ban_party"
+            Orientation = "UPPER_LEFT"
+            clicksound = click_close
+            pdx_tooltip = SOCD_BAN_BUTTON_TT
+            pdx_tooltip_delayed = BAN_DELAYED_TT
+        }
+        buttonType = {
+            name = "socd_unban_button"
+            position = { x = @UNBANX y = 194 }
+            quadTextureSprite ="GFX_unban_party"
+            Orientation = "UPPER_LEFT"
+            clicksound = click_close
+            pdx_tooltip = SOCD_UNBAN_BUTTON_TT
+            pdx_tooltip_delayed = UNBAN_DELAYED_TT
+        }
+
+        instantTextboxType = {
+            name = "dsoc_party_text"
+            position = { x = @TEXTX y = 222 }
+            font = "hoi_26mbs"
+            borderSize = {x = 0 y = 0}
+            text = "Democratic Socialists"
+            maxWidth = 256
+            maxHeight = 26
+            format = right
+        }
+        buttonType = {
+            name = "dsoc_support_button"
+            position = { x = @SUPPORTX y = 220 }
+            quadTextureSprite ="GFX_support_party"
+            Orientation = "UPPER_LEFT"
+            clicksound = click_close
+            pdx_tooltip = DSOC_SUPPORT_BUTTON_TT
+            pdx_tooltip_delayed = SUPPORT_DELAYED_TT
+        }
+        buttonType = {
+            name = "dsoc_ban_button"
+            position = { x = @BANX y = 220 }
+            quadTextureSprite ="GFX_ban_party"
+            Orientation = "UPPER_LEFT"
+            clicksound = click_close
+            pdx_tooltip = DSOC_BAN_BUTTON_TT
+            pdx_tooltip_delayed = BAN_DELAYED_TT
+        }
+        buttonType = {
+            name = "dsoc_unban_button"
+            position = { x = @UNBANX y = 220 }
+            quadTextureSprite ="GFX_unban_party"
+            Orientation = "UPPER_LEFT"
+            clicksound = click_close
+            pdx_tooltip = DSOC_UNBAN_BUTTON_TT
+            pdx_tooltip_delayed = UNBAN_DELAYED_TT
+        }
+
+        instantTextboxType = {
+            name = "bols_party_text"
+            position = { x = @TEXTX y = 248 }
+            font = "hoi_26mbs"
+            borderSize = {x = 0 y = 0}
+            text = "Bolsheviks"
+            maxWidth = 256
+            maxHeight = 26
+            format = right
+        }
+        buttonType = {
+            name = "bols_support_button"
+            position = { x = @SUPPORTX y = 246 }
+            quadTextureSprite ="GFX_support_party"
+            Orientation = "UPPER_LEFT"
+            clicksound = click_close
+            pdx_tooltip = BOLS_SUPPORT_BUTTON_TT
+            pdx_tooltip_delayed = SUPPORT_DELAYED_TT
+        }
+        buttonType = {
+            name = "bols_ban_button"
+            position = { x = @BANX y = 246 }
+            quadTextureSprite ="GFX_ban_party"
+            Orientation = "UPPER_LEFT"
+            clicksound = click_close
+            pdx_tooltip = BOLS_BAN_BUTTON_TT
+            pdx_tooltip_delayed = BAN_DELAYED_TT
+        }
+        buttonType = {
+            name = "bols_unban_button"
+            position = { x = @UNBANX y = 246 }
+            quadTextureSprite ="GFX_unban_party"
+            Orientation = "UPPER_LEFT"
+            clicksound = click_close
+            pdx_tooltip = BOLS_UNBAN_BUTTON_TT
+            pdx_tooltip_delayed = UNBAN_DELAYED_TT
+        }
+
+        instantTextboxType = {
+            name = "anar_party_text"
+            position = { x = @TEXTX y = 274 }
+            font = "hoi_26mbs"
+            borderSize = {x = 0 y = 0}
+            text = "Anarchists"
+            maxWidth = 256
+            maxHeight = 26
+            format = right
+        }
+        buttonType = {
+            name = "anar_support_button"
+            position = { x = @SUPPORTX y = 272 }
+            quadTextureSprite ="GFX_support_party"
+            Orientation = "UPPER_LEFT"
+            clicksound = click_close
+            pdx_tooltip = ANAR_SUPPORT_BUTTON_TT
+            pdx_tooltip_delayed = SUPPORT_DELAYED_TT
+        }
+        buttonType = {
+            name = "anar_ban_button"
+            position = { x = @BANX y = 272 }
+            quadTextureSprite ="GFX_ban_party"
+            Orientation = "UPPER_LEFT"
+            clicksound = click_close
+            pdx_tooltip = ANAR_BAN_BUTTON_TT
+            pdx_tooltip_delayed = BAN_DELAYED_TT
+        }
+        buttonType = {
+            name = "anar_unban_button"
+            position = { x = @UNBANX y = 272 }
+            quadTextureSprite ="GFX_unban_party"
+            Orientation = "UPPER_LEFT"
+            clicksound = click_close
+            pdx_tooltip = ANAR_UNBAN_BUTTON_TT
+            pdx_tooltip_delayed = UNBAN_DELAYED_TT
+        }
+
+        # Reforms/Laws
+        iconType = {
+            position = { x = 10 y = 310 }
+            name = "reforms_header"
+            quadTextureSprite ="GFX_faction_header"
+            frame = 1
+            pdx_tooltip = "TODO: FIX ME!"
+        }
+
+        instantTextboxType = {
+            name = "title_label"
+            position = { x = 30 y = 320 }
+            font = "hoi_18mbs"
+            text = "National Reforms"
+            maxWidth = 480
+            maxHeight = 20
+            format = left
+            alwaystransparent = yes
+        }
+        instantTextboxType = {
+            name = "regime_label"
+            position = { x = 30 y = 320 }
+            font = "hoi_18mbs"
+            text = CURRENT_REGIME_TITLE
+            maxWidth = 480
+            maxHeight = 20
+            format = right
+            alwaystransparent = yes
+        }
+
+        iconType ={
+			name ="category_1_header"
+			spriteType = "GFX_category_header"
+			position = { x=20 y=350 }
+			Orientation = "UPPER_LEFT"
+		}
+        instantTextboxType = {
+			name = "category_1_header_title"
+			position = { x=64 y=354 }
+			font = "hoi_36header"
+			text = "State and Governance"
+			format = left
+			multiline = no
+			maxWidth = 500
+		}
+
+        instantTextboxType = {
+            name = "reform_0_button_header"
+            position = { x = @REFORMX0 y = 400 }
+            font = "hoi_26mbs"
+            borderSize = {x = 0 y = 0}
+            text = "Distribution of Power"
+            maxWidth = 162
+            maxHeight = 26
+            format = center
+        }
+        buttonType = {
+            name = "reform_0_button"
+            position = { x = @REFORMX0 y = 420 }
+            quadTextureSprite ="GFX_faction_goal_slot"
+            Orientation = "UPPER_LEFT"
+            clicksound = click_close
+            frame = 1
+        }
+        instantTextboxType = {
+            name = "reform_0_button_current_law"
+            position = { x = @REFORMX0 y = 453 }
+            font = "hoi_26mbs"
+            borderSize = {x = 0 y = 0}
+            text = CURRENT_REFORM_DOP
+            fixedsize = yes
+            maxWidth = 162
+            maxHeight = 26
+            format = center
+        }
+
+        instantTextboxType = {
+            name = "reform_1_button_header"
+            position = { x = @REFORMX1 y = 400 }
+            font = "hoi_26mbs"
+            borderSize = {x = 0 y = 0}
+            text = "Decision-Making"
+            maxWidth = 162
+            maxHeight = 26
+            format = center
+        }
+        buttonType = {
+            name = "reform_1_button"
+            position = { x = @REFORMX1 y = 420 }
+            quadTextureSprite ="GFX_faction_goal_slot"
+            Orientation = "UPPER_LEFT"
+            clicksound = click_close
+            frame = 1
+        }
+        instantTextboxType = {
+            name = "reform_1_button_current_law"
+            position = { x = @REFORMX1 y = 453 }
+            font = "hoi_26mbs"
+            borderSize = {x = 0 y = 0}
+            text = CURRENT_REFORM_DM
+            fixedsize = yes
+            maxWidth = 162
+            maxHeight = 26
+            format = center
+        }
+
+        instantTextboxType = {
+            name = "reform_2_button_header"
+            position = { x = @REFORMX2 y = 400 }
+            font = "hoi_26mbs"
+            borderSize = {x = 0 y = 0}
+            text = "Civil Liberties"
+            maxWidth = 162
+            maxHeight = 26
+            format = center
+        }
+        buttonType = {
+            name = "reform_2_button"
+            position = { x = @REFORMX2 y = 420 }
+            quadTextureSprite ="GFX_faction_goal_slot"
+            Orientation = "UPPER_LEFT"
+            clicksound = click_close
+            frame = 1
+        }
+        instantTextboxType = {
+            name = "reform_2_button_current_law"
+            position = { x = @REFORMX2 y = 453 }
+            font = "hoi_26mbs"
+            borderSize = {x = 0 y = 0}
+            text = CURRENT_REFORM_CL
+            fixedsize = yes
+            maxWidth = 162
+            maxHeight = 26
+            format = center
+        }
+
+        iconType ={
+			name ="category_2_header"
+			spriteType = "GFX_category_header"
+			position = { x=20 y=510 }
+			Orientation = "UPPER_LEFT"
+		}
+        instantTextboxType = {
+			name = "category_2_header_title"
+			position = { x=64 y=514 }
+			font = "hoi_36header"
+			text = "Society"
+			format = left
+			multiline = no
+			maxWidth = 500
+		}
+
+        
+
+        instantTextboxType = {
+            name = "reform_3_button_header"
+            position = { x = @REFORMX0 y = 560 }
+            font = "hoi_26mbs"
+            borderSize = {x = 0 y = 0}
+            text = "Property and Ownership"
+            maxWidth = 162
+            maxHeight = 26
+            format = center
+        }
+        buttonType = {
+            name = "reform_3_button"
+            position = { x = @REFORMX0 y = 580 }
+            quadTextureSprite ="GFX_faction_goal_slot"
+            Orientation = "UPPER_LEFT"
+            clicksound = click_close
+            frame = 1
+        }
+        instantTextboxType = {
+            name = "reform_3_button_current_law"
+            position = { x = @REFORMX0 y = 613 }
+            font = "hoi_26mbs"
+            borderSize = {x = 0 y = 0}
+            text = CURRENT_REFORM_PAO
+            fixedsize = yes
+            maxWidth = 162
+            maxHeight = 26
+            format = center
+        }
+    }
+    containerWindowType = {
+        name = "dpolitics_choose_gui" # Can be used in the window_name of scripted GUI
+        position = { x = 546 y = 78 }
+        fade_time = 300
+        fade_type = linear
+        size = { width = 420 height= 626 }
+
+        background = {
+            name = "Background"
+            spriteType = "GFX_tiled_plain_bg"
+        }
+
+        instantTextboxType = {
+			name = "title"
+			position = { x = -30 y = 12 }
+			font = "hoi_20b"
+			text = CHANGE_REFORM_WINDOW_TITLE
+			maxWidth = 460
+			maxHeight = 20
+			format = center
+		}
+		instantTextboxType = {
+			name = "switch"
+			position = { x = -30 y = 32 }
+			font = "hoi_18b"
+			text = CHANGE_REFORM_WINDOW_SUBTITLE
+			maxWidth = 460
+			maxHeight = 20
+			format = center
+			text_color_code = H
+		}
+
+        buttonType = {
+            name = "close_button"
+            position = { x = -44 y = 12 }
+            quadTextureSprite ="GFX_closebutton"
+            buttonFont = "Main_14_black"
+            shortcut = "ESCAPE"
+            Orientation = "UPPER_RIGHT"
+            clicksound = click_close
+            pdx_tooltip = "CLOSE"
+        }
+
+        iconType = {
+            position = { x = 4 y = 64 }
+            name = "option_1_bg"
+            quadTextureSprite ="GFX_reform_entry_bg_2"
+            frame = 1
+            pdx_tooltip = REFORM_OPTION_1_TT_DELAYED
+        }
+        instantTextboxType = {
+			name = "option_1_title"
+			position = { x = 0 y = 78 }
+			font = "hoi_20b"
+			text = REFORM_OPTION_1_NAME
+			maxWidth = 337
+			maxHeight = 20
+			format = center
+            pdx_tooltip = REFORM_OPTION_1_TT_DELAYED
+		}
+        buttonType = {
+            name = "option_1_button"
+            quadTextureSprite ="GFX_faction_edit_rule_button"
+			position = { x=-87 y=78 }
+			buttonText = "Reform"
+			orientation = upper_right
+			font = "hoi_16mbs"
+            pdx_tooltip = OPTION_1_BUTTON_TT
+            pdx_tooltip_delayed = REFORM_OPTION_1_TT_DELAYED
+        }
+
+        iconType = {
+            position = { x = 4 y = 114 }
+            name = "option_2_bg"
+            quadTextureSprite ="GFX_reform_entry_bg_2"
+            frame = 1
+            pdx_tooltip = REFORM_OPTION_2_TT_DELAYED
+        }
+        instantTextboxType = {
+			name = "option_2_title"
+			position = { x = 0 y = 128 }
+			font = "hoi_20b"
+			text = REFORM_OPTION_2_NAME
+			maxWidth = 337
+			maxHeight = 20
+			format = center
+            pdx_tooltip = REFORM_OPTION_2_TT_DELAYED
+		}
+        buttonType = {
+            name = "option_2_button"
+            quadTextureSprite ="GFX_faction_edit_rule_button"
+			position = { x=-87 y=128 }
+			buttonText = "Reform"
+			orientation = upper_right
+			font = "hoi_16mbs"
+            pdx_tooltip = OPTION_2_BUTTON_TT
+            pdx_tooltip_delayed = REFORM_OPTION_2_TT_DELAYED
+        }
+        
+        iconType = {
+            position = { x = 4 y = 164 }
+            name = "option_3_bg"
+            quadTextureSprite ="GFX_reform_entry_bg_2"
+            frame = 1
+            pdx_tooltip = REFORM_OPTION_3_TT_DELAYED
+        }
+        instantTextboxType = {
+			name = "option_3_title"
+			position = { x = 0 y = 178 }
+			font = "hoi_20b"
+			text = REFORM_OPTION_3_NAME
+			maxWidth = 337
+			maxHeight = 20
+			format = center
+            pdx_tooltip = REFORM_OPTION_3_TT_DELAYED
+		}
+        buttonType = {
+            name = "option_3_button"
+            quadTextureSprite ="GFX_faction_edit_rule_button"
+			position = { x=-87 y=178 }
+			buttonText = "Reform"
+			orientation = upper_right
+			font = "hoi_16mbs"
+            pdx_tooltip = OPTION_3_BUTTON_TT
+            pdx_tooltip_delayed = REFORM_OPTION_3_TT_DELAYED
+        }
+        
+        iconType = {
+            position = { x = 4 y = 214 }
+            name = "option_4_bg"
+            quadTextureSprite ="GFX_reform_entry_bg_2"
+            frame = 1
+            pdx_tooltip = REFORM_OPTION_4_TT_DELAYED
+        }
+        instantTextboxType = {
+			name = "option_4_title"
+			position = { x = 0 y = 228 }
+			font = "hoi_20b"
+			text = REFORM_OPTION_4_NAME
+			maxWidth = 337
+			maxHeight = 20
+			format = center
+            pdx_tooltip = REFORM_OPTION_4_TT_DELAYED
+		}
+        buttonType = {
+            name = "option_4_button"
+            quadTextureSprite ="GFX_faction_edit_rule_button"
+			position = { x=-87 y=228 }
+			buttonText = "Reform"
+			orientation = upper_right
+			font = "hoi_16mbs"
+            pdx_tooltip = OPTION_4_BUTTON_TT
+            pdx_tooltip_delayed = REFORM_OPTION_4_TT_DELAYED
+        }
+        
+        iconType = {
+            position = { x = 4 y = 264 }
+            name = "option_5_bg"
+            quadTextureSprite ="GFX_reform_entry_bg_2"
+            frame = 1
+            pdx_tooltip = REFORM_OPTION_5_TT_DELAYED
+        }
+        instantTextboxType = {
+			name = "option_5_title"
+			position = { x = 0 y = 278 }
+			font = "hoi_20b"
+			text = REFORM_OPTION_5_NAME
+			maxWidth = 337
+			maxHeight = 20
+			format = center
+            pdx_tooltip = REFORM_OPTION_5_TT_DELAYED
+		}
+        buttonType = {
+            name = "option_5_button"
+            quadTextureSprite ="GFX_faction_edit_rule_button"
+			position = { x=-87 y=278 }
+			buttonText = "Reform"
+			orientation = upper_right
+			font = "hoi_16mbs"
+            pdx_tooltip = OPTION_5_BUTTON_TT
+            pdx_tooltip_delayed = REFORM_OPTION_5_TT_DELAYED
+        }
+        
+        iconType = {
+            position = { x = 4 y = 314 }
+            name = "option_6_bg"
+            quadTextureSprite ="GFX_reform_entry_bg_2"
+            frame = 1
+            pdx_tooltip = REFORM_OPTION_6_TT_DELAYED
+        }
+        instantTextboxType = {
+			name = "option_6_title"
+			position = { x = 0 y = 328 }
+			font = "hoi_20b"
+			text = REFORM_OPTION_6_NAME
+			maxWidth = 337
+			maxHeight = 20
+			format = center
+            pdx_tooltip = REFORM_OPTION_6_TT_DELAYED
+		}
+        buttonType = {
+            name = "option_6_button"
+            quadTextureSprite ="GFX_faction_edit_rule_button"
+			position = { x=-87 y=328 }
+			buttonText = "Reform"
+			orientation = upper_right
+			font = "hoi_16mbs"
+            pdx_tooltip = OPTION_6_BUTTON_TT
+            pdx_tooltip_delayed = REFORM_OPTION_6_TT_DELAYED
+        }
+    }
+}

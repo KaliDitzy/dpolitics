@@ -1,0 +1,5 @@
+dissent_modifier = {
+    enable = { always = yes }
+    stability_weekly = var:dissent_stability_impact
+    drift_defence_factor = var:dissent_drift_defence_impact
+}
