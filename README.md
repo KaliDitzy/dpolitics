@@ -10,3 +10,5 @@ It is possible for anyone to contribute, but it is recommend that if you plan to
 ## Terms
 ### Rev. 1
 As of 12/29/2025, if you redistribute these files, you must credit me in a way that is immediately visible, and you may not use it for non-commercial purposes. The reason I'm not simply placing this under something like Creative Commons is due to the fact I want to have the option to change my mind later. Commits beyond this point will be subject to these terms.
+### Rev. 2
+A typo was made, the mistake is in "non-commercial purposes", I meant to write "commercial purposes" instead.
