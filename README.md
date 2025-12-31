@@ -8,7 +8,8 @@ The mod is EXTREMELY unfinished and is it nowhere near a playable state, feedbac
 ## Contribution
 It is possible for anyone to contribute, but it is recommend that if you plan to contribute frequently in the long-term, consider joining the development team officially from within the Discord server.
 ## Terms
-### Rev. 1
-As of 12/29/2025, if you redistribute these files, you must credit me in a way that is immediately visible, and you may not use it for non-commercial purposes. The reason I'm not simply placing this under something like Creative Commons is due to the fact I want to have the option to change my mind later. Commits beyond this point will be subject to these terms.
-### Rev. 2
-A typo was made, the mistake is in "non-commercial purposes", I meant to write "commercial purposes" instead.
+### Revision 3
+Originally authored by KaliDitzy.
+A 'copy' of these assets is defined as - though is not limited to - any clone, fork, download, or mirror.
+If you redistribute these assets, you must credit the original author in a way that is clearly visible, and you may not use it for commercial purposes, except if you are the original author. Each copy must also include these terms, and may not modify them without explicit permission from the original author.
+Each change to these terms only applies to copies that are created following each revision of the code, which may be viewed through the commit history. Redistributed copies must maintain verifiable version information or commit metadata.
