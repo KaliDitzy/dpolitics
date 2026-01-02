@@ -619,8 +619,6 @@ guiTypes = {
 			maxWidth = 500
 		}
 
-        
-
         instantTextboxType = {
             name = "reform_3_button_header"
             position = { x = @REFORMX0 y = 560 }
@@ -645,6 +643,66 @@ guiTypes = {
             font = "hoi_26mbs"
             borderSize = {x = 0 y = 0}
             text = CURRENT_REFORM_PAO
+            fixedsize = yes
+            maxWidth = 162
+            maxHeight = 26
+            format = center
+        }
+
+        instantTextboxType = {
+            name = "reform_4_button_header"
+            position = { x = @REFORMX1 y = 560 }
+            font = "hoi_26mbs"
+            borderSize = {x = 0 y = 0}
+            text = "Election Suffrage"
+            maxWidth = 162
+            maxHeight = 26
+            format = center
+        }
+        buttonType = {
+            name = "reform_4_button"
+            position = { x = @REFORMX1 y = 580 }
+            quadTextureSprite ="GFX_faction_goal_slot"
+            Orientation = "UPPER_LEFT"
+            clicksound = click_close
+            frame = 1
+        }
+        instantTextboxType = {
+            name = "reform_4_button_current_law"
+            position = { x = @REFORMX1 y = 613 }
+            font = "hoi_26mbs"
+            borderSize = {x = 0 y = 0}
+            text = CURRENT_REFORM_ES
+            fixedsize = yes
+            maxWidth = 162
+            maxHeight = 26
+            format = center
+        }
+
+        instantTextboxType = {
+            name = "reform_5_button_header"
+            position = { x = @REFORMX2 y = 560 }
+            font = "hoi_26mbs"
+            borderSize = {x = 0 y = 0}
+            text = "Civil Rights"
+            maxWidth = 162
+            maxHeight = 26
+            format = center
+        }
+        buttonType = {
+            name = "reform_5_button"
+            position = { x = @REFORMX2 y = 580 }
+            quadTextureSprite ="GFX_faction_goal_slot"
+            Orientation = "UPPER_LEFT"
+            clicksound = click_close
+            frame = 1
+        }
+        instantTextboxType = {
+            name = "reform_5_button_current_law"
+            position = { x = @REFORMX2 y = 613 }
+            font = "hoi_26mbs"
+            borderSize = {x = 0 y = 0}
+            text = CURRENT_REFORM_CR
             fixedsize = yes
             maxWidth = 162
             maxHeight = 26
