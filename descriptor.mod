@@ -9,6 +9,6 @@ tags={
 	"Graphics"
 }
 name="Dynamic Politics Preview"
-supported_version="1.16.10"
+supported_version="1.17.*"
 replace_path="history/countries"
 replace_path="history/states"

@@ -11,5 +11,5 @@ tags={
 name="Dynamic Politics Preview"
 replace_path="history/countries"
 replace_path="history/states"
-supported_version="1.16.10"
+supported_version="1.17.*"
 path="C:/Users/PC/Documents/Paradox Interactive/Hearts of Iron IV/mod/dpolitics"
