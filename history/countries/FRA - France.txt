@@ -87,6 +87,7 @@ add_ideas = {
 	reform_cl_guaranteed
 	reform_pao_private_ownership
 	reform_es_literacy_tests
+	reform_cr_minority_indifference
 }
 set_cosmetic_tag = FRA_republic
 set_variable = { regime_id = 2 }

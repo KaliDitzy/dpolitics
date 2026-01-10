@@ -87,6 +87,7 @@ add_ideas = {
 	reform_cl_curtailed
 	reform_pao_private_ownership
 	reform_es_wealth_bias
+	reform_cr_national_supremacy
 }
 set_cosmetic_tag = PRE_monarchy
 set_variable = { regime_id = 1 }

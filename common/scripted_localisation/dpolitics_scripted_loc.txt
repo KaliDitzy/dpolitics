@@ -70,6 +70,12 @@ defined_text = {
         }
         localization_key = reform_es_landed_voting
     }
+    text = {
+        trigger = {
+            check_variable = { current_selected_reform = 5 }
+        }
+        localization_key = reform_cr_ethnostate
+    }
 }
 defined_text = {
     name = option_2_title
@@ -102,6 +108,12 @@ defined_text = {
             check_variable = { current_selected_reform = 4 }
         }
         localization_key = reform_es_wealth_bias
+    }
+    text = {
+        trigger = {
+            check_variable = { current_selected_reform = 5 }
+        }
+        localization_key = reform_cr_supremacy_of_tradition
     }
 }
 defined_text = {
@@ -136,6 +148,12 @@ defined_text = {
         }
         localization_key = reform_es_literacy_tests
     }
+    text = {
+        trigger = {
+            check_variable = { current_selected_reform = 5 }
+        }
+        localization_key = reform_cr_national_supremacy
+    }
 }
 defined_text = {
     name = option_4_title
@@ -163,6 +181,12 @@ defined_text = {
         }
         localization_key = reform_es_no_restrictions
     }
+    text = {
+        trigger = {
+            check_variable = { current_selected_reform = 5 }
+        }
+        localization_key = reform_cr_minority_indifference
+    }
 }
 defined_text = {
     name = option_5_title
@@ -178,6 +202,12 @@ defined_text = {
         }
         localization_key = reform_cl_total_individual_freedom
     }
+    text = {
+        trigger = {
+            check_variable = { current_selected_reform = 5 }
+        }
+        localization_key = reform_cr_minority_rights
+    }
 }
 defined_text = {
     name = option_6_title
@@ -186,6 +216,21 @@ defined_text = {
             check_variable = { current_selected_reform = 1 }
         }
         localization_key = reform_dm_free_association
+    }
+    text = {
+        trigger = {
+            check_variable = { current_selected_reform = 5 }
+        }
+        localization_key = reform_cr_sexual_autonomy
+    }
+}
+defined_text = {
+    name = option_7_title
+    text = {
+        trigger = {
+            check_variable = { current_selected_reform = 5 }
+        }
+        localization_key = reform_cr_queer_rights
     }
 }
 
@@ -215,6 +260,18 @@ defined_text = {
         }
         localization_key = reform_pao_feudal_structure_desc
     }
+    text = {
+        trigger = {
+            check_variable = { current_selected_reform = 4 }
+        }
+        localization_key = reform_es_landed_voting_desc
+    }
+    text = {
+        trigger = {
+            check_variable = { current_selected_reform = 5 }
+        }
+        localization_key = reform_cr_ethnostate_desc
+    }
 }
 defined_text = {
     name = option_2_desc
@@ -241,6 +298,18 @@ defined_text = {
             check_variable = { current_selected_reform = 3 }
         }
         localization_key = reform_pao_private_ownership_desc
+    }
+    text = {
+        trigger = {
+            check_variable = { current_selected_reform = 4 }
+        }
+        localization_key = reform_es_wealth_bias_desc
+    }
+    text = {
+        trigger = {
+            check_variable = { current_selected_reform = 5 }
+        }
+        localization_key = reform_cr_supremacy_of_tradition_desc
     }
 }
 defined_text = {
@@ -269,6 +338,18 @@ defined_text = {
         }
         localization_key = reform_pao_private_property_abolished_desc
     }
+    text = {
+        trigger = {
+            check_variable = { current_selected_reform = 4 }
+        }
+        localization_key = reform_es_literacy_tests_desc
+    }
+    text = {
+        trigger = {
+            check_variable = { current_selected_reform = 5 }
+        }
+        localization_key = reform_cr_national_supremacy_desc
+    }
 }
 defined_text = {
     name = option_4_desc
@@ -290,6 +371,18 @@ defined_text = {
         }
         localization_key = reform_cl_guaranteed_desc
     }
+    text = {
+        trigger = {
+            check_variable = { current_selected_reform = 4 }
+        }
+        localization_key = reform_es_no_restrictions_desc
+    }
+    text = {
+        trigger = {
+            check_variable = { current_selected_reform = 5 }
+        }
+        localization_key = reform_cr_minority_indifference_desc
+    }
 }
 defined_text = {
     name = option_5_desc
@@ -305,6 +398,12 @@ defined_text = {
         }
         localization_key = reform_cl_total_individual_freedom_desc
     }
+    text = {
+        trigger = {
+            check_variable = { current_selected_reform = 5 }
+        }
+        localization_key = reform_cr_minority_rights_desc
+    }
 }
 defined_text = {
     name = option_6_desc
@@ -313,6 +412,21 @@ defined_text = {
             check_variable = { current_selected_reform = 1 }
         }
         localization_key = reform_dm_free_association_desc
+    }
+    text = {
+        trigger = {
+            check_variable = { current_selected_reform = 5 }
+        }
+        localization_key = reform_cr_sexual_autonomy_desc
+    }
+}
+defined_text = {
+    name = option_7_desc
+    text = {
+        trigger = {
+            check_variable = { current_selected_reform = 5 }
+        }
+        localization_key = reform_cr_queer_rights_desc
     }
 }
 
@@ -463,7 +577,51 @@ defined_text = {
         localization_key = reform_es_no_restrictions
     }
 }
-
+defined_text = {
+    name = current_reform_cr
+    text = {
+        trigger = {
+            has_idea = reform_cr_ethnostate
+        }
+        localization_key = reform_cr_ethnostate
+    }
+    text = {
+        trigger = {
+            has_idea = reform_cr_supremacy_of_tradition
+        }
+        localization_key = reform_cr_supremacy_of_tradition
+    }
+    text = {
+        trigger = {
+            has_idea = reform_cr_national_supremacy
+        }
+        localization_key = reform_cr_national_supremacy
+    }
+    text = {
+        trigger = {
+            has_idea = reform_cr_minority_indifference
+        }
+        localization_key = reform_cr_minority_indifference
+    }
+    text = {
+        trigger = {
+            has_idea = reform_cr_minority_rights
+        }
+        localization_key = reform_cr_minority_rights
+    }
+    text = {
+        trigger = {
+            has_idea = reform_cr_sexual_autonomy
+        }
+        localization_key = reform_cr_sexual_autonomy
+    }
+    text = {
+        trigger = {
+            has_idea = reform_cr_queer_rights
+        }
+        localization_key = reform_cr_queer_rights
+    }
+}
 
 defined_text = {
     name = current_regime_title

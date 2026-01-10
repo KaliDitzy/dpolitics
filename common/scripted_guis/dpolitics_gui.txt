@@ -726,6 +726,7 @@ scripted_gui = {
                     check_variable = { current_selected_reform = 2 }
                     check_variable = { current_selected_reform = 3 }
                     check_variable = { current_selected_reform = 4 }
+                    check_variable = { current_selected_reform = 5 }
                 }
             }
             option_3_title_visible = {
@@ -735,6 +736,7 @@ scripted_gui = {
                     check_variable = { current_selected_reform = 2 }
                     check_variable = { current_selected_reform = 3 }
                     check_variable = { current_selected_reform = 4 }
+                    check_variable = { current_selected_reform = 5 }
                 }
             }
             option_3_button_visible = {
@@ -744,6 +746,7 @@ scripted_gui = {
                     check_variable = { current_selected_reform = 2 }
                     check_variable = { current_selected_reform = 3 }
                     check_variable = { current_selected_reform = 4 }
+                    check_variable = { current_selected_reform = 5 }
                 }
             }
 
@@ -753,6 +756,7 @@ scripted_gui = {
                     check_variable = { current_selected_reform = 1 }
                     check_variable = { current_selected_reform = 2 }
                     check_variable = { current_selected_reform = 4 }
+                    check_variable = { current_selected_reform = 5 }
                 }
             }
             option_4_title_visible = {
@@ -761,6 +765,7 @@ scripted_gui = {
                     check_variable = { current_selected_reform = 1 }
                     check_variable = { current_selected_reform = 2 }
                     check_variable = { current_selected_reform = 4 }
+                    check_variable = { current_selected_reform = 5 }
                 }
             }
             option_4_button_visible = {
@@ -769,6 +774,7 @@ scripted_gui = {
                     check_variable = { current_selected_reform = 1 }
                     check_variable = { current_selected_reform = 2 }
                     check_variable = { current_selected_reform = 4 }
+                    check_variable = { current_selected_reform = 5 }
                 }
             }
 
@@ -776,34 +782,56 @@ scripted_gui = {
                 OR = {
                     check_variable = { current_selected_reform = 1 }
                     check_variable = { current_selected_reform = 2 }
+                    check_variable = { current_selected_reform = 5 }
                 }
             }
             option_5_title_visible = {
                 OR = {
                     check_variable = { current_selected_reform = 1 }
                     check_variable = { current_selected_reform = 2 }
+                    check_variable = { current_selected_reform = 5 }
                 }
             }
             option_5_button_visible = {
                 OR = {
                     check_variable = { current_selected_reform = 1 }
                     check_variable = { current_selected_reform = 2 }
+                    check_variable = { current_selected_reform = 5 }
                 }
             }
 
             option_6_bg_visible = {
                 OR = {
                     check_variable = { current_selected_reform = 1 }
+                    check_variable = { current_selected_reform = 5 }
                 }
             }
             option_6_title_visible = {
                 OR = {
                     check_variable = { current_selected_reform = 1 }
+                    check_variable = { current_selected_reform = 5 }
                 }
             }
             option_6_button_visible = {
                 OR = {
                     check_variable = { current_selected_reform = 1 }
+                    check_variable = { current_selected_reform = 5 }
+                }
+            }
+
+            option_7_bg_visible = {
+                OR = {
+                    check_variable = { current_selected_reform = 5 }
+                }
+            }
+            option_7_title_visible = {
+                OR = {
+                    check_variable = { current_selected_reform = 5 }
+                }
+            }
+            option_7_button_visible = {
+                OR = {
+                    check_variable = { current_selected_reform = 5 }
                 }
             }
 
@@ -900,6 +928,21 @@ scripted_gui = {
                         fascism_plurality = yes
                         traditionalism_plurality = yes
                         conservatism_plurality = yes
+                    }
+                }
+                else_if = {
+                    limit = {
+                        check_variable = { current_selected_reform = 5 }
+                    }
+                    NOT = { has_idea = reform_cr_ethnostate }
+                    reform_cr_minimum_requirements = yes
+                    OR = {
+                        has_idea = reform_cl_indefinitely_suspended
+                        has_idea = reform_cl_martial_law
+                    }
+                    OR = {
+                        fascism_plurality = yes
+                        traditionalism_plurality = yes
                     }
                 }
             }
@@ -1024,6 +1067,22 @@ scripted_gui = {
                         conservatism_plurality = yes
                     }
                 }
+                else_if = {
+                    limit = {
+                        check_variable = { current_selected_reform = 5 }
+                    }
+                    NOT = { has_idea = reform_cr_supremacy_of_tradition }
+                    reform_cr_minimum_requirements = yes
+                    OR = {
+                        has_idea = reform_cl_indefinitely_suspended
+                        has_idea = reform_cl_martial_law
+                    }
+                    OR = {
+                        fascism_plurality = yes
+                        traditionalism_plurality = yes
+                        conservatism_plurality = yes
+                    }
+                }
             }
             option_3_button_click_enabled = {
                 if = {
@@ -1117,6 +1176,23 @@ scripted_gui = {
                         liberalism_plurality = yes
                     }
                 }
+                else_if = {
+                    limit = {
+                        check_variable = { current_selected_reform = 5 }
+                    }
+                    NOT = { has_idea = reform_cr_national_supremacy }
+                    reform_cr_minimum_requirements = yes
+                    OR = {
+                        has_idea = reform_cl_indefinitely_suspended
+                        has_idea = reform_cl_martial_law
+                        has_idea = reform_cl_curtailed
+                    }
+                    OR = {
+                        traditionalism_plurality = yes
+                        conservatism_plurality = yes
+                        bolshevism_plurality = yes
+                    }
+                }
             }
             option_4_button_click_enabled = {
                 if = {
@@ -1202,6 +1278,24 @@ scripted_gui = {
                         anarchism_plurality = yes
                     }
                 }
+                else_if = {
+                    limit = {
+                        check_variable = { current_selected_reform = 5 }
+                    }
+                    NOT = { has_idea = reform_cr_minority_indifference }
+                    reform_cr_minimum_requirements = yes
+                    OR = {
+                        has_idea = reform_cl_martial_law
+                        has_idea = reform_cl_curtailed
+                        has_idea = reform_cl_guaranteed
+                    }
+                    OR = {
+                        conservatism_plurality = yes
+                        liberalism_plurality = yes
+                        radicalism_plurality = yes
+                        bolshevism_plurality = yes
+                    }
+                }
             }
             option_5_button_click_enabled = {
                 if = {
@@ -1241,6 +1335,25 @@ scripted_gui = {
                         anarchism_plurality = yes
                     }
                 }
+                else_if = {
+                    limit = {
+                        check_variable = { current_selected_reform = 5 }
+                    }
+                    NOT = { has_idea = reform_cr_minority_rights }
+                    reform_cr_minimum_requirements = yes
+                    OR = {
+                        has_idea = reform_cl_martial_law
+                        has_idea = reform_cl_curtailed
+                        has_idea = reform_cl_guaranteed
+                    }
+                    OR = {
+                        liberalism_plurality = yes
+                        radicalism_plurality = yes
+                        social_democracy_plurality = yes
+                        democratic_socialism_plurality = yes
+                        bolshevism_plurality = yes
+                    }
+                }
             }
             option_6_button_click_enabled = {
                 if = {
@@ -1253,6 +1366,44 @@ scripted_gui = {
                     has_idea = reform_cl_total_individual_freedom
                     has_idea = reform_pao_private_property_abolished
                     anarchism_plurality = yes
+                }
+                else_if = {
+                    limit = {
+                        check_variable = { current_selected_reform = 5 }
+                    }
+                    NOT = { has_idea = reform_cr_sexual_autonomy }
+                    reform_cr_minimum_requirements = yes
+                    OR = {
+                        has_idea = reform_cl_guaranteed
+                        has_idea = reform_cl_total_individual_freedom
+                    }
+                    OR = {
+                        radicalism_plurality = yes
+                        social_democracy_plurality = yes
+                        democratic_socialism_plurality = yes
+                        bolshevism_plurality = yes
+                        anarchism_plurality = yes
+                    }
+                }
+            }
+            option_7_button_click_enabled = {
+                if = {
+                    limit = {
+                        check_variable = { current_selected_reform = 5 }
+                    }
+                    NOT = { has_idea = reform_cr_queer_rights }
+                    reform_cr_minimum_requirements = yes
+                    OR = {
+                        has_idea = reform_cl_guaranteed
+                        has_idea = reform_cl_total_individual_freedom
+                    }
+                    OR = {
+                        radicalism_plurality = yes
+                        social_democracy_plurality = yes
+                        democratic_socialism_plurality = yes
+                        bolshevism_plurality = yes
+                        anarchism_plurality = yes
+                    }
                 }
             }
         }
@@ -1335,6 +1486,23 @@ scripted_gui = {
                     }
                     reform_es_minimum_effects = yes
                 }
+                else_if = {
+                    limit = {
+                        check_variable = { current_selected_reform = 5 }
+                    }
+                    add_ideas = reform_cr_ethnostate
+                    hidden_effect = {
+                        remove_ideas = {
+                            reform_cr_supremacy_of_tradition
+                            reform_cr_national_supremacy
+                            reform_cr_minority_indifference
+                            reform_cr_minority_rights
+                            reform_cr_sexual_autonomy
+                            reform_cr_queer_rights
+                        }
+                    }
+                    reform_cr_minimum_effects = yes
+                }
             }
             option_2_button_click = {
                 if = {
@@ -1408,6 +1576,23 @@ scripted_gui = {
                         }
                     }
                     reform_es_minimum_effects = yes
+                }
+                else_if = {
+                    limit = {
+                        check_variable = { current_selected_reform = 5 }
+                    }
+                    add_ideas = reform_cr_supremacy_of_tradition
+                    hidden_effect = {
+                        remove_ideas = {
+                            reform_cr_ethnostate
+                            reform_cr_national_supremacy
+                            reform_cr_minority_indifference
+                            reform_cr_minority_rights
+                            reform_cr_sexual_autonomy
+                            reform_cr_queer_rights
+                        }
+                    }
+                    reform_cr_minimum_effects = yes
                 }
             }
             option_3_button_click = {
@@ -1483,6 +1668,23 @@ scripted_gui = {
                     }
                     reform_es_minimum_effects = yes
                 }
+                else_if = {
+                    limit = {
+                        check_variable = { current_selected_reform = 5 }
+                    }
+                    add_ideas = reform_cr_national_supremacy
+                    hidden_effect = {
+                        remove_ideas = {
+                            reform_cr_ethnostate
+                            reform_cr_supremacy_of_tradition
+                            reform_cr_minority_indifference
+                            reform_cr_minority_rights
+                            reform_cr_sexual_autonomy
+                            reform_cr_queer_rights
+                        }
+                    }
+                    reform_cr_minimum_effects = yes
+                }
             }
             option_4_button_click = {
                 if = {
@@ -1544,6 +1746,23 @@ scripted_gui = {
                     }
                     reform_es_minimum_effects = yes
                 }
+                else_if = {
+                    limit = {
+                        check_variable = { current_selected_reform = 5 }
+                    }
+                    add_ideas = reform_cr_minority_indifference
+                    hidden_effect = {
+                        remove_ideas = {
+                            reform_cr_ethnostate
+                            reform_cr_supremacy_of_tradition
+                            reform_cr_national_supremacy
+                            reform_cr_minority_rights
+                            reform_cr_sexual_autonomy
+                            reform_cr_queer_rights
+                        }
+                    }
+                    reform_cr_minimum_effects = yes
+                }
             }
             option_5_button_click = {
                 if = {
@@ -1577,6 +1796,23 @@ scripted_gui = {
                     }
                     reform_cl_minimum_effects = yes
                 }
+                else_if = {
+                    limit = {
+                        check_variable = { current_selected_reform = 5 }
+                    }
+                    add_ideas = reform_cr_minority_rights
+                    hidden_effect = {
+                        remove_ideas = {
+                            reform_cr_ethnostate
+                            reform_cr_supremacy_of_tradition
+                            reform_cr_national_supremacy
+                            reform_cr_minority_indifference
+                            reform_cr_sexual_autonomy
+                            reform_cr_queer_rights
+                        }
+                    }
+                    reform_cr_minimum_effects = yes
+                }
             }
             option_6_button_click = {
                 if = {
@@ -1594,6 +1830,42 @@ scripted_gui = {
                         }
                     }
                     reform_dm_minimum_effects = yes
+                }
+                else_if = {
+                    limit = {
+                        check_variable = { current_selected_reform = 5 }
+                    }
+                    add_ideas = reform_cr_sexual_autonomy
+                    hidden_effect = {
+                        remove_ideas = {
+                            reform_cr_ethnostate
+                            reform_cr_supremacy_of_tradition
+                            reform_cr_national_supremacy
+                            reform_cr_minority_indifference
+                            reform_cr_minority_rights
+                            reform_cr_queer_rights
+                        }
+                    }
+                    reform_cr_minimum_effects = yes
+                }
+            }
+            option_7_button_click = {
+                if = {
+                    limit = {
+                        check_variable = { current_selected_reform = 5 }
+                    }
+                    add_ideas = reform_cr_queer_rights
+                    hidden_effect = {
+                        remove_ideas = {
+                            reform_cr_ethnostate
+                            reform_cr_supremacy_of_tradition
+                            reform_cr_national_supremacy
+                            reform_cr_minority_indifference
+                            reform_cr_minority_rights
+                            reform_cr_sexual_autonomy
+                        }
+                    }
+                    reform_cr_minimum_effects = yes
                 }
             }
         }

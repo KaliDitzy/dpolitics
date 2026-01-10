@@ -139,5 +139,27 @@ ideas = {
 		reform_es_no_restrictions = {
 			name = reform_es_no_restrictions
 		}
+
+		reform_cr_ethnostate = {
+			name = reform_cr_ethnostate
+		}
+		reform_cr_supremacy_of_tradition = {
+			name = reform_cr_supremacy_of_tradition
+		}
+		reform_cr_national_supremacy = {
+			name = reform_cr_national_supremacy
+		}
+		reform_cr_minority_indifference = {
+			name = reform_cr_minority_indifference
+		}
+		reform_cr_minority_rights = {
+			name = reform_cr_minority_rights
+		}
+		reform_cr_sexual_autonomy = {
+			name = reform_cr_sexual_autonomy
+		}
+		reform_cr_queer_rights = {
+			name = reform_cr_queer_rights
+		}
 	}
 }

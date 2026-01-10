@@ -77,6 +77,7 @@
   OPTION_4_BUTTON_TT: "Reform to §Y[option_4_title]§!\n\n[!option_4_button_click_enabled]\n[!option_4_button_click]"
   OPTION_5_BUTTON_TT: "Reform to §Y[option_5_title]§!\n\n[!option_5_button_click_enabled]\n[!option_5_button_click]"
   OPTION_6_BUTTON_TT: "Reform to §Y[option_6_title]§!\n\n[!option_6_button_click_enabled]\n[!option_6_button_click]"
+  OPTION_7_BUTTON_TT: "Reform to §Y[option_7_title]§!\n\n[!option_7_button_click_enabled]\n[!option_7_button_click]"
 
   REFORM_OPTION_1_TT_DELAYED: "[option_1_desc]"
   REFORM_OPTION_2_TT_DELAYED: "[option_2_desc]"
@@ -84,6 +85,7 @@
   REFORM_OPTION_4_TT_DELAYED: "[option_4_desc]"
   REFORM_OPTION_5_TT_DELAYED: "[option_5_desc]"
   REFORM_OPTION_6_TT_DELAYED: "[option_6_desc]"
+  REFORM_OPTION_7_TT_DELAYED: "[option_7_desc]"
 
   NL_TT: "\n"
 

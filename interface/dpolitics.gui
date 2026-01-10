@@ -919,5 +919,33 @@ guiTypes = {
             pdx_tooltip = OPTION_6_BUTTON_TT
             pdx_tooltip_delayed = REFORM_OPTION_6_TT_DELAYED
         }
+        
+        iconType = {
+            position = { x = 4 y = 364 }
+            name = "option_7_bg"
+            quadTextureSprite ="GFX_reform_entry_bg_2"
+            frame = 1
+            pdx_tooltip = REFORM_OPTION_7_TT_DELAYED
+        }
+        instantTextboxType = {
+			name = "option_7_title"
+			position = { x = 0 y = 378 }
+			font = "hoi_20b"
+			text = REFORM_OPTION_7_NAME
+			maxWidth = 337
+			maxHeight = 20
+			format = center
+            pdx_tooltip = REFORM_OPTION_7_TT_DELAYED
+		}
+        buttonType = {
+            name = "option_7_button"
+            quadTextureSprite ="GFX_faction_edit_rule_button"
+			position = { x=-87 y=378 }
+			buttonText = "Reform"
+			orientation = upper_right
+			font = "hoi_16mbs"
+            pdx_tooltip = OPTION_7_BUTTON_TT
+            pdx_tooltip_delayed = REFORM_OPTION_7_TT_DELAYED
+        }
     }
 }

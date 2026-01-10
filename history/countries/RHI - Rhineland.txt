@@ -42,6 +42,7 @@ add_ideas = {
 	reform_cl_guaranteed
 	reform_pao_private_ownership
 	reform_es_wealth_bias
+	reform_cr_national_supremacy
 }
 set_cosmetic_tag = RHI_republic
 set_variable = { regime_id = 2 }

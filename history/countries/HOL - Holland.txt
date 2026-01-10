@@ -42,6 +42,7 @@ add_ideas = {
 	reform_cl_guaranteed
 	reform_pao_private_ownership
 	reform_es_literacy_tests
+	reform_cr_minority_rights
 }
 set_cosmetic_tag = HOL_republic
 set_variable = { regime_id = 2 }
