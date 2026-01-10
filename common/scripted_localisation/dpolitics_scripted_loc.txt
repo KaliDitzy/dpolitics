@@ -672,6 +672,21 @@ defined_text = {
     text = {
         trigger = {
             check_variable = { regime_id = 2 }
+            OR = {
+                has_idea = reform_cr_ethnostate
+                has_idea = reform_cr_supremacy_of_tradition
+                has_idea = reform_cr_national_supremacy
+            }
+            OR = {
+                has_idea = reform_es_landed_voting
+                has_idea = reform_es_wealth_bias
+            }
+        }
+        localization_key = "Authoritarian Republic"
+    }
+    text = {
+        trigger = {
+            check_variable = { regime_id = 2 }
         }
         localization_key = "Republic"
     }
