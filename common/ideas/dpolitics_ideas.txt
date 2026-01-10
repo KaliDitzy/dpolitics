@@ -126,5 +126,18 @@ ideas = {
 		reform_pao_private_property_abolished = {
 			name = reform_pao_private_property_abolished
 		}
+
+		reform_es_landed_voting = {
+			name = reform_es_landed_voting
+		}
+		reform_es_wealth_bias = {
+			name = reform_es_wealth_bias
+		}
+		reform_es_literacy_tests = {
+			name = reform_es_literacy_tests
+		}
+		reform_es_no_restrictions = {
+			name = reform_es_no_restrictions
+		}
 	}
 }

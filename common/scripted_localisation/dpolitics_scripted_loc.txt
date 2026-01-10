@@ -24,6 +24,18 @@ defined_text = {
         }
         localization_key = "Property and Ownership"
     }
+    text = {
+        trigger = {
+            check_variable = { current_selected_reform = 4 }
+        }
+        localization_key = "Election Suffrage"
+    }
+    text = {
+        trigger = {
+            check_variable = { current_selected_reform = 5 }
+        }
+        localization_key = "Civil Rights"
+    }
 }
 
 defined_text = {
@@ -52,6 +64,12 @@ defined_text = {
         }
         localization_key = reform_pao_feudal_structure
     }
+    text = {
+        trigger = {
+            check_variable = { current_selected_reform = 4 }
+        }
+        localization_key = reform_es_landed_voting
+    }
 }
 defined_text = {
     name = option_2_title
@@ -78,6 +96,12 @@ defined_text = {
             check_variable = { current_selected_reform = 3 }
         }
         localization_key = reform_pao_private_ownership
+    }
+    text = {
+        trigger = {
+            check_variable = { current_selected_reform = 4 }
+        }
+        localization_key = reform_es_wealth_bias
     }
 }
 defined_text = {
@@ -106,6 +130,12 @@ defined_text = {
         }
         localization_key = reform_pao_private_property_abolished
     }
+    text = {
+        trigger = {
+            check_variable = { current_selected_reform = 4 }
+        }
+        localization_key = reform_es_literacy_tests
+    }
 }
 defined_text = {
     name = option_4_title
@@ -126,6 +156,12 @@ defined_text = {
             check_variable = { current_selected_reform = 2 }
         }
         localization_key = reform_cl_guaranteed
+    }
+    text = {
+        trigger = {
+            check_variable = { current_selected_reform = 4 }
+        }
+        localization_key = reform_es_no_restrictions
     }
 }
 defined_text = {
@@ -400,6 +436,34 @@ defined_text = {
         localization_key = reform_pao_private_property_abolished
     }
 }
+defined_text = {
+    name = current_reform_es
+    text = {
+        trigger = {
+            has_idea = reform_es_landed_voting
+        }
+        localization_key = reform_es_landed_voting
+    }
+    text = {
+        trigger = {
+            has_idea = reform_es_wealth_bias
+        }
+        localization_key = reform_es_wealth_bias
+    }
+    text = {
+        trigger = {
+            has_idea = reform_es_literacy_tests
+        }
+        localization_key = reform_es_literacy_tests
+    }
+    text = {
+        trigger = {
+            has_idea = reform_es_no_restrictions
+        }
+        localization_key = reform_es_no_restrictions
+    }
+}
+
 
 defined_text = {
     name = current_regime_title

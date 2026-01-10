@@ -37,3 +37,8 @@
   reform_pao_feudal_structure: "Feudalism"
   reform_pao_private_ownership: "Private Ownership"
   reform_pao_private_property_abolished: "Private Property Abolished"
+
+  reform_es_landed_voting: "Landed Voting"
+  reform_es_wealth_bias: "Wealth Bias"
+  reform_es_literacy_tests: "Literacy Tests"
+  reform_es_no_restrictions: "No Restrictions"

@@ -692,6 +692,13 @@ reform_pao_minimum_effects = {
 	set_variable = { reform_pao_cooldown = 28 }
 	subtract_from_variable = { ai_seeking_reform = 1 }
 }
+reform_es_minimum_effects = {
+	add_stability = 0.125
+	set_temp_variable = { tmp = -25 } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes
+    recalculate_cosmetic_tag = yes
+	set_variable = { reform_es_cooldown = 28 }
+	subtract_from_variable = { ai_seeking_reform = 1 }
+}
 
 d_dissent = {
 	FROM = {

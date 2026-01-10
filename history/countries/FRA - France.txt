@@ -86,6 +86,7 @@ add_ideas = {
 	reform_dm_representative_democracy
 	reform_cl_guaranteed
 	reform_pao_private_ownership
+	reform_es_literacy_tests
 }
 set_cosmetic_tag = FRA_republic
 set_variable = { regime_id = 2 }

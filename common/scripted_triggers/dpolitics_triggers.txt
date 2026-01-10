@@ -224,6 +224,9 @@ reform_cl_minimum_requirements = {
 reform_pao_minimum_requirements = {
     set_temp_variable = { tmp = 25 } custom_trigger_tooltip = { tooltip = dissent_at_least NOT = { check_variable = { dissent < tmp } } }
 }
+reform_es_minimum_requirements = {
+    set_temp_variable = { tmp = 25 } custom_trigger_tooltip = { tooltip = dissent_at_least NOT = { check_variable = { dissent < tmp } } }
+}
 
 cosmetic_monarchy = {
     has_idea = reform_dop_monarchy

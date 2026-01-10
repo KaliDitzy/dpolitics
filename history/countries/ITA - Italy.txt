@@ -86,6 +86,7 @@ add_ideas = {
 	reform_dm_autocracy
 	reform_cl_curtailed
 	reform_pao_private_property_abolished
+	reform_es_no_restrictions
 }
 set_cosmetic_tag = ITA_bolshevik
 set_variable = { regime_id = 5 }

@@ -41,6 +41,7 @@ add_ideas = {
 	reform_dm_autocracy
 	reform_cl_curtailed
 	reform_pao_private_ownership
+	reform_es_landed_voting
 }
 set_cosmetic_tag = AUS_monarchy
 set_variable = { regime_id = 1 }

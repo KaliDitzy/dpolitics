@@ -86,6 +86,13 @@ scripted_gui = {
             dsoc_unban_button_click_enabled = { has_country_flag = dsoc_banned set_temp_variable = { tmp = 10 } custom_trigger_tooltip = { tooltip = dissent_at_least NOT = { check_variable = { dissent < tmp } } } }
             bols_unban_button_click_enabled = { has_country_flag = bols_banned set_temp_variable = { tmp = 10 } custom_trigger_tooltip = { tooltip = dissent_at_least NOT = { check_variable = { dissent < tmp } } } }
             anar_unban_button_click_enabled = { has_country_flag = anar_banned set_temp_variable = { tmp = 10 } custom_trigger_tooltip = { tooltip = dissent_at_least NOT = { check_variable = { dissent < tmp } } } }
+        
+            reform_4_button_click_enabled = {
+                OR = {
+                    has_idea = reform_dm_representative_democracy
+                    has_idea = reform_dm_direct_democracy
+                }
+            }
         }
 
         effects = {
@@ -333,6 +340,32 @@ scripted_gui = {
                 }
                 else = {
                     set_variable = { current_selected_reform = 3 }
+                    set_country_flag = dpolitics_choose_visible
+                }
+            }
+            reform_4_button_click = {
+                if = {
+                    limit = {
+                        check_variable = { current_selected_reform = 4 }
+                        has_country_flag = dpolitics_choose_visible
+                    }
+                    clr_country_flag = dpolitics_choose_visible
+                }
+                else = {
+                    set_variable = { current_selected_reform = 4 }
+                    set_country_flag = dpolitics_choose_visible
+                }
+            }
+            reform_5_button_click = {
+                if = {
+                    limit = {
+                        check_variable = { current_selected_reform = 5 }
+                        has_country_flag = dpolitics_choose_visible
+                    }
+                    clr_country_flag = dpolitics_choose_visible
+                }
+                else = {
+                    set_variable = { current_selected_reform = 5 }
                     set_country_flag = dpolitics_choose_visible
                 }
             }
@@ -615,7 +648,7 @@ scripted_gui = {
 
                     modifier = {
                         add = 1
-                        check_variable = { current_selected_reform = 3 }
+                        check_variable = { current_selected_reform = 5 }
                     }
                 }
             }
@@ -649,6 +682,26 @@ scripted_gui = {
                     }
                 }
             }
+            reform_4_button_click = {
+                ai_will_do = {
+                    base = 0
+
+                    modifier = {
+                        add = 1
+                        check_variable = { current_selected_reform = 3 }
+                    }
+                }
+            }
+            reform_5_button_click = {
+                ai_will_do = {
+                    base = 0
+
+                    modifier = {
+                        add = 1
+                        check_variable = { current_selected_reform = 4 }
+                    }
+                }
+            }
         }
     }
     dpolitics_choose = {
@@ -672,6 +725,7 @@ scripted_gui = {
                     check_variable = { current_selected_reform = 1 }
                     check_variable = { current_selected_reform = 2 }
                     check_variable = { current_selected_reform = 3 }
+                    check_variable = { current_selected_reform = 4 }
                 }
             }
             option_3_title_visible = {
@@ -680,6 +734,7 @@ scripted_gui = {
                     check_variable = { current_selected_reform = 1 }
                     check_variable = { current_selected_reform = 2 }
                     check_variable = { current_selected_reform = 3 }
+                    check_variable = { current_selected_reform = 4 }
                 }
             }
             option_3_button_visible = {
@@ -688,6 +743,7 @@ scripted_gui = {
                     check_variable = { current_selected_reform = 1 }
                     check_variable = { current_selected_reform = 2 }
                     check_variable = { current_selected_reform = 3 }
+                    check_variable = { current_selected_reform = 4 }
                 }
             }
 
@@ -696,6 +752,7 @@ scripted_gui = {
                     check_variable = { current_selected_reform = 0 }
                     check_variable = { current_selected_reform = 1 }
                     check_variable = { current_selected_reform = 2 }
+                    check_variable = { current_selected_reform = 4 }
                 }
             }
             option_4_title_visible = {
@@ -703,6 +760,7 @@ scripted_gui = {
                     check_variable = { current_selected_reform = 0 }
                     check_variable = { current_selected_reform = 1 }
                     check_variable = { current_selected_reform = 2 }
+                    check_variable = { current_selected_reform = 4 }
                 }
             }
             option_4_button_visible = {
@@ -710,6 +768,7 @@ scripted_gui = {
                     check_variable = { current_selected_reform = 0 }
                     check_variable = { current_selected_reform = 1 }
                     check_variable = { current_selected_reform = 2 }
+                    check_variable = { current_selected_reform = 4 }
                 }
             }
 
@@ -827,6 +886,13 @@ scripted_gui = {
                         traditionalism_plurality = yes
                     }
                 }
+                else_if = {
+                    limit = {
+                        check_variable = { current_selected_reform = 4 }
+                    }
+                    NOT = { has_idea = reform_es_landed_voting }
+                    reform_es_minimum_requirements = yes
+                }
             }
             option_2_button_click_enabled = {
                 if = {
@@ -933,6 +999,13 @@ scripted_gui = {
                         democratic_socialism_plurality = yes
                     }
                 }
+                else_if = {
+                    limit = {
+                        check_variable = { current_selected_reform = 4 }
+                    }
+                    NOT = { has_idea = reform_es_wealth_bias }
+                    reform_es_minimum_requirements = yes
+                }
             }
             option_3_button_click_enabled = {
                 if = {
@@ -1011,6 +1084,13 @@ scripted_gui = {
                         anarchism_plurality = yes
                     }
                 }
+                else_if = {
+                    limit = {
+                        check_variable = { current_selected_reform = 4 }
+                    }
+                    NOT = { has_idea = reform_es_literacy_tests }
+                    reform_es_minimum_requirements = yes
+                }
             }
             option_4_button_click_enabled = {
                 if = {
@@ -1077,6 +1157,13 @@ scripted_gui = {
                         bolshevism_plurality = yes
                         anarchism_plurality = yes
                     }
+                }
+                else_if = {
+                    limit = {
+                        check_variable = { current_selected_reform = 4 }
+                    }
+                    NOT = { has_idea = reform_es_no_restrictions }
+                    reform_es_minimum_requirements = yes
                 }
             }
             option_5_button_click_enabled = {
@@ -1197,6 +1284,20 @@ scripted_gui = {
                     }
                     reform_pao_minimum_effects = yes
                 }
+                else_if = {
+                    limit = {
+                        check_variable = { current_selected_reform = 4 }
+                    }
+                    add_ideas = reform_es_landed_voting
+                    hidden_effect = {
+                        remove_ideas = {
+                            reform_es_wealth_bias
+                            reform_es_literacy_tests
+                            reform_es_no_restrictions
+                        }
+                    }
+                    reform_es_minimum_effects = yes
+                }
             }
             option_2_button_click = {
                 if = {
@@ -1256,6 +1357,20 @@ scripted_gui = {
                         }
                     }
                     reform_pao_minimum_effects = yes
+                }
+                else_if = {
+                    limit = {
+                        check_variable = { current_selected_reform = 4 }
+                    }
+                    add_ideas = reform_es_wealth_bias
+                    hidden_effect = {
+                        remove_ideas = {
+                            reform_es_landed_voting
+                            reform_es_literacy_tests
+                            reform_es_no_restrictions
+                        }
+                    }
+                    reform_es_minimum_effects = yes
                 }
             }
             option_3_button_click = {
@@ -1317,6 +1432,20 @@ scripted_gui = {
                     }
                     reform_pao_minimum_effects = yes
                 }
+                else_if = {
+                    limit = {
+                        check_variable = { current_selected_reform = 4 }
+                    }
+                    add_ideas = reform_es_literacy_tests
+                    hidden_effect = {
+                        remove_ideas = {
+                            reform_es_landed_voting
+                            reform_es_wealth_bias
+                            reform_es_no_restrictions
+                        }
+                    }
+                    reform_es_minimum_effects = yes
+                }
             }
             option_4_button_click = {
                 if = {
@@ -1363,6 +1492,20 @@ scripted_gui = {
                         }
                     }
                     reform_cl_minimum_effects = yes
+                }
+                else_if = {
+                    limit = {
+                        check_variable = { current_selected_reform = 4 }
+                    }
+                    add_ideas = reform_es_no_restrictions
+                    hidden_effect = {
+                        remove_ideas = {
+                            reform_es_landed_voting
+                            reform_es_wealth_bias
+                            reform_es_literacy_tests
+                        }
+                    }
+                    reform_es_minimum_effects = yes
                 }
             }
             option_5_button_click = {
@@ -1451,6 +1594,13 @@ scripted_gui = {
                         is_moderate = no
                         is_right = yes
                     }
+
+                    # Election Suffrage
+                    modifier = {
+                        add = -100
+                        check_variable = { current_selected_reform = 4 }
+                        check_variable = { reform_es_cooldown > 0 }
+                    }
                 }
             }
             option_2_button_click = {
@@ -1488,6 +1638,13 @@ scripted_gui = {
                         is_moderate = no
                         NOT = { has_idea = reform_cl_indefinitely_suspended }
                     }
+
+                    # Election Suffrage
+                    modifier = {
+                        add = -100
+                        check_variable = { current_selected_reform = 4 }
+                        check_variable = { reform_es_cooldown > 0 }
+                    }
                 }
             }
             option_3_button_click = {
@@ -1523,6 +1680,13 @@ scripted_gui = {
                         add = 5
                         check_variable = { current_selected_reform = 2 }
                         is_moderate = no
+                    }
+
+                    # Election Suffrage
+                    modifier = {
+                        add = -100
+                        check_variable = { current_selected_reform = 4 }
+                        check_variable = { reform_es_cooldown > 0 }
                     }
                 }
             }
@@ -1569,6 +1733,13 @@ scripted_gui = {
                         add = 5
                         check_variable = { current_selected_reform = 2 }
                         is_left = yes
+                    }
+
+                    # Election Suffrage
+                    modifier = {
+                        add = -100
+                        check_variable = { current_selected_reform = 4 }
+                        check_variable = { reform_es_cooldown > 0 }
                     }
                 }
             }
