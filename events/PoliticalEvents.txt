@@ -303,7 +303,7 @@ country_event = {
 	}
 
 	option = {
-		name = politics.opposition.8.a
+		name = politics.opposition.8.b
 
 		random_list = {
 			50 = { add_popularity = { ideology = social_democracy popularity = 0.02 } }
