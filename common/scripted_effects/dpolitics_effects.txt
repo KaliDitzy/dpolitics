@@ -96,7 +96,7 @@ recalculate_ideological_incoherence = {
 	}
 
 	### dissent change
-	divide_variable = { ideological_incoherence = 5 }
+	divide_variable = { ideological_incoherence = 4 }
 }
 recalculate_dissent = {
 	set_variable = { dissent_change_base = 0.5 }
