@@ -892,6 +892,15 @@ scripted_gui = {
                     }
                     NOT = { has_idea = reform_es_landed_voting }
                     reform_es_minimum_requirements = yes
+                    OR = {
+                        has_idea = reform_cl_indefinitely_suspended
+                        has_idea = reform_cl_martial_law
+                    }
+                    OR = {
+                        fascism_plurality = yes
+                        traditionalism_plurality = yes
+                        conservatism_plurality = yes
+                    }
                 }
             }
             option_2_button_click_enabled = {
@@ -1005,6 +1014,15 @@ scripted_gui = {
                     }
                     NOT = { has_idea = reform_es_wealth_bias }
                     reform_es_minimum_requirements = yes
+                    OR = {
+                        has_idea = reform_cl_indefinitely_suspended
+                        has_idea = reform_cl_martial_law
+                        has_idea = reform_cl_curtailed
+                    }
+                    OR = {
+                        traditionalism_plurality = yes
+                        conservatism_plurality = yes
+                    }
                 }
             }
             option_3_button_click_enabled = {
@@ -1090,6 +1108,14 @@ scripted_gui = {
                     }
                     NOT = { has_idea = reform_es_literacy_tests }
                     reform_es_minimum_requirements = yes
+                    OR = {
+                        has_idea = reform_cl_curtailed
+                        has_idea = reform_cl_guaranteed
+                    }
+                    OR = {
+                        conservatism_plurality = yes
+                        liberalism_plurality = yes
+                    }
                 }
             }
             option_4_button_click_enabled = {
@@ -1164,6 +1190,17 @@ scripted_gui = {
                     }
                     NOT = { has_idea = reform_es_no_restrictions }
                     reform_es_minimum_requirements = yes
+                    OR = {
+                        has_idea = reform_cl_guaranteed
+                        has_idea = reform_cl_total_individual_freedom
+                    }
+                    OR = {
+                        liberalism_plurality = yes
+                        radicalism_plurality = yes
+                        social_democracy_plurality = yes
+                        democratic_socialism_plurality = yes
+                        anarchism_plurality = yes
+                    }
                 }
             }
             option_5_button_click_enabled = {
