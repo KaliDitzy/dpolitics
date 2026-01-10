@@ -850,6 +850,7 @@ scripted_gui = {
                     }
                     NOT = { has_idea = reform_dm_autocracy }
                     reform_dm_minimum_requirements = yes
+                    NOT = { has_idea = reform_dop_anarchy }
                     OR = {
                         fascism_plurality = yes
                         traditionalism_plurality = yes
@@ -1071,6 +1072,7 @@ scripted_gui = {
                     }
                     NOT = { has_idea = reform_dop_anarchy }
                     reform_dop_minimum_requirements = yes
+                    NOT = { has_idea = reform_dm_autocracy }
                     has_idea = reform_pao_private_property_abolished
                     anarchism_plurality = yes
                 }
