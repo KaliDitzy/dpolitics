@@ -1,6 +1,6 @@
 recalculate_ideological_incoherence = {
 	### base value
-	set_temp_variable = { t = 0 }
+	set_variable = { ideological_incoherence = 0 }
 
 	# Incompatible distribution of power + decision-making
 	if = {
@@ -14,7 +14,7 @@ recalculate_ideological_incoherence = {
 				has_idea = reform_dm_free_association
 			}
 		}
-		add_to_temp_variable = { t = 1 }
+		add_to_variable = { ideological_incoherence = 1 }
 	}
 	if = {
 		limit = {
@@ -28,7 +28,7 @@ recalculate_ideological_incoherence = {
 				has_idea = reform_dm_corporatism
 			}
 		}
-		add_to_temp_variable = { t = 1 }
+		add_to_variable = { ideological_incoherence = 1 }
 	}
 
 	# Incompatible distribution of power + suffrage
@@ -41,7 +41,7 @@ recalculate_ideological_incoherence = {
 				has_idea = reform_es_literacy_tests
 			}
 		}
-		add_to_temp_variable = { t = 1 }
+		add_to_variable = { ideological_incoherence = 1 }
 	}
 
 	# Incompatible distribution of power + civil liberties
@@ -57,7 +57,16 @@ recalculate_ideological_incoherence = {
 				has_idea = reform_cl_curtailed
 			}
 		}
-		add_to_temp_variable = { t = 1 }
+		add_to_variable = { ideological_incoherence = 1 }
+	}
+ 
+	# Minarchy must not have feudalism
+	if = {
+		limit = {
+			has_idea = reform_dop_minarchism
+			has_idea = reform_pao_feudal_structure
+		}
+		add_to_variable = { ideological_incoherence = 2 }
 	}
 
 	# Anarchy must have private property abolished
@@ -66,7 +75,7 @@ recalculate_ideological_incoherence = {
 			has_idea = reform_dop_anarchy
 			NOT = { has_idea = reform_pao_private_property_abolished }
 		}
-		add_to_temp_variable = { t = 2 }
+		add_to_variable = { ideological_incoherence = 2 }
 	}
 
 	# Supremacist nations probably shouldnt tolerate minorities as voters
@@ -79,12 +88,11 @@ recalculate_ideological_incoherence = {
 			}
 			has_idea = reform_es_no_restrictions
 		}
-		add_to_temp_variable = { t = 2 }
+		add_to_variable = { ideological_incoherence = 2 }
 	}
 
 	### dissent change
-	set_variable = { ideological_incoherence = t }
-	divide_variable = { ideological_incoherence = 5 }
+	divide_variable = { ideological_incoherence = 2 }
 }
 recalculate_dissent = {
 	set_variable = { dissent_change_base = 0.5 }
@@ -177,6 +185,8 @@ recalculate_dissent = {
 		}
 		add_to_variable = { dissent_change_base = 0.1 }
 	}
+
+	add_to_variable = { dissent_change_base = ideological_incoherence }
 
 	clamp_variable = {
 		var = dissent_base

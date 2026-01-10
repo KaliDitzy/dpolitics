@@ -301,7 +301,7 @@ scripted_gui = {
                 }
                 else = {
                     set_variable = { current_selected_reform = 0 }
-                    set_country_flag = dpolitics_choose_visible`
+                    set_country_flag = dpolitics_choose_visible
                 }
             }
             reform_1_button_click = {
@@ -843,18 +843,6 @@ scripted_gui = {
                     NOT = { has_idea = reform_dop_monarchy }
                     reform_dop_minimum_requirements = yes
                     OR = {
-                        has_idea = reform_dm_autocracy
-                        has_idea = reform_dm_technocracy
-                        has_idea = reform_dm_corporatism
-                        has_idea = reform_dm_representative_democracy
-                    }
-                    OR = {
-                        has_idea = reform_cl_indefinitely_suspended
-                        has_idea = reform_cl_martial_law
-                        has_idea = reform_cl_curtailed
-                        has_idea = reform_cl_guaranteed
-                    }
-                    OR = {
                         traditionalism_plurality = yes
                         conservatism_plurality = yes
                     }
@@ -865,15 +853,6 @@ scripted_gui = {
                     }
                     NOT = { has_idea = reform_dm_autocracy }
                     reform_dm_minimum_requirements = yes
-                    OR = {
-                        has_idea = reform_dop_monarchy
-                        has_idea = reform_dop_oligarchy
-                    }
-                    OR = {
-                        has_idea = reform_cl_indefinitely_suspended
-                        has_idea = reform_cl_martial_law
-                        has_idea = reform_cl_curtailed
-                    }
                     OR = {
                         fascism_plurality = yes
                         traditionalism_plurality = yes
@@ -887,15 +866,6 @@ scripted_gui = {
                     NOT = { has_idea = reform_cl_indefinitely_suspended }
                     reform_cl_minimum_requirements = yes
                     OR = {
-                        has_idea = reform_dop_monarchy
-                        has_idea = reform_dop_oligarchy
-                    }
-                    OR = {
-                        has_idea = reform_dm_autocracy
-                        has_idea = reform_dm_technocracy
-                        has_idea = reform_dm_corporatism
-                    }
-                    OR = {
                         fascism_plurality = yes
                         traditionalism_plurality = yes
                         conservatism_plurality = yes
@@ -908,8 +878,6 @@ scripted_gui = {
                     }
                     NOT = { has_idea = reform_pao_feudal_structure }
                     reform_pao_minimum_requirements = yes
-                    has_idea = reform_dop_monarchy
-                    has_idea = reform_dm_autocracy
                     OR = {
                         traditionalism_plurality = yes
                     }
@@ -920,10 +888,6 @@ scripted_gui = {
                     }
                     NOT = { has_idea = reform_es_landed_voting }
                     reform_es_minimum_requirements = yes
-                    OR = {
-                        has_idea = reform_cl_indefinitely_suspended
-                        has_idea = reform_cl_martial_law
-                    }
                     OR = {
                         fascism_plurality = yes
                         traditionalism_plurality = yes
@@ -937,10 +901,6 @@ scripted_gui = {
                     NOT = { has_idea = reform_cr_ethnostate }
                     reform_cr_minimum_requirements = yes
                     OR = {
-                        has_idea = reform_cl_indefinitely_suspended
-                        has_idea = reform_cl_martial_law
-                    }
-                    OR = {
                         fascism_plurality = yes
                         traditionalism_plurality = yes
                     }
@@ -953,18 +913,6 @@ scripted_gui = {
                     }
                     NOT = { has_idea = reform_dop_oligarchy }
                     reform_dop_minimum_requirements = yes
-                    OR = {
-                        has_idea = reform_dm_autocracy
-                        has_idea = reform_dm_technocracy
-                        has_idea = reform_dm_corporatism
-                        has_idea = reform_dm_representative_democracy
-                    }
-                    OR = {
-                        has_idea = reform_cl_indefinitely_suspended
-                        has_idea = reform_cl_martial_law
-                        has_idea = reform_cl_curtailed
-                        has_idea = reform_cl_guaranteed
-                    }
                     OR = {
                         fascism_plurality = yes
                         traditionalism_plurality = yes
@@ -982,16 +930,6 @@ scripted_gui = {
                     NOT = { has_idea = reform_dm_technocracy }
                     reform_dm_minimum_requirements = yes
                     OR = {
-                        has_idea = reform_dop_monarchy
-                        has_idea = reform_dop_oligarchy
-                    }
-                    OR = {
-                        has_idea = reform_cl_indefinitely_suspended
-                        has_idea = reform_cl_martial_law
-                        has_idea = reform_cl_curtailed
-                        has_idea = reform_cl_guaranteed
-                    }
-                    OR = {
                         liberalism_plurality = yes
                         social_democracy_plurality = yes
                     }
@@ -1002,16 +940,6 @@ scripted_gui = {
                     }
                     NOT = { has_idea = reform_cl_martial_law }
                     reform_cl_minimum_requirements = yes
-                    OR = {
-                        has_idea = reform_dop_monarchy
-                        has_idea = reform_dop_oligarchy
-                    }
-                    OR = {
-                        has_idea = reform_dm_autocracy
-                        has_idea = reform_dm_technocracy
-                        has_idea = reform_dm_corporatism
-                        has_idea = reform_dm_representative_democracy
-                    }
                     OR = {
                         fascism_plurality = yes
                         traditionalism_plurality = yes
@@ -1030,18 +958,6 @@ scripted_gui = {
                     NOT = { has_idea = reform_pao_private_ownership }
                     reform_pao_minimum_requirements = yes
                     OR = {
-                        has_idea = reform_dop_monarchy
-                        has_idea = reform_dop_oligarchy
-                        has_idea = reform_dop_minarchy
-                    }
-                    OR = {
-                        has_idea = reform_dm_autocracy
-                        has_idea = reform_dm_technocracy
-                        has_idea = reform_dm_corporatism
-                        has_idea = reform_dm_representative_democracy
-                        has_idea = reform_dm_direct_democracy
-                    }
-                    OR = {
                         fascism_plurality = yes
                         traditionalism_plurality = yes
                         conservatism_plurality = yes
@@ -1058,11 +974,6 @@ scripted_gui = {
                     NOT = { has_idea = reform_es_wealth_bias }
                     reform_es_minimum_requirements = yes
                     OR = {
-                        has_idea = reform_cl_indefinitely_suspended
-                        has_idea = reform_cl_martial_law
-                        has_idea = reform_cl_curtailed
-                    }
-                    OR = {
                         traditionalism_plurality = yes
                         conservatism_plurality = yes
                     }
@@ -1073,10 +984,6 @@ scripted_gui = {
                     }
                     NOT = { has_idea = reform_cr_supremacy_of_tradition }
                     reform_cr_minimum_requirements = yes
-                    OR = {
-                        has_idea = reform_cl_indefinitely_suspended
-                        has_idea = reform_cl_martial_law
-                    }
                     OR = {
                         fascism_plurality = yes
                         traditionalism_plurality = yes
@@ -1092,11 +999,6 @@ scripted_gui = {
                     NOT = { has_idea = reform_dop_minarchy }
                     reform_dop_minimum_requirements = yes
                     OR = {
-                        has_idea = reform_dm_representative_democracy
-                        has_idea = reform_dm_direct_democracy
-                    }
-                    has_idea = reform_cl_guaranteed
-                    OR = {
                         liberalism_plurality = yes
                         radicalism_plurality = yes
                         anarchism_plurality = yes
@@ -1109,15 +1011,6 @@ scripted_gui = {
                     NOT = { has_idea = reform_dm_corporatism }
                     reform_dm_minimum_requirements = yes
                     OR = {
-                        has_idea = reform_dop_monarchy
-                        has_idea = reform_dop_oligarchy
-                    }
-                    OR = {
-                        has_idea = reform_cl_indefinitely_suspended
-                        has_idea = reform_cl_martial_law
-                        has_idea = reform_cl_curtailed
-                    }
-                    OR = {
                         fascism_plurality = yes
                     }
                 }
@@ -1127,17 +1020,6 @@ scripted_gui = {
                     }
                     NOT = { has_idea = reform_cl_curtailed }
                     reform_cl_minimum_requirements = yes
-                    OR = {
-                        has_idea = reform_dop_monarchy
-                        has_idea = reform_dop_oligarchy
-                        has_idea = reform_dop_minarchy
-                    }
-                    OR = {
-                        has_idea = reform_dm_autocracy
-                        has_idea = reform_dm_technocracy
-                        has_idea = reform_dm_corporatism
-                        has_idea = reform_dm_representative_democracy
-                    }
                     OR = {
                         fascism_plurality = yes
                         traditionalism_plurality = yes
@@ -1168,10 +1050,6 @@ scripted_gui = {
                     NOT = { has_idea = reform_es_literacy_tests }
                     reform_es_minimum_requirements = yes
                     OR = {
-                        has_idea = reform_cl_curtailed
-                        has_idea = reform_cl_guaranteed
-                    }
-                    OR = {
                         conservatism_plurality = yes
                         liberalism_plurality = yes
                     }
@@ -1182,11 +1060,6 @@ scripted_gui = {
                     }
                     NOT = { has_idea = reform_cr_national_supremacy }
                     reform_cr_minimum_requirements = yes
-                    OR = {
-                        has_idea = reform_cl_indefinitely_suspended
-                        has_idea = reform_cl_martial_law
-                        has_idea = reform_cl_curtailed
-                    }
                     OR = {
                         traditionalism_plurality = yes
                         conservatism_plurality = yes
@@ -1201,14 +1074,6 @@ scripted_gui = {
                     }
                     NOT = { has_idea = reform_dop_anarchy }
                     reform_dop_minimum_requirements = yes
-                    OR = {
-                        has_idea = reform_dm_direct_democracy
-                        has_idea = reform_dm_free_association
-                    }
-                    OR = {
-                        has_idea = reform_cl_guaranteed
-                        has_idea = reform_cl_total_individual_freedom
-                    }
                     has_idea = reform_pao_private_property_abolished
                     anarchism_plurality = yes
                 }
@@ -1218,17 +1083,6 @@ scripted_gui = {
                     }
                     NOT = { has_idea = reform_dm_representative_democracy }
                     reform_dm_minimum_requirements = yes
-                    OR = {
-                        has_idea = reform_dop_monarchy
-                        has_idea = reform_dop_oligarchy
-                        has_idea = reform_dop_minarchy
-                    }
-                    OR = {
-                        has_idea = reform_cl_martial_law
-                        has_idea = reform_cl_curtailed
-                        has_idea = reform_cl_guaranteed
-                        has_idea = reform_cl_total_individual_freedom
-                    }
                     OR = {
                         conservatism_plurality = yes
                         liberalism_plurality = yes
@@ -1243,13 +1097,6 @@ scripted_gui = {
                     }
                     NOT = { has_idea = reform_cl_guaranteed }
                     reform_cl_minimum_requirements = yes
-                    OR = {
-                        has_idea = reform_dm_autocracy
-                        has_idea = reform_dm_technocracy
-                        has_idea = reform_dm_corporatism
-                        has_idea = reform_dm_representative_democracy
-                        has_idea = reform_dm_direct_democracy
-                    }
                     OR = {
                         conservatism_plurality = yes
                         liberalism_plurality = yes
@@ -1267,10 +1114,6 @@ scripted_gui = {
                     NOT = { has_idea = reform_es_no_restrictions }
                     reform_es_minimum_requirements = yes
                     OR = {
-                        has_idea = reform_cl_guaranteed
-                        has_idea = reform_cl_total_individual_freedom
-                    }
-                    OR = {
                         liberalism_plurality = yes
                         radicalism_plurality = yes
                         social_democracy_plurality = yes
@@ -1284,11 +1127,6 @@ scripted_gui = {
                     }
                     NOT = { has_idea = reform_cr_minority_indifference }
                     reform_cr_minimum_requirements = yes
-                    OR = {
-                        has_idea = reform_cl_martial_law
-                        has_idea = reform_cl_curtailed
-                        has_idea = reform_cl_guaranteed
-                    }
                     OR = {
                         conservatism_plurality = yes
                         liberalism_plurality = yes
@@ -1305,14 +1143,6 @@ scripted_gui = {
                     NOT = { has_idea = reform_dm_direct_democracy }
                     reform_dm_minimum_requirements = yes
                     OR = {
-                        has_idea = reform_dop_minarchy
-                        has_idea = reform_dop_anarchy
-                    }
-                    OR = {
-                        has_idea = reform_cl_guaranteed
-                        has_idea = reform_cl_total_individual_freedom
-                    }
-                    OR = {
                         liberalism_plurality = yes
                         radicalism_plurality = yes
                         social_democracy_plurality = yes
@@ -1327,10 +1157,6 @@ scripted_gui = {
                     NOT = { has_idea = reform_cl_total_individual_freedom }
                     reform_cl_minimum_requirements = yes
                     OR = {
-                        has_idea = reform_dm_direct_democracy
-                        has_idea = reform_dm_free_association
-                    }
-                    OR = {
                         radicalism_plurality = yes
                         anarchism_plurality = yes
                     }
@@ -1341,11 +1167,6 @@ scripted_gui = {
                     }
                     NOT = { has_idea = reform_cr_minority_rights }
                     reform_cr_minimum_requirements = yes
-                    OR = {
-                        has_idea = reform_cl_martial_law
-                        has_idea = reform_cl_curtailed
-                        has_idea = reform_cl_guaranteed
-                    }
                     OR = {
                         liberalism_plurality = yes
                         radicalism_plurality = yes
@@ -1362,9 +1183,6 @@ scripted_gui = {
                     }
                     NOT = { has_idea = reform_dm_free_association }
                     reform_dm_minimum_requirements = yes
-                    has_idea = reform_dop_anarchy
-                    has_idea = reform_cl_total_individual_freedom
-                    has_idea = reform_pao_private_property_abolished
                     anarchism_plurality = yes
                 }
                 else_if = {
@@ -1373,10 +1191,6 @@ scripted_gui = {
                     }
                     NOT = { has_idea = reform_cr_sexual_autonomy }
                     reform_cr_minimum_requirements = yes
-                    OR = {
-                        has_idea = reform_cl_guaranteed
-                        has_idea = reform_cl_total_individual_freedom
-                    }
                     OR = {
                         radicalism_plurality = yes
                         social_democracy_plurality = yes
@@ -1393,10 +1207,6 @@ scripted_gui = {
                     }
                     NOT = { has_idea = reform_cr_queer_rights }
                     reform_cr_minimum_requirements = yes
-                    OR = {
-                        has_idea = reform_cl_guaranteed
-                        has_idea = reform_cl_total_individual_freedom
-                    }
                     OR = {
                         radicalism_plurality = yes
                         social_democracy_plurality = yes
