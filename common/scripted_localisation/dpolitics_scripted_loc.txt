@@ -554,6 +554,17 @@ defined_text = {
     name = current_reform_es
     text = {
         trigger = {
+            NOT = {
+                OR = {
+                    has_idea = reform_dm_representative_democracy
+                    has_idea = reform_dm_direct_democracy
+                }
+            }
+        }
+        localization_key = "N/A"
+    }
+    text = {
+        trigger = {
             has_idea = reform_es_landed_voting
         }
         localization_key = reform_es_landed_voting

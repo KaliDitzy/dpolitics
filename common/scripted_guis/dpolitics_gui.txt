@@ -301,7 +301,7 @@ scripted_gui = {
                 }
                 else = {
                     set_variable = { current_selected_reform = 0 }
-                    set_country_flag = dpolitics_choose_visible
+                    set_country_flag = dpolitics_choose_visible`
                 }
             }
             reform_1_button_click = {
@@ -1910,6 +1910,13 @@ scripted_gui = {
                         check_variable = { current_selected_reform = 4 }
                         check_variable = { reform_es_cooldown > 0 }
                     }
+
+                    # Civil Rights
+                    modifier = {
+                        add = -100
+                        check_variable = { current_selected_reform = 5 }
+                        check_variable = { reform_cr_cooldown > 0 }
+                    }
                 }
             }
             option_2_button_click = {
@@ -1954,6 +1961,13 @@ scripted_gui = {
                         check_variable = { current_selected_reform = 4 }
                         check_variable = { reform_es_cooldown > 0 }
                     }
+
+                    # Civil Rights
+                    modifier = {
+                        add = -100
+                        check_variable = { current_selected_reform = 5 }
+                        check_variable = { reform_cr_cooldown > 0 }
+                    }
                 }
             }
             option_3_button_click = {
@@ -1996,6 +2010,13 @@ scripted_gui = {
                         add = -100
                         check_variable = { current_selected_reform = 4 }
                         check_variable = { reform_es_cooldown > 0 }
+                    }
+
+                    # Civil Rights
+                    modifier = {
+                        add = -100
+                        check_variable = { current_selected_reform = 5 }
+                        check_variable = { reform_cr_cooldown > 0 }
                     }
                 }
             }
@@ -2050,6 +2071,13 @@ scripted_gui = {
                         check_variable = { current_selected_reform = 4 }
                         check_variable = { reform_es_cooldown > 0 }
                     }
+
+                    # Civil Rights
+                    modifier = {
+                        add = -100
+                        check_variable = { current_selected_reform = 5 }
+                        check_variable = { reform_cr_cooldown > 0 }
+                    }
                 }
             }
             option_5_button_click = {
@@ -2086,6 +2114,13 @@ scripted_gui = {
                         check_variable = { current_selected_reform = 2 }
                         is_right = no
                     }
+
+                    # Civil Rights
+                    modifier = {
+                        add = -100
+                        check_variable = { current_selected_reform = 5 }
+                        check_variable = { reform_cr_cooldown > 0 }
+                    }
                 }
             }
             option_6_button_click = {
@@ -2097,6 +2132,25 @@ scripted_gui = {
                         add = -100
                         check_variable = { current_selected_reform = 1 }
                         check_variable = { reform_dm_cooldown > 0 }
+                    }
+
+                    # Civil Rights
+                    modifier = {
+                        add = -100
+                        check_variable = { current_selected_reform = 5 }
+                        check_variable = { reform_cr_cooldown > 0 }
+                    }
+                }
+            }
+            option_7_button_click = {
+                ai_will_do = {
+                    base = 5
+
+                    # Civil Rights
+                    modifier = {
+                        add = -100
+                        check_variable = { current_selected_reform = 5 }
+                        check_variable = { reform_cr_cooldown > 0 }
                     }
                 }
             }

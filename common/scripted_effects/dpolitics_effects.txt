@@ -1,3 +1,91 @@
+recalculate_ideological_incoherence = {
+	### base value
+	set_temp_variable = { t = 0 }
+
+	# Incompatible distribution of power + decision-making
+	if = {
+		limit = {
+			OR = {
+				has_idea = reform_dop_monarchy
+				has_idea = reform_dop_oligarchy
+			}
+			OR = {
+				has_idea = reform_dm_direct_democracy
+				has_idea = reform_dm_free_association
+			}
+		}
+		add_to_temp_variable = { t = 1 }
+	}
+	if = {
+		limit = {
+			OR = {
+				has_idea = reform_dop_minarchy
+				has_idea = reform_dop_anarchy
+			}
+			OR = {
+				has_idea = reform_dm_autocracy
+				has_idea = reform_dm_technocracy
+				has_idea = reform_dm_corporatism
+			}
+		}
+		add_to_temp_variable = { t = 1 }
+	}
+
+	# Incompatible distribution of power + suffrage
+	if = {
+		limit = {
+			has_idea = reform_dop_anarchy
+			OR = {
+				has_idea = reform_es_landed_voting
+				has_idea = reform_es_wealth_bias
+				has_idea = reform_es_literacy_tests
+			}
+		}
+		add_to_temp_variable = { t = 1 }
+	}
+
+	# Incompatible distribution of power + civil liberties
+	if = {
+		limit = {
+			OR = {
+				has_idea = reform_dop_minarchism
+				has_idea = reform_dop_anarchy
+			}
+			OR = {
+				has_idea = reform_cl_indefinitely_suspended
+				has_idea = reform_cl_martial_law
+				has_idea = reform_cl_curtailed
+			}
+		}
+		add_to_temp_variable = { t = 1 }
+	}
+
+	# Anarchy must have private property abolished
+	if = {
+		limit = {
+			has_idea = reform_dop_anarchy
+			NOT = { has_idea = reform_pao_private_property_abolished }
+		}
+		add_to_temp_variable = { t = 2 }
+	}
+
+	# Supremacist nations probably shouldnt tolerate minorities as voters
+	if = {
+		limit = {
+			OR = {
+				has_idea = reform_cr_ethnostate
+				has_idea = reform_cr_supremacy_of_tradition
+				has_idea = reform_cr_national_supremacy
+			}
+			has_idea = reform_es_no_restrictions
+		}
+		add_to_temp_variable = { t = 2 }
+	}
+
+	### dissent change
+	set_variable = { ideological_incoherence = t }
+	divide_variable = { ideological_incoherence = 5 }
+}
 recalculate_dissent = {
 	set_variable = { dissent_change_base = 0.5 }
 
@@ -666,6 +754,7 @@ update_ideology_targets = { # Slightly shifts an AI country's motivation to supp
 
 reform_dop_minimum_effects = {
 	add_stability = 0.2
+	recalculate_ideological_incoherence = yes
 	set_temp_variable = { tmp = -40 } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes
     recalculate_cosmetic_tag = yes
 	set_variable = { reform_dop_cooldown = 28 }
@@ -673,6 +762,7 @@ reform_dop_minimum_effects = {
 }
 reform_dm_minimum_effects = {
 	add_stability = 0.125
+	recalculate_ideological_incoherence = yes
 	set_temp_variable = { tmp = -25 } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes
     recalculate_cosmetic_tag = yes
 	set_variable = { reform_dm_cooldown = 28 }
@@ -680,6 +770,7 @@ reform_dm_minimum_effects = {
 }
 reform_cl_minimum_effects = {
 	add_stability = 0.075
+	recalculate_ideological_incoherence = yes
 	set_temp_variable = { tmp = -15 } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes
     recalculate_cosmetic_tag = yes
 	set_variable = { reform_cl_cooldown = 28 }
@@ -687,6 +778,7 @@ reform_cl_minimum_effects = {
 }
 reform_pao_minimum_effects = {
 	add_stability = 0.125
+	recalculate_ideological_incoherence = yes
 	set_temp_variable = { tmp = -25 } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes
     recalculate_cosmetic_tag = yes
 	set_variable = { reform_pao_cooldown = 28 }
@@ -694,6 +786,7 @@ reform_pao_minimum_effects = {
 }
 reform_es_minimum_effects = {
 	add_stability = 0.125
+	recalculate_ideological_incoherence = yes
 	set_temp_variable = { tmp = -25 } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes
     recalculate_cosmetic_tag = yes
 	set_variable = { reform_es_cooldown = 28 }
@@ -701,6 +794,7 @@ reform_es_minimum_effects = {
 }
 reform_cr_minimum_effects = {
 	add_stability = 0.075
+	recalculate_ideological_incoherence = yes
 	set_temp_variable = { tmp = -15 } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes
     recalculate_cosmetic_tag = yes
 	set_variable = { reform_cr_cooldown = 28 }

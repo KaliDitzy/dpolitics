@@ -1,6 +1,6 @@
 ﻿l_english:
   DISSENT: "[?dissent|%%0]"
-  DISSENT_INFO: "§YDissent§!\n§YCurrently affected by:§!\n\nBase Value: [?dissent_base|%%Y]\n\nWeekly Change: [?dissent_change|%%-]"
+  DISSENT_INFO: "§YDissent§!\n§YCurrently affected by:§!\n\nBase Value: [?dissent_base|%%Y]\n\nWeekly Change: [?dissent_change|%%-]\nFrom Ideological Incoherence: [?ideological_incoherence|%%-]"
   DISSENT_INFO_DELAYED: "Dissent represents the percentage of the dissenting thought amongst the population. A high dissent will damage your ideology drift defence and make it easier to make shifts in ideology and government. However, a high dissent will also damage your stability with time, so use it with caution."
 
   CHANGE_REFORM_WINDOW_TITLE: "[current_reform_title]"
