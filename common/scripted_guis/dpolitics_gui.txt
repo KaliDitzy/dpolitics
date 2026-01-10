@@ -88,10 +88,7 @@ scripted_gui = {
             anar_unban_button_click_enabled = { has_country_flag = anar_banned set_temp_variable = { tmp = 10 } custom_trigger_tooltip = { tooltip = dissent_at_least NOT = { check_variable = { dissent < tmp } } } }
         
             reform_4_button_click_enabled = {
-                OR = {
-                    has_idea = reform_dm_representative_democracy
-                    has_idea = reform_dm_direct_democracy
-                }
+                has_elections = yes
             }
         }
 
@@ -282,7 +279,7 @@ scripted_gui = {
             fash_support_button_click = { add_popularity = { ideology = fascism popularity = 0.015 } set_temp_variable = { tmp = -5 } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes add_stability = 0.005 }
             trad_support_button_click = { add_popularity = { ideology = traditionalism popularity = 0.015 } set_temp_variable = { tmp = -5 } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes add_stability = 0.005 }
             cons_support_button_click = { add_popularity = { ideology = conservatism popularity = 0.015 } set_temp_variable = { tmp = -5 } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes add_stability = 0.005 }
-            lib_support_button_click = { add_popularity = { ideology = liberalism popularity = 0.015 } set_temp_variable = { tmp = -5 } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes add_stability = 0.005 }
+            lib_support_button_click = { add_popularity = { ideology = liberalism popularity = 0.015 } set_temp_variable = { tmp =  -5 } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes add_stability = 0.005 }
             rad_support_button_click = { add_popularity = { ideology = radicalism popularity = 0.015 } set_temp_variable = { tmp = -5 } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes add_stability = 0.005 }
             socd_support_button_click = { add_popularity = { ideology = social_democracy popularity = 0.015 } set_temp_variable = { tmp = -5 } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes add_stability = 0.005 }
             dsoc_support_button_click = { add_popularity = { ideology = democratic_socialism popularity = 0.015 } set_temp_variable = { tmp = -5 } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes add_stability = 0.005 }

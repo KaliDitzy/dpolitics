@@ -40,6 +40,8 @@ recalculate_ideological_incoherence = {
 				has_idea = reform_es_wealth_bias
 				has_idea = reform_es_literacy_tests
 			}
+
+			has_elections = yes
 		}
 		add_to_variable = { ideological_incoherence = 1 }
 	}
@@ -78,7 +80,7 @@ recalculate_ideological_incoherence = {
 		add_to_variable = { ideological_incoherence = 2 }
 	}
 
-	# Supremacist nations probably shouldnt tolerate minorities as voters
+	# Supremacist nations shouldnt tolerate minorities as voters
 	if = {
 		limit = {
 			OR = {
@@ -87,12 +89,14 @@ recalculate_ideological_incoherence = {
 				has_idea = reform_cr_national_supremacy
 			}
 			has_idea = reform_es_no_restrictions
+
+			has_elections = yes
 		}
 		add_to_variable = { ideological_incoherence = 2 }
 	}
 
 	### dissent change
-	divide_variable = { ideological_incoherence = 2 }
+	divide_variable = { ideological_incoherence = 5 }
 }
 recalculate_dissent = {
 	set_variable = { dissent_change_base = 0.5 }
