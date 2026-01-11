@@ -28,7 +28,7 @@
   reform_cl_martial_law: "Martial Law"
   reform_cl_martial_law_desc: "Martial law will be enacted, enforcing nation-wide curfews and a state of high surveillance to maintain control."
   reform_cl_curtailed: "Curtailed"
-  reform_cl_curtailed_ITA: "Right-Wing Ban"
+  reform_cl_curtailed_ITA: "Right-Wing Ban (Curtailed)"
   reform_cl_curtailed_desc: "Civil liberties will be curtailed to a limited degree, in an effort to further state interests."
   reform_cl_curtailed_desc_ITA: "Certain political parties will be banned for the security of the state."
   reform_cl_guaranteed: "Guaranteed"
