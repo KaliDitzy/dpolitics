@@ -1,0 +1,52 @@
+GER_unification_influence = {
+	GER_major_influence_minor = {
+		target_root_trigger = {
+			ROOT = {
+				german_capital_state = yes
+				OR = {
+					original_tag = AUS
+					original_tag = PRE
+					original_tag = HAN
+				}
+			}
+		}
+		targets_dynamic = yes
+		target_trigger = {
+			FROM = {
+				german_capital_state = yes
+				NOT = {
+					OR = {
+						original_tag = AUS
+						original_tag = PRE
+						original_tag = HAN
+					}
+				}
+			}
+		}
+		cost = 35
+        days_remove = 70
+		modifier = {
+			political_power_factor = -0.25
+		}
+		remove_effect = {
+			if = {
+				limit = {
+					original_tag = AUS
+				}
+				FROM = { add_to_variable = { GER_influence_from_AUS = 5 } }
+			}
+			else_if = {
+				limit = {
+					original_tag = PRE
+				}
+				FROM = { add_to_variable = { GER_influence_from_PRE = 5 } }
+			}
+			else_if = {
+				limit = {
+					original_tag = HAN
+				}
+				FROM = { add_to_variable = { GER_influence_from_HAN = 5 } }
+			}
+		}
+	}
+}
