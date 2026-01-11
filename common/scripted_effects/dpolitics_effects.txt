@@ -569,7 +569,12 @@ recalculate_cosmetic_tag = {
 			limit = {
 				cosmetic_republic = yes
 			}
-			set_cosmetic_tag = ITA_republic
+			if = {
+				limit = {
+					has_idea = reform_pao_private_property_abolished
+				}
+				set_cosmetic_tag = ITA_republic_communist
+			}
 		}
 		else_if = {
 			limit = {

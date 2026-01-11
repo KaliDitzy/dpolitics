@@ -83,14 +83,14 @@ set_stability = 0.6
 set_variable = { dissent_base = 2.5 }
 add_ideas = {
 	reform_dop_oligarchy
-	reform_dm_autocracy
+	reform_dm_representative_democracy
 	reform_cl_curtailed
 	reform_pao_private_property_abolished
 	reform_es_no_restrictions
 	reform_cr_minority_rights
 }
-set_cosmetic_tag = ITA_bolshevik
-set_variable = { regime_id = 5 }
+set_cosmetic_tag = ITA_republic_communist
+set_variable = { regime_id = 2 }
 
 set_politics = {
 	ruling_party = bolshevism
