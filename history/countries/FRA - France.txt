@@ -93,7 +93,7 @@ set_cosmetic_tag = FRA_republic
 set_variable = { regime_id = 2 }
 
 set_politics = {
-	ruling_party = liberalism
+	ruling_party = radicalism
 	last_election = "1933.11.1"
 	election_frequency = 48
 	elections_allowed = yes
@@ -101,9 +101,9 @@ set_politics = {
 set_popularities = {
     fascism = 5
     traditionalism = 7
-    conservatism = 19
-    liberalism = 40
-    radicalism = 9
+    conservatism = 9
+    liberalism = 19
+    radicalism = 40
     social_democracy = 13
     democratic_socialism = 5
     bolshevism = 2
