@@ -688,7 +688,7 @@ defined_text = {
                 has_idea = reform_pao_private_property_abolished
             }
         }
-        localization_key = "Communist Republic"
+        localization_key = "Socialist Republic"
     }
     text = {
         trigger = {
