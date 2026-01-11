@@ -752,6 +752,7 @@ scripted_gui = {
                     check_variable = { current_selected_reform = 0 }
                     check_variable = { current_selected_reform = 1 }
                     check_variable = { current_selected_reform = 2 }
+                    check_variable = { current_selected_reform = 3 }
                     check_variable = { current_selected_reform = 4 }
                     check_variable = { current_selected_reform = 5 }
                 }
@@ -761,6 +762,7 @@ scripted_gui = {
                     check_variable = { current_selected_reform = 0 }
                     check_variable = { current_selected_reform = 1 }
                     check_variable = { current_selected_reform = 2 }
+                    check_variable = { current_selected_reform = 3 }
                     check_variable = { current_selected_reform = 4 }
                     check_variable = { current_selected_reform = 5 }
                 }
@@ -770,6 +772,7 @@ scripted_gui = {
                     check_variable = { current_selected_reform = 0 }
                     check_variable = { current_selected_reform = 1 }
                     check_variable = { current_selected_reform = 2 }
+                    check_variable = { current_selected_reform = 3 }
                     check_variable = { current_selected_reform = 4 }
                     check_variable = { current_selected_reform = 5 }
                 }
@@ -1033,12 +1036,11 @@ scripted_gui = {
                     limit = {
                         check_variable = { current_selected_reform = 3 }
                     }
-                    NOT = { has_idea = reform_pao_private_property_abolished }
+                    NOT = { has_idea = reform_pao_private_property_limited }
                     reform_pao_minimum_requirements = yes
                     OR = {
+                        social_democracy_plurality = yes
                         democratic_socialism_plurality = yes
-                        bolshevism_plurality = yes
-                        anarchism_plurality = yes
                     }
                 }
                 else_if = {
@@ -1101,6 +1103,18 @@ scripted_gui = {
                         liberalism_plurality = yes
                         radicalism_plurality = yes
                         social_democracy_plurality = yes
+                        democratic_socialism_plurality = yes
+                        bolshevism_plurality = yes
+                        anarchism_plurality = yes
+                    }
+                }
+                else_if = {
+                    limit = {
+                        check_variable = { current_selected_reform = 3 }
+                    }
+                    NOT = { has_idea = reform_pao_private_property_abolished }
+                    reform_pao_minimum_requirements = yes
+                    OR = {
                         democratic_socialism_plurality = yes
                         bolshevism_plurality = yes
                         anarchism_plurality = yes
@@ -1276,6 +1290,7 @@ scripted_gui = {
                     hidden_effect = {
                         remove_ideas = {
                             reform_pao_private_ownership
+                            reform_pao_private_property_limited
                             reform_pao_private_property_abolished
                         }
                     }
@@ -1367,6 +1382,7 @@ scripted_gui = {
                     hidden_effect = {
                         remove_ideas = {
                             reform_pao_feudal_structure
+                            reform_pao_private_property_limited
                             reform_pao_private_property_abolished
                         }
                     }
@@ -1454,11 +1470,12 @@ scripted_gui = {
                     limit = {
                         check_variable = { current_selected_reform = 3 }
                     }
-                    add_ideas = reform_pao_private_property_abolished
+                    add_ideas = reform_pao_private_property_limited
                     hidden_effect = {
                         remove_ideas = {
                             reform_pao_feudal_structure
                             reform_pao_private_ownership
+                            reform_pao_private_property_abolished
                         }
                     }
                     reform_pao_minimum_effects = yes
@@ -1540,6 +1557,20 @@ scripted_gui = {
                         }
                     }
                     reform_cl_minimum_effects = yes
+                }
+                else_if = {
+                    limit = {
+                        check_variable = { current_selected_reform = 3 }
+                    }
+                    add_ideas = reform_pao_private_property_abolished
+                    hidden_effect = {
+                        remove_ideas = {
+                            reform_pao_feudal_structure
+                            reform_pao_private_ownership
+                            reform_pao_private_property_limited
+                        }
+                    }
+                    reform_pao_minimum_effects = yes
                 }
                 else_if = {
                     limit = {

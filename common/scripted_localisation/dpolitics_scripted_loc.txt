@@ -140,7 +140,7 @@ defined_text = {
         trigger = {
             check_variable = { current_selected_reform = 3 }
         }
-        localization_key = reform_pao_private_property_abolished
+        localization_key = reform_pao_private_property_limited
     }
     text = {
         trigger = {
@@ -174,6 +174,12 @@ defined_text = {
             check_variable = { current_selected_reform = 2 }
         }
         localization_key = reform_cl_guaranteed
+    }
+    text = {
+        trigger = {
+            check_variable = { current_selected_reform = 3 }
+        }
+        localization_key = reform_pao_private_property_abolished
     }
     text = {
         trigger = {
@@ -336,7 +342,7 @@ defined_text = {
         trigger = {
             check_variable = { current_selected_reform = 3 }
         }
-        localization_key = reform_pao_private_property_abolished_desc
+        localization_key = reform_pao_private_property_limited_desc
     }
     text = {
         trigger = {
@@ -370,6 +376,12 @@ defined_text = {
             check_variable = { current_selected_reform = 2 }
         }
         localization_key = reform_cl_guaranteed_desc
+    }
+    text = {
+        trigger = {
+            check_variable = { current_selected_reform = 3 }
+        }
+        localization_key = reform_pao_private_property_abolished_desc
     }
     text = {
         trigger = {
@@ -545,6 +557,12 @@ defined_text = {
     }
     text = {
         trigger = {
+            has_idea = reform_pao_private_property_limited
+        }
+        localization_key = reform_pao_private_property_limited
+    }
+    text = {
+        trigger = {
             has_idea = reform_pao_private_property_abolished
         }
         localization_key = reform_pao_private_property_abolished
@@ -665,7 +683,10 @@ defined_text = {
     text = {
         trigger = {
             check_variable = { regime_id = 2 }
-            has_idea = reform_pao_private_property_abolished
+            OR = {
+                has_idea = reform_pao_private_property_limited
+                has_idea = reform_pao_private_property_abolished
+            }
         }
         localization_key = "Communist Republic"
     }

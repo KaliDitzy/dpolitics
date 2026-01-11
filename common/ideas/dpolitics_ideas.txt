@@ -123,6 +123,9 @@ ideas = {
 		reform_pao_private_ownership = {
 			name = reform_pao_private_ownership
 		}
+		reform_pao_private_property_limited = {
+			name = reform_pao_private_property_limited
+		}
 		reform_pao_private_property_abolished = {
 			name = reform_pao_private_property_abolished
 		}

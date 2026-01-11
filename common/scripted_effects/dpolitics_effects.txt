@@ -50,7 +50,7 @@ recalculate_ideological_incoherence = {
 	if = {
 		limit = {
 			OR = {
-				has_idea = reform_dop_minarchism
+				has_idea = reform_dop_minarchy
 				has_idea = reform_dop_anarchy
 			}
 			OR = {
@@ -65,7 +65,7 @@ recalculate_ideological_incoherence = {
 	# Minarchy must not have feudalism
 	if = {
 		limit = {
-			has_idea = reform_dop_minarchism
+			has_idea = reform_dop_minarchy
 			has_idea = reform_pao_feudal_structure
 		}
 		add_to_variable = { ideological_incoherence = 2 }
@@ -571,7 +571,10 @@ recalculate_cosmetic_tag = {
 			}
 			if = {
 				limit = {
-					has_idea = reform_pao_private_property_abolished
+					OR = {
+						has_idea = reform_pao_private_property_abolished
+						has_idea = reform_pao_private_property_limited
+					}
 				}
 				set_cosmetic_tag = ITA_republic_communist
 			}
