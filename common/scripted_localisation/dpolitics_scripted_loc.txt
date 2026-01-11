@@ -130,7 +130,19 @@ defined_text = {
         }
         localization_key = reform_dm_corporatism
     }
-    text = {
+    text = { # ITALIAN VARIANT OF CURTAILED
+        trigger = {
+            check_variable = { current_selected_reform = 2 }
+            original_tag = ITA
+            check_variable = { regime_id = 2 }
+            OR = {
+                has_idea = reform_pao_private_property_limited
+                has_idea = reform_pao_private_property_abolished
+            }
+        }
+        localization_key = reform_cl_curtailed_ITA
+    }
+    text = { # GENERIC
         trigger = {
             check_variable = { current_selected_reform = 2 }
         }
@@ -534,7 +546,19 @@ defined_text = {
         }
         localization_key = reform_cl_martial_law
     }
-    text = {
+    text = { # ITALIAN VARIANT OF CURTAILED
+        trigger = {
+            has_idea = reform_cl_curtailed
+            original_tag = ITA
+            check_variable = { regime_id = 2 }
+            OR = {
+                has_idea = reform_pao_private_property_limited
+                has_idea = reform_pao_private_property_abolished
+            }
+        }
+        localization_key = reform_cl_curtailed_ITA
+    }
+    text = { # GENERIC
         trigger = {
             has_idea = reform_cl_curtailed
         }
