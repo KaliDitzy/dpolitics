@@ -882,3 +882,97 @@ d_force_recalculate_cosmetic_tags = {
 		recalculate_cosmetic_tag = yes
 	}
 }
+
+d_find_bugs = {
+	every_possible_country = {
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_idea = reform_dop_monarchy
+						has_idea = reform_dop_oligarchy
+						has_idea = reform_dop_minarchy
+						has_idea = reform_dop_anarchy
+					}
+				}
+			}
+
+			log = "DPOLITICS : [THIS.GetName] doesn't have a Distribution of Power idea!"
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_idea = reform_dm_autocracy
+						has_idea = reform_dm_technocracy
+						has_idea = reform_dm_corporatism
+						has_idea = reform_dm_representative_democracy
+						has_idea = reform_dm_direct_democracy
+						has_idea = reform_dm_free_association
+					}
+				}
+			}
+
+			log = "DPOLITICS : [THIS.GetName] doesn't have a Decision-Making idea!"
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_idea = reform_cl_indefinitely_suspended
+						has_idea = reform_cl_martial_law
+						has_idea = reform_cl_curtailed
+						has_idea = reform_cl_guaranteed
+						has_idea = reform_cl_total_individual_freedom
+					}
+				}
+			}
+
+			log = "DPOLITICS : [THIS.GetName] doesn't have a Civil Liberties idea!"
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_idea = reform_pao_feudal_structure
+						has_idea = reform_pao_private_ownership
+						has_idea = reform_pao_private_property_abolished
+					}
+				}
+			}
+
+			log = "DPOLITICS : [THIS.GetName] doesn't have a Property and Ownership idea!"
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_idea = reform_es_landed_voting
+						has_idea = reform_es_wealth_bias
+						has_idea = reform_es_literacy_tests
+						has_idea = reform_es_no_restrictions
+					}
+				}
+			}
+
+			log = "DPOLITICS : [THIS.GetName] doesn't have a Election Suffrage idea!"
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_idea = reform_cr_ethnostate
+						has_idea = reform_cr_supremacy_of_tradition
+						has_idea = reform_cr_national_supremacy
+						has_idea = reform_cr_minority_indifference
+						has_idea = reform_cr_minority_rights
+						has_idea = reform_cr_sexual_autonomy
+						has_idea = reform_cr_queer_rights
+					}
+				}
+			}
+
+			log = "DPOLITICS : [THIS.GetName] doesn't have a Civil Rights idea!"
+		}
+	}
+}
