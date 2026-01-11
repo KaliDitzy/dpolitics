@@ -80,7 +80,7 @@ if = {
 set_research_slots = 3
 set_convoys = 50
 set_stability = 0.6
-set_variable = { dissent_base = 2.5 }
+set_variable = { dissent_base = 7.5 }
 add_ideas = {
 	reform_dop_oligarchy
 	reform_dm_representative_democracy
@@ -93,7 +93,7 @@ set_cosmetic_tag = ITA_republic_communist
 set_variable = { regime_id = 2 }
 
 set_politics = {
-	ruling_party = bolshevism
+	ruling_party = democratic_socialism
 	last_election = "1933.5.1"
 	election_frequency = 48
 	elections_allowed = no
@@ -105,7 +105,7 @@ set_popularities = {
     liberalism = 4
     radicalism = 4
     social_democracy = 8
-    democratic_socialism = 18
-    bolshevism = 45
+    democratic_socialism = 38
+    bolshevism = 25
     anarchism = 9
 }
