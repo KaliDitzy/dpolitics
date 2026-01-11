@@ -168,7 +168,7 @@ guiTypes = {
             position = { x = @TEXTX y = 92 }
             font = "hoi_26mbs"
             borderSize = {x = 0 y = 0}
-            text = "Traditionalists"
+            text = "Reactionaries"
             maxWidth = 256
             maxHeight = 26
             format = right
@@ -358,7 +358,7 @@ guiTypes = {
             position = { x = @TEXTX y = 222 }
             font = "hoi_26mbs"
             borderSize = {x = 0 y = 0}
-            text = "Democratic Socialists"
+            text = "Socialists"
             maxWidth = 256
             maxHeight = 26
             format = right
@@ -396,7 +396,7 @@ guiTypes = {
             position = { x = @TEXTX y = 248 }
             font = "hoi_26mbs"
             borderSize = {x = 0 y = 0}
-            text = "Bolsheviks"
+            text = "Communists"
             maxWidth = 256
             maxHeight = 26
             format = right
