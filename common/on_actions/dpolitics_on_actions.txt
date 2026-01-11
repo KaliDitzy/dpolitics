@@ -9,7 +9,6 @@ on_actions = {
                 recalculate_cosmetic_tag = yes
 
                 d_spawn_army = yes
-                d_find_bugs = yes
             }
         }
     }

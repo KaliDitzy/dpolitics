@@ -29,6 +29,7 @@
   reform_cl_martial_law_desc: "Martial law will be enacted, enforcing nation-wide curfews and a state of high surveillance to maintain control."
   reform_cl_curtailed: "Curtailed"
   reform_cl_curtailed_desc: "Civil liberties will be curtailed to a limited degree, in an effort to further state interests."
+  reform_cl_curtailed_desc_ITA: "Certain political parties will be banned for the security of the state."
   reform_cl_guaranteed: "Guaranteed"
   reform_cl_guaranteed_desc: "Civil liberties will be guaranteed, and the state will have little to no bearing on individual self-determination."
   reform_cl_total_individual_freedom: "Total Individual Freedom"

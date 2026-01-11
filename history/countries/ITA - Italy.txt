@@ -91,6 +91,15 @@ add_ideas = {
 }
 set_cosmetic_tag = ITA_republic_communist
 set_variable = { regime_id = 2 }
+# Ban Fascism
+set_variable = { fash_ban_cooldown = 240 }
+set_country_flag = fash_banned
+# Ban Reactionaries
+set_variable = { trad_ban_cooldown = 240 }
+set_country_flag = trad_banned
+# Ban Conservatism
+set_variable = { cons_ban_cooldown = 240 }
+set_country_flag = cons_banned
 
 set_politics = {
 	ruling_party = democratic_socialism

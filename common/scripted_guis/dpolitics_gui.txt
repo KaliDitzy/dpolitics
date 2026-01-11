@@ -41,38 +41,92 @@ scripted_gui = {
             anar_support_button_click_enabled = { set_temp_variable = { tmp = 5 } custom_trigger_tooltip = { tooltip = dissent_at_least NOT = { check_variable = { dissent < tmp } } } }
 
             fash_ban_button_click_enabled = {
+                NOT = {
+                    OR = {
+                        has_idea = reform_cl_guaranteed
+                        has_idea = reform_cl_total_individual_freedom
+                    }
+                }
                 if = { limit = { check_variable = { fash_ban_cooldown > 0 } } custom_trigger_tooltip = { tooltip = fash_cooldown NOT = { check_variable = { fash_ban_cooldown > 0 } } } }
                 NOT = { has_government = fascism has_country_flag = fash_banned }
             }
             trad_ban_button_click_enabled = {
+                NOT = {
+                    OR = {
+                        has_idea = reform_cl_guaranteed
+                        has_idea = reform_cl_total_individual_freedom
+                    }
+                }
                 if = { limit = { check_variable = { trad_ban_cooldown > 0 } } custom_trigger_tooltip = { tooltip = trad_cooldown NOT = { check_variable = { trad_ban_cooldown > 0 } } } }
                 NOT = { has_government = traditionalism has_country_flag = trad_banned }
             }
             cons_ban_button_click_enabled = {
+                NOT = {
+                    OR = {
+                        has_idea = reform_cl_guaranteed
+                        has_idea = reform_cl_total_individual_freedom
+                    }
+                }
                 if = { limit = { check_variable = { cons_ban_cooldown > 0 } } custom_trigger_tooltip = { tooltip = cons_cooldown NOT = { check_variable = { cons_ban_cooldown > 0 } } } }
                 NOT = { has_government = conservatism has_country_flag = cons_banned }
             }
             lib_ban_button_click_enabled = {
+                NOT = {
+                    OR = {
+                        has_idea = reform_cl_guaranteed
+                        has_idea = reform_cl_total_individual_freedom
+                    }
+                }
                 if = { limit = { check_variable = { lib_ban_cooldown > 0 } } custom_trigger_tooltip = { tooltip = lib_cooldown NOT = { check_variable = { lib_ban_cooldown > 0 } } } }
                 NOT = { has_government = liberalism has_country_flag = lib_banned }
             }
             rad_ban_button_click_enabled = {
+                NOT = {
+                    OR = {
+                        has_idea = reform_cl_guaranteed
+                        has_idea = reform_cl_total_individual_freedom
+                    }
+                }
                 if = { limit = { check_variable = { rad_ban_cooldown > 0 } } custom_trigger_tooltip = { tooltip = rad_cooldown NOT = { check_variable = { rad_ban_cooldown > 0 } } } }
                 NOT = { has_government = radicalism has_country_flag = rad_banned }
             }
             socd_ban_button_click_enabled = {
+                NOT = {
+                    OR = {
+                        has_idea = reform_cl_guaranteed
+                        has_idea = reform_cl_total_individual_freedom
+                    }
+                }
                 if = { limit = { check_variable = { socd_ban_cooldown > 0 } } custom_trigger_tooltip = { tooltip = socd_cooldown NOT = { check_variable = { socd_ban_cooldown > 0 } } } }
                 NOT = { has_government = social_democracy has_country_flag = socd_banned }
             }
             dsoc_ban_button_click_enabled = {
+                NOT = {
+                    OR = {
+                        has_idea = reform_cl_guaranteed
+                        has_idea = reform_cl_total_individual_freedom
+                    }
+                }
                 if = { limit = { check_variable = { dsoc_ban_cooldown > 0 } } custom_trigger_tooltip = { tooltip = dsoc_cooldown NOT = { check_variable = { dsoc_ban_cooldown > 0 } } } }
                 NOT = { has_government = democratic_socialism has_country_flag = dsoc_banned }
             }
             bols_ban_button_click_enabled = {
+                NOT = {
+                    OR = {
+                        has_idea = reform_cl_guaranteed
+                        has_idea = reform_cl_total_individual_freedom
+                    }
+                }
                 if = { limit = { check_variable = { bols_ban_cooldown > 0 } } custom_trigger_tooltip = { tooltip = bols_cooldown NOT = { check_variable = { bols_ban_cooldown > 0 } } } }
                 NOT = { has_government = bolshevism has_country_flag = bols_banned }
             }
             anar_ban_button_click_enabled = {
+                NOT = {
+                    OR = {
+                        has_idea = reform_cl_guaranteed
+                        has_idea = reform_cl_total_individual_freedom
+                    }
+                }
                 if = { limit = { check_variable = { anar_ban_cooldown > 0 } } custom_trigger_tooltip = { tooltip = anar_cooldown NOT = { check_variable = { anar_ban_cooldown > 0 } } } }
                 NOT = { has_government = anarchism has_country_flag = anar_banned }
             }

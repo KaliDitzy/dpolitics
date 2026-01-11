@@ -332,7 +332,19 @@ defined_text = {
         }
         localization_key = reform_dm_corporatism_desc
     }
-    text = {
+    text = { # ITALIAN VARIANT OF CURTAILED DESCRIPTION
+        trigger = {
+            check_variable = { current_selected_reform = 2 }
+            original_tag = ITA
+            check_variable = { regime_id = 2 }
+            OR = {
+                has_idea = reform_pao_private_property_limited
+                has_idea = reform_pao_private_property_abolished
+            }
+        }
+        localization_key = reform_cl_curtailed_desc_ITA
+    }
+    text = { # GENERIC
         trigger = {
             check_variable = { current_selected_reform = 2 }
         }
