@@ -885,6 +885,11 @@ d_force_recalculate_cosmetic_tags = {
 
 d_find_bugs = {
 	every_possible_country = {
+		limit = {
+			any_state = {
+				is_core_of = PREV
+			}
+		}
 		if = {
 			limit = {
 				NOT = {
@@ -897,7 +902,7 @@ d_find_bugs = {
 				}
 			}
 
-			log = "DPOLITICS : [THIS.GetName] doesn't have a Distribution of Power idea!"
+			log = "DPOLITICS : [THIS.GetNonIdeologyName] doesn't have a Distribution of Power idea!"
 		}
 		if = {
 			limit = {
@@ -913,7 +918,7 @@ d_find_bugs = {
 				}
 			}
 
-			log = "DPOLITICS : [THIS.GetName] doesn't have a Decision-Making idea!"
+			log = "DPOLITICS : [THIS.GetNonIdeologyName] doesn't have a Decision-Making idea!"
 		}
 		if = {
 			limit = {
@@ -928,7 +933,7 @@ d_find_bugs = {
 				}
 			}
 
-			log = "DPOLITICS : [THIS.GetName] doesn't have a Civil Liberties idea!"
+			log = "DPOLITICS : [THIS.GetNonIdeologyName] doesn't have a Civil Liberties idea!"
 		}
 		if = {
 			limit = {
@@ -941,7 +946,7 @@ d_find_bugs = {
 				}
 			}
 
-			log = "DPOLITICS : [THIS.GetName] doesn't have a Property and Ownership idea!"
+			log = "DPOLITICS : [THIS.GetNonIdeologyName] doesn't have a Property and Ownership idea!"
 		}
 		if = {
 			limit = {
@@ -955,7 +960,7 @@ d_find_bugs = {
 				}
 			}
 
-			log = "DPOLITICS : [THIS.GetName] doesn't have a Election Suffrage idea!"
+			log = "DPOLITICS : [THIS.GetNonIdeologyName] doesn't have a Election Suffrage idea!"
 		}
 		if = {
 			limit = {
@@ -972,7 +977,7 @@ d_find_bugs = {
 				}
 			}
 
-			log = "DPOLITICS : [THIS.GetName] doesn't have a Civil Rights idea!"
+			log = "DPOLITICS : [THIS.GetNonIdeologyName] doesn't have a Civil Rights idea!"
 		}
 	}
 }
