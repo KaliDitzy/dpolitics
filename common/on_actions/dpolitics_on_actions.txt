@@ -34,9 +34,10 @@ on_actions = {
         effect = { # random scandal
             set_temp_variable_to_random = t_rand
             multiply_temp_variable = { t_rand = 208 }
+            multiply_temp_variable = { t_rand = stability }
             if = {
                 limit = {
-                    check_variable = { t_rand < 40 } # 1
+                    check_variable = { t_rand < 9 } # 1
                 }
                 random_list = {
                     100 = {
