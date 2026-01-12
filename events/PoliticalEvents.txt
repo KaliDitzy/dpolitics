@@ -43,7 +43,7 @@ country_event = {
 		add_stability = 0.05
 	}
 }
-# Opposition Against Traditionalism
+# Opposition Against Reactionaries
 country_event = {
 	id = politics.opposition.2
 	title = politics.opposition.2.t
@@ -237,7 +237,7 @@ country_event = {
 		add_stability = 0.05
 	}
 }
-# Opposition Against Democratic Socialism
+# Opposition Against Socialism
 country_event = {
 	id = politics.opposition.7
 	title = politics.opposition.7.t
@@ -276,7 +276,7 @@ country_event = {
 		add_stability = 0.05
 	}
 }
-# Opposition Against Bolshevism
+# Opposition Against Communism
 country_event = {
 	id = politics.opposition.8
 	title = politics.opposition.8.t
@@ -398,7 +398,7 @@ country_event = {
 		}
 	}
 }
-# Traditionalist Country Spillover
+# Reactionary Country Spillover
 country_event = {
 	id = politics.border_influence.2
 	title = politics.border_influence.2.t
@@ -598,7 +598,7 @@ country_event = {
 		}
 	}
 }
-# Democratic Socialist Country Spillover
+# Socialist Country Spillover
 country_event = {
 	id = politics.border_influence.7
 	title = politics.border_influence.7.t
@@ -638,7 +638,7 @@ country_event = {
 		}
 	}
 }
-# Bolshevik Country Spillover
+# Communist Country Spillover
 country_event = {
 	id = politics.border_influence.8
 	title = politics.border_influence.8.t
@@ -1017,7 +1017,7 @@ news_event = {
 		set_temp_variable = { tmp = @border_influence_dissent } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes
 	}
 }
-# Bolshevik Regime Comes Into Power
+# Communist Regime Comes Into Power
 news_event = {
 	id = politics.regime_change.5
 	title = politics.regime_change.5.t
