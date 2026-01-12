@@ -724,7 +724,7 @@ country_event = {
 add_namespace = politics.scandal
 
 @maximum_political_power_loss = -100
-@maximum_party_popularity_loss = -1
+@maximum_party_popularity_loss = -0.15
 # Fascist Scandal
 country_event = {
 	id = politics.scandal.1
