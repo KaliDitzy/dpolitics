@@ -16,7 +16,7 @@ bookmarks = {
 			}
 		}
 		"AUS"={
-			history = "FRA_GATHERING_STORM_DESC"
+			history = "AUS_GATHERING_STORM_DESC"
 			ideology = traditionalism
 			ideas = {
 			}
