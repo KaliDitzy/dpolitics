@@ -4305,24 +4305,6 @@ on_actions = {
 	#Fired when a country goes to war against anyone and is not fired again when it enters war against another country unless it went to peace first
 	on_war = { 
 		effect = {
-			if = {
-				limit = {
-					tag = USA
-					has_war_with = JAP
-					NOT = { has_global_flag = day_of_infamy_happened }
-					has_country_leader = { character = USA_franklin_delano_roosevelt ruling_only = yes }
-				}
-				play_day_of_infamy_effect = yes
-			}
-			if = {
-				limit = {
-					tag = ENG
-					has_war_with = GER
-					has_country_leader = { character = ENG_neville_chamberlain ruling_only = yes }
-					GER = { has_war_with = POL }
-				}
-				play_war_with_germany_effect = yes
-			}
 		}
 	}
 	#ROOT = attacking side
