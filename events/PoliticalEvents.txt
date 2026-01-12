@@ -723,6 +723,8 @@ country_event = {
 
 add_namespace = politics.scandal
 
+@maximum_political_power_loss = -100
+@maximum_party_popularity_loss = -1
 # Fascist Scandal
 country_event = {
 	id = politics.scandal.1
@@ -739,11 +741,11 @@ country_event = {
 			limit = {
 				has_government = fascism
 			}
-			set_temp_variable = { t = -100 }
+			set_temp_variable = { t = @maximum_political_power_loss }
 			multiply_temp_variable = { t = party_popularity@fascism }
 			add_political_power = var:t
 		}
-		set_temp_variable = { t = -0.1 }
+		set_temp_variable = { t = @maximum_party_popularity_loss }
 		multiply_temp_variable = { t = party_popularity@fascism }
 		add_popularity = { ideology = fascism popularity = var:t }
 	}
@@ -764,11 +766,11 @@ country_event = {
 			limit = {
 				has_government = traditionalism
 			}
-			set_temp_variable = { t = -100 }
+			set_temp_variable = { t = @maximum_political_power_loss }
 			multiply_temp_variable = { t = party_popularity@traditionalism }
 			add_political_power = var:t
 		}
-		set_temp_variable = { t = -0.1 }
+		set_temp_variable = { t = @maximum_party_popularity_loss }
 		multiply_temp_variable = { t = party_popularity@traditionalism }
 		add_popularity = { ideology = traditionalism popularity = var:t }
 	}
@@ -789,11 +791,11 @@ country_event = {
 			limit = {
 				has_government = conservatism
 			}
-			set_temp_variable = { t = -100 }
+			set_temp_variable = { t = @maximum_political_power_loss }
 			multiply_temp_variable = { t = party_popularity@conservatism }
 			add_political_power = var:t
 		}
-		set_temp_variable = { t = -0.1 }
+		set_temp_variable = { t = @maximum_party_popularity_loss }
 		multiply_temp_variable = { t = party_popularity@conservatism }
 		add_popularity = { ideology = conservatism popularity = var:t }
 	}
@@ -814,11 +816,11 @@ country_event = {
 			limit = {
 				has_government = liberalism
 			}
-			set_temp_variable = { t = -100 }
+			set_temp_variable = { t = @maximum_political_power_loss }
 			multiply_temp_variable = { t = party_popularity@liberalism }
 			add_political_power = var:t
 		}
-		set_temp_variable = { t = -0.1 }
+		set_temp_variable = { t = @maximum_party_popularity_loss }
 		multiply_temp_variable = { t = party_popularity@liberalism }
 		add_popularity = { ideology = liberalism popularity = var:t }
 	}
@@ -839,11 +841,11 @@ country_event = {
 			limit = {
 				has_government = radicalism
 			}
-			set_temp_variable = { t = -100 }
+			set_temp_variable = { t = @maximum_political_power_loss }
 			multiply_temp_variable = { t = party_popularity@radicalism }
 			add_political_power = var:t
 		}
-		set_temp_variable = { t = -0.1 }
+		set_temp_variable = { t = @maximum_party_popularity_loss }
 		multiply_temp_variable = { t = party_popularity@radicalism }
 		add_popularity = { ideology = radicalism popularity = var:t }
 	}
@@ -864,11 +866,11 @@ country_event = {
 			limit = {
 				has_government = social_democracy
 			}
-			set_temp_variable = { t = -100 }
+			set_temp_variable = { t = @maximum_political_power_loss }
 			multiply_temp_variable = { t = party_popularity@social_democracy }
 			add_political_power = var:t
 		}
-		set_temp_variable = { t = -0.1 }
+		set_temp_variable = { t = @maximum_party_popularity_loss }
 		multiply_temp_variable = { t = party_popularity@social_democracy }
 		add_popularity = { ideology = social_democracy popularity = var:t }
 	}
@@ -889,11 +891,11 @@ country_event = {
 			limit = {
 				has_government = democratic_socialism
 			}
-			set_temp_variable = { t = -100 }
+			set_temp_variable = { t = @maximum_political_power_loss }
 			multiply_temp_variable = { t = party_popularity@democratic_socialism }
 			add_political_power = var:t
 		}
-		set_temp_variable = { t = -0.1 }
+		set_temp_variable = { t = @maximum_party_popularity_loss }
 		multiply_temp_variable = { t = party_popularity@democratic_socialism }
 		add_popularity = { ideology = democratic_socialism popularity = var:t }
 	}
@@ -914,11 +916,11 @@ country_event = {
 			limit = {
 				has_government = bolshevism
 			}
-			set_temp_variable = { t = -100 }
+			set_temp_variable = { t = @maximum_political_power_loss }
 			multiply_temp_variable = { t = party_popularity@bolshevism }
 			add_political_power = var:t
 		}
-		set_temp_variable = { t = -0.1 }
+		set_temp_variable = { t = @maximum_party_popularity_loss }
 		multiply_temp_variable = { t = party_popularity@bolshevism }
 		add_popularity = { ideology = bolshevism popularity = var:t }
 	}
@@ -939,11 +941,11 @@ country_event = {
 			limit = {
 				has_government = anarchism
 			}
-			set_temp_variable = { t = -100 }
+			set_temp_variable = { t = @maximum_political_power_loss }
 			multiply_temp_variable = { t = party_popularity@anarchism }
 			add_political_power = var:t
 		}
-		set_temp_variable = { t = -0.1 }
+		set_temp_variable = { t = @maximum_party_popularity_loss }
 		multiply_temp_variable = { t = party_popularity@anarchism }
 		add_popularity = { ideology = anarchism popularity = var:t }
 	}
