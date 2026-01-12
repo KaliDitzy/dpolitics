@@ -719,6 +719,236 @@ country_event = {
 	}
 }
 
+# SCANDAL EVENTS
+
+add_namespace = politics.scandal
+
+# Fascist Scandal
+country_event = {
+	id = politics.scandal.1
+	title = politics.scandal.1.t
+	desc = politics.scandal.1.d
+	picture = GFX_report_event_election_vote
+
+	is_triggered_only = yes
+	
+	option = { #
+		name = politics.scandal.1.a
+
+		if = {
+			limit = {
+				has_government = fascism
+			}
+			set_temp_variable = { t = -100 }
+			multiply_temp_variable = { t = party_popularity@fascism }
+			add_political_power = var:t
+		}
+		set_temp_variable = { t = -0.1 }
+		multiply_temp_variable = { t = party_popularity@fascism }
+		add_popularity = { ideology = fascism popularity = var:t }
+	}
+}
+# Reactionary Scandal
+country_event = {
+	id = politics.scandal.2
+	title = politics.scandal.2.t
+	desc = politics.scandal.2.d
+	picture = GFX_report_event_election_vote
+
+	is_triggered_only = yes
+	
+	option = { #
+		name = politics.scandal.2.a
+
+		if = {
+			limit = {
+				has_government = traditionalism
+			}
+			set_temp_variable = { t = -100 }
+			multiply_temp_variable = { t = party_popularity@traditionalism }
+			add_political_power = var:t
+		}
+		set_temp_variable = { t = -0.1 }
+		multiply_temp_variable = { t = party_popularity@traditionalism }
+		add_popularity = { ideology = traditionalism popularity = var:t }
+	}
+}
+# Conservative Scandal
+country_event = {
+	id = politics.scandal.3
+	title = politics.scandal.3.t
+	desc = politics.scandal.3.d
+	picture = GFX_report_event_election_vote
+
+	is_triggered_only = yes
+	
+	option = { #
+		name = politics.scandal.3.a
+
+		if = {
+			limit = {
+				has_government = conservatism
+			}
+			set_temp_variable = { t = -100 }
+			multiply_temp_variable = { t = party_popularity@conservatism }
+			add_political_power = var:t
+		}
+		set_temp_variable = { t = -0.1 }
+		multiply_temp_variable = { t = party_popularity@conservatism }
+		add_popularity = { ideology = conservatism popularity = var:t }
+	}
+}
+# Liberal Scandal
+country_event = {
+	id = politics.scandal.4
+	title = politics.scandal.4.t
+	desc = politics.scandal.4.d
+	picture = GFX_report_event_election_vote
+
+	is_triggered_only = yes
+	
+	option = { #
+		name = politics.scandal.4.a
+
+		if = {
+			limit = {
+				has_government = liberalism
+			}
+			set_temp_variable = { t = -100 }
+			multiply_temp_variable = { t = party_popularity@liberalism }
+			add_political_power = var:t
+		}
+		set_temp_variable = { t = -0.1 }
+		multiply_temp_variable = { t = party_popularity@liberalism }
+		add_popularity = { ideology = liberalism popularity = var:t }
+	}
+}
+# Radical Scandal
+country_event = {
+	id = politics.scandal.5
+	title = politics.scandal.5.t
+	desc = politics.scandal.5.d
+	picture = GFX_report_event_election_vote
+
+	is_triggered_only = yes
+	
+	option = { #
+		name = politics.scandal.5.a
+
+		if = {
+			limit = {
+				has_government = radicalism
+			}
+			set_temp_variable = { t = -100 }
+			multiply_temp_variable = { t = party_popularity@radicalism }
+			add_political_power = var:t
+		}
+		set_temp_variable = { t = -0.1 }
+		multiply_temp_variable = { t = party_popularity@radicalism }
+		add_popularity = { ideology = radicalism popularity = var:t }
+	}
+}
+# Social Democratic Scandal
+country_event = {
+	id = politics.scandal.6
+	title = politics.scandal.6.t
+	desc = politics.scandal.6.d
+	picture = GFX_report_event_election_vote
+
+	is_triggered_only = yes
+	
+	option = { #
+		name = politics.scandal.6.a
+
+		if = {
+			limit = {
+				has_government = social_democracy
+			}
+			set_temp_variable = { t = -100 }
+			multiply_temp_variable = { t = party_popularity@social_democracy }
+			add_political_power = var:t
+		}
+		set_temp_variable = { t = -0.1 }
+		multiply_temp_variable = { t = party_popularity@social_democracy }
+		add_popularity = { ideology = social_democracy popularity = var:t }
+	}
+}
+# Socialist Scandal
+country_event = {
+	id = politics.scandal.7
+	title = politics.scandal.7.t
+	desc = politics.scandal.7.d
+	picture = GFX_report_event_election_vote
+
+	is_triggered_only = yes
+	
+	option = { #
+		name = politics.scandal.7.a
+
+		if = {
+			limit = {
+				has_government = democratic_socialism
+			}
+			set_temp_variable = { t = -100 }
+			multiply_temp_variable = { t = party_popularity@democratic_socialism }
+			add_political_power = var:t
+		}
+		set_temp_variable = { t = -0.1 }
+		multiply_temp_variable = { t = party_popularity@democratic_socialism }
+		add_popularity = { ideology = democratic_socialism popularity = var:t }
+	}
+}
+# Communist Scandal
+country_event = {
+	id = politics.scandal.8
+	title = politics.scandal.8.t
+	desc = politics.scandal.8.d
+	picture = GFX_report_event_election_vote
+
+	is_triggered_only = yes
+	
+	option = { #
+		name = politics.scandal.8.a
+
+		if = {
+			limit = {
+				has_government = bolshevism
+			}
+			set_temp_variable = { t = -100 }
+			multiply_temp_variable = { t = party_popularity@bolshevism }
+			add_political_power = var:t
+		}
+		set_temp_variable = { t = -0.1 }
+		multiply_temp_variable = { t = party_popularity@bolshevism }
+		add_popularity = { ideology = bolshevism popularity = var:t }
+	}
+}
+# Anarchist Scandal
+country_event = {
+	id = politics.scandal.9
+	title = politics.scandal.9.t
+	desc = politics.scandal.9.d
+	picture = GFX_report_event_election_vote
+
+	is_triggered_only = yes
+	
+	option = { #
+		name = politics.scandal.9.a
+
+		if = {
+			limit = {
+				has_government = anarchism
+			}
+			set_temp_variable = { t = -100 }
+			multiply_temp_variable = { t = party_popularity@anarchism }
+			add_political_power = var:t
+		}
+		set_temp_variable = { t = -0.1 }
+		multiply_temp_variable = { t = party_popularity@anarchism }
+		add_popularity = { ideology = anarchism popularity = var:t }
+	}
+}
+
 # REGIME CHANGE EVENTS
 
 add_namespace = politics.regime_change

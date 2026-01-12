@@ -38,6 +38,53 @@ on_actions = {
                 limit = {
                     check_variable = { t_rand < 40 } # 1
                 }
+                random_list = {
+                    100 = {
+                        modifier = {
+                            factor = party_popularity@fascism
+                        }
+                    }
+                    100 = {
+                        modifier = {
+                            factor = party_popularity@traditionalism
+                        }
+                    }
+                    100 = {
+                        modifier = {
+                            factor = party_popularity@conservatism
+                        }
+                    }
+                    100 = {
+                        modifier = {
+                            factor = party_popularity@liberalism
+                        }
+                    }
+                    100 = {
+                        modifier = {
+                            factor = party_popularity@radicalism
+                        }
+                    }
+                    100 = {
+                        modifier = {
+                            factor = party_popularity@social_democracy
+                        }
+                    }
+                    100 = {
+                        modifier = {
+                            factor = party_popularity@democratic_socialism
+                        }
+                    }
+                    100 = {
+                        modifier = {
+                            factor = party_popularity@bolshevism
+                        }
+                    }
+                    100 = {
+                        modifier = {
+                            factor = party_popularity@anarchism
+                        }
+                    }
+                }
                 add_political_power = -50 # TEST EFFECT - REMOVE LATER TODO
             }
         }
