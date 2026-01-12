@@ -10,5 +10,10 @@ tags={
 }
 name="Dynamic Politics Preview"
 supported_version="1.17.*"
+replace_path="common/scripted_diplomatic_actions"
+replace_path="common/scripted_effects"
+replace_path="common/scripted_guis"
+replace_path="common/scripted_localisation"
+replace_path="common/scripted_triggers"
 replace_path="history/countries"
 replace_path="history/states"
