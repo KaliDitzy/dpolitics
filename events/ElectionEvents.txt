@@ -101,6 +101,22 @@ country_event = {
 			elections_allowed = yes
 		}
 	}
+	option = {
+		trigger = {
+			fascism > 0.5
+		}
+		name = election.2.d
+		set_politics = {
+			ruling_party = fascism
+			elections_allowed = yes
+		}
+		set_temp_variable = { popularity_hit = party_popularity@fascism }
+		multiply_temp_variable = { popularity_hit = -0.05 }
+		add_popularity = {
+			ideology = fascism
+			popularity = var:popularity_hit
+		}
+	}
 }
 # Traditionalist Victory
 country_event = {
@@ -163,6 +179,22 @@ country_event = {
 		set_politics = {
 			ruling_party = traditionalism
 			elections_allowed = yes
+		}
+	}
+	option = {
+		trigger = {
+			traditionalism > 0.5
+		}
+		name = election.3.d
+		set_politics = {
+			ruling_party = traditionalism
+			elections_allowed = yes
+		}
+		set_temp_variable = { popularity_hit = party_popularity@traditionalism }
+		multiply_temp_variable = { popularity_hit = -0.05 }
+		add_popularity = {
+			ideology = traditionalism
+			popularity = var:popularity_hit
 		}
 	}
 }
@@ -229,6 +261,22 @@ country_event = {
 			elections_allowed = yes
 		}
 	}
+	option = {
+		trigger = {
+			conservatism > 0.5
+		}
+		name = election.4.d
+		set_politics = {
+			ruling_party = conservatism
+			elections_allowed = yes
+		}
+		set_temp_variable = { popularity_hit = party_popularity@conservatism }
+		multiply_temp_variable = { popularity_hit = -0.05 }
+		add_popularity = {
+			ideology = conservatism
+			popularity = var:popularity_hit
+		}
+	}
 }
 # Liberal Victory
 country_event = {
@@ -291,6 +339,22 @@ country_event = {
 		set_politics = {
 			ruling_party = liberalism
 			elections_allowed = yes
+		}
+	}
+	option = {
+		trigger = {
+			liberalism > 0.5
+		}
+		name = election.5.d
+		set_politics = {
+			ruling_party = liberalism
+			elections_allowed = yes
+		}
+		set_temp_variable = { popularity_hit = party_popularity@liberalism }
+		multiply_temp_variable = { popularity_hit = -0.05 }
+		add_popularity = {
+			ideology = liberalism
+			popularity = var:popularity_hit
 		}
 	}
 }
@@ -357,6 +421,22 @@ country_event = {
 			elections_allowed = yes
 		}
 	}
+	option = {
+		trigger = {
+			radicalism > 0.5
+		}
+		name = election.6.d
+		set_politics = {
+			ruling_party = radicalism
+			elections_allowed = yes
+		}
+		set_temp_variable = { popularity_hit = party_popularity@radicalism }
+		multiply_temp_variable = { popularity_hit = -0.05 }
+		add_popularity = {
+			ideology = radicalism
+			popularity = var:popularity_hit
+		}
+	}
 }
 # Social Democratic Victory
 country_event = {
@@ -419,6 +499,22 @@ country_event = {
 		set_politics = {
 			ruling_party = social_democracy
 			elections_allowed = yes
+		}
+	}
+	option = {
+		trigger = {
+			social_democracy > 0.5
+		}
+		name = election.7.d
+		set_politics = {
+			ruling_party = social_democracy
+			elections_allowed = yes
+		}
+		set_temp_variable = { popularity_hit = party_popularity@social_democracy }
+		multiply_temp_variable = { popularity_hit = -0.05 }
+		add_popularity = {
+			ideology = social_democracy
+			popularity = var:popularity_hit
 		}
 	}
 }
@@ -485,6 +581,22 @@ country_event = {
 			elections_allowed = yes
 		}
 	}
+	option = {
+		trigger = {
+			democratic_socialism > 0.5
+		}
+		name = election.8.d
+		set_politics = {
+			ruling_party = democratic_socialism
+			elections_allowed = yes
+		}
+		set_temp_variable = { popularity_hit = party_popularity@democratic_socialism }
+		multiply_temp_variable = { popularity_hit = -0.05 }
+		add_popularity = {
+			ideology = democratic_socialism
+			popularity = var:popularity_hit
+		}
+	}
 }
 # Bolshevik Victory
 country_event = {
@@ -547,6 +659,22 @@ country_event = {
 		set_politics = {
 			ruling_party = bolshevism
 			elections_allowed = yes
+		}
+	}
+	option = {
+		trigger = {
+			bolshevism > 0.5
+		}
+		name = election.9.d
+		set_politics = {
+			ruling_party = bolshevism
+			elections_allowed = yes
+		}
+		set_temp_variable = { popularity_hit = party_popularity@bolshevism }
+		multiply_temp_variable = { popularity_hit = -0.05 }
+		add_popularity = {
+			ideology = bolshevism
+			popularity = var:popularity_hit
 		}
 	}
 }
