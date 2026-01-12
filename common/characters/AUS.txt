@@ -1,0 +1,15 @@
+characters = {
+	AUS_otto_von_habsburg = {
+		name = "Otto von Habsburg" 
+		portraits = {
+			civilian = {
+				large = GFX_portrait_Otto_von_Habsburg
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "2000.1.1.1"
+			id = -1
+		}
+	}
+}
