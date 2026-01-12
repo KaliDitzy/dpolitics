@@ -25,11 +25,21 @@ on_actions = {
         }
     }
     on_weekly = {
-        effect = {
+        effect = { # regular stuff
             add_to_variable = { dissent_base = dissent_change }
             recalculate_dissent = yes
             
             update_ideology_targets = yes
+        }
+        effect = { # random scandal
+            set_temp_variable_to_random = t_rand
+            multiply_temp_variable = { t_rand = 208 }
+            if = {
+                limit = {
+                    check_variable = { t_rand < 40 } # 1
+                }
+                add_political_power = -50 # TEST EFFECT - REMOVE LATER TODO
+            }
         }
         random_events = {
             100 = politics.border_influence.1
