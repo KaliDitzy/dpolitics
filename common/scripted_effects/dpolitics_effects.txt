@@ -791,7 +791,7 @@ reform_dop_minimum_effects = {
 	add_stability = 0.2
 	recalculate_ideological_incoherence = yes
 	set_temp_variable = { tmp = -40 } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes
-    recalculate_cosmetic_tag = yes
+    hidden_effect = { recalculate_cosmetic_tag = yes }
 	set_variable = { reform_dop_cooldown = 28 }
 	subtract_from_variable = { ai_seeking_reform = 1 }
 }
@@ -799,7 +799,7 @@ reform_dm_minimum_effects = {
 	add_stability = 0.125
 	recalculate_ideological_incoherence = yes
 	set_temp_variable = { tmp = -25 } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes
-    recalculate_cosmetic_tag = yes
+    hidden_effect = { recalculate_cosmetic_tag = yes }
 	set_variable = { reform_dm_cooldown = 28 }
 	subtract_from_variable = { ai_seeking_reform = 1 }
 }
@@ -807,7 +807,7 @@ reform_cl_minimum_effects = {
 	add_stability = 0.075
 	recalculate_ideological_incoherence = yes
 	set_temp_variable = { tmp = -15 } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes
-    recalculate_cosmetic_tag = yes
+    hidden_effect = { recalculate_cosmetic_tag = yes }
 	set_variable = { reform_cl_cooldown = 28 }
 	subtract_from_variable = { ai_seeking_reform = 1 }
 }
@@ -815,7 +815,7 @@ reform_pao_minimum_effects = {
 	add_stability = 0.125
 	recalculate_ideological_incoherence = yes
 	set_temp_variable = { tmp = -25 } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes
-    recalculate_cosmetic_tag = yes
+    hidden_effect = { recalculate_cosmetic_tag = yes }
 	set_variable = { reform_pao_cooldown = 28 }
 	subtract_from_variable = { ai_seeking_reform = 1 }
 }
@@ -823,7 +823,7 @@ reform_es_minimum_effects = {
 	add_stability = 0.125
 	recalculate_ideological_incoherence = yes
 	set_temp_variable = { tmp = -25 } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes
-    recalculate_cosmetic_tag = yes
+    hidden_effect = { recalculate_cosmetic_tag = yes }
 	set_variable = { reform_es_cooldown = 28 }
 	subtract_from_variable = { ai_seeking_reform = 1 }
 }
@@ -831,7 +831,7 @@ reform_cr_minimum_effects = {
 	add_stability = 0.075
 	recalculate_ideological_incoherence = yes
 	set_temp_variable = { tmp = -15 } custom_effect_tooltip = dissent_change add_to_variable = { dissent_base = tmp } recalculate_dissent = yes
-    recalculate_cosmetic_tag = yes
+    hidden_effect = { recalculate_cosmetic_tag = yes }
 	set_variable = { reform_cr_cooldown = 28 }
 	subtract_from_variable = { ai_seeking_reform = 1 }
 }
