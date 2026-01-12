@@ -22,7 +22,7 @@ ideas = {
 				}
 			}
 			on_remove = {
-				retire_leader = yes
+				retire_country_leader = yes
 			}
 		}
 		reform_dm_technocracy = {
@@ -34,7 +34,7 @@ ideas = {
 				}
 			}
 			on_remove = {
-				retire_leader = yes
+				retire_country_leader = yes
 			}
 		}
 		reform_dm_corporatism = {
@@ -49,7 +49,7 @@ ideas = {
 				dissent_gain = 0.5
 			}
 			on_remove = {
-				retire_leader = yes
+				retire_country_leader = yes
 			}
 		}
 		reform_dm_representative_democracy = {
@@ -61,7 +61,7 @@ ideas = {
 				}
 			}
 			on_remove = {
-				retire_leader = yes
+				#retire_country_leader = yes
 			}
 		}
 		reform_dm_direct_democracy = {
@@ -73,7 +73,7 @@ ideas = {
 				}
 			}
 			on_remove = {
-				retire_leader = yes
+				#retire_country_leader = yes
 			}
 		}
 		reform_dm_free_association = {
@@ -85,7 +85,7 @@ ideas = {
 				}
 			}
 			on_remove = {
-				retire_leader = yes
+				retire_country_leader = yes
 			}
 		}
 		
