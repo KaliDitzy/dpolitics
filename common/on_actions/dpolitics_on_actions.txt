@@ -35,6 +35,10 @@ on_actions = {
             set_temp_variable_to_random = t_rand
             multiply_temp_variable = { t_rand = 208 }
             multiply_temp_variable = { t_rand = stability }
+            clamp_temp_variable = {
+                var = t_rand
+                min = 36
+            }
             if = {
                 limit = {
                     check_variable = { t_rand < 9 } # 1
