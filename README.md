@@ -9,7 +9,7 @@ The mod is EXTREMELY unfinished and is it nowhere near a playable state, feedbac
 It is possible for anyone to contribute, but it is recommend that if you plan to contribute frequently in the long-term, consider joining the development team officially from within the Discord server.
 ## Installation
 If you aren't playing it from a workshop release, you will have to manually create a `.mod` file in order to play the mod.<br>
-It is recommended you clone the repo directly into your `Documents/Paradox Interactive/Hearts of Iron IV/mod folder.`
+It is recommended you clone the repo directly into your `Documents/Paradox Interactive/Hearts of Iron IV/mod` folder.
 
 After that, you will need to copy the `descriptor.mod` file found within the repo to the root of your `mod` directory.
 After this, you need to add the path of the repo to the file you just pasted, as such:
