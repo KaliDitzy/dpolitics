@@ -1,6 +1,6 @@
-faction_template_AUS_deitsche_verbund = {
-	name = AUS_deitsche_verbund
-	icon = GFX_faction_icon_deitsche_verbund
+faction_template_AUS_deutscher_bund = {
+	name = AUS_deutscher_bund
+	icon = GFX_faction_icon_deutscher_bund
 	manifest = faction_manifest_strength_in_unity
 
 	can_leader_join_other_factions = no

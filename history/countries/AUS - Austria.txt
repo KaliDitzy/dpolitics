@@ -69,7 +69,7 @@ recruit_character = AUS_otto_von_habsburg
 promote_character = AUS_otto_von_habsburg
 
 create_faction_from_template = {
-	template = faction_template_AUS_deitsche_verbund
+	template = faction_template_AUS_deutscher_bund
 	color = { 160 158 86 }
 }
 
