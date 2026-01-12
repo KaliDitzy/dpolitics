@@ -43,49 +43,57 @@ on_actions = {
                         modifier = {
                             factor = party_popularity@fascism
                         }
+                        country_event = politics.scandal.1
                     }
                     100 = {
                         modifier = {
                             factor = party_popularity@traditionalism
                         }
+                        country_event = politics.scandal.2
                     }
                     100 = {
                         modifier = {
                             factor = party_popularity@conservatism
                         }
+                        country_event = politics.scandal.3
                     }
                     100 = {
                         modifier = {
                             factor = party_popularity@liberalism
                         }
+                        country_event = politics.scandal.4
                     }
                     100 = {
                         modifier = {
                             factor = party_popularity@radicalism
                         }
+                        country_event = politics.scandal.5
                     }
                     100 = {
                         modifier = {
                             factor = party_popularity@social_democracy
                         }
+                        country_event = politics.scandal.6
                     }
                     100 = {
                         modifier = {
                             factor = party_popularity@democratic_socialism
                         }
+                        country_event = politics.scandal.7
                     }
                     100 = {
                         modifier = {
                             factor = party_popularity@bolshevism
                         }
+                        country_event = politics.scandal.8
                     }
                     100 = {
                         modifier = {
                             factor = party_popularity@anarchism
                         }
+                        country_event = politics.scandal.9
                     }
                 }
-                add_political_power = -50 # TEST EFFECT - REMOVE LATER TODO
             }
         }
         random_events = {
