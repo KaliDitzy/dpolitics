@@ -44,7 +44,7 @@ add_ideas = {
 	reform_es_landed_voting
 	reform_cr_supremacy_of_tradition
 }
-set_cosmetic_tag = AUS_monarchy
+set_cosmetic_tag = AUS_monarchy_empire
 set_variable = { regime_id = 1 }
 
 set_politics = {
