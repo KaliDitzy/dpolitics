@@ -335,7 +335,17 @@ recalculate_cosmetic_tag = {
 			limit = {
 				cosmetic_monarchy = yes
 			}
-			set_cosmetic_tag = AUS_monarchy
+			if = {
+				limit = {
+					OR = {
+						has_idea = reform_dm_autocracy
+					}
+				}
+				set_cosmetic_tag = AUS_monarchy_empire
+			}
+			else = {
+				set_cosmetic_tag = AUS_monarchy
+			}
 		}
 		else_if = {
 			limit = {
@@ -577,6 +587,9 @@ recalculate_cosmetic_tag = {
 					}
 				}
 				set_cosmetic_tag = ITA_republic_communist
+			}
+			else = {
+				set_cosmetic_tag = ITA_republic
 			}
 		}
 		else_if = {

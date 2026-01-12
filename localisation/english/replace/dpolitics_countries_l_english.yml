@@ -21,6 +21,8 @@
   AUS_fascism_ADJ: "Austrian"
   AUS_monarchy: "Kingdom of Austria"
   AUS_monarchy_DEF: "The Kingdom of Austria"
+  AUS_monarchy_empire: "Austrian Empire"
+  AUS_monarchy_empire_DEF: "The Austrian Empire"
   AUS_republic: "Republic of Austria"
   AUS_republic_DEF: "The Republic of Austria"
   AUS_junta: "Austrian Junta"

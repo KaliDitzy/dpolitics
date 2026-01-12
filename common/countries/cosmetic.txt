@@ -3,6 +3,10 @@ AUS_monarchy = {
 	color = rgb { 153 53 119 }
 	color_ui = rgb { 153 53 119 }
 }
+AUS_monarchy_empire = {
+	color = rgb { 153 53 119 }
+	color_ui = rgb { 153 53 119 }
+}
 AUS_republic = {
 	color = rgb { 140 65 213 }
 	color_ui = rgb { 140 65 213 }
