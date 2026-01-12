@@ -513,7 +513,18 @@ on_actions = {
 
 	#FROM is war target
 	on_declare_war = {
-		effect = {}
+		effect = {
+			if = {
+				limit = {
+					is_dynamic_country = yes
+					has_civil_war = yes
+					NOT = { has_country_flag = dp_in_civil_war }
+				}
+				set_country_flag = dp_in_civil_war
+				
+				conform_government_to_FROM = yes
+			}
+		}
 	}
 
 	# When a new faction is formed
