@@ -9,7 +9,7 @@ bookmarks = {
 		
 		"FRA"={
 			history = "FRA_GATHERING_STORM_DESC"
-			ideology = liberalism
+			ideology = radicalism
 			ideas = {
 			}
 			focuses = {
@@ -18,6 +18,14 @@ bookmarks = {
 		"AUS"={
 			history = "AUS_GATHERING_STORM_DESC"
 			ideology = traditionalism
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		"ITA"={
+			history = "ITA_GATHERING_STORM_DESC"
+			ideology = social_democracy
 			ideas = {
 			}
 			focuses = {
