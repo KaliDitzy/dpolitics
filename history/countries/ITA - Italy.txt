@@ -118,3 +118,6 @@ set_popularities = {
     bolshevism = 25
     anarchism = 9
 }
+
+recruit_character = ITA_giacomo_matteotti
+promote_character = ITA_giacomo_matteotti
