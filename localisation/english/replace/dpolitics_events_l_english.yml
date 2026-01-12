@@ -85,8 +85,8 @@
   politics.regime_change.4.t: "The [FROM.GetAdjective] Commune is formed!"
   politics.regime_change.5.t: "The [FROM.GetAdjective] Soviet Republic is formed!"
 
-  deitsche_vabund.1.t: "Die Deitschnation"
-  deitsche_vabund.2.t: "Aufruf zur Einigung"
-  deitsche_vabund.2.a: "The time has come to join as one."
-  deitsche_vabund.2.b: "We cannot commit to such a union."
-  deitsche_vabund.3.t: "Germany Unites!"
+  deitsche_verbund.1.t: "Die Deitschnation"
+  deitsche_verbund.2.t: "Aufruf zur Einigung"
+  deitsche_verbund.2.a: "The time has come to join as one."
+  deitsche_verbund.2.b: "We cannot commit to such a union."
+  deitsche_verbund.3.t: "Germany Unites!"

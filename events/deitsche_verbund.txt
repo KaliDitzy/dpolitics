@@ -1,16 +1,16 @@
-add_namespace = deitsche_vabund
+add_namespace = deitsche_verbund
 
 # TIME TO DO GERMANY
 country_event = {
-	id = deitsche_vabund.1
-	title = deitsche_vabund.1.t
-	desc = deitsche_vabund.1.d
+	id = deitsche_verbund.1
+	title = deitsche_verbund.1.t
+	desc = deitsche_verbund.1.d
 	picture = GFX_report_event_election_vote
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = deitsche_vabund.1.a
+		name = deitsche_verbund.1.a
 
 		custom_effect_tooltip = germany_will_unite_tt
 		every_owned_state = {
@@ -65,7 +65,7 @@ country_event = {
 				german_capital_state = yes
 			}
 			country_event = {
-				id = deitsche_vabund.2
+				id = deitsche_verbund.2
 				days = 4
 				random_days = 3
 			}
@@ -75,7 +75,7 @@ country_event = {
 		dismantle_faction = yes
 
 		country_event = {
-			id = deitsche_vabund.3
+			id = deitsche_verbund.3
 			days = 9
 			random_days = 2
 		}
@@ -83,15 +83,15 @@ country_event = {
 }
 # ANNEXATION INTO GERMANY
 country_event = {
-	id = deitsche_vabund.2
-	title = deitsche_vabund.2.t
-	desc = deitsche_vabund.2.d
+	id = deitsche_verbund.2
+	title = deitsche_verbund.2.t
+	desc = deitsche_verbund.2.d
 	picture = GFX_report_event_election_vote
 	
 	is_triggered_only = yes
 	
 	option = { # Yes!
-		name = deitsche_vabund.2.a
+		name = deitsche_verbund.2.a
 
 		if = {
 			limit = {
@@ -117,7 +117,7 @@ country_event = {
 		}
 	}
 	option = { # No!
-		name = deitsche_vabund.2.b
+		name = deitsche_verbund.2.b
 		every_core_state = {
 			add_core_of = FROM
 		}
@@ -138,9 +138,9 @@ country_event = {
 }
 # GERMANY CAN INTO EXIST
 news_event = {
-	id = deitsche_vabund.3
-	title = deitsche_vabund.3.t
-	desc = deitsche_vabund.3.d
+	id = deitsche_verbund.3
+	title = deitsche_verbund.3.t
+	desc = deitsche_verbund.3.d
 	picture = GFX_report_event_election_vote
 
 	major = yes
@@ -148,6 +148,6 @@ news_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = deitsche_vabund.3.a
+		name = deitsche_verbund.3.a
 	}
 }

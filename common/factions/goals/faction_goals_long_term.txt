@@ -1527,7 +1527,7 @@ faction_goal_unify_germany = {
 	complete_effect = {
 		ROOT = {
 			country_event = {
-				id = deitsche_vabund.1
+				id = deitsche_verbund.1
 				days = 4
 				random_days = 3
 			}

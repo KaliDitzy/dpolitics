@@ -47,12 +47,12 @@ spriteTypes = {
 
 	# faction icons
 	spriteType = {
-		name = "GFX_faction_icon_deitsche_vabund"
-		texturefile = "gfx/interface/factions/faction_logos/faction_icon_deitsche_vabund.dds"
+		name = "GFX_faction_icon_deitsche_verbund"
+		texturefile = "gfx/interface/factions/faction_logos/faction_icon_deitsche_verbund.dds"
 		noOfFrames = 2
 	}
 	spriteType = {
-		name = "GFX_faction_icon_deitsche_vabund_miniature"
-		texturefile = "gfx/interface/factions/faction_logos/faction_icon_deitsche_vabund_miniature.dds"
+		name = "GFX_faction_icon_deitsche_verbund_miniature"
+		texturefile = "gfx/interface/factions/faction_logos/faction_icon_deitsche_verbund_miniature.dds"
 	}
 }
