@@ -225,7 +225,7 @@ country_event = {
 	}
 
 	option = {
-		name = politics.opposition.6.a
+		name = politics.opposition.6.b
 
 		random_list = {
 			50 = { add_popularity = { ideology = liberalism popularity = 0.02 } }
@@ -264,7 +264,7 @@ country_event = {
 	}
 
 	option = {
-		name = politics.opposition.7.a
+		name = politics.opposition.7.b
 
 		random_list = {
 			50 = { add_popularity = { ideology = liberalism popularity = 0.02 } }
@@ -341,7 +341,7 @@ country_event = {
 	}
 
 	option = {
-		name = politics.opposition.9.a
+		name = politics.opposition.9.b
 
 		random_list = {
 			50 = { add_popularity = { ideology = democratic_socialism popularity = 0.02 } }
