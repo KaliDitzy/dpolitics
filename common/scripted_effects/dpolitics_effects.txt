@@ -836,6 +836,714 @@ reform_cr_minimum_effects = {
 	subtract_from_variable = { ai_seeking_reform = 1 }
 }
 
+conform_government_to_ROOT = {
+	if = {
+		limit = {
+			ROOT = { has_idea = reform_dop_monarchy }
+		}
+		add_ideas = reform_dop_monarchy
+		hidden_effect = {
+			remove_ideas = {
+				reform_dop_oligarchy
+				reform_dop_minarchy
+				reform_dop_anarchy
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			ROOT = { has_idea = reform_dop_oligarchy }
+		}
+		add_ideas = reform_dop_oligarchy
+		hidden_effect = {
+			remove_ideas = {
+				reform_dop_monarchy
+				reform_dop_minarchy
+				reform_dop_anarchy
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			ROOT = { has_idea = reform_dop_minarchy }
+		}
+		add_ideas = reform_dop_minarchy
+		hidden_effect = {
+			remove_ideas = {
+				reform_dop_monarchy
+				reform_dop_oligarchy
+				reform_dop_anarchy
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			ROOT = { has_idea = reform_dop_anarchy }
+		}
+		add_ideas = reform_dop_anarchy
+		hidden_effect = {
+			remove_ideas = {
+				reform_dop_monarchy
+				reform_dop_oligarchy
+				reform_dop_minarchy
+			}
+		}
+	}
+	
+	if = {
+		limit = {
+			ROOT = { has_idea = reform_dm_autocracy }
+		}
+		add_ideas = reform_dm_autocracy
+		hidden_effect = {
+			remove_ideas = {
+				reform_dm_technocracy
+				reform_dm_corporatism
+				reform_dm_representative_democracy
+				reform_dm_direct_democracy
+				reform_dm_free_association
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			ROOT = { has_idea = reform_dm_technocracy }
+		}
+		add_ideas = reform_dm_technocracy
+		hidden_effect = {
+			remove_ideas = {
+				reform_dm_autocracy
+				reform_dm_corporatism
+				reform_dm_representative_democracy
+				reform_dm_direct_democracy
+				reform_dm_free_association
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			ROOT = { has_idea = reform_dm_corporatism }
+		}
+		add_ideas = reform_dm_corporatism
+		hidden_effect = {
+			remove_ideas = {
+				reform_dm_autocracy
+				reform_dm_technocracy
+				reform_dm_representative_democracy
+				reform_dm_direct_democracy
+				reform_dm_free_association
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			ROOT = { has_idea = reform_dm_representative_democracy }
+		}
+		add_ideas = reform_dm_representative_democracy
+		hidden_effect = {
+			remove_ideas = {
+				reform_dm_autocracy
+				reform_dm_technocracy
+				reform_dm_corporatism
+				reform_dm_direct_democracy
+				reform_dm_free_association
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			ROOT = { has_idea = reform_dm_direct_democracy }
+		}
+		add_ideas = reform_dm_direct_democracy
+		hidden_effect = {
+			remove_ideas = {
+				reform_dm_autocracy
+				reform_dm_technocracy
+				reform_dm_corporatism
+				reform_dm_representative_democracy
+				reform_dm_free_association
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			ROOT = { has_idea = reform_dm_free_association }
+		}
+		add_ideas = reform_dm_free_association
+		hidden_effect = {
+			remove_ideas = {
+				reform_dm_autocracy
+				reform_dm_technocracy
+				reform_dm_corporatism
+				reform_dm_representative_democracy
+				reform_dm_direct_democracy
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			ROOT = { has_idea = reform_pao_feudal_structure }
+		}
+		add_ideas = reform_pao_feudal_structure
+		hidden_effect = {
+			remove_ideas = {
+				reform_pao_private_ownership
+				reform_pao_private_property_abolished
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			ROOT = { has_idea = reform_pao_private_ownership }
+		}
+		add_ideas = reform_pao_private_ownership
+		hidden_effect = {
+			remove_ideas = {
+				reform_pao_feudal_structure
+				reform_pao_private_property_abolished
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			ROOT = { has_idea = reform_pao_private_property_abolished }
+		}
+		add_ideas = reform_pao_private_property_abolished
+		hidden_effect = {
+			remove_ideas = {
+				reform_pao_feudal_structure
+				reform_pao_private_ownership
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			ROOT = { has_idea = reform_es_landed_voting }
+		}
+		add_ideas = reform_es_landed_voting
+		hidden_effect = {
+			remove_ideas = {
+				reform_es_wealth_bias
+				reform_es_literacy_tests
+				reform_es_no_restrictions
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			ROOT = { has_idea = reform_es_wealth_bias }
+		}
+		add_ideas = reform_es_wealth_bias
+		hidden_effect = {
+			remove_ideas = {
+				reform_es_landed_voting
+				reform_es_literacy_tests
+				reform_es_no_restrictions
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			ROOT = { has_idea = reform_es_literacy_tests }
+		}
+		add_ideas = reform_es_literacy_tests
+		hidden_effect = {
+			remove_ideas = {
+				reform_es_landed_voting
+				reform_es_wealth_bias
+				reform_es_no_restrictions
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			ROOT = { has_idea = reform_es_no_restrictions }
+		}
+		add_ideas = reform_es_no_restrictions
+		hidden_effect = {
+			remove_ideas = {
+				reform_es_landed_voting
+				reform_es_wealth_bias
+				reform_es_literacy_tests
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			ROOT = { has_idea = reform_cr_ethnostate }
+		}
+		add_ideas = reform_cr_ethnostate
+		hidden_effect = {
+			remove_ideas = {
+				reform_cr_supremacy_of_tradition
+				reform_cr_national_supremacy
+				reform_cr_minority_indifference
+				reform_cr_minority_rights
+				reform_cr_sexual_autonomy
+				reform_cr_queer_rights
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			ROOT = { has_idea = reform_cr_supremacy_of_tradition }
+		}
+		add_ideas = reform_cr_supremacy_of_tradition
+		hidden_effect = {
+			remove_ideas = {
+				reform_cr_ethnostate
+				reform_cr_national_supremacy
+				reform_cr_minority_indifference
+				reform_cr_minority_rights
+				reform_cr_sexual_autonomy
+				reform_cr_queer_rights
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			ROOT = { has_idea = reform_cr_national_supremacy }
+		}
+		add_ideas = reform_cr_national_supremacy
+		hidden_effect = {
+			remove_ideas = {
+				reform_cr_ethnostate
+				reform_cr_supremacy_of_tradition
+				reform_cr_minority_indifference
+				reform_cr_minority_rights
+				reform_cr_sexual_autonomy
+				reform_cr_queer_rights
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			ROOT = { has_idea = reform_cr_minority_indifference }
+		}
+		add_ideas = reform_cr_minority_indifference
+		hidden_effect = {
+			remove_ideas = {
+				reform_cr_ethnostate
+				reform_cr_supremacy_of_tradition
+				reform_cr_national_supremacy
+				reform_cr_minority_rights
+				reform_cr_sexual_autonomy
+				reform_cr_queer_rights
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			ROOT = { has_idea = reform_cr_minority_rights }
+		}
+		add_ideas = reform_cr_minority_rights
+		hidden_effect = {
+			remove_ideas = {
+				reform_cr_ethnostate
+				reform_cr_supremacy_of_tradition
+				reform_cr_national_supremacy
+				reform_cr_minority_indifference
+				reform_cr_sexual_autonomy
+				reform_cr_queer_rights
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			ROOT = { has_idea = reform_cr_sexual_autonomy }
+		}
+		add_ideas = reform_cr_sexual_autonomy
+		hidden_effect = {
+			remove_ideas = {
+				reform_cr_ethnostate
+				reform_cr_supremacy_of_tradition
+				reform_cr_national_supremacy
+				reform_cr_minority_indifference
+				reform_cr_minority_rights
+				reform_cr_queer_rights
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			ROOT = { has_idea = reform_cr_queer_rights }
+		}
+		add_ideas = reform_cr_queer_rights
+		hidden_effect = {
+			remove_ideas = {
+				reform_cr_ethnostate
+				reform_cr_supremacy_of_tradition
+				reform_cr_national_supremacy
+				reform_cr_minority_indifference
+				reform_cr_minority_rights
+				reform_cr_sexual_autonomy
+			}
+		}
+	}
+}
+
+conform_government_to_FROM = {
+	if = {
+		limit = {
+			FROM = { has_idea = reform_dop_monarchy }
+		}
+		add_ideas = reform_dop_monarchy
+		hidden_effect = {
+			remove_ideas = {
+				reform_dop_oligarchy
+				reform_dop_minarchy
+				reform_dop_anarchy
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			FROM = { has_idea = reform_dop_oligarchy }
+		}
+		add_ideas = reform_dop_oligarchy
+		hidden_effect = {
+			remove_ideas = {
+				reform_dop_monarchy
+				reform_dop_minarchy
+				reform_dop_anarchy
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			FROM = { has_idea = reform_dop_minarchy }
+		}
+		add_ideas = reform_dop_minarchy
+		hidden_effect = {
+			remove_ideas = {
+				reform_dop_monarchy
+				reform_dop_oligarchy
+				reform_dop_anarchy
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			FROM = { has_idea = reform_dop_anarchy }
+		}
+		add_ideas = reform_dop_anarchy
+		hidden_effect = {
+			remove_ideas = {
+				reform_dop_monarchy
+				reform_dop_oligarchy
+				reform_dop_minarchy
+			}
+		}
+	}
+	
+	if = {
+		limit = {
+			FROM = { has_idea = reform_dm_autocracy }
+		}
+		add_ideas = reform_dm_autocracy
+		hidden_effect = {
+			remove_ideas = {
+				reform_dm_technocracy
+				reform_dm_corporatism
+				reform_dm_representative_democracy
+				reform_dm_direct_democracy
+				reform_dm_free_association
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			FROM = { has_idea = reform_dm_technocracy }
+		}
+		add_ideas = reform_dm_technocracy
+		hidden_effect = {
+			remove_ideas = {
+				reform_dm_autocracy
+				reform_dm_corporatism
+				reform_dm_representative_democracy
+				reform_dm_direct_democracy
+				reform_dm_free_association
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			FROM = { has_idea = reform_dm_corporatism }
+		}
+		add_ideas = reform_dm_corporatism
+		hidden_effect = {
+			remove_ideas = {
+				reform_dm_autocracy
+				reform_dm_technocracy
+				reform_dm_representative_democracy
+				reform_dm_direct_democracy
+				reform_dm_free_association
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			FROM = { has_idea = reform_dm_representative_democracy }
+		}
+		add_ideas = reform_dm_representative_democracy
+		hidden_effect = {
+			remove_ideas = {
+				reform_dm_autocracy
+				reform_dm_technocracy
+				reform_dm_corporatism
+				reform_dm_direct_democracy
+				reform_dm_free_association
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			FROM = { has_idea = reform_dm_direct_democracy }
+		}
+		add_ideas = reform_dm_direct_democracy
+		hidden_effect = {
+			remove_ideas = {
+				reform_dm_autocracy
+				reform_dm_technocracy
+				reform_dm_corporatism
+				reform_dm_representative_democracy
+				reform_dm_free_association
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			FROM = { has_idea = reform_dm_free_association }
+		}
+		add_ideas = reform_dm_free_association
+		hidden_effect = {
+			remove_ideas = {
+				reform_dm_autocracy
+				reform_dm_technocracy
+				reform_dm_corporatism
+				reform_dm_representative_democracy
+				reform_dm_direct_democracy
+			}
+		}
+	}
+
+	add_ideas = reform_cl_martial_law
+	hidden_effect = {
+		remove_ideas = {
+			reform_cl_indefinitely_suspended
+			reform_cl_curtailed
+			reform_cl_guaranteed
+			reform_cl_total_individual_freedom
+		}
+	}
+
+	if = {
+		limit = {
+			FROM = { has_idea = reform_pao_feudal_structure }
+		}
+		add_ideas = reform_pao_feudal_structure
+		hidden_effect = {
+			remove_ideas = {
+				reform_pao_private_ownership
+				reform_pao_private_property_abolished
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			FROM = { has_idea = reform_pao_private_ownership }
+		}
+		add_ideas = reform_pao_private_ownership
+		hidden_effect = {
+			remove_ideas = {
+				reform_pao_feudal_structure
+				reform_pao_private_property_abolished
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			FROM = { has_idea = reform_pao_private_property_abolished }
+		}
+		add_ideas = reform_pao_private_property_abolished
+		hidden_effect = {
+			remove_ideas = {
+				reform_pao_feudal_structure
+				reform_pao_private_ownership
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			FROM = { has_idea = reform_es_landed_voting }
+		}
+		add_ideas = reform_es_landed_voting
+		hidden_effect = {
+			remove_ideas = {
+				reform_es_wealth_bias
+				reform_es_literacy_tests
+				reform_es_no_restrictions
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			FROM = { has_idea = reform_es_wealth_bias }
+		}
+		add_ideas = reform_es_wealth_bias
+		hidden_effect = {
+			remove_ideas = {
+				reform_es_landed_voting
+				reform_es_literacy_tests
+				reform_es_no_restrictions
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			FROM = { has_idea = reform_es_literacy_tests }
+		}
+		add_ideas = reform_es_literacy_tests
+		hidden_effect = {
+			remove_ideas = {
+				reform_es_landed_voting
+				reform_es_wealth_bias
+				reform_es_no_restrictions
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			FROM = { has_idea = reform_es_no_restrictions }
+		}
+		add_ideas = reform_es_no_restrictions
+		hidden_effect = {
+			remove_ideas = {
+				reform_es_landed_voting
+				reform_es_wealth_bias
+				reform_es_literacy_tests
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			FROM = { has_idea = reform_cr_ethnostate }
+		}
+		add_ideas = reform_cr_ethnostate
+		hidden_effect = {
+			remove_ideas = {
+				reform_cr_supremacy_of_tradition
+				reform_cr_national_supremacy
+				reform_cr_minority_indifference
+				reform_cr_minority_rights
+				reform_cr_sexual_autonomy
+				reform_cr_queer_rights
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			FROM = { has_idea = reform_cr_supremacy_of_tradition }
+		}
+		add_ideas = reform_cr_supremacy_of_tradition
+		hidden_effect = {
+			remove_ideas = {
+				reform_cr_ethnostate
+				reform_cr_national_supremacy
+				reform_cr_minority_indifference
+				reform_cr_minority_rights
+				reform_cr_sexual_autonomy
+				reform_cr_queer_rights
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			FROM = { has_idea = reform_cr_national_supremacy }
+		}
+		add_ideas = reform_cr_national_supremacy
+		hidden_effect = {
+			remove_ideas = {
+				reform_cr_ethnostate
+				reform_cr_supremacy_of_tradition
+				reform_cr_minority_indifference
+				reform_cr_minority_rights
+				reform_cr_sexual_autonomy
+				reform_cr_queer_rights
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			FROM = { has_idea = reform_cr_minority_indifference }
+		}
+		add_ideas = reform_cr_minority_indifference
+		hidden_effect = {
+			remove_ideas = {
+				reform_cr_ethnostate
+				reform_cr_supremacy_of_tradition
+				reform_cr_national_supremacy
+				reform_cr_minority_rights
+				reform_cr_sexual_autonomy
+				reform_cr_queer_rights
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			FROM = { has_idea = reform_cr_minority_rights }
+		}
+		add_ideas = reform_cr_minority_rights
+		hidden_effect = {
+			remove_ideas = {
+				reform_cr_ethnostate
+				reform_cr_supremacy_of_tradition
+				reform_cr_national_supremacy
+				reform_cr_minority_indifference
+				reform_cr_sexual_autonomy
+				reform_cr_queer_rights
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			FROM = { has_idea = reform_cr_sexual_autonomy }
+		}
+		add_ideas = reform_cr_sexual_autonomy
+		hidden_effect = {
+			remove_ideas = {
+				reform_cr_ethnostate
+				reform_cr_supremacy_of_tradition
+				reform_cr_national_supremacy
+				reform_cr_minority_indifference
+				reform_cr_minority_rights
+				reform_cr_queer_rights
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			FROM = { has_idea = reform_cr_queer_rights }
+		}
+		add_ideas = reform_cr_queer_rights
+		hidden_effect = {
+			remove_ideas = {
+				reform_cr_ethnostate
+				reform_cr_supremacy_of_tradition
+				reform_cr_national_supremacy
+				reform_cr_minority_indifference
+				reform_cr_minority_rights
+				reform_cr_sexual_autonomy
+			}
+		}
+	}
+}
+
 d_dissent = {
 	FROM = {
 		add_to_variable = {
