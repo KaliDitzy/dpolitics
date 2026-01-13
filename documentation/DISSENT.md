@@ -18,14 +18,15 @@ if = {
 
 Simply do a similar thing in order to implement your brand new weekly dissent modifier.
 
-If you want one that simply flatly modifies the base dissent or by a percentage. You will have to do something a little different:
+If you want one that simply flatly modifies the base dissent or by a percentage. You will have to do something a little different.
+Place this after `set_variable = { dissent = dissent_base }`:
 
 ```
 if = {
 	limit = {
 		has_idea = your_idea_goes_here
 	}
-	add_to_variable = { dissent_base = 0.1 } # By a constant number (in this case +10% constantly.)
+	add_to_variable = { dissent = 0.1 } # By a constant number (in this case +10% constantly.)
 }
 ```
 
@@ -34,7 +35,7 @@ if = {
 	limit = {
 		has_idea = your_idea_goes_here
 	}
-	multiply_variable = { dissent_base = 1.1 } # By a percentage (in this case +10% of the base dissent.)
+	multiply_variable = { dissent = 1.1 } # By a percentage (in this case +10% of the base dissent.)
 }
 ```
 
