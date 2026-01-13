@@ -39,7 +39,7 @@ civil_war_crisis = {
 				}
 				start_civil_war = {
 					ideology = fascism
-					size = party_popularity@fascism
+					size = 0.4
 
 					hidden_effect = { conform_government_to_ROOT = yes }
 
@@ -103,7 +103,7 @@ civil_war_crisis = {
 				}
 				start_civil_war = {
 					ideology = traditionalism
-					size = party_popularity@traditionalism
+					size = 0.4
 
 					hidden_effect = { conform_government_to_ROOT = yes }
 
@@ -167,7 +167,7 @@ civil_war_crisis = {
 				}
 				start_civil_war = {
 					ideology = conservatism
-					size = party_popularity@conservatism
+					size = 0.4
 
 					hidden_effect = { conform_government_to_ROOT = yes }
 
@@ -231,7 +231,7 @@ civil_war_crisis = {
 				}
 				start_civil_war = {
 					ideology = liberalism
-					size = party_popularity@liberalism
+					size = 0.4
 
 					hidden_effect = { conform_government_to_ROOT = yes }
 
@@ -295,7 +295,7 @@ civil_war_crisis = {
 				}
 				start_civil_war = {
 					ideology = radicalism
-					size = party_popularity@radicalism
+					size = 0.4
 
 					hidden_effect = { conform_government_to_ROOT = yes }
 
@@ -359,7 +359,7 @@ civil_war_crisis = {
 				}
 				start_civil_war = {
 					ideology = social_democracy
-					size = party_popularity@social_democracy
+					size = 0.4
 
 					hidden_effect = { conform_government_to_ROOT = yes }
 
@@ -423,7 +423,7 @@ civil_war_crisis = {
 				}
 				start_civil_war = {
 					ideology = democratic_socialism
-					size = party_popularity@democratic_socialism
+					size = 0.4
 
 					hidden_effect = { conform_government_to_ROOT = yes }
 
@@ -487,7 +487,7 @@ civil_war_crisis = {
 				}
 				start_civil_war = {
 					ideology = bolshevism
-					size = party_popularity@bolshevism
+					size = 0.4
 
 					hidden_effect = { conform_government_to_ROOT = yes }
 
@@ -551,7 +551,7 @@ civil_war_crisis = {
 				}
 				start_civil_war = {
 					ideology = anarchism
-					size = party_popularity@anarchism
+					size = 0.4
 
 					hidden_effect = { conform_government_to_ROOT = yes }
 
