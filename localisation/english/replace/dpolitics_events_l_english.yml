@@ -1,6 +1,6 @@
 ﻿l_english:
   election.1.t: "Election Stalled"
-  election.1.d: "The elections have resulted in an unprecedented tie, leaving no conclusive victor, we will be forced to form a coalition with other parties to resolve this conflict."
+  election.1.d: "The elections have resulted in an unprecedented tie, leaving no conclusive victor. We will be forced to form a coalition with other parties to resolve this conflict."
   election.1.a: "Oh dear."
   election.2.t: "Fascists Secure Election"
   election.2.d.1: "We have managed to achieve the plurality of the vote from the [ROOT.GetAdjective] people. It is recommended for us to form a coalition so we may have the decision-making power to proceed with our goals. Otherwise, I believe the rest of the government may challenge us, and we will not receive their good will."
