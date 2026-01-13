@@ -26,7 +26,7 @@ if = {
 	limit = {
 		has_idea = your_idea_goes_here
 	}
-	add_to_variable = { dissent = 0.1 } # By a constant number (in this case +10% constantly.)
+	add_to_variable = { dissent = 10 } # By a constant number (in this case +10% constantly.)
 }
 ```
 
