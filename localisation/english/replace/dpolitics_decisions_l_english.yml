@@ -1,3 +1,7 @@
 ﻿l_english:
+  civil_war_crisis: "§RCRISIS§! - Civil Insurrection!"
+  civil_war_crisis_desc: "The people of the nation have taken up arms and are fighting against the status quo. If we do not stop this now, we will inevitably fall into civil war."
+  imminent_civil_war: "Imminent Civil War"
+
   GER_unification_influence: "Unifying the German People"
   GER_major_influence_minor: "Influence [FROM.GetNameDef]"
