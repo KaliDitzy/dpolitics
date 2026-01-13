@@ -1,19 +1,9 @@
 civil_war_crisis = {
     imminent_civil_war = {
 		activation = {
-			OR = {
-				AND = {
-					has_civil_war = no
-					check_variable = { dissent > 0.2 }
-					check_variable = { dissent_change > 2 }
-					has_stability < 0.2
-				}
-				AND = {
-					has_civil_war = no
-					is_ai = no
-					is_debug = yes
-				}
-			}
+			has_civil_war = no
+			check_variable = { dissent_change > 2 }
+			has_stability < 0.2
 		}
 		available = {
 			OR = {
@@ -22,15 +12,10 @@ civil_war_crisis = {
 				NOT = { check_variable = { dissent_change > 2 } }
 				NOT = { has_stability < 0.2 }
 			}
-			NOT = {
-				has_civil_war = no
-				is_ai = no
-				is_debug = yes
-			}
 		}
 		icon = mission_icon
 		is_good = no
-		days_mission_timeout = 35
+		days_mission_timeout = 180
 		selectable_mission = no
 		timeout_effect = {
 			if = {
