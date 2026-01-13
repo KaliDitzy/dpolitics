@@ -637,7 +637,7 @@ radicalism_cw_plurality = {
 }
 social_democracy_cw_plurality = {
     custom_trigger_tooltip = {
-        tooltip = rad_cw_plurality
+        tooltip = socd_cw_plurality
         if = {
             limit = {
                 has_government = fascism
@@ -733,6 +733,309 @@ social_democracy_cw_plurality = {
             social_democracy > party_popularity@radicalism
             social_democracy > party_popularity@democratic_socialism
             social_democracy > party_popularity@bolshevism
+        }
+    }
+}
+democratic_socialism_cw_plurality = {
+    custom_trigger_tooltip = {
+        tooltip = dsoc_cw_plurality
+        if = {
+            limit = {
+                has_government = fascism
+            }
+            democratic_socialism > party_popularity@traditionalism
+            democratic_socialism > party_popularity@conservatism
+            democratic_socialism > party_popularity@liberalism
+            democratic_socialism > party_popularity@radicalism
+            democratic_socialism > party_popularity@social_democracy
+            democratic_socialism > party_popularity@bolshevism
+            democratic_socialism > party_popularity@anarchism
+        }
+        else_if = {
+            limit = {
+                has_government = traditionalism
+            }
+            democratic_socialism > party_popularity@fascism
+            democratic_socialism > party_popularity@conservatism
+            democratic_socialism > party_popularity@liberalism
+            democratic_socialism > party_popularity@radicalism
+            democratic_socialism > party_popularity@social_democracy
+            democratic_socialism > party_popularity@bolshevism
+            democratic_socialism > party_popularity@anarchism
+        }
+        else_if = {
+            limit = {
+                has_government = conservatism
+            }
+            democratic_socialism > party_popularity@fascism
+            democratic_socialism > party_popularity@traditionalism
+            democratic_socialism > party_popularity@liberalism
+            democratic_socialism > party_popularity@radicalism
+            democratic_socialism > party_popularity@social_democracy
+            democratic_socialism > party_popularity@bolshevism
+            democratic_socialism > party_popularity@anarchism
+        }
+        else_if = {
+            limit = {
+                has_government = liberalism
+            }
+            democratic_socialism > party_popularity@fascism
+            democratic_socialism > party_popularity@traditionalism
+            democratic_socialism > party_popularity@conservatism
+            democratic_socialism > party_popularity@radicalism
+            democratic_socialism > party_popularity@social_democracy
+            democratic_socialism > party_popularity@bolshevism
+            democratic_socialism > party_popularity@anarchism
+        }
+        else_if = {
+            limit = {
+                has_government = radicalism
+            }
+            democratic_socialism > party_popularity@fascism
+            democratic_socialism > party_popularity@traditionalism
+            democratic_socialism > party_popularity@conservatism
+            democratic_socialism > party_popularity@liberalism
+            democratic_socialism > party_popularity@social_democracy
+            democratic_socialism > party_popularity@bolshevism
+            democratic_socialism > party_popularity@anarchism
+        }
+        else_if = {
+            limit = {
+                has_government = social_democracy
+            }
+            democratic_socialism > party_popularity@fascism
+            democratic_socialism > party_popularity@traditionalism
+            democratic_socialism > party_popularity@conservatism
+            democratic_socialism > party_popularity@liberalism
+            democratic_socialism > party_popularity@radicalism
+            democratic_socialism > party_popularity@bolshevism
+            democratic_socialism > party_popularity@anarchism
+        }
+        else_if = {
+            limit = {
+                has_government = bolshevism
+            }
+            democratic_socialism > party_popularity@fascism
+            democratic_socialism > party_popularity@traditionalism
+            democratic_socialism > party_popularity@conservatism
+            democratic_socialism > party_popularity@liberalism
+            democratic_socialism > party_popularity@radicalism
+            democratic_socialism > party_popularity@social_democracy
+            democratic_socialism > party_popularity@anarchism
+        }
+        else_if = {
+            limit = {
+                has_government = anarchism
+            }
+            democratic_socialism > party_popularity@fascism
+            democratic_socialism > party_popularity@traditionalism
+            democratic_socialism > party_popularity@conservatism
+            democratic_socialism > party_popularity@liberalism
+            democratic_socialism > party_popularity@radicalism
+            democratic_socialism > party_popularity@social_democracy
+            democratic_socialism > party_popularity@bolshevism
+        }
+    }
+}
+bolshevism_cw_plurality = {
+    custom_trigger_tooltip = {
+        tooltip = bols_cw_plurality
+        if = {
+            limit = {
+                has_government = fascism
+            }
+            bolshevism > party_popularity@traditionalism
+            bolshevism > party_popularity@conservatism
+            bolshevism > party_popularity@liberalism
+            bolshevism > party_popularity@radicalism
+            bolshevism > party_popularity@social_democracy
+            bolshevism > party_popularity@democratic_socialism
+            bolshevism > party_popularity@anarchism
+        }
+        else_if = {
+            limit = {
+                has_government = traditionalism
+            }
+            bolshevism > party_popularity@fascism
+            bolshevism > party_popularity@conservatism
+            bolshevism > party_popularity@liberalism
+            bolshevism > party_popularity@radicalism
+            bolshevism > party_popularity@social_democracy
+            bolshevism > party_popularity@democratic_socialism
+            bolshevism > party_popularity@anarchism
+        }
+        else_if = {
+            limit = {
+                has_government = conservatism
+            }
+            bolshevism > party_popularity@fascism
+            bolshevism > party_popularity@traditionalism
+            bolshevism > party_popularity@liberalism
+            bolshevism > party_popularity@radicalism
+            bolshevism > party_popularity@social_democracy
+            bolshevism > party_popularity@democratic_socialism
+            bolshevism > party_popularity@anarchism
+        }
+        else_if = {
+            limit = {
+                has_government = liberalism
+            }
+            bolshevism > party_popularity@fascism
+            bolshevism > party_popularity@traditionalism
+            bolshevism > party_popularity@conservatism
+            bolshevism > party_popularity@radicalism
+            bolshevism > party_popularity@social_democracy
+            bolshevism > party_popularity@democratic_socialism
+            bolshevism > party_popularity@anarchism
+        }
+        else_if = {
+            limit = {
+                has_government = radicalism
+            }
+            bolshevism > party_popularity@fascism
+            bolshevism > party_popularity@traditionalism
+            bolshevism > party_popularity@conservatism
+            bolshevism > party_popularity@liberalism
+            bolshevism > party_popularity@social_democracy
+            bolshevism > party_popularity@democratic_socialism
+            bolshevism > party_popularity@anarchism
+        }
+        else_if = {
+            limit = {
+                has_government = social_democracy
+            }
+            bolshevism > party_popularity@fascism
+            bolshevism > party_popularity@traditionalism
+            bolshevism > party_popularity@conservatism
+            bolshevism > party_popularity@liberalism
+            bolshevism > party_popularity@radicalism
+            bolshevism > party_popularity@democratic_socialism
+            bolshevism > party_popularity@anarchism
+        }
+        else_if = {
+            limit = {
+                has_government = democratic_socialism
+            }
+            bolshevism > party_popularity@fascism
+            bolshevism > party_popularity@traditionalism
+            bolshevism > party_popularity@conservatism
+            bolshevism > party_popularity@liberalism
+            bolshevism > party_popularity@radicalism
+            bolshevism > party_popularity@social_democracy
+            bolshevism > party_popularity@anarchism
+        }
+        else_if = {
+            limit = {
+                has_government = anarchism
+            }
+            bolshevism > party_popularity@fascism
+            bolshevism > party_popularity@traditionalism
+            bolshevism > party_popularity@conservatism
+            bolshevism > party_popularity@liberalism
+            bolshevism > party_popularity@radicalism
+            bolshevism > party_popularity@social_democracy
+            bolshevism > party_popularity@democratic_socialism
+        }
+    }
+}
+anarchism_cw_plurality = {
+    custom_trigger_tooltip = {
+        tooltip = anar_cw_plurality
+        if = {
+            limit = {
+                has_government = fascism
+            }
+            anarchism > party_popularity@traditionalism
+            anarchism > party_popularity@conservatism
+            anarchism > party_popularity@liberalism
+            anarchism > party_popularity@radicalism
+            anarchism > party_popularity@social_democracy
+            anarchism > party_popularity@democratic_socialism
+            anarchism > party_popularity@bolshevism
+        }
+        else_if = {
+            limit = {
+                has_government = traditionalism
+            }
+            anarchism > party_popularity@fascism
+            anarchism > party_popularity@conservatism
+            anarchism > party_popularity@liberalism
+            anarchism > party_popularity@radicalism
+            anarchism > party_popularity@social_democracy
+            anarchism > party_popularity@democratic_socialism
+            anarchism > party_popularity@bolshevism
+        }
+        else_if = {
+            limit = {
+                has_government = conservatism
+            }
+            anarchism > party_popularity@fascism
+            anarchism > party_popularity@traditionalism
+            anarchism > party_popularity@liberalism
+            anarchism > party_popularity@radicalism
+            anarchism > party_popularity@social_democracy
+            anarchism > party_popularity@democratic_socialism
+            anarchism > party_popularity@bolshevism
+        }
+        else_if = {
+            limit = {
+                has_government = liberalism
+            }
+            anarchism > party_popularity@fascism
+            anarchism > party_popularity@traditionalism
+            anarchism > party_popularity@conservatism
+            anarchism > party_popularity@radicalism
+            anarchism > party_popularity@social_democracy
+            anarchism > party_popularity@democratic_socialism
+            anarchism > party_popularity@bolshevism
+        }
+        else_if = {
+            limit = {
+                has_government = radicalism
+            }
+            anarchism > party_popularity@fascism
+            anarchism > party_popularity@traditionalism
+            anarchism > party_popularity@conservatism
+            anarchism > party_popularity@liberalism
+            anarchism > party_popularity@social_democracy
+            anarchism > party_popularity@democratic_socialism
+            anarchism > party_popularity@bolshevism
+        }
+        else_if = {
+            limit = {
+                has_government = social_democracy
+            }
+            anarchism > party_popularity@fascism
+            anarchism > party_popularity@traditionalism
+            anarchism > party_popularity@conservatism
+            anarchism > party_popularity@liberalism
+            anarchism > party_popularity@radicalism
+            anarchism > party_popularity@democratic_socialism
+            anarchism > party_popularity@bolshevism
+        }
+        else_if = {
+            limit = {
+                has_government = democratic_socialism
+            }
+            anarchism > party_popularity@fascism
+            anarchism > party_popularity@traditionalism
+            anarchism > party_popularity@conservatism
+            anarchism > party_popularity@liberalism
+            anarchism > party_popularity@radicalism
+            anarchism > party_popularity@social_democracy
+            anarchism > party_popularity@bolshevism
+        }
+        else_if = {
+            limit = {
+                has_government = bolshevism
+            }
+            anarchism > party_popularity@fascism
+            anarchism > party_popularity@traditionalism
+            anarchism > party_popularity@conservatism
+            anarchism > party_popularity@liberalism
+            anarchism > party_popularity@radicalism
+            anarchism > party_popularity@social_democracy
+            anarchism > party_popularity@democratic_socialism
         }
     }
 }
