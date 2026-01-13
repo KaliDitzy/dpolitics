@@ -8,7 +8,7 @@ tags={
 	"Events"
 	"Graphics"
 }
-name="Dynamic Politics Preview"
+name="Untitled Dynamic Politics Mod"
 supported_version="1.17.*"
 replace_path="common/characters"
 replace_path="common/countries"
