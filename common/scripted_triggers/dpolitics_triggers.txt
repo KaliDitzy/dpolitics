@@ -229,6 +229,7 @@ fascism_cw_plurality = {
             fascism > party_popularity@democratic_socialism
             fascism > party_popularity@bolshevism
         }
+        else = { always = no }
     }
 }
 traditionalism_cw_plurality = {
@@ -330,6 +331,7 @@ traditionalism_cw_plurality = {
             traditionalism > party_popularity@democratic_socialism
             traditionalism > party_popularity@bolshevism
         }
+        else = { always = no }
     }
 }
 conservatism_cw_plurality = {
@@ -431,6 +433,7 @@ conservatism_cw_plurality = {
             conservatism > party_popularity@democratic_socialism
             conservatism > party_popularity@bolshevism
         }
+        else = { always = no }
     }
 }
 liberalism_cw_plurality = {
@@ -532,6 +535,7 @@ liberalism_cw_plurality = {
             liberalism > party_popularity@democratic_socialism
             liberalism > party_popularity@bolshevism
         }
+        else = { always = no }
     }
 }
 radicalism_cw_plurality = {
@@ -633,6 +637,7 @@ radicalism_cw_plurality = {
             radicalism > party_popularity@democratic_socialism
             radicalism > party_popularity@bolshevism
         }
+        else = { always = no }
     }
 }
 social_democracy_cw_plurality = {
@@ -734,6 +739,7 @@ social_democracy_cw_plurality = {
             social_democracy > party_popularity@democratic_socialism
             social_democracy > party_popularity@bolshevism
         }
+        else = { always = no }
     }
 }
 democratic_socialism_cw_plurality = {
@@ -835,6 +841,7 @@ democratic_socialism_cw_plurality = {
             democratic_socialism > party_popularity@social_democracy
             democratic_socialism > party_popularity@bolshevism
         }
+        else = { always = no }
     }
 }
 bolshevism_cw_plurality = {
@@ -936,6 +943,7 @@ bolshevism_cw_plurality = {
             bolshevism > party_popularity@social_democracy
             bolshevism > party_popularity@democratic_socialism
         }
+        else = { always = no }
     }
 }
 anarchism_cw_plurality = {
@@ -1037,6 +1045,7 @@ anarchism_cw_plurality = {
             anarchism > party_popularity@social_democracy
             anarchism > party_popularity@democratic_socialism
         }
+        else = { always = no }
     }
 }
 
