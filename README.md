@@ -6,7 +6,7 @@ All placeholder graphics will be either colored magenta or contain magenta pixel
 ### WARNING
 The mod is EXTREMELY unfinished and is it nowhere near a playable state, feedback for this stage of development will be under intense scrutiny.
 ## Contribution
-It is possible for anyone to contribute, but it is recommend that if you plan to contribute frequently in the long-term, consider joining the development team officially from within the Discord server.
+It is possible for anyone to contribute, but it is recommend that if you plan to contribute frequently in the long-term, consider joining the development team officially from within the [Discord server](https://discord.com/invite/qJm8zdgu28).
 ## Installation
 If you aren't playing it from a workshop release, you will have to manually create a `.mod` file in order to play the mod.<br>
 It is recommended you clone the repo directly into your `Documents/Paradox Interactive/Hearts of Iron IV/mod` folder.
