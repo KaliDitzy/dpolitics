@@ -1,0 +1,221 @@
+focus_tree = {
+	id = ITA_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 20
+			original_tag = ITA
+		}
+	}
+	continuous_focus_position = {
+		x = 100
+		y = 10
+	}
+	##################
+	## Intro Branch ##
+	##################
+	focus = {
+		id = ITA_socialist_nation
+		icon = GFX_goal_generic_national_unity
+		x = 0
+		y = 0
+		cost = 1
+		completion_reward = {
+			country_event = {
+				id = italy.1
+			}
+		}
+	}
+	focus = {
+		id = ITA_difficult_elements
+		icon = GFX_goal_generic_national_unity
+		x = 0
+		y = 1
+		relative_position_id = ITA_socialist_nation
+		cost = 1
+		prerequisite = {
+			focus = ITA_socialist_nation
+		}
+		completion_reward = {
+			country_event = {
+				id = italy.2
+			}
+		}
+	}
+	focus = {
+		id = ITA_youth_protests
+		icon = GFX_goal_generic_national_unity
+		x = 0
+		y = 1
+		relative_position_id = ITA_difficult_elements
+		cost = 1
+		prerequisite = {
+			focus = ITA_difficult_elements
+		}
+		completion_reward = {
+			country_event = {
+				id = italy.3
+			}
+		}
+	}
+	###########################
+	## Social Reforms Branch ##
+	###########################
+	focus = {
+		id = ITA_social_reforms
+		icon = GFX_goal_generic_national_unity
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = ITA_youth_protests
+		prerequisite = {
+			focus = ITA_youth_protests
+		}
+		completion_reward = {
+			custom_effect_tooltip = {
+				localization_key = ITA_social_reforms_tt
+			}
+		}
+	}
+	#####################
+	## Military Branch ##
+	#####################
+	focus = {
+		id = ITA_italian_armed_forces
+		icon = GFX_goal_generic_alliance
+		cost = 5
+		x = 10
+		y = 1
+		relative_position_id = ITA_youth_protests
+		prerequisite = {
+			focus = ITA_youth_protests
+		}
+		completion_reward = {
+			army_experience = 10
+			navy_experience = 10
+			air_experience = 10
+		}
+	}
+	#####################
+	## Economic Branch ##
+	#####################
+	focus = {
+		id = ITA_union_of_industries
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 5
+		x = -10
+		y = 1
+		relative_position_id = ITA_youth_protests
+		prerequisite = {
+			focus = ITA_youth_protests
+		}
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = ITA_union_of_industries_tech_bonus
+				bonus = 0.5
+				uses = 2
+				category = industry
+			}
+		}
+	}
+	###################################################
+	## Council of Workers and Union Bank Sub-Branche ##
+	###################################################
+	focus = {
+		id = ITA_worker_councils
+		icon = GFX_goal_generic_national_unity
+		cost = 5
+		x = 0
+		y = 2
+		relative_position_id = ITA_union_of_industries
+		prerequisite = {
+			focus = ITA_union_of_industries
+		}
+		completion_reward = {
+			add_ideas = ITA_worker_councils_idea_1
+		}
+	}
+	############################################
+	## Prioritize Industrial North Sub-Branch ##
+	############################################
+	focus = {
+		id = ITA_develop_north
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 5
+		x = -3
+		y = 1
+		relative_position_id = ITA_union_of_industries
+		prerequisite = {
+			focus = ITA_union_of_industries
+		}
+		mutually_exclusive = {
+			focus = ITA_fund_rural_areas
+		}
+		available = {
+			AND = {
+				owns_state = 158
+				owns_state = 159
+			}
+		}
+		completion_reward = {
+			158 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			159 = {
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	##################################
+	## Rural Development Sub-Branch ##
+	##################################
+	focus = {
+		id = ITA_fund_rural_areas
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 5
+		x = 3
+		y = 1
+		relative_position_id = ITA_union_of_industries
+		prerequisite = {
+			focus = ITA_union_of_industries
+		}
+		mutually_exclusive = {
+			focus = ITA_develop_north
+		}
+		available = {
+			AND = {
+				owns_state = 115
+				owns_state = 117
+				owns_state = 156
+				owns_state = 849
+			}
+		}
+		completion_reward = {
+			115 = {
+				add_extra_state_shared_building_slots = 1
+			}
+			117 = {
+				add_extra_state_shared_building_slots = 1
+			}
+			156 = {
+				add_extra_state_shared_building_slots = 1
+			}
+			849 = {
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+}

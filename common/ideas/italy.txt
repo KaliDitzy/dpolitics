@@ -1,0 +1,16 @@
+ideas = {
+	country = {
+		ITA_worker_councils_idea_1 = {
+			allowed = {
+				tag = ITA
+			}
+			removal_cost = 0
+			picture = GFX_idea_industrial_complex_1
+			cost = 0
+			modifier = {
+				factory_output = 0.05
+				add_stability = -0.02
+			}
+		}
+	}
+}

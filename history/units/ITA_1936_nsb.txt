@@ -1,0 +1,233 @@
+division_template = {
+	name = "Divisione di Fanteria"
+	division_names_group = ITA_INF_01
+	# Represents nearly all infantry divisions
+	# In later years, CC.NN. Brigade added to INF Division (1x2 MIL/INF regiments)
+	# Also represent semi-mountain divisions (1st, 2nd, 3rd, 4th, 6th Divisions)
+	regiments = {
+		infantry = {
+			x = 0
+			y = 0
+		}
+		infantry = {
+			x = 0
+			y = 1
+		}
+		infantry = {
+			x = 0
+			y = 2
+		}
+		infantry = {
+			x = 1
+			y = 0
+		}
+		infantry = {
+			x = 1
+			y = 1
+		}
+		infantry = {
+			x = 1
+			y = 2
+		}
+	}
+	support = {
+		engineer = {
+			x = 0
+			y = 0
+		}
+		artillery = {
+			x = 0
+			y = 1
+		}
+	}
+}
+
+division_template = {
+	name = "Divisione Alpina"
+	division_names_group = ITA_MNT_01
+	regiments = {
+		mountaineers = {
+			x = 0
+			y = 0
+		}
+		# (elite) Alpini Regiment
+		mountaineers = {
+			x = 0
+			y = 1
+		}
+		mountaineers = {
+			x = 0
+			y = 2
+		}
+		mountaineers = {
+			x = 1
+			y = 0
+		}
+		mountaineers = {
+			x = 1
+			y = 1
+		}
+		mountaineers = {
+			x = 1
+			y = 2
+		}
+	}
+	support = {
+		engineer = {
+			x = 0
+			y = 0
+		}
+		artillery = {
+			x = 0
+			y = 1
+		}
+	}
+	priority = 2
+}
+
+division_template = {
+	name = "Reggimento di Cavalleria"
+	division_names_group = ITA_CAV_01
+	regiments = {
+		cavalry = {
+			x = 0
+			y = 0
+		}
+		cavalry = {
+			x = 0
+			y = 1
+		}
+		cavalry = {
+			x = 1
+			y = 0
+		}
+		cavalry = {
+			x = 1
+			y = 1
+		}
+	}
+}
+
+units = {
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 911
+		division_template = "Divisione di Fanteria"
+		start_experience_factor = 0.3
+	}
+	division = {
+		location = 6780
+		division_template = "Divisione Alpina"
+		start_experience_factor = 0.28
+		start_equipment_factor = 0.92
+	}
+	division = {
+		location = 6780
+		division_template = "Divisione di Fanteria"
+		start_experience_factor = 0.22
+		start_equipment_factor = 0.9
+		start_manpower_factor = 0.9
+	}
+	division = {
+		location = 735
+		division_template = "Divisione Alpina"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.9
+	}
+	division = {
+		location = 6973
+		division_template = "Reggimento di Cavalleria"
+		start_equipment_factor = 0.85
+		start_experience_factor = 0.19
+	}
+	division = {
+		location = 11584
+		division_template = "Reggimento di Cavalleria"
+		start_equipment_factor = 0.85
+		start_experience_factor = 0.19
+	}
+	division = {
+		location = 11584
+		division_template = "Divisione di Fanteria"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+	}
+	division = {
+		location = 9904
+		division_template = "Divisione di Fanteria"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+	}
+	division = {
+		location = 9904
+		division_template = "Divisione di Fanteria"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+	}
+	division = {
+		location = 9904
+		division_template = "Divisione di Fanteria"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+	}
+	division = {
+		location = 819
+		division_template = "Reggimento di Cavalleria"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+	}
+	division = {
+		location = 10074
+		division_template = "Divisione di Fanteria"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+	}
+	division = {
+		location = 10074
+		division_template = "Divisione di Fanteria"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+	}
+}
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "ITA"
+		}
+		requested_factories = 4
+		progress = 0.19
+		efficiency = 66
+	}
+	add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_1
+			creator = "ITA"
+		}
+		requested_factories = 2
+		progress = 0.22
+		efficiency = 70
+	}
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "ITA"
+		}
+		requested_factories = 1
+		progress = 0.18
+		efficiency = 65
+	}
+	add_equipment_production = {
+		equipment = {
+			type = motorized_equipment_1
+			creator = "ITA"
+		}
+		requested_factories = 1
+		progress = 0.15
+		efficiency = 80
+	}
+}

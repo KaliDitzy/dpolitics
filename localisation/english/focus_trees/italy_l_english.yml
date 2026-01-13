@@ -1,0 +1,26 @@
+﻿l_english:
+  # Characters
+  # Ideas
+  ITA_worker_councils_idea_1: "Worker's Councils of Italy"
+  # Focus Tree
+  ITA_focus: "[ITA.GetName] Focus Tree"
+  ITA_socialist_nation: "Red Dawn Over Turin"
+  ITA_socialist_nation_desc: ""
+  ITA_difficult_elements: "Difficult Opposition"
+  ITA_difficult_elements_desc: ""
+  ITA_youth_protests: "Youth Protests"
+  ITA_youth_protests_desc: ""
+  ITA_social_reforms: "Social Reforms"
+  ITA_social_reforms_desc: ""
+  ITA_social_reforms_tt: "[ITA.GetNameDefCap] will be able to enact §OSocial Reforms§!."
+  ITA_union_of_industries: "Union of Industries"
+  ITA_union_of_industries_desc: ""
+  ITA_develop_north: "Develop the North"
+  ITA_develop_north_desc: ""
+  ITA_worker_councils: "Establish Worker's Councils"
+  ITA_worker_councils_desc: ""
+  ITA_fund_rural_areas: "Fund Rural Areas"
+  ITA_fund_rural_areas_desc: ""
+  ITA_italian_armed_forces: "Italian Armed Forces"
+  ITA_italian_armed_forces_desc: ""
+  # Events

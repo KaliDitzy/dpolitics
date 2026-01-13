@@ -1,11 +1,10 @@
-capital = 2
-
+capital = 158
 # Starting tech
 set_technology = {
 	infantry_weapons = 1
 	infantry_weapons1 = 1
 	tech_recon = 1
-	tech_support = 1		
+	tech_support = 1
 	tech_engineers = 1
 	tech_mountaineers = 1
 	tech_trucks = 1
@@ -20,9 +19,12 @@ set_technology = {
 	oil_processing = 1
 	fuel_refining = 1
 }
+
 if = {
 	limit = {
-		NOT = { has_dlc = "By Blood Alone" }
+		NOT = {
+			has_dlc = "By Blood Alone"
+		}
 	}
 	set_technology = {
 		early_fighter = 1
@@ -34,6 +36,7 @@ if = {
 		naval_bomber1 = 1
 	}
 }
+
 if = {
 	limit = {
 		NOT = {
@@ -47,11 +50,10 @@ if = {
 		basic_heavy_tank = 1
 	}
 }
+
 if = {
 	limit = {
-		
 		has_dlc = "No Step Back"
-		
 	}
 	set_technology = {
 		gwtank_chassis = 1
@@ -60,14 +62,18 @@ if = {
 		basic_heavy_tank_chassis = 1
 	}
 }
+
 if = {
 	limit = {
-		not = { has_dlc = "Man the Guns" }
+		not = {
+			has_dlc = "Man the Guns"
+		}
 	}
 	set_technology = {
 		transport = 1
 	}
 }
+
 if = {
 	limit = {
 		has_dlc = "Man the Guns"
@@ -80,7 +86,10 @@ if = {
 set_research_slots = 3
 set_convoys = 50
 set_stability = 0.6
-set_variable = { dissent_base = 7.5 }
+set_variable = {
+	dissent_base = 7.5
+}
+
 add_ideas = {
 	reform_dop_oligarchy
 	reform_dm_representative_democracy
@@ -89,34 +98,77 @@ add_ideas = {
 	reform_es_no_restrictions
 	reform_cr_minority_rights
 }
+
 set_cosmetic_tag = ITA_republic_communist
-set_variable = { regime_id = 2 }
+set_variable = {
+	regime_id = 2
+}
+
 # Ban Fascism
-set_variable = { fash_ban_cooldown = 240 }
+set_variable = {
+	fash_ban_cooldown = 240
+}
+
 set_country_flag = fash_banned
 # Ban Reactionaries
-set_variable = { trad_ban_cooldown = 240 }
+set_variable = {
+	trad_ban_cooldown = 240
+}
+
 set_country_flag = trad_banned
 # Ban Conservatism
-set_variable = { cons_ban_cooldown = 240 }
-set_country_flag = cons_banned
+set_variable = {
+	cons_ban_cooldown = 240
+}
 
+set_country_flag = cons_banned
 set_politics = {
 	ruling_party = democratic_socialism
 	last_election = "1933.5.1"
 	election_frequency = 48
 	elections_allowed = yes
 }
+
 set_popularities = {
-    fascism = 0
-    traditionalism = 9
-    conservatism = 3
-    liberalism = 4
-    radicalism = 4
-    social_democracy = 8
-    democratic_socialism = 38
-    bolshevism = 25
-    anarchism = 9
+	fascism = 0
+	traditionalism = 9
+	conservatism = 3
+	liberalism = 4
+	radicalism = 4
+	social_democracy = 8
+	democratic_socialism = 38
+	bolshevism = 25
+	anarchism = 9
+}
+
+if = {
+	limit = {
+		has_dlc = "By Blood Alone"
+	}
+	set_oob = "ITA_1936_air_bba"
+	else = {
+		set_oob = "ITA_1936_air_legacy"
+	}
+}
+
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_oob = "ITA_1936_naval_mtg"
+	else = {
+		set_oob = "ITA_1936_naval_legacy"
+	}
+}
+
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_oob = "ITA_1936_nsb"
+	else = {
+		set_oob = "ITA_1936_legacy"
+	}
 }
 
 recruit_character = ITA_giacomo_matteotti
