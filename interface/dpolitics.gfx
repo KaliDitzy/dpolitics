@@ -44,15 +44,4 @@ spriteTypes = {
 		name = "GFX_reform_entry_bg_3"
 		texturefile = "gfx/interface/reform_entry_bg_3.dds"
 	}
-
-	# faction icons
-	spriteType = {
-		name = "GFX_faction_icon_deutscher_bund"
-		texturefile = "gfx/interface/factions/faction_logos/faction_icon_deutscher_bund.dds"
-		noOfFrames = 2
-	}
-	spriteType = {
-		name = "GFX_faction_icon_deutscher_bund_miniature"
-		texturefile = "gfx/interface/factions/faction_logos/faction_icon_deutscher_bund_miniature.dds"
-	}
 }
