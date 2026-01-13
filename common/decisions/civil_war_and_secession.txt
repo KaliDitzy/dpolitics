@@ -17,7 +17,15 @@ civil_war_crisis = {
 		is_good = no
 		days_mission_timeout = 180
 		selectable_mission = no
+		modifier = {
+			resistance_activity = 0.15
+			compliance_growth_on_our_occupied_states = -0.15
+		}
+		complete_effect = {
+			add_to_variable = { regime_approval = 2 }
+		}
 		timeout_effect = {
+			add_to_variable = { regime_approval = -2 }
 			if = {
 				limit = {
 					fascism_cw_plurality = yes
