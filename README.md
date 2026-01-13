@@ -14,7 +14,9 @@ It is recommended you clone the repo directly into your `Documents/Paradox Inter
 After that, you will need to copy the `descriptor.mod` file found within the repo to the root of your `mod` directory.
 After this, you need to add the path of the repo to the file you just pasted, as such:
 
-```path="C:/Users/PC/Documents/Paradox Interactive/Hearts of Iron IV/mod/dpolitics"```
+```
+path="C:/Users/PC/Documents/Paradox Interactive/Hearts of Iron IV/mod/dpolitics"
+```
 
 This may differ per user, and will definitely be different on platforms such as Linux. Make sure to use forward slashes otherwise it will not work.
 
