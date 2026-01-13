@@ -2,14 +2,14 @@ civil_war_crisis = {
     imminent_civil_war = {
 		activation = {
 			has_civil_war = no
-			check_variable = { dissent_change > 2 }
+			set_temp_variable = { tmp = 2 } custom_trigger_tooltip = { tooltip = dissent_change_at_least check_variable = { dissent_change > 2 } }
 			has_stability < 0.2
 		}
 		available = {
 			OR = {
 				has_civil_war = yes
-				NOT = { check_variable = { dissent > 0.2 } }
-				NOT = { check_variable = { dissent_change > 2 } }
+				set_temp_variable = { tmp = 20 }
+				NOT = { set_temp_variable = { tmp = 2 } custom_trigger_tooltip = { tooltip = dissent_change_at_least check_variable = { dissent_change > 2 } } }
 				NOT = { has_stability < 0.2 }
 			}
 		}
