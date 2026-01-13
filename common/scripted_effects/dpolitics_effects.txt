@@ -983,6 +983,96 @@ conform_government_to_ROOT = {
 
 	if = {
 		limit = {
+			ROOT = {
+				NOT = { has_idea = reform_dop_anarchy }
+				NOT = { has_idea = reform_dop_minarchy }
+			}
+		}
+		add_ideas = reform_cl_martial_law
+		hidden_effect = {
+			remove_ideas = {
+				reform_cl_indefinitely_suspended
+				reform_cl_curtailed
+				reform_cl_guaranteed
+				reform_cl_total_individual_freedom
+			}
+		}
+	}
+	else = {
+		if = {
+			limit = {
+				ROOT = { has_idea = reform_cl_indefinitely_suspended }
+			}
+			add_ideas = reform_cl_indefinitely_suspended
+			hidden_effect = {
+				remove_ideas = {
+					reform_cl_martial_law
+					reform_cl_curtailed
+					reform_cl_guaranteed
+					reform_cl_total_individual_freedom
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				ROOT = { has_idea = reform_cl_martial_law }
+			}
+			add_ideas = reform_cl_martial_law
+			hidden_effect = {
+				remove_ideas = {
+					reform_cl_indefinitely_suspended
+					reform_cl_curtailed
+					reform_cl_guaranteed
+					reform_cl_total_individual_freedom
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				ROOT = { has_idea = reform_cl_curtailed }
+			}
+			add_ideas = reform_cl_curtailed
+			hidden_effect = {
+				remove_ideas = {
+					reform_cl_indefinitely_suspended
+					reform_cl_martial_law
+					reform_cl_guaranteed
+					reform_cl_total_individual_freedom
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				ROOT = { has_idea = reform_cl_guaranteed }
+			}
+			add_ideas = reform_cl_guaranteed
+			hidden_effect = {
+				remove_ideas = {
+					reform_cl_indefinitely_suspended
+					reform_cl_martial_law
+					reform_cl_curtailed
+					reform_cl_total_individual_freedom
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				ROOT = { has_idea = reform_cl_total_individual_freedom }
+			}
+			add_ideas = reform_cl_total_individual_freedom
+			hidden_effect = {
+				remove_ideas = {
+					reform_cl_indefinitely_suspended
+					reform_cl_martial_law
+					reform_cl_curtailed
+					reform_cl_guaranteed
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
 			ROOT = { has_idea = reform_pao_feudal_structure }
 		}
 		add_ideas = reform_pao_feudal_structure
@@ -1330,13 +1420,93 @@ conform_government_to_FROM = {
 		}
 	}
 
-	add_ideas = reform_cl_martial_law
-	hidden_effect = {
-		remove_ideas = {
-			reform_cl_indefinitely_suspended
-			reform_cl_curtailed
-			reform_cl_guaranteed
-			reform_cl_total_individual_freedom
+	if = {
+		limit = {
+			FROM = {
+				NOT = { has_idea = reform_dop_anarchy }
+				NOT = { has_idea = reform_dop_minarchy }
+			}
+		}
+		add_ideas = reform_cl_martial_law
+		hidden_effect = {
+			remove_ideas = {
+				reform_cl_indefinitely_suspended
+				reform_cl_curtailed
+				reform_cl_guaranteed
+				reform_cl_total_individual_freedom
+			}
+		}
+	}
+	else = {
+		if = {
+			limit = {
+				FROM = { has_idea = reform_cl_indefinitely_suspended }
+			}
+			add_ideas = reform_cl_indefinitely_suspended
+			hidden_effect = {
+				remove_ideas = {
+					reform_cl_martial_law
+					reform_cl_curtailed
+					reform_cl_guaranteed
+					reform_cl_total_individual_freedom
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				FROM = { has_idea = reform_cl_martial_law }
+			}
+			add_ideas = reform_cl_martial_law
+			hidden_effect = {
+				remove_ideas = {
+					reform_cl_indefinitely_suspended
+					reform_cl_curtailed
+					reform_cl_guaranteed
+					reform_cl_total_individual_freedom
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				FROM = { has_idea = reform_cl_curtailed }
+			}
+			add_ideas = reform_cl_curtailed
+			hidden_effect = {
+				remove_ideas = {
+					reform_cl_indefinitely_suspended
+					reform_cl_martial_law
+					reform_cl_guaranteed
+					reform_cl_total_individual_freedom
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				FROM = { has_idea = reform_cl_guaranteed }
+			}
+			add_ideas = reform_cl_guaranteed
+			hidden_effect = {
+				remove_ideas = {
+					reform_cl_indefinitely_suspended
+					reform_cl_martial_law
+					reform_cl_curtailed
+					reform_cl_total_individual_freedom
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				FROM = { has_idea = reform_cl_total_individual_freedom }
+			}
+			add_ideas = reform_cl_total_individual_freedom
+			hidden_effect = {
+				remove_ideas = {
+					reform_cl_indefinitely_suspended
+					reform_cl_martial_law
+					reform_cl_curtailed
+					reform_cl_guaranteed
+				}
+			}
 		}
 	}
 

@@ -1,0 +1,624 @@
+civil_war_crisis = {
+    imminent_civil_war = {
+		activation = {
+			has_civil_war = no
+			set_temp_variable = { tmp = 2 } custom_trigger_tooltip = { tooltip = dissent_change_greater_than check_variable = { dissent_change > 2 } }
+			has_stability < 0.2
+		}
+		available = {
+			OR = {
+				has_civil_war = yes
+				set_temp_variable = { tmp = 20 }
+				NOT = { set_temp_variable = { tmp = 2 } custom_trigger_tooltip = { tooltip = dissent_change_greater_than check_variable = { dissent_change > 2 } } }
+				NOT = { has_stability < 0.2 }
+			}
+		}
+		icon = mission_icon
+		is_good = no
+		days_mission_timeout = 180
+		selectable_mission = no
+		modifier = {
+			resistance_activity = 0.15
+			compliance_growth_on_our_occupied_states = -0.15
+		}
+		complete_effect = {
+			add_to_variable = { regime_approval = 2 }
+		}
+		timeout_effect = {
+			add_to_variable = { regime_approval = -2 }
+			if = {
+				limit = {
+					fascism_cw_plurality = yes
+				}
+				start_civil_war = {
+					ideology = fascism
+					size = 0.4
+
+					hidden_effect = { conform_government_to_ROOT = yes }
+
+					add_ideas = reform_dop_oligarchy
+					hidden_effect = {
+						remove_ideas = {
+							reform_dop_monarchy
+							reform_dop_minarchy
+							reform_dop_anarchy
+						}
+					}
+
+					add_ideas = reform_dm_corporatism
+                    hidden_effect = {
+                        remove_ideas = {
+                            reform_dm_autocracy
+                            reform_dm_technocracy
+                            reform_dm_representative_democracy
+                            reform_dm_direct_democracy
+                            reform_dm_free_association
+                        }
+                    }
+
+					add_ideas = reform_cl_indefinitely_suspended
+					hidden_effect = {
+						remove_ideas = {
+							reform_cl_martial_law
+							reform_cl_curtailed
+							reform_cl_guaranteed
+							reform_cl_total_individual_freedom
+						}
+					}
+
+					add_ideas = reform_pao_private_ownership
+                    hidden_effect = {
+                        remove_ideas = {
+                            reform_pao_feudal_structure
+                            reform_pao_private_property_limited
+                            reform_pao_private_property_abolished
+                        }
+                    }
+
+					add_ideas = reform_cr_national_supremacy
+                    hidden_effect = {
+                        remove_ideas = {
+                            reform_cr_ethnostate
+                            reform_cr_supremacy_of_tradition
+                            reform_cr_minority_indifference
+                            reform_cr_minority_rights
+                            reform_cr_sexual_autonomy
+                            reform_cr_queer_rights
+                        }
+                    }
+
+					hidden_effect = { recalculate_cosmetic_tag = yes }
+				}
+			}
+			else_if = {
+				limit = {
+					traditionalism_cw_plurality = yes
+				}
+				start_civil_war = {
+					ideology = traditionalism
+					size = 0.4
+
+					hidden_effect = { conform_government_to_ROOT = yes }
+
+					add_ideas = reform_dop_monarchy
+					hidden_effect = {
+						remove_ideas = {
+							reform_dop_oligarchy
+							reform_dop_minarchy
+							reform_dop_anarchy
+						}
+					}
+
+					add_ideas = reform_dm_autocracy
+                    hidden_effect = {
+                        remove_ideas = {
+                            reform_dm_technocracy
+                            reform_dm_corporatism
+                            reform_dm_representative_democracy
+                            reform_dm_direct_democracy
+                            reform_dm_free_association
+                        }
+                    }
+
+					add_ideas = reform_cl_indefinitely_suspended
+					hidden_effect = {
+						remove_ideas = {
+							reform_cl_martial_law
+							reform_cl_curtailed
+							reform_cl_guaranteed
+							reform_cl_total_individual_freedom
+						}
+					}
+
+					add_ideas = reform_pao_private_ownership
+                    hidden_effect = {
+                        remove_ideas = {
+                            reform_pao_feudal_structure
+                            reform_pao_private_property_limited
+                            reform_pao_private_property_abolished
+                        }
+                    }
+
+					add_ideas = reform_cr_national_supremacy
+                    hidden_effect = {
+                        remove_ideas = {
+                            reform_cr_ethnostate
+                            reform_cr_supremacy_of_tradition
+                            reform_cr_minority_indifference
+                            reform_cr_minority_rights
+                            reform_cr_sexual_autonomy
+                            reform_cr_queer_rights
+                        }
+                    }
+
+					hidden_effect = { recalculate_cosmetic_tag = yes }
+				}
+			}
+			else_if = {
+				limit = {
+					conservatism_cw_plurality = yes
+				}
+				start_civil_war = {
+					ideology = conservatism
+					size = 0.4
+
+					hidden_effect = { conform_government_to_ROOT = yes }
+
+					add_ideas = reform_dop_oligarchy
+					hidden_effect = {
+						remove_ideas = {
+							reform_dop_monarchy
+							reform_dop_minarchy
+							reform_dop_anarchy
+						}
+					}
+
+					add_ideas = reform_dm_representative_democracy
+                    hidden_effect = {
+                        remove_ideas = {
+                            reform_dm_autocracy
+                            reform_dm_technocracy
+                            reform_dm_corporatism
+                            reform_dm_direct_democracy
+                            reform_dm_free_association
+                        }
+                    }
+
+					add_ideas = reform_cl_martial_law
+					hidden_effect = {
+						remove_ideas = {
+							reform_cl_indefinitely_suspended
+							reform_cl_curtailed
+							reform_cl_guaranteed
+							reform_cl_total_individual_freedom
+						}
+					}
+
+					add_ideas = reform_pao_private_ownership
+                    hidden_effect = {
+                        remove_ideas = {
+                            reform_pao_feudal_structure
+                            reform_pao_private_property_limited
+                            reform_pao_private_property_abolished
+                        }
+                    }
+
+					add_ideas = reform_cr_national_supremacy
+                    hidden_effect = {
+                        remove_ideas = {
+                            reform_cr_ethnostate
+                            reform_cr_supremacy_of_tradition
+                            reform_cr_minority_indifference
+                            reform_cr_minority_rights
+                            reform_cr_sexual_autonomy
+                            reform_cr_queer_rights
+                        }
+                    }
+
+					hidden_effect = { recalculate_cosmetic_tag = yes }
+				}
+			}
+			else_if = {
+				limit = {
+					liberalism_cw_plurality = yes
+				}
+				start_civil_war = {
+					ideology = liberalism
+					size = 0.4
+
+					hidden_effect = { conform_government_to_ROOT = yes }
+
+					add_ideas = reform_dop_oligarchy
+					hidden_effect = {
+						remove_ideas = {
+							reform_dop_monarchy
+							reform_dop_minarchy
+							reform_dop_anarchy
+						}
+					}
+
+					add_ideas = reform_dm_representative_democracy
+                    hidden_effect = {
+                        remove_ideas = {
+                            reform_dm_autocracy
+                            reform_dm_technocracy
+                            reform_dm_corporatism
+                            reform_dm_direct_democracy
+                            reform_dm_free_association
+                        }
+                    }
+
+					add_ideas = reform_cl_martial_law
+					hidden_effect = {
+						remove_ideas = {
+							reform_cl_indefinitely_suspended
+							reform_cl_curtailed
+							reform_cl_guaranteed
+							reform_cl_total_individual_freedom
+						}
+					}
+
+					add_ideas = reform_pao_private_ownership
+                    hidden_effect = {
+                        remove_ideas = {
+                            reform_pao_feudal_structure
+                            reform_pao_private_property_limited
+                            reform_pao_private_property_abolished
+                        }
+                    }
+
+					add_ideas = reform_cr_minority_indifference
+                    hidden_effect = {
+                        remove_ideas = {
+                            reform_cr_ethnostate
+                            reform_cr_supremacy_of_tradition
+                            reform_cr_national_supremacy
+                            reform_cr_minority_rights
+                            reform_cr_sexual_autonomy
+                            reform_cr_queer_rights
+                        }
+                    }
+
+					hidden_effect = { recalculate_cosmetic_tag = yes }
+				}
+			}
+			else_if = {
+				limit = {
+					radicalism_cw_plurality = yes
+				}
+				start_civil_war = {
+					ideology = radicalism
+					size = 0.4
+
+					hidden_effect = { conform_government_to_ROOT = yes }
+
+					add_ideas = reform_dop_minarchy
+					hidden_effect = {
+						remove_ideas = {
+							reform_dop_monarchy
+							reform_dop_oligarchy
+							reform_dop_anarchy
+						}
+					}
+
+					add_ideas = reform_dm_direct_democracy
+                    hidden_effect = {
+                        remove_ideas = {
+                            reform_dm_autocracy
+                            reform_dm_technocracy
+                            reform_dm_corporatism
+                            reform_dm_representative_democracy
+                            reform_dm_free_association
+                        }
+                    }
+
+					add_ideas = reform_cl_curtailed
+					hidden_effect = {
+						remove_ideas = {
+							reform_cl_indefinitely_suspended
+							reform_cl_martial_law
+							reform_cl_guaranteed
+							reform_cl_total_individual_freedom
+						}
+					}
+
+					add_ideas = reform_pao_private_ownership
+                    hidden_effect = {
+                        remove_ideas = {
+                            reform_pao_feudal_structure
+                            reform_pao_private_property_limited
+                            reform_pao_private_property_abolished
+                        }
+                    }
+
+					add_ideas = reform_cr_minority_rights
+                    hidden_effect = {
+                        remove_ideas = {
+                            reform_cr_ethnostate
+                            reform_cr_supremacy_of_tradition
+                            reform_cr_national_supremacy
+                            reform_cr_minority_indifference
+                            reform_cr_sexual_autonomy
+                            reform_cr_queer_rights
+                        }
+                    }
+
+					hidden_effect = { recalculate_cosmetic_tag = yes }
+				}
+			}
+			else_if = {
+				limit = {
+					social_democracy_cw_plurality = yes
+				}
+				start_civil_war = {
+					ideology = social_democracy
+					size = 0.4
+
+					hidden_effect = { conform_government_to_ROOT = yes }
+
+					add_ideas = reform_dop_oligarchy
+					hidden_effect = {
+						remove_ideas = {
+							reform_dop_monarchy
+							reform_dop_minarchy
+							reform_dop_anarchy
+						}
+					}
+
+					add_ideas = reform_dm_representative_democracy
+                    hidden_effect = {
+                        remove_ideas = {
+                            reform_dm_autocracy
+                            reform_dm_technocracy
+                            reform_dm_corporatism
+                            reform_dm_direct_democracy
+                            reform_dm_free_association
+                        }
+                    }
+
+					add_ideas = reform_cl_martial_law
+					hidden_effect = {
+						remove_ideas = {
+							reform_cl_indefinitely_suspended
+							reform_cl_curtailed
+							reform_cl_guaranteed
+							reform_cl_total_individual_freedom
+						}
+					}
+
+					add_ideas = reform_pao_private_ownership
+                    hidden_effect = {
+                        remove_ideas = {
+                            reform_pao_feudal_structure
+                            reform_pao_private_property_limited
+                            reform_pao_private_property_abolished
+                        }
+                    }
+
+					add_ideas = reform_cr_minority_rights
+                    hidden_effect = {
+                        remove_ideas = {
+                            reform_cr_ethnostate
+                            reform_cr_supremacy_of_tradition
+                            reform_cr_national_supremacy
+                            reform_cr_minority_indifference
+                            reform_cr_sexual_autonomy
+                            reform_cr_queer_rights
+                        }
+                    }
+
+					hidden_effect = { recalculate_cosmetic_tag = yes }
+				}
+			}
+			else_if = {
+				limit = {
+					democratic_socialism_cw_plurality = yes
+				}
+				start_civil_war = {
+					ideology = democratic_socialism
+					size = 0.4
+
+					hidden_effect = { conform_government_to_ROOT = yes }
+
+					add_ideas = reform_dop_oligarchy
+					hidden_effect = {
+						remove_ideas = {
+							reform_dop_monarchy
+							reform_dop_minarchy
+							reform_dop_anarchy
+						}
+					}
+
+					add_ideas = reform_dm_representative_democracy
+                    hidden_effect = {
+                        remove_ideas = {
+                            reform_dm_autocracy
+                            reform_dm_technocracy
+                            reform_dm_corporatism
+                            reform_dm_direct_democracy
+                            reform_dm_free_association
+                        }
+                    }
+
+					add_ideas = reform_cl_martial_law
+					hidden_effect = {
+						remove_ideas = {
+							reform_cl_indefinitely_suspended
+							reform_cl_curtailed
+							reform_cl_guaranteed
+							reform_cl_total_individual_freedom
+						}
+					}
+
+					add_ideas = reform_pao_private_property_limited
+                    hidden_effect = {
+                        remove_ideas = {
+                            reform_pao_feudal_structure
+                            reform_pao_private_ownership
+                            reform_pao_private_property_abolished
+                        }
+                    }
+
+					add_ideas = reform_cr_minority_rights
+                    hidden_effect = {
+                        remove_ideas = {
+                            reform_cr_ethnostate
+                            reform_cr_supremacy_of_tradition
+                            reform_cr_national_supremacy
+                            reform_cr_minority_indifference
+                            reform_cr_sexual_autonomy
+                            reform_cr_queer_rights
+                        }
+                    }
+
+					hidden_effect = { recalculate_cosmetic_tag = yes }
+				}
+			}
+			else_if = {
+				limit = {
+					bolshevism_cw_plurality = yes
+				}
+				start_civil_war = {
+					ideology = bolshevism
+					size = 0.4
+
+					hidden_effect = { conform_government_to_ROOT = yes }
+
+					add_ideas = reform_dop_oligarchy
+					hidden_effect = {
+						remove_ideas = {
+							reform_dop_monarchy
+							reform_dop_minarchy
+							reform_dop_anarchy
+						}
+					}
+
+					add_ideas = reform_dm_autocracy
+                    hidden_effect = {
+                        remove_ideas = {
+                            reform_dm_technocracy
+                            reform_dm_corporatism
+                            reform_dm_representative_democracy
+                            reform_dm_direct_democracy
+                            reform_dm_free_association
+                        }
+                    }
+
+					add_ideas = reform_cl_indefinitely_suspended
+					hidden_effect = {
+						remove_ideas = {
+							reform_cl_martial_law
+							reform_cl_curtailed
+							reform_cl_guaranteed
+							reform_cl_total_individual_freedom
+						}
+					}
+
+					add_ideas = reform_pao_private_property_abolished
+                    hidden_effect = {
+                        remove_ideas = {
+                            reform_pao_feudal_structure
+                            reform_pao_private_ownership
+                            reform_pao_private_property_limited
+                        }
+                    }
+
+					add_ideas = reform_cr_minority_rights
+                    hidden_effect = {
+                        remove_ideas = {
+                            reform_cr_ethnostate
+                            reform_cr_supremacy_of_tradition
+                            reform_cr_national_supremacy
+                            reform_cr_minority_indifference
+                            reform_cr_sexual_autonomy
+                            reform_cr_queer_rights
+                        }
+                    }
+
+					hidden_effect = { recalculate_cosmetic_tag = yes }
+				}
+			}
+			else_if = {
+				limit = {
+					anarchism_cw_plurality = yes
+				}
+				start_civil_war = {
+					ideology = anarchism
+					size = 0.4
+
+					hidden_effect = { conform_government_to_ROOT = yes }
+
+					add_ideas = reform_dop_anarchy
+					hidden_effect = {
+						remove_ideas = {
+							reform_dop_monarchy
+							reform_dop_oligarchy
+							reform_dop_minarchy
+						}
+					}
+
+					add_ideas = reform_dm_direct_democracy
+                    hidden_effect = {
+                        remove_ideas = {
+							reform_dm_autocracy
+                            reform_dm_technocracy
+                            reform_dm_corporatism
+                            reform_dm_representative_democracy
+                            reform_dm_free_association
+                        }
+                    }
+
+					add_ideas = reform_cl_total_individual_freedom
+					hidden_effect = {
+						remove_ideas = {
+							reform_cl_indefinitely_suspended
+							reform_cl_martial_law
+							reform_cl_curtailed
+							reform_cl_guaranteed
+							reform_cl_total_individual_freedom
+						}
+					}
+
+					add_ideas = reform_pao_private_property_abolished
+                    hidden_effect = {
+                        remove_ideas = {
+                            reform_pao_feudal_structure
+                            reform_pao_private_ownership
+                            reform_pao_private_property_limited
+                        }
+                    }
+
+					add_ideas = reform_cr_queer_rights
+                    hidden_effect = {
+                        remove_ideas = {
+                            reform_cr_ethnostate
+                            reform_cr_supremacy_of_tradition
+                            reform_cr_national_supremacy
+                            reform_cr_minority_indifference
+                            reform_cr_minority_rights
+                            reform_cr_sexual_autonomy
+                            reform_cr_queer_rights
+                        }
+                    }
+
+					hidden_effect = { recalculate_cosmetic_tag = yes }
+				}
+			}
+
+			hidden_effect = {
+				if = {
+					limit = {
+						OR = {
+							has_idea = reform_dm_representative_democracy
+							has_idea = reform_dm_direct_democracy
+						}
+					}
+					set_politics = {
+						ruling_party = ROOT
+						elections_allowed = yes
+					}
+				}
+			}
+		}
+	}
+}

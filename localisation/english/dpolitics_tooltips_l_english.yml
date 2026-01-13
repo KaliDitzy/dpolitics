@@ -5,6 +5,10 @@
   dissent_greater_than: "Dissent is greater than [?tmp|%%0Y]"
   dissent_less_than: "Dissent is less than [?tmp|%%0Y]"
   dissent_at_least: "Dissent is at least [?tmp|%%0Y]"
+  dissent_change_greater_than: "Weekly Dissent is greater than [?tmp|%%-=]"
+  dissent_change_greater_than_NOT: "Weekly Dissent is less than or equal to [?tmp|%%-=]"
+  dissent_change_less_than: "Weekly Dissent is less than [?tmp|%%-=]"
+  dissent_change_at_least: "Weekly Dissent is at least [?tmp|%%-=]"
 
   fash_cooldown: "§YFascism§! cannot be banned for §Y[?fash_ban_cooldown]§! days."
   trad_cooldown: "§YTraditionalism§! cannot be banned for §Y[?trad_ban_cooldown]§! days."
