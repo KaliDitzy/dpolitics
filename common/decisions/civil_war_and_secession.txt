@@ -611,6 +611,21 @@ civil_war_crisis = {
 					hidden_effect = { recalculate_cosmetic_tag = yes }
 				}
 			}
+
+			hidden_effect = {
+				if = {
+					limit = {
+						OR = {
+							has_idea = reform_dm_representative_democracy
+							has_idea = reform_dm_direct_democracy
+						}
+					}
+					set_politics = {
+						ruling_party = ROOT
+						elections_allowed = yes
+					}
+				}
+			}
 		}
 	}
 }
