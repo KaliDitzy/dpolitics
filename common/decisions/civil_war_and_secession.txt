@@ -1,0 +1,23 @@
+civil_war_crisis = {
+    imminent_civil_war = {
+		activation = {
+			has_civil_war = no
+			check_variable = { dissent > 0.2 }
+			check_variable = { dissent_change > 2 }
+			has_stability < 0.2
+		}
+		cancel_trigger = {
+			OR = {
+				has_civil_war = yes
+				NOT = { check_variable = { dissent > 0.2 } }
+				NOT = { check_variable = { dissent_change > 2 } }
+				NOT = { has_stability < 0.2 }
+			}
+		}
+		icon = mission_icon
+		is_good = no
+		days_mission_timeout = 35
+		timeout_effect = {
+		}
+	}
+}
