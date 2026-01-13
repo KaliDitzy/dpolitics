@@ -1,7 +1,7 @@
-# Untitled Dynamic Politics Mod
+# Paix Dormante - "The Final Era"
 **Steam Workshop Link:** N/A
 ## About
-UDPM is a politics revamp and total conversion for Hearts of Iron. Currently all aspects of the mod are subject to change, so before the release of the mod, not all released media may be accurate to a version of the mod that eventually becomes public.
+Paix Dormante is a politics revamp and total conversion for Hearts of Iron. Currently all aspects of the mod are subject to change, so before the release of the mod, not all released media may be accurate to a version of the mod that eventually becomes public.
 All placeholder graphics will be either colored magenta or contain magenta pixels to indicate that fact.
 ### WARNING
 The mod is EXTREMELY unfinished and is it nowhere near a playable state, feedback for this stage of development will be under intense scrutiny.
