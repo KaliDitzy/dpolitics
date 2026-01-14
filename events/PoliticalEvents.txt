@@ -4,7 +4,7 @@
 
 add_namespace = politics.opposition
 
-@opposition_days = 96
+@opposition_days = 192
 @opposition_dissent = 1
 # Opposition Against Fascism
 country_event = {
