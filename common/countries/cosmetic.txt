@@ -45,6 +45,27 @@ PRE_bolshevik = {
 	color_ui = rgb { 173 87 87 }
 }
 
+ENG_monarchy = {
+	color = rgb { 255 66 100 }
+	color_ui = rgb { 255 66 100 }
+}
+ENG_republic = {
+	color = rgb { 198 41 83 }
+	color_ui = rgb { 198 41 83 }
+}
+ENG_junta = {
+	color = rgb { 160 110 127 }
+	color_ui = rgb { 160 110 127 }
+}
+ENG_anarchist = {
+	color = rgb { 201 54 125 }
+	color_ui = rgb { 201 54 125 }
+}
+ENG_bolshevik = {
+	color = rgb { 255 95 202 }
+	color_ui = rgb { 255 95 202 }
+}
+
 FRA_monarchy = {
 	color = rgb { 71 105 183 }
 	color_ui = rgb { 71 105 183 }
