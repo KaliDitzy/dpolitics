@@ -652,6 +652,44 @@ recalculate_cosmetic_tag = {
 			drop_cosmetic_tag = yes
 		}
 	}
+	if = {
+		limit = {
+			original_tag = ENG
+		}
+		if = {
+			limit = {
+				cosmetic_monarchy = yes
+			}
+			set_cosmetic_tag = ENG_monarchy
+		}
+		else_if = {
+			limit = {
+				cosmetic_republic = yes
+			}
+			set_cosmetic_tag = ENG_republic
+		}
+		else_if = {
+			limit = {
+				cosmetic_junta = yes
+			}
+			set_cosmetic_tag = ENG_junta
+		}
+		else_if = {
+			limit = {
+				cosmetic_anarchist = yes
+			}
+			set_cosmetic_tag = ENG_anarchist
+		}
+		else_if = {
+			limit = {
+				cosmetic_bolshevik = yes
+			}
+			set_cosmetic_tag = ENG_bolshevik
+		}
+		else = {
+			drop_cosmetic_tag = yes
+		}
+	}
 
 	# formables
 	if = {
