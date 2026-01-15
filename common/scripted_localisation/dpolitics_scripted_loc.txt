@@ -823,3 +823,70 @@ defined_text = {
         localization_key = anarchism
     }
 }
+
+## TOOLTIP LOC STUFF
+defined_text = {
+    name = dissent_from_stability_tt
+    
+    text = {
+        trigger = {
+            NOT = { check_variable = { dissent_from_stability = 0 } }
+        }
+        localization_key = DISSENT_INFO_SUBTT_DISSENT_FROM_STABILITY_TT
+    }
+    text = {
+        localization_key = ""
+    }
+}
+defined_text = {
+    name = dissent_from_ideology_tt
+    
+    text = {
+        trigger = {
+            NOT = { check_variable = { dissent_from_ideology = 0 } }
+        }
+        localization_key = DISSENT_INFO_SUBTT_DISSENT_FROM_IDEOLOGY_TT
+    }
+    text = {
+        localization_key = ""
+    }
+}
+defined_text = {
+    name = dissent_from_ideas_tt
+    
+    text = {
+        trigger = {
+            NOT = { check_variable = { dissent_from_ideas = 0 } }
+        }
+        localization_key = DISSENT_INFO_SUBTT_DISSENT_FROM_IDEAS_TT
+    }
+    text = {
+        localization_key = ""
+    }
+}
+defined_text = {
+    name = ideological_incoherence_tt
+    
+    text = {
+        trigger = {
+            NOT = { check_variable = { ideological_incoherence = 0 } }
+        }
+        localization_key = DISSENT_INFO_SUBTT_IDEOLOGICAL_INCOHERENCE_TT
+    }
+    text = {
+        localization_key = ""
+    }
+}
+defined_text = {
+    name = regime_approval_change_tt
+    
+    text = {
+        trigger = {
+            NOT = { check_variable = { regime_approval_change = 0 } }
+        }
+        localization_key = DISSENT_INFO_SUBTT_REGIME_APPROVAL_CHANGE_TT
+    }
+    text = {
+        localization_key = ""
+    }
+}

@@ -1,7 +1,13 @@
 ﻿l_english:
   DISSENT: "[?dissent|%%0]"
-  DISSENT_INFO: "§YDissent§!\n§YCurrently affected by:§!\n\nBase Value: [?dissent_base|%%Y]\n\nWeekly Change: [?dissent_change|%%-=]\nFrom Ideology: [?dissent_from_ideology|%%-=]\nFrom Ideas: [?dissent_from_ideas|%%-=]\nIdeological Incoherence: [?ideological_incoherence|%%-=]\nRegime Approval: [?regime_approval_change|%%-=]"
+  DISSENT_INFO: "§YDissent§!\n§YCurrently affected by:§!\n\nBase Value: [?dissent_base|%%Y]\n\nWeekly Change: [?dissent_change|%%-=]\nBase Change: §R+0.50%§![dissent_from_stability_tt][dissent_from_ideology_tt][dissent_from_ideas_tt][ideological_incoherence_tt][regime_approval_change_tt]"
   DISSENT_INFO_DELAYED: "Dissent represents the percentage of the dissenting thought amongst the population. A high dissent will damage your ideology drift defence and make it easier to make shifts in ideology and government. However, a high dissent will also damage your stability with time, so use it with caution."
+
+  DISSENT_INFO_SUBTT_DISSENT_FROM_STABILITY_TT: "\nFrom Stability: [?dissent_from_stability|%%-=]"
+  DISSENT_INFO_SUBTT_DISSENT_FROM_IDEOLOGY_TT: "\nFrom Ideology: [?dissent_from_ideology|%%-=]"
+  DISSENT_INFO_SUBTT_DISSENT_FROM_IDEAS_TT: "\nFrom Ideas: [?dissent_from_ideas|%%-=]"
+  DISSENT_INFO_SUBTT_IDEOLOGICAL_INCOHERENCE_TT: "\nIdeological Incoherence: [?ideological_incoherence|%%-=]"
+  DISSENT_INFO_SUBTT_REGIME_APPROVAL_CHANGE_TT: "\nRegime Approval: [?regime_approval_change|%%-=]"
 
   CHANGE_REFORM_WINDOW_TITLE: "[current_reform_title]"
   CHANGE_REFORM_WINDOW_SUBTITLE: "Select new reform"

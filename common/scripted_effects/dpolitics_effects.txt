@@ -102,11 +102,13 @@ recalculate_dissent = {
 	set_variable = { dissent_change_base = 0.5 }
 
 	# MECHANICAL
+	set_variable = { dissent_from_stability = 0 }
 	set_temp_variable = { inv_stability = 0.5 }
 	subtract_from_temp_variable = { inv_stability = stability }
-	add_to_variable = { dissent_change_base = inv_stability }
+	add_to_variable = { dissent_from_stability = inv_stability }
 
 	# IDEOLOGY
+	set_variable = { dissent_from_ideology = 0 }
 	if = {
 		limit = {
 			OR = {
@@ -149,6 +151,7 @@ recalculate_dissent = {
 	}
 	
 	### IDEAS
+	set_variable = { dissent_from_ideas = 0 }
 	# Traits
 	if = {
 		limit = {
@@ -189,6 +192,8 @@ recalculate_dissent = {
 		}
 		add_to_variable = { dissent_from_ideas = 0.1 }
 	}
+
+	add_to_variable = { dissent_change_base = dissent_from_stability }
 
 	add_to_variable = { dissent_change_base = dissent_from_ideology }
 
