@@ -79,6 +79,22 @@
   SWI_fascism: "Switzerland"
   SWI_fascism_ADJ: "Swiss"
 
+  # britain & colonies?
+  ENG: "Britain"
+  ENG_ADJ: "British"
+  ENG_fascism: "Britain"
+  ENG_fascism_ADJ: "British"
+  ENG_monarchy: "United Kingdom"
+  ENG_monarchy_DEF: "The United Kingdom"
+  ENG_republic: "Republic of Britain"
+  ENG_republic_DEF: "The Republic of Britain"
+  ENG_junta: "British Junta"
+  ENG_junta_DEF: "The British Junta"
+  ENG_anarchist: "British Free Territory"
+  ENG_anarchist_DEF: "The British Free Territory"
+  ENG_bolshevik: "Democratic Republic of Britain"
+  ENG_bolshevik_DEF: "The Democratic Republic of Britain"
+
   # low countries & france
   HOL: "Netherlands"
   HOL_DEF: "The Netherlands"
