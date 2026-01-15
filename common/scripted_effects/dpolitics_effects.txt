@@ -114,38 +114,38 @@ recalculate_dissent = {
 				has_government = bolshevism
 			}
 		}
-		subtract_from_variable = { dissent_change_base = 1 }
+		subtract_from_variable = { dissent_from_ideology = 1 }
 	}
-	if = {
+	else_if = {
 		limit = {
 			has_government = traditionalism
 		}
-		subtract_from_variable = { dissent_change_base = 0.75 }
+		subtract_from_variable = { dissent_from_ideology = 0.75 }
 	}
-	if = {
+	else_if = {
 		limit = {
 			OR = {
 				has_government = conservatism
 				has_government = democratic_socialism
 			}
 		}
-		subtract_from_variable = { dissent_change_base = 0.25 }
+		subtract_from_variable = { dissent_from_ideology = 0.25 }
 	}
-	if = {
+	else_if = {
 		limit = {
 			has_government = liberalism
 			has_government = social_democracy
 		}
-		subtract_from_variable = { dissent_change_base = -0.25 }
+		subtract_from_variable = { dissent_from_ideology = -0.25 }
 	}
-	if = {
+	else_if = {
 		limit = {
 			OR = {
 				has_government = radicalism
 				has_government = anarchism
 			}
 		}
-		subtract_from_variable = { dissent_change_base = -0.5 }
+		subtract_from_variable = { dissent_from_ideology = -0.5 }
 	}
 	
 	### IDEAS
@@ -154,13 +154,13 @@ recalculate_dissent = {
 		limit = {
 			has_idea_with_trait = political_dissenter
 		}
-		subtract_from_variable = { dissent_change_base = -0.5 }
+		subtract_from_variable = { dissent_from_ideas = -0.5 }
 	}
 	if = {
 		limit = {
 			has_idea_with_trait = iron_fist
 		}
-		subtract_from_variable = { dissent_change_base = 0.5 }
+		subtract_from_variable = { dissent_from_ideas = 0.5 }
 	}
 
 	## Reforms
@@ -169,26 +169,30 @@ recalculate_dissent = {
 		limit = {
 			has_idea = reform_cl_indefinitely_suspended
 		}
-		subtract_from_variable = { dissent_change_base = 0.4 }
+		subtract_from_variable = { dissent_from_ideas = 0.4 }
 	}
 	if = {
 		limit = {
 			has_idea = reform_cl_martial_law
 		}
-		subtract_from_variable = { dissent_change_base = 0.2 }
+		subtract_from_variable = { dissent_from_ideas = 0.2 }
 	}
 	if = {
 		limit = {
 			has_idea = reform_cl_curtailed
 		}
-		subtract_from_variable = { dissent_change_base = 0.1 }
+		subtract_from_variable = { dissent_from_ideas = 0.1 }
 	}
 	if = {
 		limit = {
 			has_idea = reform_cl_total_individual_freedom
 		}
-		add_to_variable = { dissent_change_base = 0.1 }
+		add_to_variable = { dissent_from_ideas = 0.1 }
 	}
+
+	add_to_variable = { dissent_change_base = dissent_from_ideology }
+
+	add_to_variable = { dissent_change_base = dissent_from_ideas }
 
 	add_to_variable = { dissent_change_base = ideological_incoherence }
 	
