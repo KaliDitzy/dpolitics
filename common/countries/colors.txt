@@ -1,8 +1,8 @@
 #reload countrycolors
 
 ENG = {
-	color = rgb { 201 56 93 }
-	color_ui = rgb { 255 73 121 }
+	color = rgb { 255 66 100 }
+	color_ui = rgb { 255 66 100 }
 }
 FRA = {
 	color = rgb { 43 68 255 }
