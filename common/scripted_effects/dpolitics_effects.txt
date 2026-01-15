@@ -1752,6 +1752,15 @@ conform_government_to_FROM = {
 	}
 }
 
+match_formable_to_ROOT = {
+	if = {
+		limit = {
+			ROOT = { has_country_flag = GER_formed }
+		}
+		set_country_flag = GET_formed
+	}
+}
+
 d_dissent = {
 	FROM = {
 		add_to_variable = {
