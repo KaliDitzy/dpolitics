@@ -23,6 +23,28 @@ on_actions = {
 
             set_variable = { global.day_1_over = 1 }
         }
+        effect = {
+            # REGIME APPROVAL
+            if = {
+                limit = {
+                    check_variable = { regime_approval < 0.1 }
+                    check_variable = { regime_approval > -0.1 }
+                }
+                set_variable = { regime_approval = 0 }
+            }
+            else_if = {
+                limit = {
+                    check_variable = { regime_approval > 0 }
+                }
+                subtract_from_variable = { regime_approval = 0.1 }
+            }
+            else_if = {
+                limit = {
+                    check_variable = { regime_approval < 0 }
+                }
+                add_to_variable = { regime_approval = 0.1 }
+            }
+        }
     }
     on_weekly = {
         effect = { # regular stuff

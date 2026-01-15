@@ -191,6 +191,10 @@ recalculate_dissent = {
 	}
 
 	add_to_variable = { dissent_change_base = ideological_incoherence }
+	
+	set_variable = { regime_approval_change = regime_approval }
+	divide_variable = { regime_approval_change = -10 }
+	add_to_variable = { dissent_change_base = regime_approval_change }
 
 	clamp_variable = {
 		var = dissent_base
