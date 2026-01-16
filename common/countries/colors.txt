@@ -8,6 +8,30 @@ FRA = {
 	color = rgb { 43 68 255 }
 	color_ui = rgb { 43 68 255 }
 }
+ITA = {
+	color = rgb { 65 127 86 }
+	color_ui = rgb { 65 127 86 }
+}
+SPR = {
+	color = rgb { 197 168 8 }
+	color_ui = rgb { 197 168 8 }
+}
+AUS = {
+	color = rgb { 153 53 119 }
+	color_ui = rgb { 153 53 119 }
+}
+PRE = {
+	color = rgb { 68 87 135 }
+	color_ui = rgb { 68 87 135 }
+}
+HUN = {
+	color = rgb { 16 86 39 }
+	color_ui = rgb { 16 86 39 }
+}
+HAN = {
+	color = rgb { 216 189 101 }
+	color_ui = rgb { 216 189 101 }
+}
 LUX = {
 	color = rgb { 221 191 113 }
 	color_ui = rgb { 221 191 113 }
@@ -15,14 +39,6 @@ LUX = {
 HOL = {
 	color = rgb { 255 153 0 }
 	color_ui = rgb { 255 153 0 }
-}
-AUS = {
-	color = rgb { 153 53 119 }
-	color_ui = rgb { 153 53 119 }
-}
-HAN = {
-	color = rgb { 216 189 101 }
-	color_ui = rgb { 216 189 101 }
 }
 FRC = {
 	color = rgb { 122 105 147 }
@@ -40,10 +56,6 @@ MEK = {
 	color = rgb { 111 75 193 }
 	color_ui = rgb { 111 75 193 }
 }
-PRE = {
-	color = rgb { 68 87 135 }
-	color_ui = rgb { 68 87 135 }
-}
 RHI = {
 	color = rgb { 107 175 110 }
 	color_ui = rgb { 107 175 110 }
@@ -59,12 +71,4 @@ WUR = {
 SWI = {
 	color = rgb { 202 179 229 }
 	color_ui = rgb { 202 179 229 }
-}
-ITA = {
-	color = rgb { 65 127 86 }
-	color_ui = rgb { 65 127 86 }
-}
-HUN = {
-	color = rgb { 16 86 39 }
-	color_ui = rgb { 16 86 39 }
 }
