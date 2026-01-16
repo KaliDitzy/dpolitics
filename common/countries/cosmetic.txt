@@ -58,6 +58,27 @@ ITA_bolshevik = {
 	color_ui = rgb { 174 216 84 }
 }
 
+SPR_monarchy = {
+	color = rgb { 197 168 8 }
+	color_ui = rgb { 197 168 8 }
+}
+SPR_republic = {
+	color = rgb { 98 10 86 }
+	color_ui = rgb { 98 10 86 }
+}
+SPR_junta = {
+	color = rgb { 130 108 45 }
+	color_ui = rgb { 130 108 45 }
+}
+SPR_anarchist = {
+	color = rgb { 201 60 98 }
+	color_ui = rgb { 201 60 98 }
+}
+SPR_bolshevik = {
+	color = rgb { 234 63 86 }
+	color_ui = rgb { 234 63 86 }
+}
+
 AUS_monarchy = {
 	color = rgb { 153 53 119 }
 	color_ui = rgb { 153 53 119 }
