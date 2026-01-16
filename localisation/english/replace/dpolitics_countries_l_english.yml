@@ -163,6 +163,22 @@
   BUR_bolshevik: "Burgundian Democratic Republic"
   BUR_bolshevik_DEF: "The Burgundian Democratic Republic"
 
+  # iberia & colonies
+  SPR: "Spain"
+  SPR_ADJ: "Spanish"
+  SPR_fascism: "Spain"
+  SPR_fascism_ADJ: "Spanish"
+  SPR_monarchy: "Kingdom of Spain"
+  SPR_monarchy_DEF: "The Kingdom of Spain"
+  SPR_republic: "Spanish Republic"
+  SPR_republic_DEF: "The Spanish Republic"
+  SPR_junta: "Spanish Junta"
+  SPR_junta_DEF: "The Spanish Junta"
+  SPR_anarchist: "Spanish Free Territory"
+  SPR_anarchist_DEF: "The Spanish Free Territory"
+  SPR_bolshevik: "People's Republic of Spain"
+  SPR_bolshevik_DEF: "The People's Republic of Spain"
+
   # italy & the balkans
 
   ITA: "Italy"
