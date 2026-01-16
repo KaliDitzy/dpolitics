@@ -1,4 +1,63 @@
 # MOD
+ENG_monarchy = {
+	color = rgb { 255 66 100 }
+	color_ui = rgb { 255 66 100 }
+}
+ENG_republic = {
+	color = rgb { 198 41 83 }
+	color_ui = rgb { 198 41 83 }
+}
+ENG_junta = {
+	color = rgb { 160 110 127 }
+	color_ui = rgb { 160 110 127 }
+}
+ENG_anarchist = {
+	color = rgb { 201 54 125 }
+	color_ui = rgb { 201 54 125 }
+}
+ENG_bolshevik = {
+	color = rgb { 255 95 202 }
+	color_ui = rgb { 255 95 202 }
+}
+
+FRA_monarchy = {
+	color = rgb { 71 105 183 }
+	color_ui = rgb { 71 105 183 }
+}
+FRA_republic = {
+	color = rgb { 43 68 255 }
+	color_ui = rgb { 43 68 255 }
+}
+FRA_junta = {
+	color = rgb { 132 140 201 }
+	color_ui = rgb { 132 140 201 }
+}
+FRA_anarchist = {
+	color = rgb { 216 49 80 }
+	color_ui = rgb { 216 49 80 }
+}
+FRA_bolshevik = {
+	color = rgb { 216 49 80 }
+	color_ui = rgb { 216 49 80 }
+}
+
+ITA_republic = {
+	color = rgb { 87 186 90 }
+	color_ui = rgb { 87 186 90 }
+}
+ITA_republic_communist = {
+	color = rgb { 174 216 84 }
+	color_ui = rgb { 174 216 84 }
+}
+ITA_anarchist = {
+	color = rgb { 174 216 84 }
+	color_ui = rgb { 174 216 84 }
+}
+ITA_bolshevik = {
+	color = rgb { 174 216 84 }
+	color_ui = rgb { 174 216 84 }
+}
+
 AUS_monarchy = {
 	color = rgb { 153 53 119 }
 	color_ui = rgb { 153 53 119 }
@@ -45,46 +104,13 @@ PRE_bolshevik = {
 	color_ui = rgb { 173 87 87 }
 }
 
-ENG_monarchy = {
-	color = rgb { 255 66 100 }
-	color_ui = rgb { 255 66 100 }
+HUN_anarchist = {
+	color = rgb { 164 170 138 }
+	color_ui = rgb { 164 170 138 }
 }
-ENG_republic = {
-	color = rgb { 198 41 83 }
-	color_ui = rgb { 198 41 83 }
-}
-ENG_junta = {
-	color = rgb { 160 110 127 }
-	color_ui = rgb { 160 110 127 }
-}
-ENG_anarchist = {
-	color = rgb { 201 54 125 }
-	color_ui = rgb { 201 54 125 }
-}
-ENG_bolshevik = {
-	color = rgb { 255 95 202 }
-	color_ui = rgb { 255 95 202 }
-}
-
-FRA_monarchy = {
-	color = rgb { 71 105 183 }
-	color_ui = rgb { 71 105 183 }
-}
-FRA_republic = {
-	color = rgb { 43 68 255 }
-	color_ui = rgb { 43 68 255 }
-}
-FRA_junta = {
-	color = rgb { 132 140 201 }
-	color_ui = rgb { 132 140 201 }
-}
-FRA_anarchist = {
-	color = rgb { 216 49 80 }
-	color_ui = rgb { 216 49 80 }
-}
-FRA_bolshevik = {
-	color = rgb { 216 49 80 }
-	color_ui = rgb { 216 49 80 }
+HUN_bolshevik = {
+	color = rgb { 164 170 138 }
+	color_ui = rgb { 164 170 138 }
 }
 
 HOL_monarchy = {
@@ -102,32 +128,6 @@ HOL_anarchist = {
 HOL_bolshevik = {
 	color = rgb { 236 50 34 }
 	color_ui = rgb { 236 50 34 }
-}
-
-ITA_republic = {
-	color = rgb { 87 186 90 }
-	color_ui = rgb { 87 186 90 }
-}
-ITA_republic_communist = {
-	color = rgb { 174 216 84 }
-	color_ui = rgb { 174 216 84 }
-}
-ITA_anarchist = {
-	color = rgb { 174 216 84 }
-	color_ui = rgb { 174 216 84 }
-}
-ITA_bolshevik = {
-	color = rgb { 174 216 84 }
-	color_ui = rgb { 174 216 84 }
-}
-
-HUN_anarchist = {
-	color = rgb { 164 170 138 }
-	color_ui = rgb { 164 170 138 }
-}
-HUN_bolshevik = {
-	color = rgb { 164 170 138 }
-	color_ui = rgb { 164 170 138 }
 }
 
 # MOD FORMABLES
