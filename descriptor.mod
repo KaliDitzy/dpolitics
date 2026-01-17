@@ -11,6 +11,7 @@ tags={
 name="Untitled Dynamic Politics Mod"
 supported_version="1.17.*"
 replace_path="common/ai_strategy"
+replace_path="common/autonomous_states"
 replace_path="common/characters"
 replace_path="common/countries"
 replace_path="common/country_leader"
