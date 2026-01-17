@@ -7,6 +7,14 @@ bookmarks = {
 		default_country = "AUS"
 		default = yes
 		
+		"ENG"={
+			history = "ENG_GATHERING_STORM_DESC"
+			ideology = conservatism
+			ideas = {
+			}
+			focuses = {
+			}
+		}
 		"FRA"={
 			history = "FRA_GATHERING_STORM_DESC"
 			ideology = radicalism
@@ -17,6 +25,22 @@ bookmarks = {
 		}
 		"AUS"={
 			history = "AUS_GATHERING_STORM_DESC"
+			ideology = traditionalism
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		"PRE"={
+			history = "PRE_GATHERING_STORM_DESC"
+			ideology = traditionalism
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		"HAN"={
+			history = "HAN_GATHERING_STORM_DESC"
 			ideology = traditionalism
 			ideas = {
 			}
