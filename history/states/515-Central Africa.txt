@@ -8,6 +8,7 @@ state = {
 	force_link_ownership_to = 781 # Niger
 
 	history = {
+		owner = ENG
 
 		#
 		#

@@ -8,6 +8,7 @@ state = {
 	force_link_ownership_to = 898 # Gao
 
 	history = {
+		owner = ENG
 
 		#
 		#

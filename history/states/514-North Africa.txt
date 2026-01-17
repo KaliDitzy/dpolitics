@@ -8,6 +8,7 @@ state = {
 	force_link_ownership_to = 513 # Tlemcen
 
 	history = {
+		owner = ENG
 
 		#
 		#
