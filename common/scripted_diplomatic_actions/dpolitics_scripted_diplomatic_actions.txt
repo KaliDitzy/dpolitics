@@ -36,6 +36,11 @@ scripted_diplomatic_actions = {
 			}
 			ROOT = {
 				leave_faction = yes
+
+				declare_war_on = { # TODO TEMP FIX UNTIL reject_effect CAN WORK
+					target = PREV
+					type = independence_wargoal
+				}
 			}
 		}
 
@@ -45,11 +50,11 @@ scripted_diplomatic_actions = {
 		}
 
 		# runs when the action is properly sent and rejected
-		reject_effect = {
-			create_wargoal = {
-				target = ROOT
-				type = puppet_wargoal_focus
-			}
+		reject_effect = { # TODO IDK WHY THIS DOESNT WORK
+			#create_wargoal = {
+			#	target = ROOT
+			#	type = puppet_wargoal_focus
+			#}
 		}
 
 		can_be_sent = { # send button will be disabled if no
