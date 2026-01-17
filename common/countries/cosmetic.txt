@@ -79,6 +79,27 @@ SPR_bolshevik = {
 	color_ui = rgb { 234 63 86 }
 }
 
+POR_monarchy = {
+	color = rgb { 33 109 30 }
+	color_ui = rgb { 33 109 30 }
+}
+POR_republic = {
+	color = rgb { 33 109 30 }
+	color_ui = rgb { 33 109 30 }
+}
+POR_junta = {
+	color = rgb { 82 117 41 }
+	color_ui = rgb { 82 117 41 }
+}
+POR_anarchist = {
+	color = rgb { 255 64 108 }
+	color_ui = rgb { 255 64 108 }
+}
+POR_bolshevik = {
+	color = rgb { 221 64 108 }
+	color_ui = rgb { 221 64 108 }
+}
+
 AUS_monarchy = {
 	color = rgb { 153 53 119 }
 	color_ui = rgb { 153 53 119 }

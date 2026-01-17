@@ -16,6 +16,10 @@ SPR = {
 	color = rgb { 197 168 8 }
 	color_ui = rgb { 197 168 8 }
 }
+POR = {
+	color = rgb { 33 109 30 }
+	color_ui = rgb { 33 109 30 }
+}
 AUS = {
 	color = rgb { 153 53 119 }
 	color_ui = rgb { 153 53 119 }

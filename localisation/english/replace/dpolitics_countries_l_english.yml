@@ -179,6 +179,21 @@
   SPR_bolshevik: "People's Republic of Spain"
   SPR_bolshevik_DEF: "The People's Republic of Spain"
 
+  POR: "Portugal"
+  POR_ADJ: "Portuguese"
+  POR_fascism: "Portugal"
+  POR_fascism_ADJ: "Portuguese"
+  POR_monarchy: "Kingdom of Portugal"
+  POR_monarchy_DEF: "The Kingdom of Portugal"
+  POR_republic: "Portuguese Republic"
+  POR_republic_DEF: "The Portuguese Republic"
+  POR_junta: "Portuguese Junta"
+  POR_junta_DEF: "The Portuguese Junta"
+  POR_anarchist: "Portuguese Free Territory"
+  POR_anarchist_DEF: "The Portuguese Free Territory"
+  POR_bolshevik: "People's Republic of Portugal"
+  POR_bolshevik_DEF: "The People's Republic of Portugal"
+
   # italy & the balkans
 
   ITA: "Italy"
