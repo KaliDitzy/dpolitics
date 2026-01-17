@@ -743,6 +743,12 @@ recalculate_cosmetic_tag = {
 			set_cosmetic_tag = GER
 		}
 	}
+	else_if = {
+		limit = {
+			has_country_flag = LBY_tripolitania
+		}
+		set_cosmetic_tag = LBY_tripolitania
+	}
 }
 
 randomize_ideology_targets = { # Randomizes an AI country's motivation to support a certain ideology.

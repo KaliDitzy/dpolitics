@@ -8,6 +8,8 @@ state = {
 	force_link_ownership_to = 662 # Sirte
 
 	history = {
+		owner = LBY
+		add_core_of = LBY
 
 		#
 		#

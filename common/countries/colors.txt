@@ -12,6 +12,10 @@ ITA = {
 	color = rgb { 65 127 86 }
 	color_ui = rgb { 65 127 86 }
 }
+LBY = {
+	color = rgb { 80 160 64 }
+	color_ui = rgb { 80 160 64 }
+}
 SPR = {
 	color = rgb { 197 168 8 }
 	color_ui = rgb { 197 168 8 }

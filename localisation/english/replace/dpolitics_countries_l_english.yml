@@ -194,7 +194,7 @@
   POR_bolshevik: "People's Republic of Portugal"
   POR_bolshevik_DEF: "The People's Republic of Portugal"
 
-  # italy & the balkans
+  # italy & colonies & the balkans
 
   ITA: "Italy"
   ITA_ADJ: "Italian"
@@ -212,6 +212,14 @@
   ITA_anarchist_DEF: "The Italian Free Territory"
   ITA_bolshevik: "Italian People's Republic"
   ITA_bolshevik_DEF: "The Italian People's Republic"
+
+  LBY: "Libya"
+  LBY_ADJ: "Libyan"
+  LBY_fascism: "Libya"
+  LBY_fascism_ADJ: "Libyan"
+  LBY_tripolitania: "Worker's Republic of Tripolitania"
+  LBY_tripolitania_ADJ: "Tripolitanian"
+  LBY_tripolitania_DEF: "The Worker's Republic of Tripolitania"
 
   HUN: "Hungary"
   HUN_ADJ: "Hungarian"

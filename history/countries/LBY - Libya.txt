@@ -1,4 +1,4 @@
-capital = 2
+capital = 448
 
 # Starting tech
 set_technology = {
@@ -77,7 +77,7 @@ if = {
 	}
 }
 
-set_research_slots = 3
+set_research_slots = 2
 set_convoys = 50
 set_stability = 0.6
 set_variable = { dissent_base = 7.5 }
@@ -89,7 +89,8 @@ add_ideas = {
 	reform_es_no_restrictions
 	reform_cr_minority_rights
 }
-set_cosmetic_tag = ITA_republic_communist
+set_country_flag = LBY_tripolitania
+set_cosmetic_tag = LBY_tripolitania
 set_variable = { regime_id = 2 }
 # Ban Fascism
 set_variable = { fash_ban_cooldown = 240 }
@@ -103,7 +104,7 @@ set_country_flag = cons_banned
 
 set_politics = {
 	ruling_party = democratic_socialism
-	last_election = "1933.5.1"
+	last_election = "1935.5.1"
 	election_frequency = 48
 	elections_allowed = yes
 }
@@ -118,12 +119,3 @@ set_popularities = {
     bolshevism = 25
     anarchism = 9
 }
-
-set_autonomy = {
-	target = LBY
-	autonomous_state = autonomy_supervised_state
-	freedom_level = 0.15
-}
-
-recruit_character = ITA_giacomo_matteotti
-promote_character = ITA_giacomo_matteotti

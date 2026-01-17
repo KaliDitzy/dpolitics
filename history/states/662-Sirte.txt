@@ -7,6 +7,8 @@ state={
 	
 	
 	history={
+		owner = LBY
+		add_core_of = LBY
 		#
 		buildings = {
 			infrastructure = 1

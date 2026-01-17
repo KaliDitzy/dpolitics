@@ -58,6 +58,11 @@ ITA_bolshevik = {
 	color_ui = rgb { 174 216 84 }
 }
 
+LBY_tripolitania = {
+	color = rgb { 75 188 229 }
+	color_ui = rgb { 75 188 229 }
+}
+
 SPR_monarchy = {
 	color = rgb { 197 168 8 }
 	color_ui = rgb { 197 168 8 }

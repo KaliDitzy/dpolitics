@@ -1,6 +1,7 @@
 ENG = "countries/United Kingdom.txt"
 FRA	= "countries/France.txt"
 ITA = "countries/Italy.txt"
+LBY = "countries/Libya.txt"
 SPR = "countries/Spain.txt"
 POR = "countries/Portugal.txt"
 AUS	= "countries/Austria.txt"
