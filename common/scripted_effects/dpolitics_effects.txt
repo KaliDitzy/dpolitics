@@ -629,6 +629,44 @@ recalculate_cosmetic_tag = {
 	}
 	if = {
 		limit = {
+			original_tag = LBY
+		}
+		if = {
+			limit = {
+				cosmetic_monarchy = yes
+			}
+			set_cosmetic_tag = LBY_monarchy
+		}
+		else_if = {
+			limit = {
+				cosmetic_republic = yes
+			}
+			set_cosmetic_tag = LBY_republic
+		}
+		else_if = {
+			limit = {
+				cosmetic_junta = yes
+			}
+			set_cosmetic_tag = LBY_junta
+		}
+		else_if = {
+			limit = {
+				cosmetic_anarchist = yes
+			}
+			set_cosmetic_tag = LBY_anarchist
+		}
+		else_if = {
+			limit = {
+				cosmetic_bolshevik = yes
+			}
+			set_cosmetic_tag = LBY_bolshevik
+		}
+		else = {
+			drop_cosmetic_tag = yes
+		}
+	}
+	if = {
+		limit = {
 			original_tag = HUN
 		}
 		if = {
