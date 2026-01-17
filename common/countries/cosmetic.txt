@@ -1,7 +1,7 @@
 # MOD
 ENG_monarchy = {
-	color = rgb { 255 66 100 }
-	color_ui = rgb { 255 66 100 }
+	color = rgb { 204 53 81 }
+	color_ui = rgb { 204 53 81 }
 }
 ENG_republic = {
 	color = rgb { 198 41 83 }
