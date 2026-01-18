@@ -2,10 +2,11 @@
 @ICONY = 11
 @TEXTY = 16
 
-@TEXTX = 174
-@SUPPORTX = 434
-@BANX = 460
-@UNBANX = 486
+@TEXTX = 116
+@TEXTX2 = 36
+@SUPPORTX = 34
+@BANX = 60
+@UNBANX = 86
 
 @REFORMX0 = 22
 @REFORMX1 = 190
@@ -121,7 +122,7 @@ guiTypes = {
         iconType ={
             name ="ruling_party_highlight"
             spriteType = "GFX_ruling_party_highlight"
-            position = { x = @TEXTX y = 64 }
+            position = { x = @TEXTX2 y = 64 }
             Orientation = "UPPER_LEFT"
         }
 
@@ -133,7 +134,7 @@ guiTypes = {
             text = "Fascists"
             maxWidth = 256
             maxHeight = 26
-            format = right
+            format = left
         }
         buttonType = {
             name = "fash_support_button"
@@ -171,7 +172,7 @@ guiTypes = {
             text = "Reactionaries"
             maxWidth = 256
             maxHeight = 26
-            format = right
+            format = left
         }
         buttonType = {
             name = "trad_support_button"
@@ -209,7 +210,7 @@ guiTypes = {
             text = "Conservatives"
             maxWidth = 256
             maxHeight = 26
-            format = right
+            format = left
         }
         buttonType = {
             name = "cons_support_button"
@@ -247,7 +248,7 @@ guiTypes = {
             text = "Liberals"
             maxWidth = 256
             maxHeight = 26
-            format = right
+            format = left
         }
         buttonType = {
             name = "lib_support_button"
@@ -285,7 +286,7 @@ guiTypes = {
             text = "Radicalists"
             maxWidth = 256
             maxHeight = 26
-            format = right
+            format = left
         }
         buttonType = {
             name = "rad_support_button"
@@ -323,7 +324,7 @@ guiTypes = {
             text = "Social Democrats"
             maxWidth = 256
             maxHeight = 26
-            format = right
+            format = left
         }
         buttonType = {
             name = "socd_support_button"
@@ -361,7 +362,7 @@ guiTypes = {
             text = "Socialists"
             maxWidth = 256
             maxHeight = 26
-            format = right
+            format = left
         }
         buttonType = {
             name = "dsoc_support_button"
@@ -399,7 +400,7 @@ guiTypes = {
             text = "Communists"
             maxWidth = 256
             maxHeight = 26
-            format = right
+            format = left
         }
         buttonType = {
             name = "bols_support_button"
@@ -437,7 +438,7 @@ guiTypes = {
             text = "Anarchists"
             maxWidth = 256
             maxHeight = 26
-            format = right
+            format = left
         }
         buttonType = {
             name = "anar_support_button"
